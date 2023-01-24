@@ -20,7 +20,7 @@
 </script>
 
 {#each arr as item}
-    <div class="p-4">
+    <div class="p-4 hover:bg-pbw-yellow/30 rounded-2xl">
         {#if item[img]}
             <div class="w-full mb-4">
                 <a href={_url(col, item)}><img src={item[img]} class="rounded-2xl w-full {aspect} object-cover" /></a>
