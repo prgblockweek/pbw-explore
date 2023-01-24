@@ -10,7 +10,7 @@
 <div class="w-full px-6 xl:mx-0">
     <div class="max-w-7xl mx-auto pt-2 md:pt-7">
         <h2 class="text-2xl uppercase font-bold text-gray-500">Unions ({data.bundle.unions.length})</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-4xl">
             <CollectionList arr={data.bundle.unions} img="logo" col="union" entry={entry} />
         </div>
         <h2 class="text-2xl uppercase font-bold text-gray-500">Events ({data.bundle.events.length})</h2>
@@ -21,5 +21,11 @@
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl">
             <CollectionList arr={data.bundle.speakers} entry={entry} />
         </div>
+        {#if data.bundle["media-partners"]}
+        <h2 class="text-2xl uppercase font-bold text-gray-500">Media Partners ({data.bundle["media-partners"].length})</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
+            <CollectionList arr={data.bundle["media-partners"]} img="logo" col="media-partner" entry={entry} />
+        </div>
+        {/if}
     </div>
 </div>

@@ -6,7 +6,8 @@
     const colsDef = {
         union: "unions",
         event: "events",
-        speaker: "speakers"
+        speaker: "speakers",
+        "media-partner": "media-partners"
     }
 
     $: col = $page.params.type
@@ -18,9 +19,14 @@
 </script>
 
 <div class="w-full mx-6 xl:mx-0">
-    <div class="max-w-7xl mx-auto pt-2 md:pt-7">
-        <span class="font-normal text-xl opacity-50">{col.toUpperCase()}</span>
-        <h2 class="text-4xl font-bold text-gray-600">{item.name}</h2>
+    <div class="max-w-7xl mx-auto pt-5 md:pt-10">
+        <div class="flex gap-8">
+            <h1 class="text-5xl uppercase font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a></h1>
+            <div>
+                <div class="font-normal text opacity-50" style="line-height: 0.6em;">{col.toUpperCase()}</div>
+                <h2 class="text-4xl font-bold text-gray-600">{item.name}</h2>
+           </div>
+        </div>
         <div class="p-2 text-xl m-6">
             <table>
             {#each Object.keys(defs.properties) as key}
