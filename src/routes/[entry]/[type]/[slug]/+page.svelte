@@ -2,6 +2,7 @@
     export let data;
     import { page } from '$app/stores';
     import CollectionList from '$lib/CollectionList.svelte';
+    import SvelteMarkdown from 'svelte-markdown';
 
     const colsDef = {
         union: "unions",
@@ -17,6 +18,10 @@
 
     let showSource = false;
 </script>
+
+<svelte:head>
+    <title>{item.name} | PBW Inspector</title>
+</svelte:head>
 
 <div class="w-full mx-6 xl:mx-0">
     <div class="max-w-7xl mx-auto pt-5 md:pt-10">
@@ -44,7 +49,13 @@
                             {item[key]?.join(", ")}
                             {#if defs.properties[key].items?.enum}
                                <div class="text-base">Available choices: {defs.properties[key].items.enum.join(", ")}</div>
-                            {/if}    
+                            {/if}
+                        {:else if defs.properties[key].type === 'string' && defs.properties[key].__markdown}
+                            {#if item[key]}
+                                <div class="md"><SvelteMarkdown source={item[key]} /></div>
+                            {:else}
+                                ❌
+                            {/if}
                         {:else}
                             {item[key] || "❌"}
                         {/if}
@@ -67,6 +78,12 @@
             {:else}
                 <div class="my-4">No speakers yet.</div>
             {/if}
+        {/if}
+        {#if col === "union"}
+            <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Events</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 mt-4 text-2xl text-center">
+                <CollectionList arr={data.bundle.events.filter(e => e.union === item.id)} col="event" img="logo" />
+            </div>
         {/if}
 
         <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 mb-4">Source code / Edit</h2>

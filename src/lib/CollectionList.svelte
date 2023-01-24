@@ -6,6 +6,7 @@
     export let aspect = "aspect-square";
 
     import { format, addDays } from 'date-fns';
+    import SvelteMarkdown from 'svelte-markdown';
 
     function formateItemDate (item) {
         let dt = format(new Date(item.date), "MMMM d")
@@ -28,11 +29,18 @@
         <h3 class=" text-pbw-red"><a href={_url(col, item)}>{item.shortname || item.name}</a></h3>
         {#if col === "event"}
             <div class="text-xl text-gray-500 my-2">
-                <span class="font-bold">{formateItemDate(item)}</span><br />{item.attendees}+ ppl
+                <span class="font-bold">{formateItemDate(item)}</span>
+                {#if item.attendees}<br />{item.attendees}+ ppl{/if}
             </div>
         {/if}
-        {#if col === "media-partner"}
+        {#if col === "media-partner" && item.description}
             <div class="text-base text-gray-500 my-2">{item.description}</div>
+        {/if}
+        {#if col === "speaker" && (item.bio || item.orgs)}
+            <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.orgs || item.bio} /></div>
+        {/if}
+        {#if col === "union" && item.description}
+            <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.description} /></div>
         {/if}
     </div>
 {/each}
