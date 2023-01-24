@@ -22,25 +22,34 @@
 {#each arr as item}
     <div class="p-4 hover:bg-pbw-yellow/30 rounded-2xl">
         {#if item[img]}
-            <div class="w-full mb-4">
+            <div class="w-full relative">
+                {#if col === "benefit"}
+                    <div class="absolute top-3 -left-4">
+                        <div class="bg-pbw-red py-0.5 px-1.5 rounded-md text-white uppercase text-base">{item.slogan}</div>
+                    </div>
+                {/if}
                 <a href={_url(col, item)}><img src={item[img]} class="rounded-2xl w-full {aspect} object-cover" /></a>
             </div>
         {/if}
-        <h3 class=" text-pbw-red"><a href={_url(col, item)}>{item.shortname || item.name}</a></h3>
-        {#if col === "event"}
-            <div class="text-xl text-gray-500 my-2">
-                <span class="font-bold">{formateItemDate(item)}</span>
-                {#if item.attendees}<br />{item.attendees}+ ppl{/if}
+        {#if col !== "media-partner"}
+            <div class="mt-4">
+                <h3 class=" text-pbw-red"><a href={_url(col, item)}>{item.shortname || item.name}</a></h3>
+                {#if col === "event"}
+                    <div class="text-xl text-gray-500 my-2">
+                        <span class="font-bold">{formateItemDate(item)}</span>
+                        {#if item.attendees}<br />{item.attendees}+ ppl{/if}
+                    </div>
+                {/if}
+                {#if col === "media-partner" && item.description}
+                    <div class="text-base text-gray-500 my-2">{item.description}</div>
+                {/if}
+                {#if col === "speaker" && (item.bio || item.orgs)}
+                    <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.orgs || item.bio} /></div>
+                {/if}
+                {#if col === "union" && item.description}
+                    <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.description} /></div>
+                {/if}
             </div>
-        {/if}
-        {#if col === "media-partner" && item.description}
-            <div class="text-base text-gray-500 my-2">{item.description}</div>
-        {/if}
-        {#if col === "speaker" && (item.bio || item.orgs)}
-            <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.orgs || item.bio} /></div>
-        {/if}
-        {#if col === "union" && item.description}
-            <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.description} /></div>
         {/if}
     </div>
 {/each}

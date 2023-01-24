@@ -8,7 +8,8 @@
         union: "unions",
         event: "events",
         speaker: "speakers",
-        "media-partner": "media-partners"
+        "media-partner": "media-partners",
+        benefit: "benefits",
     }
 
     $: col = $page.params.type
