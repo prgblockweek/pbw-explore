@@ -22,7 +22,7 @@
     <div class="p-4">
         {#if item[img]}
             <div class="w-full mb-4">
-                <a href={_url(col, item)}><img src={item[img]} class="rounded-3xl w-full {aspect} object-cover" /></a>
+                <a href={_url(col, item)}><img src={item[img]} class="rounded-2xl w-full {aspect} object-cover" /></a>
             </div>
         {/if}
         <h3 class=" text-pbw-red"><a href={_url(col, item)}>{item.shortname || item.name}</a></h3>
@@ -32,7 +32,7 @@
             </div>
         {/if}
         {#if col === "media-partner"}
-            <div class="text-lg text-gray-500 my-2">{item.description}</div>
+            <div class="text-base text-gray-500 my-2">{item.description}</div>
         {/if}
     </div>
 {/each}

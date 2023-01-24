@@ -18,11 +18,11 @@
             <CollectionList arr={data.bundle.events} img="logo" col="event" entry={entry}/>
         </div>
         <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Speakers ({data.bundle.speakers.length})</h2>
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl">
+        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl">
             <CollectionList arr={data.bundle.speakers} entry={entry} />
         </div>
         {#if data.bundle["media-partners"]}
-        <h2 class="text-2xl uppercase font-bold text-gray-500">Media Partners ({data.bundle["media-partners"].length})</h2>
+        <h2 class="text-2xl uppercase font-bold text-gray-500">Media Partners & Communities ({data.bundle["media-partners"].length})</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
             <CollectionList arr={data.bundle["media-partners"]} img="logo" col="media-partner" entry={entry} aspect="aspect-[16/9]" />
         </div>
