@@ -6,6 +6,7 @@
     const colsDef = {
         union: "unions",
         event: "events",
+        speaker: "speakers"
     }
 
     $: col = $page.params.type
