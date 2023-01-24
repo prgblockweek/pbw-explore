@@ -3,6 +3,7 @@
     export let entry = "23";
     export let col = "speaker";
     export let img = "photoUrl";
+    export let aspect = "aspect-square";
 
     import { format, addDays } from 'date-fns';
 
@@ -21,7 +22,7 @@
     <div class="p-4">
         {#if item[img]}
             <div class="w-full mb-4">
-                <a href={_url(col, item)}><img src={item[img]} class="rounded-3xl w-full aspect-square object-cover" /></a>
+                <a href={_url(col, item)}><img src={item[img]} class="rounded-3xl w-full {aspect} object-cover" /></a>
             </div>
         {/if}
         <h3 class=" text-pbw-red"><a href={_url(col, item)}>{item.shortname || item.name}</a></h3>

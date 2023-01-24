@@ -24,7 +24,7 @@
         {#if data.bundle["media-partners"]}
         <h2 class="text-2xl uppercase font-bold text-gray-500">Media Partners ({data.bundle["media-partners"].length})</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
-            <CollectionList arr={data.bundle["media-partners"]} img="logo" col="media-partner" entry={entry} />
+            <CollectionList arr={data.bundle["media-partners"]} img="logo" col="media-partner" entry={entry} aspect="aspect-[16/9]" />
         </div>
         {/if}
     </div>
