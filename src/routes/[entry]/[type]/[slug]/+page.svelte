@@ -36,7 +36,7 @@
                             <a href="{item[key]}" class="underline hover:no-underline">{item[key]}</a>
                         {:else if defs.properties[key].type === 'array'}
                             {item[key]?.join(", ")}
-                            {#if defs.properties[key].items.enum}
+                            {#if defs.properties[key].items?.enum}
                                <div class="text-base">Available choices: {defs.properties[key].items.enum.join(", ")}</div>
                             {/if}    
                         {:else}
@@ -52,13 +52,15 @@
             </table>
         </div>
 
-        <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Speakers ({item.speakers?.length || 0})</h2>
-        {#if item.speakers}
-            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center">
-                <CollectionList arr={item.speakers} />
-            </div>
-        {:else}
-            <div class="my-4">No speakers yet.</div>
+        {#if col === "event"}
+            <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Speakers ({item.speakers?.length || 0})</h2>
+            {#if item.speakers}
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center">
+                    <CollectionList arr={item.speakers} />
+                </div>
+            {:else}
+                <div class="my-4">No speakers yet.</div>
+            {/if}
         {/if}
 
         <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 mb-4">Source code / Edit</h2>
