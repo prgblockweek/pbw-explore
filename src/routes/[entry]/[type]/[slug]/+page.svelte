@@ -100,9 +100,9 @@
             {/if}
         {/if}
         {#if col === "union"}
-            <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Big events ({data.bundle.events.filter(e => e.union === item.id).length})</h2>
+            <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Big events ({item.events?.map(eId => data.bundle.events.find(e => e.id === eId)).length})</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 mt-4 text-2xl text-center">
-                <CollectionList arr={data.bundle.events.filter(e => e.union === item.id)} col="event" img="logo" />
+                <CollectionList arr={item.events?.map(eId => data.bundle.events.find(e => e.id === eId))} col="event" img="logo" />
             </div>
         {/if}
 
