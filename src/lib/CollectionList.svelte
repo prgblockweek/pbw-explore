@@ -45,7 +45,7 @@
                     <div class="text-base text-gray-500 my-2">{item.description}</div>
                 {/if}
                 {#if col === "speaker" && (item.bio || item.orgs)}
-                    <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.orgs || item.bio} /></div>
+                    <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.caption || item.orgs || item.bio} /></div>
                 {/if}
                 {#if col === "union" && item.description}
                     <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.description} /></div>
