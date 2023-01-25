@@ -4,6 +4,7 @@
     export let col = "speaker";
     export let img = "photoUrl";
     export let aspect = "aspect-square";
+    export let size = "normal";
 
     import { format, addDays } from 'date-fns';
     import SvelteMarkdown from 'svelte-markdown';
@@ -20,7 +21,7 @@
 </script>
 
 {#each arr as item}
-    <div class="p-4 hover:bg-pbw-yellow/30 rounded-2xl">
+    <div class="{size === "small" ? "p-2" : "p-4"} hover:bg-pbw-yellow/30 {size==="small" ? "rounded-lg" : "rounded-2xl"}">
         {#if item[img]}
             <div class="w-full relative">
                 {#if col === "benefit"}
@@ -28,7 +29,7 @@
                         <div class="bg-pbw-red py-0.5 px-1.5 rounded-md text-white uppercase text-base">{item.slogan}</div>
                     </div>
                 {/if}
-                <a href={_url(col, item)}><img src={item[img]} class="rounded-2xl w-full {aspect} object-cover" /></a>
+                <a href={_url(col, item)}><img src={item[img]} class="{size === "small" ? "rounded-lg" : "rounded-2xl"} w-full {aspect} object-cover" /></a>
             </div>
         {/if}
         {#if col !== "media-partner"}

@@ -12,10 +12,6 @@
 
 <div class="w-full px-6 xl:mx-0">
     <div class="max-w-7xl mx-auto pt-2 md:pt-7">
-        <h2 class="text-2xl uppercase font-bold text-gray-500">Unions ({data.bundle.unions.length})</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 my-6 text-center text-4xl">
-            <CollectionList arr={data.bundle.unions} img="logo" col="union" entry={entry} />
-        </div>
         <h2 class="text-2xl uppercase font-bold text-gray-500">Big events ({data.bundle.events.length})</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
             <CollectionList arr={data.bundle.events} img="logo" col="event" entry={entry}/>
@@ -26,15 +22,19 @@
         </div>
         {#if data.bundle.benefits}
             <h2 class="text-2xl uppercase font-bold text-gray-500">benefits for visitors ({data.bundle.benefits.length})</h2>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-xl">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-xl mb-8">
                 <CollectionList arr={data.bundle.benefits} img="logo" col="benefit" entry={entry} aspect="aspect-[16/9]" />
             </div>
         {/if}
         {#if data.bundle["media-partners"]}
             <h2 class="text-2xl uppercase font-bold text-gray-500">Media Partners & Communities ({data.bundle["media-partners"].length})</h2>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
-                <CollectionList arr={data.bundle["media-partners"]} img="logo" col="media-partner" entry={entry} aspect="aspect-[16/9]" />
+            <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 xl:grid-cols-9 my-6 text-center text-2xl mb-8">
+                <CollectionList arr={data.bundle["media-partners"]} img="logo" col="media-partner" entry={entry} aspect="aspect-[16/9]" size="small" />
             </div>
         {/if}
+        <h2 class="text-2xl uppercase font-bold text-gray-500">Unions ({data.bundle.unions.length})</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 my-6 text-center text-3xl mb-8">
+            <CollectionList arr={data.bundle.unions} img="logo" col="union" entry={entry}/>
+        </div>
     </div>
 </div>

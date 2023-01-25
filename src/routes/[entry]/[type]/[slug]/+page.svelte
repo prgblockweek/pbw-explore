@@ -106,7 +106,7 @@
             </div>
         {/if}
 
-        <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 mb-4">Source code / Edit</h2>
+        <h2 class="text-2xl uppercase font-bold mt-10 mb-4 col-span-1">Source code / Edit</h2>
         <div>
             <a href="#" class="underline hover:no-underline" on:click={() => { showSource = !showSource; }}>Show/Hide source</a>, 
             <a href="https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23/events/{item.id}" class="underline hover:no-underline">Edit on GitHub</a>
