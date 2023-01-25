@@ -37,7 +37,7 @@
             <table>
             {#each Object.keys(defs.properties) as key}
                 <tr>
-                    <td class="text-right pr-4 text-gray-400">{defs.properties[key]?.title || key}</td>
+                    <td class="text-right pr-4 text-gray-400 align-top">{defs.properties[key]?.title || key}</td>
                     <td>
                         {#if key === 'logo'}
                             <div class="m-2">
@@ -57,6 +57,17 @@
                             {:else}
                                 ❌
                             {/if}
+                        {:else if key === "links" && defs.properties[key].type === 'object' && typeof item[key] === 'object'}
+                            <div>
+                                {#each Object.keys(item[key]) as lkey}
+                                    <div>
+                                        {lkey}: 
+                                        <a class="underline hover:no-underline" target="_blank" href={item[key][lkey]}>
+                                            {item[key][lkey].replace(/^https?:\/\//,'').replace(/\/$/,'')}
+                                        </a>
+                                    </div>
+                                {/each}
+                            </div>
                         {:else}
                             {item[key] || "❌"}
                         {/if}
@@ -78,6 +89,14 @@
                 </div>
             {:else}
                 <div class="my-4">No speakers yet.</div>
+            {/if}
+            <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Sub-Events ({item.events?.length || 0})</h2>
+            {#if item.events}
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center">
+                    <CollectionList arr={item.events} />
+                </div>
+            {:else}
+                <div class="my-4">No sub-events yet.</div>
             {/if}
         {/if}
         {#if col === "union"}
