@@ -29,7 +29,9 @@
                         <div class="bg-pbw-red py-0.5 px-1.5 rounded-md text-white uppercase text-base">{item.slogan}</div>
                     </div>
                 {/if}
-                <a href={_url(col, item)}><img src={item[img]} class="{size === "small" ? "rounded-lg" : "rounded-2xl"} w-full {aspect} object-cover" /></a>
+                <a href={_url(col, item)}>
+                    <img src={item[img]} alt={item.name} class="{size === "small" ? "rounded-lg" : "rounded-2xl"} w-full {aspect} object-cover" />
+                </a>
             </div>
         {/if}
         {#if col !== "media-partner"}
@@ -41,13 +43,13 @@
                         {#if item.attendees}<br />{item.attendees}+ ppl{/if}
                     </div>
                 {/if}
-                {#if col === "media-partner" && item.description}
+                {#if col === "media-partner"}
                     <div class="text-base text-gray-500 my-2">{item.description}</div>
                 {/if}
-                {#if col === "speaker" && (item.bio || item.orgs)}
-                    <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.caption || item.orgs || item.bio} /></div>
+                {#if col === "speaker"}
+                    <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.caption} /></div>
                 {/if}
-                {#if col === "union" && item.description}
+                {#if col === "union"}
                     <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.description} /></div>
                 {/if}
             </div>
