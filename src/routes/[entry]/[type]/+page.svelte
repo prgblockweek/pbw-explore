@@ -130,8 +130,8 @@
                                     <td><SvelteMarkdown source={item.caption} /></td>
                                 {/if}
                                 {#if type === 'media-partners'}
-                                    <td class="w-16">
-                                        <img src={item.logo} class="w-14 inline-block rounded aspect-[16/9] object-cover" />
+                                    <td class="w-20">
+                                        <img src={item.logo} class="w-16 inline-block rounded aspect-[16/9] object-cover" />
                                     </td>
                                     <td class="text-2xl">
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
