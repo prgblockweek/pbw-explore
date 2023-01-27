@@ -54,7 +54,7 @@
                     </div>
                 {/if}
                 <div>
-                    <div class="font-normal text opacity-50 mt-4 md:mt-0" style="line-height: 0.6em;">{col.toUpperCase()}</div>
+                    <div class="font-normal text opacity-50 mt-4 md:mt-0 mb-1" style="line-height: 0.6em;">{col.toUpperCase()}</div>
                     <h2 class="text-5xl font-bold text-gray-600">{item.name}</h2>
                     {#if col === 'event'}
                         <div class="text-2xl flex gap-4 mt-2 flex-wrap">
@@ -98,23 +98,22 @@
             {/if}
             {#if col === 'event'}
                 <div class="flex flex-wrap gap-6 text-xl mt-4">
-                    <div><div class="uppercase text-sm opacity-40">Organizator</div><div class="markdown"><SvelteMarkdown source={item.org || 'TBD'} /></div></div>
+                    {#if item.chains && item.chains.length > 0}
+                        <div>
+                            <div class="uppercase text-sm opacity-40">Chains</div>
+                            <div class="flex gap-2">
+                                {#each item.chains as chain}
+                                    <div>{chain.substr(0, 1).toUpperCase() + chain.substr(1)}</div>
+                                {/each}
+                            </div>
+                        </div>
+                    {/if}
                     {#if item.languages}
                         <div>
                             <div class="uppercase text-sm opacity-40">Languages</div>
                             <div class="flex gap-2">
                                 {#each item.languages as lang}
                                     <div>{getFlagEmoji(langMapper[lang])} {lang}</div>
-                                {/each}
-                            </div>
-                        </div>
-                    {/if}
-                    {#if item.chains}
-                        <div>
-                            <div class="uppercase text-sm opacity-40">Chains</div>
-                            <div class="flex gap-2">
-                                {#each item.chains as chain}
-                                    <div>{chain.substr(0, 1).toUpperCase() + chain.substr(1)}</div>
                                 {/each}
                             </div>
                         </div>
@@ -128,6 +127,10 @@
                                 {/each}
                             </div>
                         </div>
+                    {/if}
+                    <div><div class="uppercase text-sm opacity-40">Organizator</div><div class="markdown"><SvelteMarkdown source={item.org || 'TBD'} /></div></div>
+                    {#if item.poc}
+                        <div><div class="uppercase text-sm opacity-40">Point of contact</div><div class="markdown"><SvelteMarkdown source={item.poc} /></div></div>
                     {/if}
                 </div>
             {/if}

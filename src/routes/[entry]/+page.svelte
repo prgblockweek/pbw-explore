@@ -5,6 +5,8 @@
 
     export let data;
     $: entry = $page.params.entry
+    $: conferences = data.bundle.events.filter(e => e.types.find(t => ['conference', 'hackathon'].includes(t)))
+    $: otherEvents = data.bundle.events.filter(e => !e.types.find(t => ['conference', 'hackathon'].includes(t)))
 
 </script>
 
@@ -14,9 +16,13 @@
 
 <div class="w-full px-6 xl:mx-0">
     <div class="max-w-7xl mx-auto pt-2 md:pt-7">
-        <h2 class="text-2xl uppercase font-bold text-gray-500">Big events ({data.bundle.events.length})</h2>
+        <h2 class="text-2xl uppercase font-bold text-gray-500">Conferences & Hackathons ({conferences.length})</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
-            <CollectionList arr={data.bundle.events} img="logo" col="event" entry={entry} offer={true}/>
+            <CollectionList arr={conferences} img="logo" col="event" entry={entry} offer={true}/>
+        </div>
+        <h2 class="text-2xl uppercase font-bold text-gray-500">Other events ({otherEvents.length})</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
+            <CollectionList arr={otherEvents} img="logo" col="event" entry={entry} />
         </div>
         <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Speakers ({data.bundle.speakers.length})</h2>
         <h2 class="text-xl uppercase font-bold mt-10 text-gray-500">International 🌎</h2>        
