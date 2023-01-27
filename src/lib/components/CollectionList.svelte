@@ -5,6 +5,7 @@
     export let img = "photoUrl";
     export let aspect = "aspect-square";
     export let size = "normal";
+    export let offer = false;
 
     import SvelteMarkdown from 'svelte-markdown';
     import { formatItemDate } from '$lib/utils.js';
@@ -48,3 +49,14 @@
         {/if}
     </div>
 {/each}
+{#if offer}
+    <div class="flex text-gray-400 self-start {col==="event" ? "mt-8" : ""}">
+        <div class="p-4">
+            <div class="text-6xl">+</div>
+            <div>
+                {#if col === 'event'}<a href="https://guide.prgblockweek.com/event-host-guide" target="_blank" class="underline hover:no-underline">Host your own event!</a>{/if}
+                {#if col === 'benefit'}<a href="https://guide.prgblockweek.com/event-host-guide" target="_blank" class="underline hover:no-underline">Offer visitors your own benefit!</a>{/if}
+            </div>
+        </div>
+    </div>
+{/if}

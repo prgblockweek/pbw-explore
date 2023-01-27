@@ -5,6 +5,7 @@
 
     export let data;
     $: entry = $page.params.entry
+
 </script>
 
 <svelte:head>
@@ -15,7 +16,7 @@
     <div class="max-w-7xl mx-auto pt-2 md:pt-7">
         <h2 class="text-2xl uppercase font-bold text-gray-500">Big events ({data.bundle.events.length})</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
-            <CollectionList arr={data.bundle.events} img="logo" col="event" entry={entry}/>
+            <CollectionList arr={data.bundle.events} img="logo" col="event" entry={entry} offer={true}/>
         </div>
         <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Speakers ({data.bundle.speakers.length})</h2>
         <h2 class="text-xl uppercase font-bold mt-10 text-gray-500">International 🌎</h2>        
@@ -29,7 +30,7 @@
         {#if data.bundle.benefits}
             <h2 class="text-2xl uppercase font-bold text-gray-500">benefits for visitors ({data.bundle.benefits.length})</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-xl mb-8">
-                <CollectionList arr={data.bundle.benefits} img="logo" col="benefit" entry={entry} aspect="aspect-[16/9]" />
+                <CollectionList arr={data.bundle.benefits} img="logo" col="benefit" entry={entry} aspect="aspect-[16/9]" offer={true}/>
             </div>
         {/if}
         {#if data.bundle["media-partners"]}
