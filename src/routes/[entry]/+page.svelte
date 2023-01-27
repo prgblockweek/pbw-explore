@@ -1,5 +1,6 @@
 <script>
-    import CollectionList from '$lib/CollectionList.svelte';
+    import CollectionList from '$lib/components/CollectionList.svelte';
+    import Footer from '$lib/components/Footer.svelte';
     import { page } from '$app/stores';
 
     export let data;
@@ -46,5 +47,6 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 my-6 text-center text-3xl mb-8">
             <CollectionList arr={data.bundle.unions} img="logo" col="union" entry={entry}/>
         </div>
+        <Footer />
     </div>
 </div>

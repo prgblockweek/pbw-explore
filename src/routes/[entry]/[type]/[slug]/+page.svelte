@@ -1,8 +1,10 @@
 <script>
     export let data;
     import { page } from '$app/stores';
-    import CollectionList from '$lib/CollectionList.svelte';
+    import CollectionList from '$lib/components/CollectionList.svelte';
+    import Footer from '$lib/components/Footer.svelte';
     import SvelteMarkdown from 'svelte-markdown';
+    import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
 
     const colsDef = {
         union: "unions",
@@ -12,12 +14,22 @@
         benefit: "benefits",
     }
 
+    const langMapper = {
+        czech: 'cz',
+        slovak: 'sk',
+        english: 'gb'
+    }
+
+    const speakerLinks = {
+        twitter: { col: x => x.twitter ? 'https://twitter.com/'+x.twitter : null },
+        web: { col: x => x.web?.url },
+        linkedin: { col: x => x.linkedin ? 'https://linkedin.com/in/'+x.linkedin : null }
+    }
+
     $: col = $page.params.type
     $: colPlural = colsDef[col]
     $: item = data.bundle[colPlural].find(e => e.id === $page.params.slug)
     $: defs = data.schema ? data.schema.definitions[col] : {}
-
-    let showSource = false;
 </script>
 
 <svelte:head>
@@ -26,14 +38,106 @@
 
 <div class="w-full mx-6 xl:mx-0">
     <div class="max-w-7xl mx-auto pt-5 md:pt-10">
-        <div class="flex gap-8">
+        <div class="flex gap-8 mb-10">
             <h1 class="text-5xl uppercase font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a></h1>
+        </div>
+        <div class="flex flex-wrap mb-4">
+            {#if item.logo}
+                <div class=" w-24 mr-5">
+                    <img src={item.logo} class="rounded-xl" alt={item.name} />
+                </div>
+            {/if}
+            {#if item.photoUrl}
+                <div class="w-48 mr-5">
+                    <img src={item.photoUrl} class="rounded-xl" alt={item.name} />
+                </div>
+            {/if}
             <div>
                 <div class="font-normal text opacity-50" style="line-height: 0.6em;">{col.toUpperCase()}</div>
-                <h2 class="text-4xl font-bold text-gray-600">{item.name}</h2>
+                <h2 class="text-5xl font-bold text-gray-600">{item.name}</h2>
+                {#if col === 'event'}
+                    <div class="text-2xl flex gap-4 mt-2 flex-wrap">
+                        <div class="flex gap-1 items-center">
+                            {#each item.types as type}
+                                <div class="text-sm uppercase text-white bg-pbw-red rounded px-1.5 py-0.5">{type}</div>
+                            {/each}
+                        </div>
+                        <div class="">{formatItemDate(item, { full: true })}</div>
+                        <div>📍 
+                            {#if item.venueUrl}
+                                <a href="{item.venueUrl}" target="_blank" class="underline hover:no-underline">{item.venueName}</a>
+                            {:else}
+                                {item.venueName}
+                            {/if}
+                        </div>
+                        {#if item.attendees}
+                            <div>👥 {item.attendees}</div>
+                        {/if}
+                    </div>
+                 {/if}
+                 {#if col === 'speaker'}
+                    <div class="text-2xl mt-2">
+                        <SvelteMarkdown source={item.caption} />
+                    </div>
+                    <div class="flex flex-wrap gap-4 mt-4 text-xl">
+                        {#each Object.keys(speakerLinks) as lk}
+                            {#if speakerLinks[lk].col(item)}
+                            <div><span class="opacity-40 text-sm uppercase">{lk} →</span> <a href={speakerLinks[lk].col(item)} target="_blank" class="underline hover:no-underline">{bareDomain(speakerLinks[lk].col(item), lk)}</a></div>
+                            {/if}
+                        {/each}
+                    </div>
+                {/if}
            </div>
         </div>
-        <div class="p-2 text-xl m-6">
+
+        {#if item.desc || item.description}
+            <div class="mt-4 text-xl">
+                <div><SvelteMarkdown source={item.desc || item.description} /></div>
+            </div>
+        {/if}
+        {#if col === 'event'}
+            <div class="flex flex-wrap gap-6 text-xl mt-4">
+                <div><div class="uppercase text-sm opacity-40">Organizator</div><SvelteMarkdown source={item.org || 'TBD'} /></div>
+                {#if item.languages}
+                    <div>
+                        <div class="uppercase text-sm opacity-40">Languages</div>
+                        <div class="flex gap-2">
+                            {#each item.languages as lang}
+                                <div>{getFlagEmoji(langMapper[lang])} {lang}</div>
+                            {/each}
+                        </div>
+                    </div>
+                {/if}
+                {#if item.chains}
+                    <div>
+                        <div class="uppercase text-sm opacity-40">Chains</div>
+                        <div class="flex gap-2">
+                            {#each item.chains as chain}
+                                <div>{chain.substr(0, 1).toUpperCase() + chain.substr(1)}</div>
+                            {/each}
+                        </div>
+                    </div>
+                {/if}
+                {#if item.tags}
+                    <div>
+                        <div class="uppercase text-sm opacity-40">Tags</div>
+                        <div class="flex gap-2">
+                            {#each item.tags as tag}
+                                <div>#{tag}</div>
+                            {/each}
+                        </div>
+                    </div>
+                {/if}
+            </div>
+        {/if}
+        {#if item.links}
+            <div class="flex flex-wrap gap-4 mt-4 text-xl">
+                {#each Object.keys(item.links) as lk}
+                    <div><span class="opacity-40 text-sm uppercase">{lk} →</span> <a href={item.links[lk]} target="_blank" class="underline hover:no-underline">{bareDomain(item.links[lk], lk)}</a></div>
+                {/each}
+            </div>
+        {/if}
+        <!--div class="p-2 text-xl m-6">
             <table>
             {#each Object.keys(defs.properties) as key}
                 <tr>
@@ -79,24 +183,20 @@
                 </tr>
             {/each}
             </table>
-        </div>
+        </div-->
 
         {#if col === "event"}
-            <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Speakers ({item.speakers?.length || 0})</h2>
             {#if item.speakers}
-                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center">
+                <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Speakers ({item.speakers?.length || 0})</h2>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
                     <CollectionList arr={item.speakers} />
                 </div>
-            {:else}
-                <div class="my-4">No speakers yet.</div>
             {/if}
-            <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Sub-Events ({item.events?.length || 0})</h2>
             {#if item.events}
+                <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Sub-Events ({item.events?.length || 0})</h2>
                 <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center">
                     <CollectionList arr={item.events} />
                 </div>
-            {:else}
-                <div class="my-4">No sub-events yet.</div>
             {/if}
         {/if}
         {#if col === "union"}
@@ -105,15 +205,13 @@
                 <CollectionList arr={item.events?.map(eId => data.bundle.events.find(e => e.id === eId))} col="event" img="logo" />
             </div>
         {/if}
-
-        <h2 class="text-2xl uppercase font-bold mt-10 mb-4 col-span-1">Source code / Edit</h2>
-        <div>
-            <a href="#" class="underline hover:no-underline" on:click={() => { showSource = !showSource; }}>Show/Hide source</a>, 
-            <a href="https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23/events/{item.id}" class="underline hover:no-underline">Edit on GitHub</a>
-        </div>
-        {#if showSource}
-            <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">JSON source-code</h2>
-            <div class="mt-4 font-mono whitespace-pre-wrap p-4 rounded-md bg-slate-200 text-sm">{JSON.stringify(item, null, 2)}</div>
+        {#if col === "speaker"}
+            <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Events ({data.bundle.events.filter(e => e.speakers?.find(s => s.id === item.id)).length || 0})</h2>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
+                <CollectionList arr={data.bundle.events.filter(e => e.speakers?.find(s => s.id === item.id))} col="event" img="logo" />
+            </div>
         {/if}
+
+        <Footer col={col} item={item} />
     </div>
 </div>
