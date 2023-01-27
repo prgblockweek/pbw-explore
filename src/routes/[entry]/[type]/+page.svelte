@@ -17,6 +17,7 @@
 
 
     function processItems(_items) {
+        _items = JSON.parse(JSON.stringify(_items))
         if (type === 'events') {
             _items = _items.sort((x, y) => x.date > y.date ? 1 : -1)
         }
