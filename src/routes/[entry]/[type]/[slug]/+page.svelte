@@ -108,7 +108,7 @@
                             </div>
                         </div>
                     {/if}
-                    {#if item.languages}
+                    {#if item.languages && item.tags.languages > 0}
                         <div>
                             <div class="uppercase text-sm opacity-40">Languages</div>
                             <div class="flex gap-2">
@@ -118,7 +118,7 @@
                             </div>
                         </div>
                     {/if}
-                    {#if item.tags}
+                    {#if item.tags && item.tags.length > 0}
                         <div>
                             <div class="uppercase text-sm opacity-40">Tags</div>
                             <div class="flex gap-2">
