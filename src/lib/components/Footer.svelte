@@ -13,7 +13,7 @@
 
 <div class="mt-20">
     <div class="bg-gray-100 p-4 text-lg text-gray-600">
-        <div>⚙ This page is automatically generated using the structured #PBW23 dataset which can be consumed as a single JSON → <a href="https://data.prgblockweek.com/23/index.json" class="underline hover:no-underline" target="_blank">data.prgblockweek.com/23/index.json</a>.
+        <div>⚙ This page is automatically generated using the structured dataset which can be consumed as a single JSON file → <a href="https://data.prgblockweek.com/23/index.json" class="underline hover:no-underline" target="_blank">data.prgblockweek.com/23/index.json</a>.
             <div class="h-4"></div>
             📖 The source data GitHub repository → <a href="https://github.com/utxo-foundation/prague-blockchain-week" class="underline hover:no-underline" target="_blank">utxo-foundation/prague-blockchain-week</a>.
             Go ahead and do PRs!
