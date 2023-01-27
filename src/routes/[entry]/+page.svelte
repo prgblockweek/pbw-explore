@@ -47,6 +47,6 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 my-6 text-center text-3xl mb-8">
             <CollectionList arr={data.bundle.unions} img="logo" col="union" entry={entry}/>
         </div>
-        <Footer />
+        <Footer bundle={data.bundle} />
     </div>
 </div>

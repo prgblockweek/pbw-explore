@@ -13,7 +13,7 @@
 </script>
 
 {#each arr as item}
-    <div class="{size === "small" ? "p-2" : "p-4"} hover:bg-pbw-yellow/30 {size==="small" ? "rounded-lg" : "rounded-2xl"}">
+    <div class="{size === "small" ? "p-0.5 lg:p-1" : "p-1 lg:p-1.5"} hover:bg-pbw-yellow/30 {size==="small" ? "rounded-lg" : "rounded-2xl"}">
         {#if item[img]}
             <div class="w-full relative">
                 {#if col === "benefit"}
@@ -27,7 +27,7 @@
             </div>
         {/if}
         {#if col !== "media-partner"}
-            <div class="mt-4">
+            <div class="mt-2">
                 <h3 class=" text-pbw-red"><a href={_url(col, item)}>{item.shortname || item.name}</a></h3>
                 {#if col === "event"}
                     <div class="text-xl text-gray-500 my-2">
