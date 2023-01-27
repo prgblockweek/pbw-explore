@@ -107,7 +107,7 @@
                                         <img src={item.photoUrl} class="w-10 inline-block rounded aspect-square object-cover" />
                                     </td>
                                     <td class="text-2xl">
-                                        <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red underline hover:no-underline">{item.name}</a>
+                                        <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
                                     </td>
                                     <td>{item.country && item.country !== 'xx' ? getFlagEmoji(item.country, false) : ''}</td>
                                     <td>
