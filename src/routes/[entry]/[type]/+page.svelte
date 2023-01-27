@@ -5,6 +5,7 @@
 	import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
     import SvelteMarkdown from 'svelte-markdown';
+    import Footer from '$lib/components/Footer.svelte';
     import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
 
     export let data;
@@ -79,7 +80,7 @@
                                         <img src={item.logo} class="w-10 inline-block rounded" />
                                     </td>
                                     <td class="text-2xl">
-                                        <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red underline hover:no-underline">{item.name}</a>
+                                        <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
                                     </td>
                                     <td>{item.types.join(", ")}</td>
                                     <td>
@@ -121,6 +122,7 @@
                     </tbody>
                 </table>
             </div>
+            <Footer bundle={data.bundle} />
         </div>
     </div>
 </div>

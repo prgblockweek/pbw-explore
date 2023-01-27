@@ -29,7 +29,7 @@
         {/if}
         {#if col !== "media-partner"}
             <div class="mt-2">
-                <h3 class=" text-pbw-red"><a href={_url(col, item)}>{item.shortname || item.name}</a></h3>
+                <h3 class=" text-pbw-red"><a href={_url(col, item)} class="hover:underline">{item.shortname || item.name}</a></h3>
                 {#if col === "event"}
                     <div class="text-xl text-gray-500 my-2">
                         <span class="font-bold">{formatItemDate(item)}</span>
