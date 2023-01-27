@@ -131,4 +131,5 @@
 {/if}
 
 <style>
+    table tr:hover { background-color: #fff5d2; }
 </style>
