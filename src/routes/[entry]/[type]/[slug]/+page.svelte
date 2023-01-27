@@ -108,22 +108,22 @@
                             </div>
                         </div>
                     {/if}
-                    {#if item.languages && item.languages.length > 0}
-                        <div>
-                            <div class="uppercase text-sm opacity-40">Languages</div>
-                            <div class="flex gap-2">
-                                {#each item.languages as lang}
-                                    <div>{getFlagEmoji(langMapper[lang])} {lang}</div>
-                                {/each}
-                            </div>
-                        </div>
-                    {/if}
                     {#if item.tags && item.tags.length > 0}
                         <div>
                             <div class="uppercase text-sm opacity-40">Tags</div>
                             <div class="flex gap-2">
                                 {#each item.tags as tag}
                                     <div>#{tag}</div>
+                                {/each}
+                            </div>
+                        </div>
+                    {/if}
+                    {#if item.languages && item.languages.length > 0}
+                        <div>
+                            <div class="uppercase text-sm opacity-40">Languages</div>
+                            <div class="flex gap-2">
+                                {#each item.languages as lang}
+                                    <div>{getFlagEmoji(langMapper[lang])} {lang}</div>
                                 {/each}
                             </div>
                         </div>
