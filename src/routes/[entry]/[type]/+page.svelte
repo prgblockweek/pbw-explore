@@ -1,0 +1,130 @@
+<script>
+    import { page } from '$app/stores';
+    import { config } from '$lib/pbw';
+    //import { redirect } from '@sveltejs/kit';
+	import { onMount } from 'svelte';
+    import { goto } from '$app/navigation';
+    import SvelteMarkdown from 'svelte-markdown';
+    import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
+
+    export let data;
+
+    let entry = $page.params.entry
+    $: type = $page.params.type;
+    $: tc = config.collections[type]
+    $: items = data.bundle[type]
+
+
+    function processItems(_items) {
+        if (type === 'events') {
+            _items = _items.sort((x, y) => x.date > y.date ? 1 : -1)
+        }
+        return _items
+    }
+
+    $: processedItems = processItems(items)
+
+    onMount(async () => {
+        if (!config.collections[$page.params.type]) {
+            const ftype = Object.keys(config.collections).find(k => config.collections[k].model === $page.params.type)
+            if (ftype) {
+                goto(`/${$page.params.entry}/${ftype}`)
+            }
+        }
+    })
+
+</script>
+
+<svelte:head>
+    <title>{tc?.title} | #PBW{$page.params.entry} Inspector</title>
+</svelte:head>
+
+{#if tc}
+<div class="w-full">
+    <div class="max-w-7xl mx-auto pt-5 md:pt-10">
+        <div class="mx-4 xl:mx-0">
+            <div class="flex gap-8 mb-10">
+                <h1 class="text-5xl uppercase font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a></h1>
+            </div>
+            <div class="flex flex-wrap md:flex-nowrap w-full">
+            </div>
+            <h2 class="text-2xl uppercase font-bold text-gray-500">{tc.title} ({processedItems.length})</h2>
+            <div class="text-xl mt-6">  
+                <table class="w-full">
+                    <thead>
+                        <tr class="text-left">
+                            {#if type === 'events'}
+                                <th class="text-right pr-4">📅</th>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>📍</th>
+                                <th>👥</th>
+                            {/if}
+                            {#if type === 'speakers'}
+                                <th></th>
+                                <th>Name</th>
+                                <th>🌎</th>
+                                <th>🐦</th>
+                                <th>Bio</th>
+                            {/if}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {#each processedItems as item}
+                            <tr class="">
+                                {#if type === 'events'}
+                                    <td class="text-right pr-4">{formatItemDate(item)}</td>
+                                    <td>
+                                        <img src={item.logo} class="w-10 inline-block rounded" />
+                                    </td>
+                                    <td class="text-2xl">
+                                        <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red underline hover:no-underline">{item.name}</a>
+                                    </td>
+                                    <td>{item.types.join(", ")}</td>
+                                    <td>
+                                        {#if item.venueUrl}
+                                            <a href={item.venueUrl} class="underline hover:no-underline">{item.venueName}</a>
+                                        {:else}
+                                            {item.venueName}
+                                        {/if}
+                                    </td>
+                                    <td>{item.attendees || "TBA"}</td>
+                                    <td>
+                                        {#if item.languages && item.languages.length > 0}
+                                            <div class="flex gap-1">
+                                                {#each item.languages as lang}
+                                                    <div>{getFlagEmoji(lang)}</div>
+                                                {/each}
+                                            </div>
+                                        {/if}
+                                    </td>
+                                {/if}
+                                {#if type === 'speakers'}
+                                    <td>
+                                        <img src={item.photoUrl} class="w-10 inline-block rounded aspect-square object-cover" />
+                                    </td>
+                                    <td class="text-2xl">
+                                        <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red underline hover:no-underline">{item.name}</a>
+                                    </td>
+                                    <td>{item.country && item.country !== 'xx' ? getFlagEmoji(item.country, false) : ''}</td>
+                                    <td>
+                                        {#if item.twitter}
+                                            @<a href="https://twitter.com/{item.twitter}" class="underline hover:no-underline">{item.twitter}</a>
+                                        {:else}
+                                        {/if}
+                                    </td>
+                                    <td><SvelteMarkdown source={item.caption} /></td>
+                                {/if}
+                            </tr>
+                        {/each}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{/if}
+
+<style>
+</style>

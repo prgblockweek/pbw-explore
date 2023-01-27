@@ -14,18 +14,13 @@
         benefit: "benefits",
     }
 
-    const langMapper = {
-        czech: 'cz',
-        slovak: 'sk',
-        english: 'gb'
-    }
-
     const speakerLinks = {
         twitter: { col: x => x.twitter ? 'https://twitter.com/'+x.twitter : null },
         web: { col: x => x.web?.url },
         linkedin: { col: x => x.linkedin ? 'https://linkedin.com/in/'+x.linkedin : null }
     }
 
+    $: entry = $page.params.entry
     $: col = $page.params.type
     $: colPlural = colsDef[col]
     $: item = data.bundle[colPlural].find(e => e.id === $page.params.slug)
@@ -33,12 +28,12 @@
 </script>
 
 <svelte:head>
-    <title>{item.name} | PBW Inspector</title>
+    <title>{item.name} | #PBW{$page.params.entry}</title>
 </svelte:head>
 
 <div class="w-full">
     <div class="max-w-7xl mx-auto pt-5 md:pt-10">
-        <div class="mx-4 2xl:mx-0">
+        <div class="mx-4 xl:mx-0">
             <div class="flex gap-8 mb-10">
                 <h1 class="text-5xl uppercase font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a></h1>
             </div>
@@ -55,7 +50,7 @@
                         </div>
                     {/if}
                     <div class="flex-grow">
-                        <div class="font-normal text opacity-50 mt-4 md:mt-0 mb-1" style="line-height: 0.6em;">{col.toUpperCase()}</div>
+                        <div class="font-normal text opacity-50 mt-4 md:mt-0 mb-1" style="line-height: 0.6em;"><a href="/{entry}/{col}">{col.toUpperCase()}</a></div>
                         <h2 class="text-5xl font-bold text-gray-600">{item.name}</h2>
                         {#if col === 'event'}
                             <div class="text-2xl flex gap-4 mt-2 flex-wrap">
@@ -116,7 +111,7 @@
                                         <div class="uppercase text-sm opacity-40">Languages</div>
                                         <div class="flex gap-2">
                                             {#each item.languages as lang}
-                                                <div>{getFlagEmoji(langMapper[lang])} {lang}</div>
+                                                <div>{getFlagEmoji(lang)} {lang}</div>
                                             {/each}
                                         </div>
                                     </div>

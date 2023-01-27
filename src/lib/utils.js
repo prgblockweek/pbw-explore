@@ -1,6 +1,12 @@
 
 import { format, addDays } from 'date-fns';
 
+const langMapper = {
+    czech: 'cz',
+    slovak: 'sk',
+    english: 'gb'
+}
+
 export function formatItemDate (item, opts = {}) {
     let dt = format(new Date(item.date), "MMMM d" + (opts.full && item.days === 1 ? ', yyyy' : ''))
     if (item.days > 1) {
@@ -17,8 +23,8 @@ export function bareDomain (link, type="") {
     return out
 }
 
-export function getFlagEmoji(countryCode) {
-    const codePoints = countryCode
+export function getFlagEmoji(str, mapper = true) {
+    const codePoints = (mapper ? langMapper[str] : str)
         .toUpperCase()
         .split('')
         .map(char =>  127397 + char.charCodeAt());

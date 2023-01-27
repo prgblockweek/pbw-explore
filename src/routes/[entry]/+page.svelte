@@ -11,20 +11,20 @@
 </script>
 
 <svelte:head>
-    <title>PBW Inspector</title>
+    <title>#PBW{$page.params.entry} Inspector</title>
 </svelte:head>
 
 <div class="w-full px-6 xl:mx-0">
     <div class="max-w-7xl mx-auto pt-2 md:pt-7">
-        <h2 class="text-2xl uppercase font-bold text-gray-500">Conferences & Hackathons ({conferences.length})</h2>
+        <h2 class="text-2xl uppercase font-bold text-gray-500"><a href="/{entry}/events">Conferences & Hackathons</a> ({conferences.length})</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
             <CollectionList arr={conferences} img="logo" col="event" entry={entry} offer={true}/>
         </div>
-        <h2 class="text-2xl uppercase font-bold text-gray-500">Other events ({otherEvents.length})</h2>
+        <h2 class="text-2xl uppercase font-bold text-gray-500"><a href="/{entry}/events">Other events</a> ({otherEvents.length})</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
             <CollectionList arr={otherEvents} img="logo" col="event" entry={entry} />
         </div>
-        <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Speakers ({data.bundle.speakers.length})</h2>
+        <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500"><a href="/{entry}/speakers">Speakers</a> ({data.bundle.speakers.length})</h2>
         <h2 class="text-xl uppercase font-bold mt-10 text-gray-500">International 🌎</h2>        
         <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl">
             <CollectionList arr={data.bundle.speakers.filter(s => !['cz', 'sk'].includes(s.country))} entry={entry} />
