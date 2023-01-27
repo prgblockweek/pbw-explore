@@ -137,8 +137,8 @@
                     </div>
 
                 {#if item.registration}
-                    <div class="text-xl lg:flex-nowrap">
-                        <div class="w-auto rounded-lg md:text-right">
+                    <div class="text-xl lg:flex-nowrap mt-6 lg:mt-0">
+                        <div class="w-auto rounded-lg md:text-right gap-4">
                             {#if item.registration.link}
                                 <div class="pb-2">
                                     <a href={item.registration.link} class="" target="_blank">
@@ -162,23 +162,25 @@
                                     {/if}
                                 </div>
                             {/if}
-                            {#if item.registration.status}
-                                <div><span class="opacity-40 text-sm uppercase mr-1">Status</span> 
-                                    {#if item.registration.status === 'available'}
-                                        <span class="text-green-700">• Available</span>
-                                    {:else if item.registration.status === 'sold-out'}
-                                        <span class="text-red-700">• Sold Out!</span>
-                                    {:else if item.registration.status === 'closed'}
-                                    <span class="text-yellow-700">• Registration closed</span>
-                                    {/if}
-                                </div>                                
-                            {/if}
-                            <div><span class="opacity-40 text-sm uppercase mr-1">Price</span> 
-                                {#if item.registration.type === 'tickets'}
-                                    {item.registration.price || 'TBA'}
-                                {:else}
-                                    Free!
+                            <div>
+                                {#if item.registration.status}
+                                    <div><span class="opacity-40 text-sm uppercase mr-1">Status</span> 
+                                        {#if item.registration.status === 'available'}
+                                            <span class="text-green-700">• Available</span>
+                                        {:else if item.registration.status === 'sold-out'}
+                                            <span class="text-red-700">• Sold Out!</span>
+                                        {:else if item.registration.status === 'closed'}
+                                        <span class="text-yellow-700">• Registration closed</span>
+                                        {/if}
+                                    </div>                                
                                 {/if}
+                                <div><span class="opacity-40 text-sm uppercase mr-1">Price</span> 
+                                    {#if item.registration.type === 'tickets'}
+                                        {item.registration.price || 'TBA'}
+                                    {:else}
+                                        Free!
+                                    {/if}
+                                </div>
                             </div>
                         </div>
                     </div>
