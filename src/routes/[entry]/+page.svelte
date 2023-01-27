@@ -34,13 +34,13 @@
             <CollectionList arr={data.bundle.speakers.filter(s => ['cz', 'sk'].includes(s.country))} entry={entry} />
         </div>
         {#if data.bundle.benefits}
-            <h2 class="text-2xl uppercase font-bold text-gray-500">benefits for visitors ({data.bundle.benefits.length})</h2>
+            <h2 class="text-2xl uppercase font-bold text-gray-500"><a href="/{entry}/benefits">Benefits for visitors</a> ({data.bundle.benefits.length})</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-xl mb-8">
                 <CollectionList arr={data.bundle.benefits} img="logo" col="benefit" entry={entry} aspect="aspect-[16/9]" offer={true}/>
             </div>
         {/if}
         {#if data.bundle["media-partners"]}
-            <h2 class="text-2xl uppercase font-bold text-gray-500">Media Partners & Communities ({data.bundle["media-partners"].length})</h2>
+            <h2 class="text-2xl uppercase font-bold text-gray-500"><a href="/{entry}/media-partners">Media Partners & Communities</a> ({data.bundle["media-partners"].length})</h2>
             <h2 class="text-xl uppercase font-bold mt-10 text-gray-500">International 🌎</h2>  
             <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 xl:grid-cols-9 my-6 text-center text-2xl mb-8">
                 <CollectionList arr={data.bundle["media-partners"].filter(m => !['czech', 'slovak'].includes(m.languages[0]))} img="logo" col="media-partner" entry={entry} aspect="aspect-[16/9]" size="small" />

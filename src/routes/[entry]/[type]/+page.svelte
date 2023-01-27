@@ -71,6 +71,16 @@
                                 <th>🐦</th>
                                 <th>Bio</th>
                             {/if}
+                            {#if type === 'media-partners'}
+                                <th></th>
+                                <th>Name</th>
+                                <th>🌎</th>
+                                <th>Description</th>
+                            {/if}
+                            {#if type === 'benefits'}
+                                <th></th>
+                                <th>Name</th>
+                            {/if}
                         </tr>
                     </thead>
                     <tbody>
@@ -78,8 +88,8 @@
                             <tr class="">
                                 {#if type === 'events'}
                                     <td class="text-right pr-4">{formatItemDate(item)}</td>
-                                    <td>
-                                        <img src={item.logo} class="w-10 inline-block rounded" />
+                                    <td class="w-14">
+                                        <img src={item.logo} class="w-10 inline-block rounded aspect-square object-cover" />
                                     </td>
                                     <td class="text-2xl">
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
@@ -104,7 +114,7 @@
                                     </td>
                                 {/if}
                                 {#if type === 'speakers'}
-                                    <td>
+                                    <td class="w-14">
                                         <img src={item.photoUrl} class="w-10 inline-block rounded aspect-square object-cover" />
                                     </td>
                                     <td class="text-2xl">
@@ -119,6 +129,34 @@
                                     </td>
                                     <td><SvelteMarkdown source={item.caption} /></td>
                                 {/if}
+                                {#if type === 'media-partners'}
+                                    <td class="w-16">
+                                        <img src={item.logo} class="w-14 inline-block rounded aspect-[16/9] object-cover" />
+                                    </td>
+                                    <td class="text-2xl">
+                                        <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
+                                    </td>
+                                    <td>
+                                        {#if item.languages && item.languages.length > 0}
+                                            <div class="flex gap-1">
+                                                {#each item.languages as lang}
+                                                    <div>{getFlagEmoji(lang)}</div>
+                                                {/each}
+                                            </div>
+                                        {/if}
+                                    </td>
+                                    <td class="">
+                                        <SvelteMarkdown source={item.description} />
+                                    </td>   
+                                {/if}    
+                                {#if type === 'benefits'}
+                                    <td class="w-14">
+                                        <img src={item.logo} class="w-10 inline-block rounded aspect-square object-cover" />
+                                    </td>
+                                    <td class="text-2xl">
+                                        <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
+                                    </td>
+                                {/if}                                
                             </tr>
                         {/each}
                     </tbody>
