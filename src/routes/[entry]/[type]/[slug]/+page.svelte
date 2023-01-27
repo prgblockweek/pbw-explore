@@ -77,7 +77,7 @@
                         </div>
                     {/if}
                     {#if col === 'speaker'}
-                        <div class="text-2xl mt-2">
+                        <div class="text-2xl mt-2 markdown">
                             <SvelteMarkdown source={item.caption} />
                         </div>
                         <div class="flex flex-wrap gap-4 mt-4 text-xl">
@@ -92,13 +92,13 @@
             </div>
 
             {#if item.desc || item.description}
-                <div class="mt-4 text-xl">
+                <div class="mt-4 text-xl markdown">
                     <div><SvelteMarkdown source={item.desc || item.description} /></div>
                 </div>
             {/if}
             {#if col === 'event'}
                 <div class="flex flex-wrap gap-6 text-xl mt-4">
-                    <div><div class="uppercase text-sm opacity-40">Organizator</div><SvelteMarkdown source={item.org || 'TBD'} /></div>
+                    <div><div class="uppercase text-sm opacity-40">Organizator</div><div class="markdown"><SvelteMarkdown source={item.org || 'TBD'} /></div></div>
                     {#if item.languages}
                         <div>
                             <div class="uppercase text-sm opacity-40">Languages</div>
