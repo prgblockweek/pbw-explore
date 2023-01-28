@@ -1,7 +1,7 @@
 {
   "name": "pbw-inspect",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",

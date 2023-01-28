@@ -1,5 +1,6 @@
 <script>
     import CollectionList from '$lib/components/CollectionList.svelte';
+    import TimelineOverview from '$lib/components/TimelineOverview.svelte';
     import Footer from '$lib/components/Footer.svelte';
     import { page } from '$app/stores';
 
@@ -16,6 +17,8 @@
 
 <div class="w-full px-6 xl:mx-0">
     <div class="max-w-7xl mx-auto pt-2 md:pt-7">
+        <TimelineOverview bundle={data.bundle} />
+
         <h2 class="text-2xl uppercase font-bold text-gray-500"><a href="/{entry}/events">Conferences & Hackathons</a> ({conferences.length})</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
             <CollectionList arr={conferences} img="logo" col="event" entry={entry} offer={true}/>
