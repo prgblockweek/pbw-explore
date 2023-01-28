@@ -33,6 +33,10 @@
         <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl">
             <CollectionList arr={data.bundle.speakers.filter(s => ['cz', 'sk'].includes(s.country))} entry={entry} />
         </div>
+        <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500"><a href="/{entry}/places">Places</a> ({data.bundle.places.length})</h2>       
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl">
+            <CollectionList arr={data.bundle.places} col="place" img="photo" entry={entry} />
+        </div>
         {#if data.bundle.benefits}
             <h2 class="text-2xl uppercase font-bold text-gray-500"><a href="/{entry}/benefits">Benefits for visitors</a> ({data.bundle.benefits.length})</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-xl mb-8">

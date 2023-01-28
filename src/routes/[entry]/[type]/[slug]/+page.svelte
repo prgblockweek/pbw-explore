@@ -6,14 +6,9 @@
     import Footer from '$lib/components/Footer.svelte';
     import SvelteMarkdown from 'svelte-markdown';
     import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
+    import { config } from '$lib/pbw';
 
-    const colsDef = {
-        union: "unions",
-        event: "events",
-        speaker: "speakers",
-        "media-partner": "media-partners",
-        benefit: "benefits",
-    }
+    const colsDef = Object.fromEntries(Object.keys(config.collections).map(col => { return [ config.collections[col].model, col ]}))
 
     const speakerLinks = {
         twitter: { col: x => x.twitter ? 'https://twitter.com/'+x.twitter : null },
@@ -36,7 +31,7 @@
     <div class="max-w-7xl mx-auto pt-5 md:pt-10">
         <div class="mx-4 xl:mx-0">
             <div class="flex gap-8 mb-10">
-                <h1 class="text-5xl uppercase font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a></h1>
+                <h1 class="text-5xl font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a><span class="text-pbw-yellow">.{$page.params.type}s</span></h1>
             </div>
             <div class="flex flex-wrap md:flex-nowrap w-full">
 
@@ -45,9 +40,9 @@
                             <img src={item.logo} class="rounded-xl" alt={item.name} />
                         </div>
                     {/if}
-                    {#if item.photoUrl}
+                    {#if item.photoUrl || item.photo}
                         <div class="w-48 mr-5">
-                            <img src={item.photoUrl} class="rounded-xl" alt={item.name} />
+                            <img src={item.photoUrl || item.photo} class="rounded-xl aspect-square object-cover" alt={item.name} />
                         </div>
                     {/if}
                     <div class="flex-grow">
@@ -120,6 +115,36 @@
                                 <div><div class="uppercase text-sm opacity-40">Organizator</div><div class="markdown"><SvelteMarkdown source={item.org || 'TBD'} /></div></div>
                                 {#if item.poc}
                                     <div><div class="uppercase text-sm opacity-40">Point of contact</div><div class="markdown"><SvelteMarkdown source={item.poc} /></div></div>
+                                {/if}
+                            </div>
+                        {/if}
+                        {#if col === 'place'}
+                            <div class="flex flex-wrap gap-6 text-xl mt-4">
+                                {#if item.address}
+                                    <div>
+                                        <div class="uppercase text-sm opacity-40">Address</div>
+                                        <div class="flex gap-2">
+                                            {item.address}
+                                        </div>
+                                    </div>
+                                {/if}
+                                {#if item.capacity}
+                                    <div>
+                                        <div class="uppercase text-sm opacity-40">Capacity</div>
+                                        <div class="flex gap-2">
+                                            {item.capacity} ppl
+                                        </div>
+                                    </div>
+                                {/if}
+                                {#if item.eventTypes && item.eventTypes.length > 0}
+                                    <div>
+                                        <div class="uppercase text-sm opacity-40">Event Types</div>
+                                        <div class="flex gap-2">
+                                            {#each item.eventTypes as type}
+                                                <div>{type}</div>
+                                            {/each}
+                                        </div>
+                                    </div>
                                 {/if}
                             </div>
                         {/if}

@@ -45,6 +45,9 @@
                 {#if col === "union"}
                     <div class="text-base text-gray-500 my-2"><SvelteMarkdown source={item.description} /></div>
                 {/if}
+                {#if col === "place"}
+                    <div class="text-xl text-gray-500 my-2">{item.capacity} ppl</div>
+                {/if}
             </div>
         {/if}
     </div>

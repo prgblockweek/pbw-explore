@@ -1,5 +1,9 @@
 export const config = {
     collections: {
+        places: {
+            title: "Places",
+            model: "place"
+        },
         events: {
             title: "Events",
             model: "event"

@@ -49,7 +49,7 @@
     <div class="max-w-7xl mx-auto pt-5 md:pt-10">
         <div class="mx-4 xl:mx-0">
             <div class="flex gap-8 mb-10">
-                <h1 class="text-5xl uppercase font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a></h1>
+                <h1 class="text-5xl font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a><span class="text-pbw-yellow">.{$page.params.type}</span></h1>
             </div>
             <div class="flex flex-wrap md:flex-nowrap w-full">
             </div>
