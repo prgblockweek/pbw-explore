@@ -19,6 +19,10 @@ export const config = {
         benefits: {
             title: "Benefits for visitors",
             model: "benefit"
+        },
+        unions: {
+            title: "Event Unions",
+            model: "union"
         }
     },
     eventTypeColors: {
