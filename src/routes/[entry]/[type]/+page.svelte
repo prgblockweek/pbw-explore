@@ -48,35 +48,35 @@
 <div class="w-full">
     <div class="max-w-7xl mx-auto pt-5 md:pt-10">
         <div class="mx-4 xl:mx-0">
-            <div class="flex gap-8 mb-10">
-                <h1 class="text-5xl font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a><span class="text-pbw-yellow">.{$page.params.type}</span></h1>
+            <div class="flex gap-8 mb-6 md:mb-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a><span class="text-pbw-yellow">.{$page.params.type}</span></h1>
             </div>
             <div class="flex flex-wrap md:flex-nowrap w-full">
             </div>
             <h2 class="text-2xl uppercase font-bold text-gray-500">{tc.title} ({processedItems.length})</h2>
             <div class="text-xl mt-6">  
-                <table class="w-full">
+                <table class="w-full table-auto">
                     <thead>
                         <tr class="text-left">
                             {#if type === 'events'}
                                 <th class="text-right pr-4">📅</th>
                                 <th></th>
                                 <th>Name</th>
-                                <th>📍</th>
-                                <th>👥</th>
+                                <th class="hidden md:table-cell">📍</th>
+                                <th class="hidden md:table-cell">👥</th>
                             {/if}
                             {#if type === 'speakers'}
                                 <th></th>
                                 <th>Name</th>
                                 <th>🌎</th>
-                                <th>🐦</th>
-                                <th>Bio</th>
+                                <th class="hidden md:table-cell">🐦</th>
+                                <th class="hidden md:table-cell">Bio</th>
                             {/if}
                             {#if type === 'media-partners'}
                                 <th></th>
                                 <th>Name</th>
                                 <th>🌎</th>
-                                <th>Description</th>
+                                <th class="hidden md:table-cell">Description</th>
                             {/if}
                             {#if type === 'benefits'}
                                 <th></th>
@@ -86,7 +86,7 @@
                                 <th></th>
                                 <th>Name</th>
                                 <th>👥</th>
-                                <th>Address</th>
+                                <th class="hidden md:table-cell">Address</th>
                             {/if}
                         </tr>
                     </thead>
@@ -94,8 +94,8 @@
                         {#each processedItems as item}
                             <tr class="">
                                 {#if type === 'events'}
-                                    <td class="text-right pr-4">{formatItemDate(item)}</td>
-                                    <td class="w-14">
+                                    <td class="text-right pr-2 md:pr-4 text-base md:text-xl">{formatItemDate(item)}</td>
+                                    <td class="w-12 md:w-14">
                                         <a href="/{entry}/{tc.model}/{item.id}">
                                             {#if item.logo}
                                                 <img src={item.logo} class="w-10 rounded aspect-square object-cover" />
@@ -105,15 +105,15 @@
                                             {/if}
                                         </a>
                                     </td>
-                                    <td class="text-2xl flex items-center h-12">
+                                    <td class="text-lg md:text-2xl flex items-center h-12">
                                         <div class=""><a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a></div>
-                                        <div class="flex gap-1 items-center ml-4">
+                                        <div class="flex gap-1 items-center ml-4 hidden md:block">
                                             {#each item.types as type}
                                                 <EventTypeBadge {type} />
                                             {/each}
                                         </div>
                                     </td>
-                                    <td>
+                                    <td class="hidden md:table-cell">
                                         {#if item.venues}
                                             {@html item.venues.map(vId => {
                                                 const place = data.bundle.places.find(p => p.id === vId)
@@ -127,8 +127,8 @@
                                             {/if}
                                         {/if}
                                     </td>
-                                    <td>{#if item.attendees}{item.attendees}{:else}<span class="opacity-20">TBA</span>{/if}</td>
-                                    <td>
+                                    <td class="hidden md:table-cell">{#if item.attendees}{item.attendees}{:else}<span class="opacity-20">TBA</span>{/if}</td>
+                                    <td class="hidden md:table-cell">
                                         {#if item.languages && item.languages.length > 0}
                                             <div class="flex gap-1">
                                                 {#each item.languages as lang}
@@ -139,19 +139,19 @@
                                     </td>
                                 {/if}
                                 {#if type === 'speakers'}
-                                    <td class="w-14">
+                                    <td class="w-12 md:w-14">
                                         <img src={item.photoUrl} class="w-10 inline-block rounded aspect-square object-cover" />
                                     </td>
                                     <td class="text-2xl h-12">
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
                                     </td>
                                     <td>{item.country && item.country !== 'xx' ? getFlagEmoji(item.country, false) : ''}</td>
-                                    <td>
+                                    <td class="hidden md:table-cell">
                                         {#if item.twitter}
                                             @<a href="https://twitter.com/{item.twitter}" class="underline hover:no-underline">{item.twitter}</a>
                                         {/if}
                                     </td>
-                                    <td><SvelteMarkdown source={item.caption} /></td>
+                                    <td class="hidden md:table-cell"><SvelteMarkdown source={item.caption} /></td>
                                 {/if}
                                 {#if type === 'media-partners'}
                                     <td class="w-20">
@@ -169,7 +169,7 @@
                                             </div>
                                         {/if}
                                     </td>
-                                    <td class="">
+                                    <td class="hidden md:table-cell">
                                         <SvelteMarkdown source={item.description} />
                                     </td>   
                                 {/if}    
@@ -189,7 +189,7 @@
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
                                     </td>
                                     <td>{item.capacity}</td>
-                                    <td>{item.address}</td>
+                                    <td class="hidden md:table-cell">{item.address}</td>
                                 {/if}                  
                             </tr>
                         {/each}

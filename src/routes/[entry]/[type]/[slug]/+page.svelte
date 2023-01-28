@@ -30,8 +30,8 @@
 <div class="w-full">
     <div class="max-w-7xl mx-auto pt-5 md:pt-10">
         <div class="mx-4 xl:mx-0">
-            <div class="flex gap-8 mb-10">
-                <h1 class="text-5xl font-bold text-pbw-red">
+            <div class="flex gap-8 mb-6 md:mb-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-pbw-red">
                     <a href="/{$page.params.entry}">#PBW23</a><a href="/{$page.params.entry}/{colsDef[$page.params.type]}"><span class="text-pbw-yellow">.{$page.params.type}</span></a>
                 </h1>
             </div>
@@ -49,7 +49,9 @@
                     {/if}
                     <div class="flex-grow">
                         <!--div class="font-normal text opacity-50 mt-4 md:mt-0 mb-1" style="line-height: 0.6em;"><a href="/{entry}/{col}">{col.toUpperCase()}</a></div-->
-                        <h2 class="text-5xl font-bold text-gray-600 mt-4 md:mt-0">{item.name}</h2>
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-600 mt-4 md:mt-0">
+                            {item.name}
+                        </h2>
                         {#if col === 'event'}
                             <div class="text-2xl flex gap-4 mt-2 flex-wrap">
                                 <div class="flex gap-1 items-center">
