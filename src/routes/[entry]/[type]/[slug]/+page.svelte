@@ -27,7 +27,7 @@
     <title>{item.name} | #PBW{$page.params.entry}</title>
 </svelte:head>
 
-<div class="w-full">
+<div class="w-full dark:text-gray-400">
     <div class="max-w-7xl mx-auto pt-5 md:pt-10">
         <div class="mx-4 xl:mx-0">
             <div class="flex gap-8 mb-6 md:mb-10">
@@ -49,7 +49,7 @@
                     {/if}
                     <div class="flex-grow">
                         <!--div class="font-normal text opacity-50 mt-4 md:mt-0 mb-1" style="line-height: 0.6em;"><a href="/{entry}/{col}">{col.toUpperCase()}</a></div-->
-                        <h2 class="text-4xl md:text-5xl font-bold text-gray-600 mt-4 md:mt-0">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-600 dark:text-gray-400 mt-4 md:mt-0">
                             {item.name}
                         </h2>
                         {#if col === 'event'}

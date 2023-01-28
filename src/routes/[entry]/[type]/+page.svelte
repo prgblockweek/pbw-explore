@@ -54,7 +54,7 @@
             <div class="flex flex-wrap md:flex-nowrap w-full">
             </div>
             <h2 class="text-2xl uppercase font-bold text-gray-500">{tc.title} ({processedItems.length})</h2>
-            <div class="text-xl mt-6">  
+            <div class="text-xl mt-6 text-gray-500 dark:text-gray-400">  
                 <table class="w-full table-auto">
                     <thead>
                         <tr class="text-left">
@@ -92,7 +92,7 @@
                     </thead>
                     <tbody>
                         {#each processedItems as item}
-                            <tr class="">
+                            <tr class="hover:bg-pbw-yellow/20 dark:hover:bg-pbw-white/10">
                                 {#if type === 'events'}
                                     <td class="text-right pr-2 md:pr-4 text-base md:text-xl">{formatItemDate(item)}</td>
                                     <td class="w-12 md:w-14">
@@ -123,11 +123,11 @@
                                             {#if item.venueUrl}
                                                 <a href={item.venueUrl} class="underline hover:no-underline external">{item.venueName}</a>
                                             {:else}
-                                                {#if item.venueName && item.venueName !== "TBA"}{item.venueName}{:else}<span class="opacity-20">TBA</span>{/if}
+                                                {#if item.venueName && item.venueName !== "TBA"}{item.venueName}{:else}<span class="opacity-50">TBA</span>{/if}
                                             {/if}
                                         {/if}
                                     </td>
-                                    <td class="hidden md:table-cell">{#if item.attendees}{item.attendees}{:else}<span class="opacity-20">TBA</span>{/if}</td>
+                                    <td class="hidden md:table-cell">{#if item.attendees}{item.attendees}{:else}<span class="opacity-50">TBA</span>{/if}</td>
                                     <td class="hidden md:table-cell">
                                         {#if item.languages && item.languages.length > 0}
                                             <div class="flex gap-1">
@@ -201,7 +201,3 @@
     </div>
 </div>
 {/if}
-
-<style>
-    table tbody tr:hover { background-color: #fff5d2; }
-</style>
