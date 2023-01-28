@@ -16,5 +16,11 @@ export const config = {
             title: "Benefits for visitors",
             model: "benefit"
         }
+    },
+    eventTypeColors: {
+        conference: '#d3e5ee',
+        meetup: '#fdecc8',
+        hackathon: '#dad7ed',
+        expo: '#eee0da'
     }
 }

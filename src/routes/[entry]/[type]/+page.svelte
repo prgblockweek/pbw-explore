@@ -6,7 +6,9 @@
     import { goto } from '$app/navigation';
     import SvelteMarkdown from 'svelte-markdown';
     import Footer from '$lib/components/Footer.svelte';
+    import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
     import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
+    import makeBlockie from 'ethereum-blockies-base64';
 
     export let data;
 
@@ -60,7 +62,6 @@
                                 <th class="text-right pr-4">📅</th>
                                 <th></th>
                                 <th>Name</th>
-                                <th>Type</th>
                                 <th>📍</th>
                                 <th>👥</th>
                             {/if}
@@ -89,20 +90,31 @@
                                 {#if type === 'events'}
                                     <td class="text-right pr-4">{formatItemDate(item)}</td>
                                     <td class="w-14">
-                                        <img src={item.logo} class="w-10 inline-block rounded aspect-square object-cover" />
+                                        <a href="/{entry}/{tc.model}/{item.id}">
+                                            {#if item.logo}
+                                                <img src={item.logo} class="w-10 rounded aspect-square object-cover" />
+                                            {:else if item.types && item.types[0]}
+                                                <!--div class="w-10 h-10 pt-2 rounded" style="background-color: {config.eventTypeColors[item.types[0]]};"></div-->
+                                                <div class="w-10 h-10 pt-2 rounded" style="background: url({makeBlockie('0x'+item.hash.substr(0,40))}); background-size: 100% 100%;"></div>
+                                            {/if}
+                                        </a>
                                     </td>
-                                    <td class="text-2xl">
-                                        <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
+                                    <td class="text-2xl flex items-center h-12">
+                                        <div class=""><a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a></div>
+                                        <div class="flex gap-1 items-center ml-4">
+                                            {#each item.types as type}
+                                                <EventTypeBadge {type} />
+                                            {/each}
+                                        </div>
                                     </td>
-                                    <td>{item.types.join(", ")}</td>
                                     <td>
                                         {#if item.venueUrl}
                                             <a href={item.venueUrl} class="underline hover:no-underline">{item.venueName}</a>
                                         {:else}
-                                            {item.venueName}
+                                            {#if item.venueName && item.venueName !== "TBA"}{item.venueName}{:else}<span class="opacity-20">TBA</span>{/if}
                                         {/if}
                                     </td>
-                                    <td>{item.attendees || "TBA"}</td>
+                                    <td>{#if item.attendees}{item.attendees}{:else}<span class="opacity-20">TBA</span>{/if}</td>
                                     <td>
                                         {#if item.languages && item.languages.length > 0}
                                             <div class="flex gap-1">
@@ -117,14 +129,13 @@
                                     <td class="w-14">
                                         <img src={item.photoUrl} class="w-10 inline-block rounded aspect-square object-cover" />
                                     </td>
-                                    <td class="text-2xl">
+                                    <td class="text-2xl h-12">
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
                                     </td>
                                     <td>{item.country && item.country !== 'xx' ? getFlagEmoji(item.country, false) : ''}</td>
                                     <td>
                                         {#if item.twitter}
                                             @<a href="https://twitter.com/{item.twitter}" class="underline hover:no-underline">{item.twitter}</a>
-                                        {:else}
                                         {/if}
                                     </td>
                                     <td><SvelteMarkdown source={item.caption} /></td>
@@ -133,7 +144,7 @@
                                     <td class="w-20">
                                         <img src={item.logo} class="w-16 inline-block rounded aspect-[16/9] object-cover" />
                                     </td>
-                                    <td class="text-2xl">
+                                    <td class="text-2xl h-12">
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
                                     </td>
                                     <td>
@@ -153,7 +164,7 @@
                                     <td class="w-14">
                                         <img src={item.logo} class="w-10 inline-block rounded aspect-square object-cover" />
                                     </td>
-                                    <td class="text-2xl">
+                                    <td class="text-2xl h-12">
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
                                     </td>
                                 {/if}                                
@@ -169,5 +180,5 @@
 {/if}
 
 <style>
-    table tr:hover { background-color: #fff5d2; }
+    table tbody tr:hover { background-color: #fff5d2; }
 </style>

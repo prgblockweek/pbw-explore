@@ -2,6 +2,7 @@
     export let data;
     import { page } from '$app/stores';
     import CollectionList from '$lib/components/CollectionList.svelte';
+    import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
     import Footer from '$lib/components/Footer.svelte';
     import SvelteMarkdown from 'svelte-markdown';
     import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
@@ -56,7 +57,7 @@
                             <div class="text-2xl flex gap-4 mt-2 flex-wrap">
                                 <div class="flex gap-1 items-center">
                                     {#each item.types as type}
-                                        <div class="text-sm uppercase text-white bg-pbw-red rounded px-1.5 py-0.5">{type}</div>
+                                        <EventTypeBadge {type} />
                                     {/each}
                                 </div>
                                 <div class="">{formatItemDate(item, { full: true })}</div>
