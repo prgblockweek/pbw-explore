@@ -82,6 +82,12 @@
                                 <th></th>
                                 <th>Name</th>
                             {/if}
+                            {#if type === 'places'}
+                                <th></th>
+                                <th>Name</th>
+                                <th>👥</th>
+                                <th>Address</th>
+                            {/if}
                         </tr>
                     </thead>
                     <tbody>
@@ -167,7 +173,17 @@
                                     <td class="text-2xl h-12">
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
                                     </td>
-                                {/if}                                
+                                {/if}                 
+                                {#if type === 'places'}
+                                    <td class="w-14">
+                                        <img src={item.photo} class="w-10 inline-block rounded aspect-square object-cover" />
+                                    </td>
+                                    <td class="text-2xl h-12">
+                                        <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
+                                    </td>
+                                    <td>{item.capacity}</td>
+                                    <td>{item.address}</td>
+                                {/if}                  
                             </tr>
                         {/each}
                     </tbody>
