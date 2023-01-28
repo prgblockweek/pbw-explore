@@ -1,11 +1,12 @@
 <script>
-	import { dataset_dev } from "svelte/internal";
-
+    import { config } from '$lib/pbw';
     import { formatDistanceToNow } from "date-fns";
 
     export let item;
     export let col;
     export let bundle;
+
+    const cc = Object.keys(config.collections).find(c => config.collections[c].model === col)
 
     let showSource = false;
 </script>
@@ -24,7 +25,7 @@
             <div class="mt-2">
                 Last update: <a href="https://github.com/utxo-foundation/prague-blockchain-week/commits/main" target="_blank" class="underline hover:no-underline">{formatDistanceToNow(new Date(bundle.time))} ago</a>
                 {#if item}
-                    &nbsp;|&nbsp; ID: <a href="https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23/events/{item.id}" class="underline hover:no-underline" target="_blank">{item.id}</a> [{col}]
+                    &nbsp;|&nbsp; ID: <a href="https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23/{cc}/{item.id}" class="underline hover:no-underline" target="_blank">{item.id}</a> [{cc}]
                     &nbsp;|&nbsp; <button class="cursor-pointer underline hover:no-underline" on:click={() => { showSource = !showSource; return false; }}>Toggle JSON source</button>
                 {/if}
             </div>   
