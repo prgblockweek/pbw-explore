@@ -70,9 +70,47 @@
         it.perc = (it.score / (segmentsMax/100))
     }
 
+    let selectedSegment = null
+
+    function makeSelected (day, segment, keys) {
+        const baseDate = new Date(`${day}T${segment}`)
+        const title = format(baseDate, "EEEE MMMM d | HH:mm - ") + format(addMinutes(baseDate, segmentMinutes), "HH:mm")
+        return (event) => {
+            selectedSegment = {
+                day,
+                segment,
+                data: keys,
+                event,
+                title,
+            }
+        }
+    }
+    function hiddenSelected() {
+        selectedSegment = null
+    }
+
+    function eventDetail (id) {
+        return bundle.events.find(e => e.id === id)
+    }
+
 </script>
 
-<div class="w-full mb-10">
+<div class="w-full mb-10 relative">
+    {#if selectedSegment}
+        <div class="absolute top-[74px] w-[300px] border bg-white z-50 py-2 px-4 {selectedSegment ? 'block' : 'hidden'}" style="left: {selectedSegment.event.layerX}px;">
+            <div class="uppercase">{selectedSegment.title}</div>
+            <div class="text-xl mt-4">
+                {#each selectedSegment.data.events.map(e => eventDetail(e)) as item}
+                    <div class="h-12">
+                        {#if item.logo}
+                            <img src={item.logo} alt={item.name} class="rounded-lg w-full aspect-square object-cover w-10 inline-block mr-1" />
+                        {/if}
+                        {item.name}
+                    </div>
+                {/each}
+            </div>
+        </div>
+    {/if}
     <div class="flex text-center text-gray-600 text-sm">
         {#each days as day}
             <div class="mb-1 uppercase" style="width: {1/(days.length/100)}%;">
@@ -80,11 +118,11 @@
             </div>
         {/each}
     </div>
-    <div class="w-full border border-gray-600 rounded flex bg-gray-50">
+    <div class="w-full border border-gray-600 rounded flex">
         {#each days as day}
-            <div class="h-12 flex flex-grow hover:bg-pbw-yellow/30" style="width: {1/(days.length/100)}%;">
+            <div class="h-12 flex flex-grow " style="width: {1/(days.length/100)}%; border-right: 1px solid gray;">
                 {#each segments as segment}
-                    <div id="{day}-{segment}" data-events={timelineData[[day, segment].join(";")].events} data-score={timelineData[[day, segment].join(";")].score} class="hover:border hover:border-pbw-red flex-grow" style="width: {1/(segments.length/50)}%; background-color: rgba(255, 120, 120, {timelineData[[day, segment].join(";")].perc}%);">
+                    <div id="{day}-{segment}" data-events={timelineData[[day, segment].join(";")].events} data-score={timelineData[[day, segment].join(";")].score} class="hover:border hover:border-pbw-red flex-grow" style="width: {1/(segments.length/50)}%; background-color: rgba(255, 120, 120, {timelineData[[day, segment].join(";")].perc}%);" on:mouseenter={makeSelected(day, segment, timelineData[[day, segment].join(";")])} on:mouseleave={hiddenSelected}>
                     </div>
                 {/each}
             </div>
