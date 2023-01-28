@@ -107,7 +107,7 @@
                                     </td>
                                     <td class="text-lg md:text-2xl flex items-center h-12">
                                         <div class=""><a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a></div>
-                                        <div class="flex gap-1 items-center ml-4 hidden md:block">
+                                        <div class="gap-1 items-center ml-4 hidden md:flex">
                                             {#each item.types as type}
                                                 <EventTypeBadge {type} />
                                             {/each}
