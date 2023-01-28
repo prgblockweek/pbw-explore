@@ -7,10 +7,8 @@
     import SvelteMarkdown from 'svelte-markdown';
     import Footer from '$lib/components/Footer.svelte';
     import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
-    import Timeline from "$lib/components/Timeline.svelte";
     import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
     import makeBlockie from 'ethereum-blockies-base64';
-	import TimelineItem from '../../../lib/components/TimelineItem.svelte';
 
     export let data;
 
