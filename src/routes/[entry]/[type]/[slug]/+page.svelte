@@ -49,7 +49,7 @@
                     {/if}
                     <div class="flex-grow">
                         <!--div class="font-normal text opacity-50 mt-4 md:mt-0 mb-1" style="line-height: 0.6em;"><a href="/{entry}/{col}">{col.toUpperCase()}</a></div-->
-                        <h2 class="text-5xl font-bold text-gray-600">{item.name}</h2>
+                        <h2 class="text-5xl font-bold text-gray-600 mt-4 md:mt-0">{item.name}</h2>
                         {#if col === 'event'}
                             <div class="text-2xl flex gap-4 mt-2 flex-wrap">
                                 <div class="flex gap-1 items-center">
@@ -59,8 +59,13 @@
                                 </div>
                                 <div class="">{formatItemDate(item, { full: true })}</div>
                                 <div>📍 
-                                    {#if item.venueUrl}
-                                        <a href="{item.venueUrl}" target="_blank" class="underline hover:no-underline">{item.venueName}</a>
+                                    {#if item.venues}
+                                        {@html item.venues.map(vId => {
+                                            const place = data.bundle.places.find(p => p.id === vId)
+                                            return `<a href="/${$page.params.entry}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`
+                                        }).join(", ")}
+                                    {:else if item.venueUrl}
+                                        <a href="{item.venueUrl}" target="_blank" class="underline hover:no-underline external">{item.venueName}</a>
                                     {:else}
                                         {item.venueName}
                                     {/if}
@@ -216,55 +221,13 @@
                 </div>
             {/if}
 
-            <!--div class="p-2 text-xl m-6">
-                <table>
-                {#each Object.keys(defs.properties) as key}
-                    <tr>
-                        <td class="text-right pr-4 text-gray-400 align-top">{defs.properties[key]?.title || key}</td>
-                        <td>
-                            {#if key === 'logo'}
-                                <div class="m-2">
-                                    <a href={item.logo} target="_blank"><img class="w-32" src={item.logo} /></a>
-                                </div>
-                            {/if}
-                            {#if defs.properties[key].type === 'string' && defs.properties[key].format === 'uri'}
-                                <a href="{item[key]}" class="underline hover:no-underline">{item[key]}</a>
-                            {:else if defs.properties[key].type === 'array'}
-                                {item[key]?.join(", ")}
-                                {#if defs.properties[key].items?.enum}
-                                <div class="text-base">Available choices: {defs.properties[key].items.enum.join(", ")}</div>
-                                {/if}
-                            {:else if defs.properties[key].type === 'string' && defs.properties[key].__markdown}
-                                {#if item[key]}
-                                    <div class="md"><SvelteMarkdown source={item[key]} /></div>
-                                {:else}
-                                    ❌
-                                {/if}
-                            {:else if key === "links" && defs.properties[key].type === 'object' && typeof item[key] === 'object'}
-                                <div>
-                                    {#each Object.keys(item[key]) as lkey}
-                                        <div>
-                                            {lkey}: 
-                                            <a class="underline hover:no-underline" target="_blank" href={item[key][lkey]}>
-                                                {item[key][lkey].replace(/^https?:\/\//,'').replace(/\/$/,'')}
-                                            </a>
-                                        </div>
-                                    {/each}
-                                </div>
-                            {:else}
-                                {item[key] || "❌"}
-                            {/if}
-                            {#if defs.properties[key].enum}
-                                <div class="text-base">Available choices: {defs.properties[key].enum.join(", ")}</div>
-                            {/if}
-
-                        </td>
-                    </tr>
-                {/each}
-                </table>
-            </div-->
-
             {#if col === "event"}
+                {#if item.venues}
+                    <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Venues ({item.venues?.length || 0})</h2>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
+                        <CollectionList arr={data.bundle.places.filter(p => item.venues.includes(p.id))} col="place" img="photo" />
+                    </div>
+                {/if}
                 {#if item.speakers}
                     <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Speakers ({item.speakers?.length || 0})</h2>
                     <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
@@ -288,6 +251,12 @@
                 <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Events ({data.bundle.events.filter(e => e.speakers?.find(s => s.id === item.id)).length || 0})</h2>
                 <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
                     <CollectionList arr={data.bundle.events.filter(e => e.speakers?.find(s => s.id === item.id))} col="event" img="logo" />
+                </div>
+            {/if}
+            {#if col === "place"}
+                <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Events ({data.bundle.events.filter(e => e.venues?.includes(item.id)).length || 0})</h2>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
+                    <CollectionList arr={data.bundle.events.filter(e => e.venues?.includes(item.id))} col="event" img="logo" />
                 </div>
             {/if}
 

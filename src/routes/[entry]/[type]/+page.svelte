@@ -114,10 +114,17 @@
                                         </div>
                                     </td>
                                     <td>
-                                        {#if item.venueUrl}
-                                            <a href={item.venueUrl} class="underline hover:no-underline">{item.venueName}</a>
-                                        {:else}
-                                            {#if item.venueName && item.venueName !== "TBA"}{item.venueName}{:else}<span class="opacity-20">TBA</span>{/if}
+                                        {#if item.venues}
+                                            {@html item.venues.map(vId => {
+                                                const place = data.bundle.places.find(p => p.id === vId)
+                                                return `<a href="/${$page.params.entry}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`
+                                            }).join(", ")}
+                                        {:else if item.venueName}
+                                            {#if item.venueUrl}
+                                                <a href={item.venueUrl} class="underline hover:no-underline external">{item.venueName}</a>
+                                            {:else}
+                                                {#if item.venueName && item.venueName !== "TBA"}{item.venueName}{:else}<span class="opacity-20">TBA</span>{/if}
+                                            {/if}
                                         {/if}
                                     </td>
                                     <td>{#if item.attendees}{item.attendees}{:else}<span class="opacity-20">TBA</span>{/if}</td>
