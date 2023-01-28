@@ -7,8 +7,10 @@
     import SvelteMarkdown from 'svelte-markdown';
     import Footer from '$lib/components/Footer.svelte';
     import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
+    import Timeline from "$lib/components/Timeline.svelte";
     import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
     import makeBlockie from 'ethereum-blockies-base64';
+	import TimelineItem from '../../../lib/components/TimelineItem.svelte';
 
     export let data;
 
@@ -200,5 +202,19 @@
         </div>
     </div>
 </div>
+{/if}
+{#if type === 'timeline'} 
+<div class="w-full">
+    <div class="max-w-7xl mx-auto pt-5 md:pt-10">
+        <div class="mx-4 xl:mx-0">
+            <div class="flex gap-8 mb-6 md:mb-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a><span class="text-pbw-yellow">.{$page.params.type}</span></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <Timeline />
+    <div class="bg-sky-800 h-[1000px]">high content below to test sticky header</div>
 {/if}
 

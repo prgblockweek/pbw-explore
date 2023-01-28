@@ -1,5 +1,5 @@
 <script>
-    import TimelineItem from "$lib/TimelineItem.svelte";
+    import TimelineItem from "$lib/components/TimelineItem.svelte";
 </script>
 
 <div class="w-full min-h-screen  text-pbw-white text-xl">    
@@ -32,8 +32,5 @@
             <TimelineItem name="Škodaverse" start="4" />
             
         </div>
-    </div>
-    <div class="h-[1000px] bg-sky-600">
-        content below
     </div>
 </div>
