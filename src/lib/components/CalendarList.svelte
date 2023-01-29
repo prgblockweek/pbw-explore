@@ -15,7 +15,7 @@
             <div class="text-xl md:w-32 text-right">{format(new Date(segment.startTime), "HH:mm")} - {format(new Date(segment.endTime), "HH:mm")}</div>
             <div class="flex flex-wrap gap-2 items-center mb-6 md:mb-0">
                     <div>
-                        <a href="/{entry}/event/{(segment.event || event).id}.id}">
+                        <a href="/{entry}/event/{(segment.event || event).id}">
                             <ItemLogo item={segment.event || event} width={event ? 'w-8' : 'w-10'}/>
                         </a>
                     </div>
