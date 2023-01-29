@@ -3,6 +3,7 @@
     import { goto } from '$app/navigation';
     import ItemLogo from '$lib/components/ItemLogo.svelte';
     export let data;
+    export let highlightDay = false;
 
     const startDate = "2023-06-02"
     const endDate = "2023-06-11"
@@ -35,7 +36,7 @@
         }
     }
 
-    function updateTimelineEvent(time, eventId, attendees) {
+    function updateTimelineEvent(time, eventId, attendees, eventSegmentId) {
         for (const day of days) {
             for (const segment of segments) {
                 const sstart = new Date(`${day}T${segment}`)
@@ -45,7 +46,7 @@
                     const baseScore = attendees ? (attendees > 3000 ? 3000 : (attendees < 200 ? 200 : attendees)) : 0
                     const target = timelineData[[day, segment].join(';')]
                     target.score += baseScore || 0
-                    target.events.push(eventId)
+                    target.events.push([eventId, eventSegmentId])
                 }
             }
         }
@@ -53,25 +54,14 @@
 
     const defaultTimes = "09:00-18:00"
     for (const event of bundle.events) {
-        if (event.segments) {
-            for (const eventSegment of event.segments) {
-                const [ tstart, tend ] = (eventSegment.times || defaultTimes).split('-')
-                const time = {
-                    start: new Date(`${eventSegment.date}T${tstart}`),
-                    end: new Date(`${tend <= tstart ? format(addDays(new Date(eventSegment.date),1), 'yyyy-MM-dd') : eventSegment.date}T${tend}`)
-                }
-                updateTimelineEvent(time, event.id, eventSegment.ecap || event.attendees)               
+        for (let i = 0; i < event.segments.length; i++) {
+            const eventSegment = event.segments[i]
+            const [ tstart, tend ] = (eventSegment.times || defaultTimes).split('-')
+            const time = {
+                start: new Date(`${eventSegment.date}T${tstart}`),
+                end: new Date(`${tend <= tstart ? format(addDays(new Date(eventSegment.date),1), 'yyyy-MM-dd') : eventSegment.date}T${tend}`)
             }
-        } else {
-            const [ tstart, tend ] = (event.times || defaultTimes).split('-').map(t => t.trim())
-            const times = []
-            for (let i = 0; i < (event.days || 1); i++) {
-                const time = {
-                    start: addDays(new Date(event.date + "T" + tstart), i),
-                    end: addDays(new Date(event.date + "T" + tend), (tend < tstart ? i+1 : i))
-                }
-                updateTimelineEvent(time, event.id, event.attendees)
-            }
+            updateTimelineEvent(time, event.id, eventSegment.ecap || event.attendees, i)               
         }
     }
 
@@ -116,34 +106,49 @@
 
 <div class="w-full mb-10 relative">
     {#if selectedSegment}
-        <div class="absolute top-[66px] w-[300px] border bg-white z-50 py-2 px-4 {selectedSegment ? 'block' : 'hidden'}" style="left: {selectedSegment.event.layerX}px;">
+        <div class="absolute top-[81px] w-[300px] border bg-white z-50 py-2 px-4 {selectedSegment ? 'block' : 'hidden'}" style="left: {selectedSegment.event.layerX}px;">
             <div class="uppercase">{selectedSegment.title}</div>
             <div class="text-xl mt-4">
-                {#each selectedSegment.data.events.map(e => eventDetail(e)) as item}
+                {#each selectedSegment.data.events.map(e => { return [eventDetail(e[0]), e[1]] }) as [item, segmentId]}
                     <div class="flex gap-2 items-center mb-1">
                         <div class="">
                             <ItemLogo {item} width="h-8" />
                         </div>
                         <div class="">
                             {item.shortname || item.name}
+                            {#if item.segments[segmentId].title}
+                                - {item.segments[segmentId].title}
+                            {/if}
                         </div>
                     </div>
                 {/each}
             </div>
         </div>
     {/if}
-    <div class="flex text-center text-gray-400 text-sm">
+    <div class="flex text-center text-gray-400 text-sm items-end h-10">
         {#each days as day}
-            <div class="mb-1 uppercase" style="width: {1/(days.length/100)}%;">
+            <div class="mb-1 uppercase {highlightDay && highlightDay !== day ? "text-gray-400 text-lg" : "text-pbw-red text-lg"}" style="width: {1/(days.length/100)}%;">
                 <a href="/23/day/{format(new Date(day), 'yyyy-MM-dd')}"><span class="hidden md:inline-block">{format(new Date(day), 'eee ')}</span> {format(new Date(day), 'd')}</a>
             </div>
         {/each}
     </div>
-    <div class="w-full border border-gray-300 rounded flex">
+    <div class="w-full border {highlightDay ? 'border-gray-300' : 'border-pbw-red'} flex">
         {#each days as day, i}
-            <div class="h-10 flex flex-grow hover:bg-pbw-yellow/20" style="width: {1/(days.length/100)}%; {days.length-i > 1 ? "border-right: 1px solid silver;" : ""}">
+            <div
+                class="h-10 flex flex-grow hover:bg-pbw-yellow/20"
+                style="width: {1/(days.length/100)}%; {days.length-i > 1 ? "border-right: 1px solid "+ (highlightDay ? "silver" : "rgb(255, 22, 22)")+ ";" : ""}"
+            >
                 {#each segments as segment}
-                    <div id="{day}-{segment}" data-events={timelineData[[day, segment].join(";")].events} data-score={timelineData[[day, segment].join(";")].score} class="hover:border hover:border-pbw-yellow flex-grow cursor-pointer" style="width: {1/(segments.length/50)}%; background-color: rgba(255, 22, 22, {timelineData[[day, segment].join(";")].perc}%);" on:click={makeClick(day, segment, timelineData[[day, segment].join(";")])} on:mouseenter={makeSelected(day, segment, timelineData[[day, segment].join(";")])} on:mouseleave={hiddenSelected}>
+                    <div 
+                        id="{day}-{segment}"
+                        data-events={timelineData[[day, segment].join(";")].events}
+                        data-score={timelineData[[day, segment].join(";")].score}
+                        class="hover:border hover:border-pbw-yellow flex-grow cursor-pointer"
+                        style="width: {1/(segments.length/50)}%; background-color: rgba({!highlightDay || highlightDay === day ? "255, 22, 22" : "115, 115, 115"}, {timelineData[[day, segment].join(";")].perc}%);"
+                        on:click={makeClick(day, segment, timelineData[[day, segment].join(";")])}
+                        on:mouseenter={makeSelected(day, segment, timelineData[[day, segment].join(";")])}
+                        on:mouseleave={hiddenSelected}
+                    >
                     </div>
                 {/each}
             </div>

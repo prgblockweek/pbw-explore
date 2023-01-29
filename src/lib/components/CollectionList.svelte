@@ -32,7 +32,7 @@
                 {#if col === "event"}
                     <div class="text-xl text-gray-500 dark:text-gray-400  my-2">
                         <span class="font-bold">{formatItemDate(item)}</span>
-                        {#if item.attendees}<br />{item.attendees}+ ppl{/if}
+                        {#if item.attendees}<br />{item.attendees} ppl{/if}
                     </div>
                 {/if}
                 {#if col === "media-partner"}

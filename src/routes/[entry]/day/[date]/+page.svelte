@@ -48,13 +48,13 @@
             <div class="flex gap-8 mb-6 md:mb-10">
                 <h1 class="text-4xl md:text-5xl font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a><span class="text-pbw-yellow">.day</span></h1>
             </div>
+        
+            <TimelineHeatmap {data} highlightDay={$page.params.date} />
+            <h2 class="text-4xl font-bold text-gray-600">{format(new Date($page.params.date), "MMMM d, yyyy - EEEE")}</h2>
+            <div class="mt-10">
+                <CalendarList date={$page.params.date} segments={segments} entry={$page.params.entry} bundle={data.bundle} />
+            </div>
+            <Footer bundle={data.bundle} />
         </div>
-
-        <TimelineHeatmap {data} />
-        <h2 class="text-4xl font-bold text-gray-600">{format(new Date($page.params.date), "MMMM d, yyyy - EEEE")}</h2>
-        <div class="mt-10">
-            <CalendarList date={$page.params.date} segments={segments} entry={$page.params.entry} bundle={data.bundle} />
-        </div>
-        <Footer bundle={data.bundle} />
     </div>
 </div>
