@@ -2,11 +2,13 @@
     export let data;
     import { page } from '$app/stores';
     import CollectionList from '$lib/components/CollectionList.svelte';
+    import CalendarList from '$lib/components/CalendarList.svelte';
     import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
     import Footer from '$lib/components/Footer.svelte';
     import SvelteMarkdown from 'svelte-markdown';
     import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
     import { config } from '$lib/pbw';
+    import { format } from 'date-fns';
 
     const colsDef = Object.fromEntries(Object.keys(config.collections).map(col => { return [ config.collections[col].model, col ]}))
 
@@ -14,6 +16,17 @@
         twitter: { col: x => x.twitter ? 'https://twitter.com/'+x.twitter : null },
         web: { col: x => x.web?.url },
         linkedin: { col: x => x.linkedin ? 'https://linkedin.com/in/'+x.linkedin : null }
+    }
+
+    function eventDates(event) {
+        const dates = []
+        for (const seg of event.segments) {
+            const date = format(new Date(seg.startTime), 'yyyy-MM-dd')
+            if (!dates.includes(date)) {
+                dates.push(date)
+            }
+        }
+        return dates
     }
 
     $: entry = $page.params.entry
@@ -224,6 +237,17 @@
             {/if}
 
             {#if col === "event"}
+                {#if item.segments}
+                    <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Day Schedule</h2>
+                    {#each eventDates(item) as date}
+                        <div class="mb-6">
+                            <h3 class="mt-4 text-xl uppercase text-gray-500"><a href="/{entry}/day/{date}">{format(new Date(date), "EEEE - MMMM d, yyyy")}</a></h3>
+                            <div class="mt-4">
+                                <CalendarList date={date} segments={item.segments.filter(s => s.startTime.match(new RegExp("^"+date)))} entry={entry} bundle={data.bundle} event={item} />
+                            </div>
+                        </div>
+                    {/each}
+                {/if}
                 {#if item.venues}
                     <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Venues ({item.venues?.length || 0})</h2>
                     <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">

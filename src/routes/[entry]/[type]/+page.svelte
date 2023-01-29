@@ -9,6 +9,9 @@
     import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
     import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
     import makeBlockie from 'ethereum-blockies-base64';
+    import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
+    import { compareAsc, compareDesc, addMinutes } from 'date-fns';
+    import { writable } from 'svelte/store';
 
     export let data;
 
@@ -17,17 +20,27 @@
     $: tc = config.collections[type]
     $: items = data.bundle[type]
 
-
-    function processItems(_items) {
+    function processItems(_items, query = {}) {
         if (!_items) return [];
         _items = JSON.parse(JSON.stringify(_items))
         if (type === 'events') {
             _items = _items.sort((x, y) => x.date > y.date ? 1 : -1)
         }
+        if (type === 'events' && query.start && query.end) {
+            _items = _items.filter(item => {
+                return item.segments.find(sgm => {
+                    const [ tstart, tend ] = sgm.times.split("-")
+                    return compareAsc(new Date(sgm.startTime), new Date(query.start)) <= 0
+                        && compareAsc(new Date(sgm.endTime), new Date(query.end)) >= 0
+                })
+        //        return compareAsc(item.new Date(query.segment) > 0)
+            })
+        }
+        
         return _items
     }
-
-    $: processedItems = processItems(items)
+    
+    $: processedItems = processItems(items) //, Object.fromEntries($page.url.searchParams))
 
     onMount(async () => {
         if (!config.collections[$page.params.type]) {
@@ -53,8 +66,9 @@
             </div>
             <div class="flex flex-wrap md:flex-nowrap w-full">
             </div>
+            <TimelineHeatmap {data} />
             <h2 class="text-2xl uppercase font-bold text-gray-500">{tc.title} ({processedItems.length})</h2>
-            <div class="text-xl mt-6 text-gray-500 dark:text-gray-400">  
+            <div class="text-xl mt-6 text-gray-800 dark:text-gray-400">  
                 <table class="w-full table-auto">
                     <thead>
                         <tr class="text-left">

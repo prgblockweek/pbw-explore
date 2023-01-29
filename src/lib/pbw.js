@@ -29,6 +29,7 @@ export const config = {
         conference: '#d3e5ee',
         meetup: '#fdecc8',
         hackathon: '#dad7ed',
-        expo: '#eee0da'
+        expo: '#eee0da',
+        party: '#dbeddb'
     }
 }
