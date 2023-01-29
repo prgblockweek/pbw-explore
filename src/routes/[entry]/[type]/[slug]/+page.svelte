@@ -248,6 +248,17 @@
             {/if}
 
             {#if col === "event"}
+                {#if item.tracks}
+                    <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Tracks</h2>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        {#each item.tracks as track}
+                            <div class="border rounded-lg bg-gray-50 items-center py-1.5 px-2">
+                                <div class="text-xl" title={track.name}>{track.shortname || track.name}</div>
+                                <!--div class="text-lg markdown"><SvelteMarkdown source={track.examples} /></div-->
+                            </div>
+                        {/each}
+                    </div>
+                {/if}
                 {#if item.segments}
                     <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Schedule</h2>
                     {#each eventDates(item) as date}
