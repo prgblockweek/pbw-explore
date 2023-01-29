@@ -61,6 +61,12 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 my-6 text-center text-3xl mb-8">
             <CollectionList arr={data.bundle.unions} img="logo" col="union" entry={entry}/>
         </div>
+
+        <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500"><a href="/{entry}/chains">Blockchains</a> ({data.bundle.chains.length})</h2>       
+        <div class="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 xl:grid-cols-12 my-6 text-center text-xl">
+            <CollectionList arr={data.bundle.chains} col="chain" img="logo" entry={entry} />
+        </div>
+
         <Footer bundle={data.bundle} />
     </div>
 </div>

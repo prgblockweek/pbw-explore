@@ -26,6 +26,10 @@ export const config = {
         unions: {
             title: "Event Unions",
             model: "union"
+        },
+        chains: {
+            title: "Blockchains",
+            model: "chain"
         }
     },
     eventTypeColors: {

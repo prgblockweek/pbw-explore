@@ -100,8 +100,27 @@
                                     <div>
                                         <div class="uppercase text-sm opacity-40">Chains</div>
                                         <div class="flex gap-2">
-                                            {#each item.chains as chain}
-                                                <div>{chain.substr(0, 1).toUpperCase() + chain.substr(1)}</div>
+                                            {#each item.chains.map(chId => {
+                                                const chItem = data.bundle.chains.find(x => x.id === chId)
+                                                if (!chItem) {
+                                                    return {
+                                                        name: chain.substr(0, 1).toUpperCase() + chain.substr(1)
+                                                    }
+                                                }
+                                                return chItem
+                                            }) as chain}
+                                                <div class="flex items-center">
+                                                    {#if chain.id}
+                                                        <a href="/{entry}/chain/{chain.id}" class="flex items-center underline hover:no-underline">
+                                                            {#if chain.logo}
+                                                                <ItemLogo item={chain} width="w-5 h-5 mr-1" />
+                                                            {/if}
+                                                            {chain.name}
+                                                        </a>
+                                                    {:else}
+                                                        {chain.name}
+                                                    {/if}
+                                                </div>
                                             {/each}
                                         </div>
                                     </div>
@@ -275,6 +294,12 @@
                 <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Events ({data.bundle.events.filter(e => e.venues?.includes(item.id)).length || 0})</h2>
                 <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
                     <CollectionList arr={data.bundle.events.filter(e => e.venues?.includes(item.id))} col="event" img="logo" />
+                </div>
+            {/if}
+            {#if col === "chain"}
+                <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Events ({data.bundle.events.filter(e => e.chains?.includes(item.id)).length || 0})</h2>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
+                    <CollectionList arr={data.bundle.events.filter(e => e.chains?.includes(item.id))} col="event" img="logo" />
                 </div>
             {/if}
 
