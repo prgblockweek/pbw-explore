@@ -51,12 +51,7 @@
             </div>
             <div class="flex flex-wrap md:flex-nowrap w-full">
 
-                    <ItemLogo {item} img={config[col]?.logo || 'logo'} aspect={config[col]?.aspect || 'aspect-square'} width="w-48 md:w-56 mr-5" rounded="rounded-xl"/>
-                    {#if item.photoUrl || item.photo}
-                        <div class="w-48 mr-5">
-                            <img src={item.photoUrl || item.photo} class="rounded-xl aspect-square object-cover" alt={item.name} />
-                        </div>
-                    {/if}
+                    <ItemLogo {item} img={config.collections[colPlural]?.img || 'logo'} aspect={config[col]?.aspect || 'aspect-square'} width="w-48 md:w-56 mr-5" rounded="rounded-xl"/>
                     <div class="flex-grow">
                         <!--div class="font-normal text opacity-50 mt-4 md:mt-0 mb-1" style="line-height: 0.6em;"><a href="/{entry}/{col}">{col.toUpperCase()}</a></div-->
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-600 dark:text-gray-400 mt-4 md:mt-0">
@@ -235,7 +230,7 @@
 
             {#if col === "event"}
                 {#if item.segments}
-                    <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Day Schedule</h2>
+                    <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Schedule</h2>
                     {#each eventDates(item) as date}
                         <div class="mb-6">
                             <h3 class="mt-4 text-xl uppercase text-gray-500"><a href="/{entry}/day/{date}">{format(new Date(date), "EEEE - MMMM d, yyyy")}</a></h3>
