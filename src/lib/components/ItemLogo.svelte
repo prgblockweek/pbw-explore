@@ -11,7 +11,7 @@
 </script>
 
 {#if item[img]}
-    <img src={item[img]} class="{width} {rounded} {aspect} object-cover" alt={item.name} />
+    <img src={item[img]} class="{width} {rounded} {aspect} object-cover dark:bg-white" alt={item.name} />
 {:else if item.hash}
-    <div class="{width} {rounded} {aspect} object-cover" style="background: url({blockie}); background-size: 100% 100%;"></div>
+    <div class="{width} {rounded} {aspect} object-cover dark:bg-white" style="background: url({blockie}); background-size: 100% 100%;"></div>
 {/if}

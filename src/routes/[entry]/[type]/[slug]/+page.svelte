@@ -240,12 +240,6 @@
                         </div>
                     {/each}
                 {/if}
-                {#if item.venues}
-                    <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Venues ({item.venues?.length || 0})</h2>
-                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
-                        <CollectionList arr={data.bundle.places.filter(p => item.venues.includes(p.id))} col="place" img="photo" />
-                    </div>
-                {/if}
                 {#if item.speakers}
                     <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Speakers ({item.speakers?.length || 0})</h2>
                     <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
@@ -256,6 +250,12 @@
                     <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Sub-Events ({item.events?.length || 0})</h2>
                     <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center">
                         <CollectionList arr={item.events} />
+                    </div>
+                {/if}
+                {#if item.venues}
+                    <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Venues ({item.venues?.length || 0})</h2>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
+                        <CollectionList arr={data.bundle.places.filter(p => item.venues.includes(p.id))} col="place" img="photo" />
                     </div>
                 {/if}
             {/if}
