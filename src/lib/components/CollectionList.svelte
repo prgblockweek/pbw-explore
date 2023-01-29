@@ -21,10 +21,12 @@
             let found = null
             for (const e of bundle.events) {
                 if (!e.speakers) continue;
-                if (currentItem && e.id === currentItem.id) continue;
-                found = e.speakers.find(s => s.id === it.id)
+                found = e.speakers.find(s => {
+                    return s.id === it.id && s.name
+                })
+                if (found) break;
             }
-            Object.assign(it, found)
+            Object.assign(it, found || {})
         }
         return it
     }
