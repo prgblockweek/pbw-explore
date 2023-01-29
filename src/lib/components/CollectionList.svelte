@@ -10,10 +10,13 @@
     export let aspect = "aspect-square";
     export let size = "normal";
     export let offer = false;
-    export let bundle;
-    export let currentItem;
+    export let bundle = null;
+    export let currentItem = null;
 
     function findObject (it) {
+        if (!bundle) {
+            return it
+        }
         if (col === "speaker" && !it.name) {
             let found = null
             for (const e of bundle.events) {
