@@ -106,7 +106,7 @@
 
 <div class="w-full mb-10 relative">
     {#if selectedSegment}
-        <div class="absolute top-[81px] w-[300px] border bg-white z-50 py-2 px-4 {selectedSegment ? 'block' : 'hidden'}" style="left: {selectedSegment.event.layerX}px;">
+        <div class="absolute top-[81px] w-[300px] border bg-white z-50 py-2 px-4 {selectedSegment ? 'hidden md:block' : 'hidden'}" style="left: {selectedSegment.event.layerX}px;">
             <div class="uppercase">{selectedSegment.title}</div>
             <div class="text-xl mt-4">
                 {#each selectedSegment.data.events.map(e => { return [eventDetail(e[0]), e[1]] }) as [item, segmentId]}
@@ -136,14 +136,14 @@
         {#each days as day, i}
             <div
                 class="h-10 flex flex-grow hover:bg-pbw-yellow/20"
-                style="width: {1/(days.length/100)}%; {days.length-i > 1 ? "border-right: 1px solid "+ (highlightDay ? "silver" : "rgb(255, 22, 22)")+ ";" : ""}"
+                style="width: {1/(days.length/100)}%; {(highlightDay && highlightDay === day ? "border: 1px solid rgb(255, 22, 22);" : (!highlightDay ? "border-right: 1px solid rgb(255, 22, 22);" : (days.length-i > 1 ? "border-right: 1px solid silver;" : "")))}"
             >
                 {#each segments as segment}
                     <div 
                         id="{day}-{segment}"
                         data-events={timelineData[[day, segment].join(";")].events}
                         data-score={timelineData[[day, segment].join(";")].score}
-                        class="hover:border hover:border-pbw-yellow flex-grow cursor-pointer"
+                        class="md:hover:border md:hover:border-pbw-yellow flex-grow cursor-pointer"
                         style="width: {1/(segments.length/50)}%; background-color: rgba({!highlightDay || highlightDay === day ? "255, 22, 22" : "115, 115, 115"}, {timelineData[[day, segment].join(";")].perc}%);"
                         on:click={makeClick(day, segment, timelineData[[day, segment].join(";")])}
                         on:mouseenter={makeSelected(day, segment, timelineData[[day, segment].join(";")])}
