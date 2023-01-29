@@ -262,7 +262,7 @@
                 {#if item.speakers}
                     <h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Speakers ({item.speakers?.length || 0})</h2>
                     <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl">
-                        <CollectionList arr={item.speakers} />
+                        <CollectionList arr={item.speakers} bundle={data.bundle} currentItem={item} />
                     </div>
                 {/if}
                 {#if item.events}

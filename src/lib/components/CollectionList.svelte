@@ -10,11 +10,26 @@
     export let aspect = "aspect-square";
     export let size = "normal";
     export let offer = false;
+    export let bundle;
+    export let currentItem;
+
+    function findObject (it) {
+        if (col === "speaker" && !it.name) {
+            let found = null
+            for (const e of bundle.events) {
+                if (!e.speakers) continue;
+                if (currentItem && e.id === currentItem.id) continue;
+                found = e.speakers.find(s => s.id === it.id)
+            }
+            Object.assign(it, found)
+        }
+        return it
+    }
 
     const _url = (col, item) => `/${entry}/${col}/${item.id}`
 </script>
 
-{#each arr as item}
+{#each arr.map((k) => findObject(k)) as item}
     <div class="{size === "small" ? "p-0.5 lg:p-1" : "p-1 lg:p-1.5"} hover:bg-pbw-yellow/20 dark:hover:bg-pbw-white/10 {size==="small" ? "rounded-lg" : "rounded-2xl"}">
         <div class="w-full relative">
             {#if col === "benefit"}
