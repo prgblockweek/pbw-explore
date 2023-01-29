@@ -3,6 +3,7 @@
     import { page } from '$app/stores';
     import CollectionList from '$lib/components/CollectionList.svelte';
     import CalendarList from '$lib/components/CalendarList.svelte';
+    import ItemLogo from '$lib/components/ItemLogo.svelte';
     import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
     import Footer from '$lib/components/Footer.svelte';
     import SvelteMarkdown from 'svelte-markdown';
@@ -50,11 +51,7 @@
             </div>
             <div class="flex flex-wrap md:flex-nowrap w-full">
 
-                    {#if item.logo}
-                        <div class="w-48 md:w-56 mr-5">
-                            <img src={item.logo} class="rounded-xl" alt={item.name} />
-                        </div>
-                    {/if}
+                    <ItemLogo {item} img={config[col]?.logo || 'logo'} aspect={config[col]?.aspect || 'aspect-square'} width="w-48 md:w-56 mr-5" rounded="rounded-xl"/>
                     {#if item.photoUrl || item.photo}
                         <div class="w-48 mr-5">
                             <img src={item.photoUrl || item.photo} class="rounded-xl aspect-square object-cover" alt={item.name} />

@@ -2,7 +2,8 @@ export const config = {
     collections: {
         places: {
             title: "Places",
-            model: "place"
+            model: "place",
+            img: "photo"
         },
         events: {
             title: "Events",
@@ -10,11 +11,13 @@ export const config = {
         },
         speakers: {
             title: "Speakers",
-            model: "speaker"
+            model: "speaker",
+            img: "photoUrl"
         },
         "media-partners": {
             title: "Media Partners & Communities",
-            model: "media-partner"
+            model: "media-partner",
+            aspect: "aspect-video"
         },
         benefits: {
             title: "Benefits for visitors",

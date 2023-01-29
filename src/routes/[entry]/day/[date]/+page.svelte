@@ -26,12 +26,12 @@
                     endTime: sg.endTime,
                     event: ev,
                     title: sg.title,
-                    venues: sg.venues || ev.venues || [],
+                    venues: sg.venues || ev.venues || false,
                 })
             }
         }
         return arr.sort((x, y) => {
-            return x.start > y.start ? 1 : -1
+            return x.startTime > y.startTime ? 1 : -1
         })
     }
 
@@ -46,7 +46,7 @@
     <div class="max-w-7xl mx-auto pt-5 md:pt-10">
         <div class="mx-4 xl:mx-0">
             <div class="flex gap-8 mb-6 md:mb-10">
-                <h1 class="text-4xl md:text-5xl font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a><span class="text-pbw-yellow">.days</span></h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a><span class="text-pbw-yellow">.day</span></h1>
             </div>
         </div>
 

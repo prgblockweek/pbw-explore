@@ -10,6 +10,8 @@
     import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
     import makeBlockie from 'ethereum-blockies-base64';
     import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
+    import ItemLogo from '$lib/components/ItemLogo.svelte';
+
     import { compareAsc, compareDesc, addMinutes } from 'date-fns';
     import { writable } from 'svelte/store';
 
@@ -66,7 +68,9 @@
             </div>
             <div class="flex flex-wrap md:flex-nowrap w-full">
             </div>
-            <TimelineHeatmap {data} />
+            {#if type === "events"}
+                <TimelineHeatmap {data} />
+            {/if}
             <h2 class="text-2xl uppercase font-bold text-gray-500">{tc.title} ({processedItems.length})</h2>
             <div class="text-xl mt-6 text-gray-800 dark:text-gray-400">  
                 <table class="w-full table-auto">
@@ -111,12 +115,7 @@
                                     <td class="text-right pr-2 md:pr-4 text-base md:text-xl">{formatItemDate(item)}</td>
                                     <td class="w-12 md:w-14">
                                         <a href="/{entry}/{tc.model}/{item.id}">
-                                            {#if item.logo}
-                                                <img src={item.logo} class="w-10 rounded aspect-square object-cover" />
-                                            {:else if item.types && item.types[0]}
-                                                <!--div class="w-10 h-10 pt-2 rounded" style="background-color: {config.eventTypeColors[item.types[0]]};"></div-->
-                                                <div class="w-10 h-10 pt-2 rounded" style="background: url({makeBlockie('0x'+item.hash.substr(0,40))}); background-size: 100% 100%;"></div>
-                                            {/if}
+                                            <ItemLogo {item} />
                                         </a>
                                     </td>
                                     <td class="text-lg md:text-2xl flex items-center h-12">
@@ -154,7 +153,9 @@
                                 {/if}
                                 {#if type === 'speakers'}
                                     <td class="w-12 md:w-14">
-                                        <img src={item.photoUrl} class="w-10 inline-block rounded aspect-square object-cover" />
+                                        <a href="/{entry}/{tc.model}/{item.id}">
+                                            <ItemLogo {item} img="photoUrl" />
+                                        </a>
                                     </td>
                                     <td class="text-2xl h-12">
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
@@ -169,7 +170,9 @@
                                 {/if}
                                 {#if type === 'media-partners'}
                                     <td class="w-20">
-                                        <img src={item.logo} class="w-16 inline-block rounded aspect-[16/9] object-cover" />
+                                        <a href="/{entry}/{tc.model}/{item.id}">
+                                            <ItemLogo {item} width="w-16" aspect="aspect-[16/9]" />
+                                        </a>
                                     </td>
                                     <td class="text-2xl h-12">
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
@@ -189,7 +192,9 @@
                                 {/if}    
                                 {#if type === 'benefits'}
                                     <td class="w-14">
-                                        <img src={item.logo} class="w-10 inline-block rounded aspect-square object-cover" />
+                                        <a href="/{entry}/{tc.model}/{item.id}">
+                                            <ItemLogo {item} />
+                                        </a>
                                     </td>
                                     <td class="text-2xl h-12">
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>
@@ -197,7 +202,9 @@
                                 {/if}                 
                                 {#if type === 'places'}
                                     <td class="w-14">
-                                        <img src={item.photo} class="w-10 inline-block rounded aspect-square object-cover" />
+                                        <a href="/{entry}/{tc.model}/{item.id}">
+                                            <ItemLogo {item} img="photo" />
+                                        </a>
                                     </td>
                                     <td class="text-2xl h-12">
                                         <a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline">{item.name}</a>

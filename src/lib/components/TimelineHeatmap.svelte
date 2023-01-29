@@ -1,6 +1,7 @@
 <script>
     import { compareAsc, addDays, addMinutes, format } from 'date-fns';
     import { goto } from '$app/navigation';
+    import ItemLogo from '$lib/components/ItemLogo.svelte';
     export let data;
 
     const startDate = "2023-06-02"
@@ -119,11 +120,13 @@
             <div class="uppercase">{selectedSegment.title}</div>
             <div class="text-xl mt-4">
                 {#each selectedSegment.data.events.map(e => eventDetail(e)) as item}
-                    <div class="h-11">
-                        {#if item.logo}
-                            <img src={item.logo} alt={item.name} class="rounded aspect-square object-cover w-10 inline-block mr-1" />
-                        {/if}
-                        {item.shortname || item.name}
+                    <div class="flex gap-2 items-center mb-1">
+                        <div class="">
+                            <ItemLogo {item} width="h-8" />
+                        </div>
+                        <div class="">
+                            {item.shortname || item.name}
+                        </div>
                     </div>
                 {/each}
             </div>

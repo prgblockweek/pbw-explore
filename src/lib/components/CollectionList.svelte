@@ -1,4 +1,8 @@
 <script>
+    import SvelteMarkdown from 'svelte-markdown';
+    import { formatItemDate } from '$lib/utils.js';
+    import ItemLogo from '$lib/components/ItemLogo.svelte';
+
     export let arr;
     export let entry = "23";
     export let col = "speaker";
@@ -7,26 +11,21 @@
     export let size = "normal";
     export let offer = false;
 
-    import SvelteMarkdown from 'svelte-markdown';
-    import { formatItemDate } from '$lib/utils.js';
-
     const _url = (col, item) => `/${entry}/${col}/${item.id}`
 </script>
 
 {#each arr as item}
     <div class="{size === "small" ? "p-0.5 lg:p-1" : "p-1 lg:p-1.5"} hover:bg-pbw-yellow/20 dark:hover:bg-pbw-white/10 {size==="small" ? "rounded-lg" : "rounded-2xl"}">
-        {#if item[img]}
-            <div class="w-full relative">
-                {#if col === "benefit"}
-                    <div class="absolute top-3 -left-4">
-                        <div class="bg-pbw-red py-0.5 px-1.5 rounded-md text-white uppercase text-base">{item.slogan}</div>
-                    </div>
-                {/if}
-                <a href={_url(col, item)}>
-                    <img src={item[img]} alt={item.name} class="{size === "small" ? "rounded-lg" : "rounded-2xl"} w-full {aspect} object-cover" />
-                </a>
-            </div>
-        {/if}
+        <div class="w-full relative">
+            {#if col === "benefit"}
+                <div class="absolute top-3 -left-4">
+                    <div class="bg-pbw-red py-0.5 px-1.5 rounded-md text-white uppercase text-base">{item.slogan}</div>
+                </div>
+            {/if}
+            <a href={_url(col, item)}>
+                <ItemLogo {item} width="w-full" {aspect} {img} rounded={size === "small" ? "rounded-lg" : "rounded-2xl"} />
+            </a>
+        </div>
         {#if col !== "media-partner"}
             <div class="mt-2">
                 <h3 class=" text-pbw-red"><a href={_url(col, item)} class="hover:underline">{item.shortname || item.name}</a></h3>
