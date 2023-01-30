@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-    <title>#PBW{$page.params.entry} Inspector</title>
+    <title>#PBW{$page.params.entry} Explore</title>
 </svelte:head>
 
 <div class="w-full px-6 xl:mx-0">

@@ -47,7 +47,7 @@
 </script>
 
 <svelte:head>
-    <title>Schedule | #PBW{$page.params.entry} Inspector</title>
+    <title>Schedule | #PBW{$page.params.entry} Explore</title>
 </svelte:head>
 
 <div class="w-full">

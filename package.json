@@ -1,6 +1,6 @@
 {
-  "name": "pbw-inspect",
-  "version": "0.1.1",
+  "name": "pbw-explore",
+  "version": "0.2.0",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -24,11 +24,9 @@
     "prettier": "^2.8.0",
     "prettier-plugin-svelte": "^2.8.1",
     "svelte": "^3.54.0",
+    "svelte-markdown": "^0.2.3",
     "tailwindcss": "^3.2.4",
     "vite": "^4.0.0"
   },
-  "type": "module",
-  "dependencies": {
-    "svelte-markdown": "^0.2.3"
-  }
+  "type": "module"
 }

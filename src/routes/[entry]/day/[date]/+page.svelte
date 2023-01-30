@@ -39,7 +39,7 @@
 </script>
 
 <svelte:head>
-    <title>{format(new Date($page.params.date), "EEEE MMMM d, yyyy")} | #PBW{$page.params.entry} Inspector</title>
+    <title>{format(new Date($page.params.date), "EEEE MMMM d, yyyy")} | #PBW{$page.params.entry} Explore</title>
 </svelte:head>
 
 <div class="w-full">

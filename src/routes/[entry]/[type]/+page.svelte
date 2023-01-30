@@ -56,7 +56,7 @@
 </script>
 
 <svelte:head>
-    <title>{tc?.title} | #PBW{$page.params.entry} Inspector</title>
+    <title>{tc?.title} | #PBW{$page.params.entry} Explore</title>
 </svelte:head>
 
 {#if tc}
