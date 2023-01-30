@@ -1,12 +1,15 @@
 pipeline:
 
-  build_dev:
+  build:
     image: node
     commands:
       - node --version
       - npm ci
       - rm src/lib/data.json && wget -O src/lib/data.json https://data.prgblockweek.com/23/index.json
       - npm run build
+    when:
+      branch: [dev]
+
 
   deploy_dev:
     image: rclone/rclone
@@ -23,6 +26,8 @@ pipeline:
       - npm ci
       - rm src/lib/data.json && wget -O src/lib/data.json https://mirror.data.prgblockweek.com/23/index.json
       - npm run build
+    when:
+      branch: [main]
 
   deploy_mirror:
     image: rclone/rclone
