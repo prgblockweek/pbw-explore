@@ -1,20 +1,12 @@
 pipeline:
 
-  build:
+  build_dev:
     image: node
     commands:
       - node --version
       - npm ci
-      - rm src/lib/data.json && wget -O src/lib/data.json https://mirror.data.prgblockweek.com/23/index.json
+      - rm src/lib/data.json && wget -O src/lib/data.json https://data.prgblockweek.com/23/index.json
       - npm run build
-
-  deploy_main:
-    image: rclone/rclone
-    commands:
-      - "rclone sync build/ :sftp:production/ --sftp-host frontier.gwei.cz --sftp-user pbw-deploy --sftp-port 2022 --sftp-pass $RCLONE_PASS -v"
-    secrets: [RCLONE_PASS]
-    when:
-      branch: [main]
 
   deploy_dev:
     image: rclone/rclone
@@ -23,3 +15,19 @@ pipeline:
     secrets: [RCLONE_PASS]
     when:
       branch: [dev]
+
+  build_mirror:
+    image: node
+    commands:
+      - node --version
+      - npm ci
+      - rm src/lib/data.json && wget -O src/lib/data.json https://mirror.data.prgblockweek.com/23/index.json
+      - npm run build
+
+  deploy_mirror:
+    image: rclone/rclone
+    commands:
+      - "rclone sync build/ :sftp:production/ --sftp-host frontier.gwei.cz --sftp-user pbw-deploy --sftp-port 2022 --sftp-pass $RCLONE_PASS -v"
+    secrets: [RCLONE_PASS]
+    when:
+      branch: [main]
