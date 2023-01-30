@@ -1,8 +1,9 @@
 pipeline:
 
-  build_and_test:
+  build:
     image: node
     commands:
       - node --version
       - npm ci
+      - rm src/lib/data.json && wget -O src/lib/data.json https://data.prgblockweek.com/23/index.json
       - npm run build
