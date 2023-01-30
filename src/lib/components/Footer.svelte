@@ -12,7 +12,7 @@
 </script>
 
 <div class="mt-20">
-	<div class="bg-gray-100 p-4 text-lg text-gray-600">
+	<div class="bg-gray-100 dark:bg-gray-400 p-4 text-lg text-gray-600 dark:text-gray-800">
 		<div>
 			⚙ This page is automatically generated using the structured dataset which can be consumed as a
 			single JSON file → <a

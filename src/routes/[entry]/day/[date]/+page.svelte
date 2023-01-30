@@ -60,7 +60,7 @@
 			</div>
 
 			<TimelineHeatmap {data} highlightDay={$page.params.date} />
-			<h2 class="text-3xl md:text-4xl font-bold text-gray-600">
+			<h2 class="text-3xl md:text-4xl font-bold text-gray-600 dark:text-gray-500">
 				{format(new Date($page.params.date), 'MMMM d, yyyy - EEEE')}
 			</h2>
 			<div class="mt-10">
