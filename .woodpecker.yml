@@ -5,7 +5,7 @@ pipeline:
     commands:
       - node --version
       - npm ci
-      - rm src/lib/data.json && wget -O src/lib/data.json https://data.prgblockweek.com/23/index.json
+      - rm src/lib/data.json && wget -O src/lib/data.json https://mirror.data.prgblockweek.com/23/index.json
       - npm run build
 
   deploy_main:
