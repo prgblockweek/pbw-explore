@@ -14,6 +14,7 @@ export async function load(entry = '23', host = null) {
 	for (const event of data.events) {
 		if (!event.speakers) continue;
 		for (const speaker of event.speakers) {
+			if (!speaker.name) continue;
 			speaker.events = [event.id];
 			data.speakers.push(speaker);
 		}
