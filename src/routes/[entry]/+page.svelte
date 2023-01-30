@@ -3,6 +3,8 @@
 	import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { page } from '$app/stores';
+	import HomepageButton from '$lib/components/HomepageButton.svelte';
+	import DarkModeToggle from '$lib/components/DarkModeToggle.svelte';
 
 	export let data;
 	$: entry = $page.params.entry;
@@ -29,20 +31,33 @@
 	<title>#PBW{$page.params.entry} Explore</title>
 </svelte:head>
 
+<div class="w-full min-h-[98vh] bg-pbw-red bg-[url('pbw-bg-3.jpg')] bg-cover bg-center relative  rounded-br-[50px] shadow-md shadow-black">    
+    <div class="px-6 xl:px-0">
+        <div class="max-w-7xl mx-auto pt-10 pb-6 ">
+            <div class="flex w-full justify-between">
+                <h1 class="text-5xl lg:text-7xl uppercase font-bold text-pbw-white">
+                    <div class="md:w-1/2"><a href="https://prgblockweek.com">Prague Blockchain Week 2023</a></div>
+                </h1>
+                <div><DarkModeToggle /></div>
+            </div>
+            <div class="text-4xl text-pbw-yellow">June 2-11, 2023</div>
+            <div class="py-6 lg:py-24 text-md lg:text-xl text-white">A decentralized gathering of all people interested in cryptocurrencies and related topics.</div>
+            <div class="flex flex-wrap w-full justify-between gap-4">
+                {#each collections as cd}
+                    <HomepageButton 
+                        link="/{$page.params.entry}/{cd.col}"
+                        count={cd.value || data.bundle[cd.col]?.length}
+                        text={cd.title}
+                    />
+                {/each}
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="w-full px-6 xl:mx-0">
 	<div class="max-w-7xl mx-auto pt-2">
-		<div class="flex flex-wrap gap-2 my-6 text-center text-2xl">
-			{#each collections as cd}
-				<a href="/{$page.params.entry}/{cd.col}">
-					<button
-						class="border rounded border-pbw-red hover:bg-pbw-red hover:text-white py-2 px-2 text-pbw-red hover:shadow-lg"
-					>
-						{cd.value || data.bundle[cd.col]?.length}
-						{cd.title}
-					</button>
-				</a>
-			{/each}
-		</div>
 
 		<TimelineHeatmap {data} />
 
