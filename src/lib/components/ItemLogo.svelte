@@ -13,7 +13,7 @@
 {#if item[img]}
 	<img
 		src={item[img]}
-		class="{width} {rounded} {aspect} object-cover dark:bg-white"
+		class="{width} {rounded} {aspect} object-cover dark:bg-white drop-shadow-xl"
 		alt={item.name}
 	/>
 {:else if item.hash}

@@ -35,7 +35,7 @@
 			{#each collections as cd}
 				<a href="/{$page.params.entry}/{cd.col}">
 					<button
-						class="border rounded border-pbw-red hover:bg-pbw-red hover:text-white py-2 px-2 text-pbw-red"
+						class="border rounded border-pbw-red hover:bg-pbw-red hover:text-white py-2 px-2 text-pbw-red hover:shadow-lg"
 					>
 						{cd.value || data.bundle[cd.col]?.length}
 						{cd.title}
