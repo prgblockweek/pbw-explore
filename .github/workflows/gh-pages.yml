@@ -3,7 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main  # Set a branch name to trigger deployment
+      - main # Set a branch name to trigger deployment
 
 jobs:
   deploy:
@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
       - uses: actions/setup-node@v3
         with:
@@ -29,9 +29,9 @@ jobs:
 
       - name: Build
         run: npm run build
-    
+
       - name: Add custom domain
-        run: "touch build/CNAME && echo \"explore.prgblockweek.com\" >> build/CNAME"
+        run: 'touch build/CNAME && echo "explore.prgblockweek.com" >> build/CNAME'
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
