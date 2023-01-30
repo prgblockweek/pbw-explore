@@ -24,6 +24,8 @@
         <div class="mt-4 text-gray-400">
             <div class="mt-2">
                 Last update: <a href="https://github.com/utxo-foundation/prague-blockchain-week/commits/main" target="_blank" class="underline hover:no-underline">{formatDistanceToNow(new Date(bundle.time))} ago</a>
+                &nbsp;|&nbsp; <a href="https://analytics.gwei.cz/explore.prgblockweek.com" class="underline hover:no-underline" target="_blank">Analytics</a>
+                &nbsp;|&nbsp; <a href="https://github.com/utxo-foundation/pbw-explore" class="underline hover:no-underline" target="_blank">pbw-explore {__VERSION__}</a>
                 {#if item}
                     &nbsp;|&nbsp; ID: <a href="https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23/{cc}/{item.id}" class="underline hover:no-underline" target="_blank">{item.id}</a> [{cc}]
                     &nbsp;|&nbsp; <button class="cursor-pointer underline hover:no-underline" on:click={() => { showSource = !showSource; return false; }}>Toggle JSON source</button>
