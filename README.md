@@ -10,3 +10,8 @@ The production version is available at [explore.prgblockweek.com](https://explor
 - [Tailwind](https://tailwindcss.com/) - CSS framework
 - [date-fns](https://date-fns.org/) - Date library
 - [GitHub Pages](https://pages.github.com/) - hosting
+
+## Authors
+
+- [tree](https://github.com/burningtree)
+- [cryptonda](https://github.com/cryptonda)
