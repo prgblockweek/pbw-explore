@@ -1,0 +1,8 @@
+pipeline:
+
+  build_and_test:
+    image: node
+    commands:
+      - node --version
+      - npm ci
+      - npm run build
