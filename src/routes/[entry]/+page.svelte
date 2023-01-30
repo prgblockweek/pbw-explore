@@ -31,7 +31,7 @@
 	<title>#PBW{$page.params.entry} Explore</title>
 </svelte:head>
 
-<div class="w-full min-h-[98vh] bg-pbw-red bg-[url('pbw-bg-3.jpg')] bg-cover bg-center relative  rounded-br-[50px] shadow-md shadow-black">    
+<div class="w-full min-h-[98vh] bg-pbw-red bg-[url('/pbw-bg-3.jpg')] bg-cover bg-center relative  rounded-br-[50px] shadow-md shadow-black">    
     <div class="px-6 xl:px-0">
         <div class="max-w-7xl mx-auto pt-10 pb-6 ">
             <div class="flex w-full justify-between">
