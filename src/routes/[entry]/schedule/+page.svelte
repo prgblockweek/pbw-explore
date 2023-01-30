@@ -3,6 +3,7 @@
 	import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
 	import CalendarList from '$lib/components/CalendarList.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
 	import { config } from '$lib/pbw';
 
 	import { format, compareAsc, addDays } from 'date-fns';
@@ -54,15 +55,10 @@
 	<title>Schedule | #PBW{$page.params.entry} Explore</title>
 </svelte:head>
 
+<Header path={false} type="schedule" />
 <div class="w-full">
 	<div class="max-w-7xl mx-auto pt-5 md:pt-10">
 		<div class="mx-4 xl:mx-0">
-			<div class="flex gap-8 mb-6 md:mb-10">
-				<h1 class="text-4xl md:text-5xl font-bold text-pbw-red">
-					<a href="/{$page.params.entry}">#PBW23</a><span class="text-pbw-yellow">.schedule</span>
-				</h1>
-			</div>
-
 			<TimelineHeatmap {data} highlightDay={$page.params.date} />
 			{#each days as day}
 				<div class="mb-14">

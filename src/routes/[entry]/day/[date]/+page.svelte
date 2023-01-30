@@ -3,6 +3,7 @@
 	import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
 	import CalendarList from '$lib/components/CalendarList.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
 
 	import { format, compareAsc } from 'date-fns';
 
@@ -48,17 +49,10 @@
 	>
 </svelte:head>
 
+<Header path="schedule" type="day" />
 <div class="w-full">
 	<div class="max-w-7xl mx-auto pt-5 md:pt-10">
 		<div class="mx-4 xl:mx-0">
-			<div class="flex gap-8 mb-6 md:mb-10">
-				<h1 class="text-4xl md:text-5xl font-bold text-pbw-red">
-					<a href="/{$page.params.entry}">#PBW23</a><a href="/{$page.params.entry}/schedule"
-						><span class="text-pbw-yellow">.day</span></a
-					>
-				</h1>
-			</div>
-
 			<TimelineHeatmap {data} highlightDay={$page.params.date} />
 			<h2 class="text-3xl md:text-4xl font-bold text-gray-600 dark:text-gray-500">
 				{format(new Date($page.params.date), 'MMMM d, yyyy - EEEE')}

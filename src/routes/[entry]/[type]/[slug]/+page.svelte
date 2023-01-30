@@ -6,6 +6,7 @@
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
 	import SvelteMarkdown from 'svelte-markdown';
 	import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
 	import { config } from '$lib/pbw';
@@ -45,17 +46,11 @@
 	<title>{item.name} | #PBW{$page.params.entry}</title>
 </svelte:head>
 
+<Header path={colsDef[$page.params.type]} type={$page.params.type} />
+
 <div class="w-full dark:text-gray-400">
 	<div class="max-w-7xl mx-auto pt-5 md:pt-10">
-		<div class="mx-4 xl:mx-0">
-			<div class="flex gap-8 mb-6 md:mb-10">
-				<h1 class="text-4xl md:text-5xl font-bold text-pbw-red">
-					<a href="/{$page.params.entry}">#PBW23</a><a
-						href="/{$page.params.entry}/{colsDef[$page.params.type]}"
-						><span class="text-pbw-yellow">.{$page.params.type}</span></a
-					>
-				</h1>
-			</div>
+		<div class="mx-4 xl:mx-0">			
 			<div class="flex flex-wrap md:flex-nowrap w-full">
 				<ItemLogo
 					{item}
