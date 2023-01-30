@@ -9,6 +9,16 @@
     $: conferences = data.bundle.events.filter(e => e.types.find(t => ['conference', 'hackathon'].includes(t)))
     $: otherEvents = data.bundle.events.filter(e => !e.types.find(t => ['conference', 'hackathon'].includes(t)))
 
+    const collections = [
+        { title: "Days", value: 10, col: "schedule" },
+        { title: "Events", col: "events" },
+        { title: "Places", col: "places" },
+        { title: "Speakers", col: "speakers" },
+        { title: "Media Partners", col: "media-partners" },
+        { title: "Blockchains", col: "chains" },
+        { title: "Unions", col: "unions" },
+        { title: "Benefits", col: "benefits" },
+    ]
 </script>
 
 <svelte:head>
@@ -16,7 +26,18 @@
 </svelte:head>
 
 <div class="w-full px-6 xl:mx-0">
-    <div class="max-w-7xl mx-auto pt-2 md:pt-7">
+    <div class="max-w-7xl mx-auto pt-2">
+        
+        <div class="flex flex-wrap gap-2 my-6 text-center text-2xl">
+            {#each collections as cd}
+                <a href="/{$page.params.entry}/{cd.col}">
+                    <button class="border rounded border-pbw-red hover:bg-pbw-red hover:text-white py-2 px-2 text-pbw-red">
+                        {cd.value || data.bundle[cd.col]?.length} {cd.title}
+                    </button>
+                </a>
+            {/each}
+        </div>
+
         <TimelineHeatmap {data} />
 
         <h2 class="text-2xl uppercase font-bold text-gray-500"><a href="/{entry}/events">Conferences & Hackathons</a> ({conferences.length})</h2>

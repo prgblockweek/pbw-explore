@@ -38,5 +38,7 @@ export const config = {
         hackathon: '#dad7ed',
         expo: '#eee0da',
         party: '#dbeddb'
-    }
+    },
+    date: "2023-06-02",
+    days: 10,
 }

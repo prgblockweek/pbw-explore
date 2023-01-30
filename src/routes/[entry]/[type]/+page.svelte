@@ -66,11 +66,6 @@
             <div class="flex gap-8 mb-6 md:mb-10">
                 <h1 class="text-4xl md:text-5xl font-bold text-pbw-red"><a href="/{$page.params.entry}">#PBW23</a><span class="text-pbw-yellow">.{$page.params.type}</span></h1>
             </div>
-            <div class="flex flex-wrap md:flex-nowrap w-full">
-            </div>
-            {#if type === "events"}
-                <TimelineHeatmap {data} />
-            {/if}
             <h2 class="text-2xl uppercase font-bold text-gray-500">{tc.title} ({processedItems.length})</h2>
             <div class="text-xl mt-6 text-gray-800 dark:text-gray-400">  
                 <table class="w-full table-auto">
