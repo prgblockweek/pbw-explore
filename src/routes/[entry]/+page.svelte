@@ -12,11 +12,11 @@
     const collections = [
         { title: "Days", value: 10, col: "schedule" },
         { title: "Events", col: "events" },
-        { title: "Places", col: "places" },
         { title: "Speakers", col: "speakers" },
+        { title: "Places", col: "places" },
         { title: "Media Partners", col: "media-partners" },
-        { title: "Blockchains", col: "chains" },
-        { title: "Unions", col: "unions" },
+        //{ title: "Blockchains", col: "chains" },
+        //{ title: "Unions", col: "unions" },
         { title: "Benefits", col: "benefits" },
     ]
 </script>

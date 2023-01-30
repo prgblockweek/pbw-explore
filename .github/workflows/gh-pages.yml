@@ -31,7 +31,7 @@ jobs:
         run: npm run build
     
       - name: Add custom domain
-        run: "touch build/CNAME && echo \"inspect.prgblockweek.com\" >> build/CNAME"
+        run: "touch build/CNAME && echo \"explore.prgblockweek.com\" >> build/CNAME"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
