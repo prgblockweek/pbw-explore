@@ -123,12 +123,12 @@
 <div class="w-full mb-10 relative">
 	{#if selectedSegment}
 		<div
-			class="absolute top-[81px] w-[300px] border bg-white z-50 py-2 px-4 {selectedSegment
+			class="absolute top-[81px] w-[300px] border dark:border-gray-400 bg-white dark:bg-pbw-dark dark:text-gray-200 z-50 py-2 px-4 {selectedSegment
 				? 'hidden md:block'
 				: 'hidden'}"
 			style="left: {selectedSegment.event.layerX}px;"
 		>
-			<div class="uppercase">{selectedSegment.title}</div>
+			<div class="uppercase text-gray-500 dark:text-gray-300 text-lg">{selectedSegment.title}</div>
 			<div class="text-xl mt-4">
 				{#each selectedSegment.data.events.map((e) => {
 					return [eventDetail(e[0]), e[1]];

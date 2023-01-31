@@ -54,7 +54,7 @@
 	<div class="max-w-7xl mx-auto pt-5 md:pt-10">
 		<div class="mx-4 xl:mx-0">
 			<TimelineHeatmap {data} highlightDay={$page.params.date} />
-			<h2 class="text-3xl md:text-4xl font-bold text-gray-600 dark:text-gray-500">
+			<h2 class="text-3xl md:text-4xl font-bold text-gray-600 dark:text-gray-100">
 				{format(new Date($page.params.date), 'MMMM d, yyyy - EEEE')}
 			</h2>
 			<div class="mt-10">
@@ -65,7 +65,8 @@
 					bundle={data.bundle}
 				/>
 			</div>
-			<Footer bundle={data.bundle} />
 		</div>
 	</div>
 </div>
+
+<Footer bundle={data.bundle} />

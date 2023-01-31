@@ -14,7 +14,6 @@
     </div>
 {/if}
 
-
-<div class="pb-24">
-    <slot />
+<div class="page-body">
+	<slot />
 </div>

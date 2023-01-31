@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="text-sm uppercase rounded px-1.5 py-0.5 text-black"
+	class="badge text-sm uppercase rounded px-1.5 py-0.5 text-black"
 	style="background-color: {config.eventTypeColors[type]};"
 >
 	{type}

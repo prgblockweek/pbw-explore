@@ -1,10 +1,10 @@
 <script>
-    let dark = false;
-   
-    function toggleDarkMode() {
-        dark = !dark;
-        document.body.classList.toggle('dark', dark);
-    }
+	let dark = false;
+
+	function toggleDarkMode() {
+		dark = !dark;
+		document.body.classList.toggle('dark', dark);
+	}
 </script>
 
 <button
