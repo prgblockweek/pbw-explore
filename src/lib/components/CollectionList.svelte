@@ -44,7 +44,7 @@
 	>
 		<div class="w-full relative">
 			{#if col === 'benefit'}
-				<div class="absolute top-3 -left-4">
+				<div class="absolute top-3 -left-2.5 z-50">
 					<div class="bg-pbw-red py-0.5 px-1.5 rounded-md text-white uppercase text-base">
 						{item.slogan}
 					</div>

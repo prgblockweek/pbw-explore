@@ -99,6 +99,7 @@
 								{#if type === 'benefits'}
 									<th />
 									<th>Name</th>
+									<th>Benefit</th>
 								{/if}
 								{#if type === 'places'}
 									<th />
@@ -225,6 +226,7 @@
 												>{item.name}</a
 											>
 										</td>
+										<td class="h-12">{item.slogan}</td>
 									{/if}
 									{#if type === 'places'}
 										<td class="w-14">
