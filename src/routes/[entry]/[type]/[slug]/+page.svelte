@@ -231,7 +231,7 @@
 								<div class="pb-2">
 									<a href={item.registration.link} class="" target="_blank">
 										<div
-											class="inline-block py-3 px-6 border border-pbw-red hover:bg-pbw-red hover:text-white text-pbw-red text-xl rounded-lg"
+											class="inline-block py-3 px-6 border border-pbw-red hover:bg-pbw-red hover:text-white text-pbw-red text-xl rounded-lg whitespace-nowrap"
 										>
 											{#if item.registration.button}
 												{item.registration.button}
