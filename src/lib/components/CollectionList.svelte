@@ -66,26 +66,26 @@
 					<a href={_url(col, item)} class="hover:underline">{item.shortname || item.name}</a>
 				</h3>
 				{#if col === 'event'}
-					<div class="text-xl text-gray-500 dark:text-gray-200  my-2">
+					<div class="text-xl pbw-text-color-secondary  my-2">
 						<span class="font-bold">{formatItemDate(item)}</span>
 						{#if item.attendees}<br />{item.attendees} ppl{/if}
 					</div>
 				{/if}
 				{#if col === 'media-partner'}
-					<div class="text-base text-gray-500 dark:text-gray-200 my-2">{item.description}</div>
+					<div class="text-base pbw-text-color-secondary my-2">{item.description}</div>
 				{/if}
 				{#if col === 'speaker'}
-					<div class="text-base text-gray-500 dark:text-gray-200 my-2">
+					<div class="text-base pbw-text-color-secondary my-2">
 						<SvelteMarkdown source={item.caption} />
 					</div>
 				{/if}
 				{#if col === 'union'}
-					<div class="text-base text-gray-500 dark:text-gray-200 my-2">
+					<div class="text-base pbw-text-color-secondary my-2">
 						<SvelteMarkdown source={item.description} />
 					</div>
 				{/if}
 				{#if col === 'place'}
-					<div class="text-xl text-gray-500 dark:text-gray-200 my-2">{item.capacity} ppl</div>
+					<div class="text-xl pbw-text-color-secondary my-2">{item.capacity} ppl</div>
 				{/if}
 			</div>
 		{/if}

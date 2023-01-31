@@ -128,7 +128,7 @@
 				: 'hidden'}"
 			style="left: {selectedSegment.event.layerX}px;"
 		>
-			<div class="uppercase text-gray-500 dark:text-gray-300 text-lg">{selectedSegment.title}</div>
+			<div class="uppercase pbw-text-color-secondary text-lg">{selectedSegment.title}</div>
 			<div class="text-xl mt-4">
 				{#each selectedSegment.data.events.map((e) => {
 					return [eventDetail(e[0]), e[1]];

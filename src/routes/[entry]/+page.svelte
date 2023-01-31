@@ -46,7 +46,7 @@
 
 		<TimelineHeatmap {data} />
 
-		<h2 class="text-2xl uppercase font-bold text-gray-500 dark:text-gray-300">
+		<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
 			<a href="/{entry}/events">Conferences & Hackathons</a> ({conferences.length})
 		</h2>
 		<div
@@ -54,7 +54,7 @@
 		>
 			<CollectionList arr={conferences} img="logo" col="event" {entry} offer={true} />
 		</div>
-		<h2 class="text-2xl uppercase font-bold text-gray-500 dark:text-gray-300">
+		<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
 			<a href="/{entry}/events">Other events</a> ({otherEvents.length})
 		</h2>
 		<div
@@ -62,12 +62,10 @@
 		>
 			<CollectionList arr={otherEvents} img="logo" col="event" {entry} />
 		</div>
-		<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
+		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			<a href="/{entry}/speakers">Speakers</a> ({data.bundle.speakers.length})
 		</h2>
-		<h2 class="text-xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
-			International 🌎
-		</h2>
+		<h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">International 🌎</h2>
 		<div
 			class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl"
 		>
@@ -76,7 +74,7 @@
 				{entry}
 			/>
 		</div>
-		<h2 class="text-xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
+		<h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			Local - Czech 🇨🇿 & Slovak 🇸🇰
 		</h2>
 		<div
@@ -87,7 +85,7 @@
 				{entry}
 			/>
 		</div>
-		<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
+		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			<a href="/{entry}/places">Places</a> ({data.bundle.places.length})
 		</h2>
 		<div
@@ -96,7 +94,7 @@
 			<CollectionList arr={data.bundle.places} col="place" img="photo" {entry} />
 		</div>
 		{#if data.bundle.benefits}
-			<h2 class="text-2xl uppercase font-bold text-gray-500 dark:text-gray-300">
+			<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
 				<a href="/{entry}/benefits">Benefits for visitors</a> ({data.bundle.benefits.length})
 			</h2>
 			<div
@@ -113,14 +111,12 @@
 			</div>
 		{/if}
 		{#if data.bundle['media-partners']}
-			<h2 class="text-2xl uppercase font-bold text-gray-500 dark:text-gray-300">
+			<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
 				<a href="/{entry}/media-partners">Media Partners & Communities</a> ({data.bundle[
 					'media-partners'
 				].length})
 			</h2>
-			<h2 class="text-xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
-				International 🌎
-			</h2>
+			<h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">International 🌎</h2>
 			<div
 				class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 xl:grid-cols-9 my-6 text-center text-2xl mb-8"
 			>
@@ -135,7 +131,7 @@
 					size="small"
 				/>
 			</div>
-			<h2 class="text-xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
+			<h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">
 				Local - Czech 🇨🇿 & Slovak 🇸🇰
 			</h2>
 			<div

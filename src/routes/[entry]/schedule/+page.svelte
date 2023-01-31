@@ -67,7 +67,7 @@
 						<a href="/{$page.params.entry}/day/{day.date}" class=" text-pbw-red hover:underline"
 							>{format(new Date(day.date), 'MMMM d, yyyy')}</a
 						>
-						<span class="dark:text-gray-500">- {format(new Date(day.date), 'EEEE')}</span>
+						<span class="pbw-text-color-primary">- {format(new Date(day.date), 'EEEE')}</span>
 					</h2>
 					<div class="mt-6">
 						<CalendarList

@@ -55,4 +55,14 @@
 	body.dark .page-body {
 		@apply bg-pbw-dark;
 	}
+
+	.pbw-text-color-base {
+		@apply text-gray-800 dark:text-gray-200;
+	}
+	.pbw-text-color-primary {
+		@apply text-gray-600 dark:text-gray-100;
+	}
+	.pbw-text-color-secondary {
+		@apply text-gray-500 dark:text-gray-300;
+	}
 }
