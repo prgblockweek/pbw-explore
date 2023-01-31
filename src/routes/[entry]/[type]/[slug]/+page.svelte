@@ -186,7 +186,11 @@
 								<div>
 									<div class="uppercase text-sm opacity-40">Address</div>
 									<div class="flex gap-2">
-										{item.address}
+										{#if item.mapUrl}
+											<a href={item.mapUrl} target="_blank" class="external underline hover:no-underline">{item.address}</a>
+										{:else}
+											{item.address}
+										{/if}
 									</div>
 								</div>
 							{/if}
