@@ -1,8 +1,8 @@
 {
-    "name": "#PBW23 Explore",
-    "theme_color": "#ff1616",
-    "background_color": "#FF1616",
-    "display": "browser",
-    "scope": "/",
-    "start_url": "/"
-  }
+	"name": "#PBW23 Explore",
+	"theme_color": "#ff1616",
+	"background_color": "#FF1616",
+	"display": "browser",
+	"scope": "/",
+	"start_url": "/"
+}
