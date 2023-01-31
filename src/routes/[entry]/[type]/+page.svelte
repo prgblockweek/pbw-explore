@@ -6,7 +6,7 @@
 	import { goto } from '$app/navigation';
 	import SvelteMarkdown from 'svelte-markdown';
 	import Footer from '$lib/components/Footer.svelte';
-    import Header from '$lib/components/Header.svelte';
+	import Header from '$lib/components/Header.svelte';
 	import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
 	import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
 	import makeBlockie from 'ethereum-blockies-base64';
@@ -69,10 +69,10 @@
 	<div class="w-full">
 		<div class="max-w-7xl mx-auto pt-5 md:pt-10">
 			<div class="mx-4 xl:mx-0">
-				<h2 class="text-2xl uppercase font-bold text-gray-500">
+				<h2 class="text-2xl uppercase font-bold text-gray-500 dark:text-gray-300">
 					{tc.title} ({processedItems.length})
 				</h2>
-				<div class="text-xl mt-6 text-gray-800 dark:text-gray-400">
+				<div class="text-xl mt-6 text-gray-800 dark:text-gray-200">
 					<table class="w-full table-auto">
 						<thead>
 							<tr class="text-left">
@@ -245,8 +245,9 @@
 						</tbody>
 					</table>
 				</div>
-				<Footer bundle={data.bundle} />
 			</div>
 		</div>
 	</div>
 {/if}
+
+<Footer bundle={data.bundle} />

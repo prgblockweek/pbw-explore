@@ -56,6 +56,7 @@
 </svelte:head>
 
 <Header path={false} type="schedule" />
+
 <div class="w-full">
 	<div class="max-w-7xl mx-auto pt-5 md:pt-10">
 		<div class="mx-4 xl:mx-0">
@@ -78,7 +79,8 @@
 					</div>
 				</div>
 			{/each}
-			<Footer bundle={data.bundle} />
 		</div>
 	</div>
 </div>
+
+<Footer bundle={data.bundle} />

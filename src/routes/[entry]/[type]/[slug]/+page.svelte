@@ -48,9 +48,9 @@
 
 <Header path={colsDef[$page.params.type]} type={$page.params.type} />
 
-<div class="w-full dark:text-gray-400">
+<div class="w-full dark:text-gray-200">
 	<div class="max-w-7xl mx-auto pt-5 md:pt-10">
-		<div class="mx-4 xl:mx-0">			
+		<div class="mx-4 xl:mx-0">
 			<div class="flex flex-wrap md:flex-nowrap w-full">
 				<ItemLogo
 					{item}
@@ -61,7 +61,7 @@
 				/>
 				<div class="flex-grow">
 					<!--div class="font-normal text opacity-50 mt-4 md:mt-0 mb-1" style="line-height: 0.6em;"><a href="/{entry}/{col}">{col.toUpperCase()}</a></div-->
-					<h2 class="text-4xl md:text-5xl font-bold text-gray-600 dark:text-gray-400 mt-4 md:mt-0">
+					<h2 class="text-4xl md:text-5xl font-bold text-gray-600 dark:text-gray-100 mt-4 md:mt-0">
 						{item.name}
 					</h2>
 					{#if col === 'event'}
@@ -289,10 +289,14 @@
 
 			{#if col === 'event'}
 				{#if item.tracks}
-					<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Tracks</h2>
+					<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
+						Tracks
+					</h2>
 					<div class="flex flex-wrap gap-2 mt-4">
 						{#each item.tracks as track}
-							<div class="border rounded-lg bg-gray-50 items-center py-1.5 px-2">
+							<div
+								class="border rounded-lg bg-gray-50 dark:text-gray-300 dark:border-gray-300 dark:bg-transparent items-center py-1.5 px-2"
+							>
 								<div class="text-xl" title={track.name}>{track.shortname || track.name}</div>
 								<!--div class="text-lg markdown"><SvelteMarkdown source={track.examples} /></div-->
 							</div>
@@ -300,10 +304,12 @@
 					</div>
 				{/if}
 				{#if item.segments}
-					<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">Schedule</h2>
+					<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
+						Schedule
+					</h2>
 					{#each eventDates(item) as date}
 						<div class="mb-6">
-							<h3 class="mt-4 text-xl uppercase text-gray-500">
+							<h3 class="mt-4 text-xl uppercase text-gray-500 dark:text-gray-400">
 								<a href="/{entry}/day/{date}">{format(new Date(date), 'EEEE - MMMM d, yyyy')}</a>
 							</h3>
 							<div class="mt-4">
@@ -319,7 +325,7 @@
 					{/each}
 				{/if}
 				{#if item.speakers}
-					<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">
+					<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
 						Speakers ({item.speakers?.length || 0})
 					</h2>
 					<div
@@ -329,7 +335,7 @@
 					</div>
 				{/if}
 				{#if item.events}
-					<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">
+					<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
 						Sub-Events ({item.events?.length || 0})
 					</h2>
 					<div
@@ -339,7 +345,7 @@
 					</div>
 				{/if}
 				{#if item.venues}
-					<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">
+					<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
 						Venues ({item.venues?.length || 0})
 					</h2>
 					<div
@@ -354,7 +360,7 @@
 				{/if}
 			{/if}
 			{#if col === 'union'}
-				<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">
+				<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
 					Big events ({item.events?.map((eId) => data.bundle.events.find((e) => e.id === eId))
 						.length})
 				</h2>
@@ -369,7 +375,7 @@
 				</div>
 			{/if}
 			{#if col === 'speaker'}
-				<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">
+				<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
 					Events ({data.bundle.events.filter((e) => e.speakers?.find((s) => s.id === item.id))
 						.length || 0})
 				</h2>
@@ -384,7 +390,7 @@
 				</div>
 			{/if}
 			{#if col === 'place'}
-				<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">
+				<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
 					Events ({data.bundle.events.filter((e) => e.venues?.includes(item.id)).length || 0})
 				</h2>
 				<div
@@ -398,7 +404,7 @@
 				</div>
 			{/if}
 			{#if col === 'chain'}
-				<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">
+				<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500 dark:text-gray-300">
 					Events ({data.bundle.events.filter((e) => e.chains?.includes(item.id)).length || 0})
 				</h2>
 				<div
@@ -411,8 +417,8 @@
 					/>
 				</div>
 			{/if}
-
-			<Footer {col} {item} bundle={data.bundle} />
 		</div>
 	</div>
 </div>
+
+<Footer {col} {item} bundle={data.bundle} />

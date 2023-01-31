@@ -1,8 +1,8 @@
 <script>
 	import { page } from '$app/stores';
 
-    export let path;
-    export let type;
+	export let path;
+	export let type;
 </script>
 
 <div class="w-full dark:text-gray-400 bg-pbw-red">
@@ -11,7 +11,7 @@
 			<div class="flex gap-8 pb-6">
 				<h1 class="text-4xl md:text-5xl font-bold text-pbw-white">
 					<a href="/{$page.params.entry}">#PBW23</a><a
-						href="/{$page.params.entry}{path ? '/' + path : ""}"
+						href="/{$page.params.entry}{path ? '/' + path : ''}"
 						><span class="text-pbw-yellow">.{type}</span></a
 					>
 				</h1>
@@ -19,4 +19,3 @@
 		</div>
 	</div>
 </div>
-
