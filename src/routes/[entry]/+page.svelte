@@ -76,6 +76,7 @@
 			<CollectionList
 				arr={data.bundle.speakers.filter((s) => !['cz', 'sk'].includes(s.country))}
 				{entry}
+				offer="true"
 			/>
 		</div>
 		<h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">

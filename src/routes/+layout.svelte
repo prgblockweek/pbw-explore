@@ -3,7 +3,10 @@
 	import '../app.css';
 	import DarkModeToggle from '$lib/components/DarkModeToggle.svelte';
 
-	$: homepage = !$page.params.type && !$page.params.date && $page.route.id !== '/[entry]/schedule';
+	$: homepage =
+		!$page.params.type &&
+		!$page.params.date &&
+		!['/[entry]/schedule', '/[entry]/for-speakers'].includes($page.route.id);
 </script>
 
 <div class="w-full h-full bg-pbw-red">

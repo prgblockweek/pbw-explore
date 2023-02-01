@@ -106,6 +106,9 @@
 						target="_blank"
 						class="underline hover:no-underline">Offer visitors your own benefit!</a
 					>{/if}
+				{#if col === 'speaker'}<a href="/{entry}/for-speakers" class="underline hover:no-underline"
+						>Participate as a speaker!</a
+					>{/if}
 			</div>
 		</div>
 	</div>
