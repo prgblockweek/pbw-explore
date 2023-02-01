@@ -24,7 +24,7 @@
 							target="_blank">data.prgblockweek.com/23/index.json</a
 						>.
 						<div class="h-4" />
-						📖 The source data GitHub repository →<a
+						📖 The source data GitHub repository → <a
 							href="https://github.com/utxo-foundation/prague-blockchain-week"
 							class="underline hover:no-underline"
 							target="_blank">utxo-foundation/prague-blockchain-week</a

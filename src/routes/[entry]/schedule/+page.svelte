@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
+	import Disclaimer from '$lib/components/Disclaimer.svelte';
 	import CalendarList from '$lib/components/CalendarList.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
@@ -61,6 +62,7 @@
 	<div class="max-w-7xl mx-auto pt-5 md:pt-10">
 		<div class="mx-4 xl:mx-0">
 			<TimelineHeatmap {data} highlightDay={$page.params.date} />
+			<Disclaimer type="events" />
 			{#each days as day}
 				<div class="mb-14">
 					<h2 class="text-3xl md:text-3xl">

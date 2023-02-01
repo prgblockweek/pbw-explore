@@ -1,6 +1,7 @@
 <script>
 	import CollectionList from '$lib/components/CollectionList.svelte';
 	import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
+	import Disclaimer from '$lib/components/Disclaimer.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { page } from '$app/stores';
 
@@ -49,11 +50,13 @@
 		<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
 			<a href="/{entry}/events">Conferences & Hackathons</a> ({conferences.length})
 		</h2>
+		<Disclaimer />
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl"
 		>
 			<CollectionList arr={conferences} img="logo" col="event" {entry} offer={true} />
 		</div>
+
 		<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
 			<a href="/{entry}/events">Other events</a> ({otherEvents.length})
 		</h2>
@@ -65,6 +68,7 @@
 		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			<a href="/{entry}/speakers">Speakers</a> ({data.bundle.speakers.length})
 		</h2>
+		<Disclaimer type="speakers" />
 		<h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">International 🌎</h2>
 		<div
 			class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl"

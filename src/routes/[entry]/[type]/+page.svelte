@@ -12,6 +12,7 @@
 	import makeBlockie from 'ethereum-blockies-base64';
 	import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
+	import Disclaimer from '$lib/components/Disclaimer.svelte';
 
 	import { compareAsc, compareDesc, addMinutes } from 'date-fns';
 	import { writable } from 'svelte/store';
@@ -72,6 +73,9 @@
 				<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
 					{tc.title} ({processedItems.length})
 				</h2>
+				{#if ['events', 'speakers'].includes(type)}
+					<Disclaimer {type} />
+				{/if}
 				<div class="text-xl mt-6 pbw-text-color-base">
 					<table class="w-full table-auto">
 						<thead>
