@@ -25,8 +25,12 @@
 				you will find events that have open CfP for anyone.
 			</div>
 			<div class="text-xl mt-2">
-				CfP means "Call for Papers" and it is a proposal system for talks or other content. Please
-				learn in detail about the focus of each conference or event before submitting a proposal.
+				CfP means "Call for Papers" and it is a proposal system for talks or other content.
+			</div>
+			<div class="text-xl mt-2">
+				Before submitting a proposal, get to know the focus of each conference or event in detail.
+				Below you will find a link to the CfP, please follow the instructions directly on each event
+				page when submitting papers.
 			</div>
 
 			<div class="mt-10">

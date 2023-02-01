@@ -365,14 +365,26 @@
 				{#if item.cfp}
 					<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
 						<a href="/{entry}/for-speakers">For speakers</a>
-					</h2>			
-					<div class="mt-4 text-xl">This event is looking for speakers.{item.cfp.text ? ' '+item.cfp.text : ''} <a href={item.cfp.link} target="_blank" class="underline hover:no-underline">Submit a proposal</a>. </div>	
+					</h2>
+					<div class="mt-4 text-xl">
+						This event is looking for speakers.{item.cfp.text ? ' ' + item.cfp.text : ''}
+						<a href={item.cfp.link} target="_blank" class="underline hover:no-underline"
+							>Submit a proposal</a
+						>.
+					</div>
 				{/if}
 				{#if item.sponsors}
 					<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
 						<a href="/{entry}/for-sponsors">For sponsors</a>
-					</h2>			
-					<div class="mt-4 text-xl">This event is looking for sponsors{item.sponsors.range ? ' in the '+item.sponsors.range+' range' : ''}.{item.sponsors.text ? ' '+item.sponsors.text : ''} Check out their <a href={item.sponsors.link} target="_blank" class="underline hover:no-underline">pitch deck</a>. </div>	
+					</h2>
+					<div class="mt-4 text-xl">
+						This event is looking for sponsors{item.sponsors.range
+							? ' in the ' + item.sponsors.range + ' range'
+							: ''}.{item.sponsors.text ? ' ' + item.sponsors.text : ''} Check out their
+						<a href={item.sponsors.link} target="_blank" class="underline hover:no-underline"
+							>pitch deck</a
+						>.
+					</div>
 				{/if}
 			{/if}
 			{#if col === 'union'}

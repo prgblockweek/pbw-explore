@@ -24,7 +24,8 @@
 				Do you want to sponsor an event that takes place as part of #PBW23?
 			</div>
 			<div class="text-xl mt-2">
-				On this page you will find a list of events that accept sponsors and links to their sponsor decks.
+				On this page you will find a list of events that accept sponsors and links to their sponsor
+				decks.
 			</div>
 
 			<div class="mt-10">
@@ -47,10 +48,8 @@
 							<div class="mt-2">{event.sponsors.text}</div>
 						{/if}
 						<div class="mt-2">
-							<a
-								href={event.sponsors.link}
-								target="_blank"
-								class="underline hover:no-underline">Pitch deck</a
+							<a href={event.sponsors.link} target="_blank" class="underline hover:no-underline"
+								>Pitch deck</a
 							>
 						</div>
 					</div>

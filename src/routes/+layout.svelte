@@ -6,7 +6,9 @@
 	$: homepage =
 		!$page.params.type &&
 		!$page.params.date &&
-		!['/[entry]/schedule', '/[entry]/for-speakers', '/[entry]/for-sponsors'].includes($page.route.id);
+		!['/[entry]/schedule', '/[entry]/for-speakers', '/[entry]/for-sponsors'].includes(
+			$page.route.id
+		);
 </script>
 
 <div class="w-full h-full bg-pbw-red">
