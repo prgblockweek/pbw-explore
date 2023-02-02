@@ -31,16 +31,14 @@
 		return it;
 	}
 
-	const _url = (col, item) => `/${entry}/${col}/${item.id}`;
+	const _url = (col, item) => (item.hidden ? '' : `/${entry}/${col}/${item.id}`);
 </script>
 
 {#each arr.map((k) => findObject(k)) as item}
 	<div
-		class="{size === 'small'
-			? 'p-0.5 lg:p-1'
-			: 'p-1 lg:p-1.5'} hover:bg-pbw-yellow/20 dark:hover:bg-pbw-white/10 {size === 'small'
-			? 'rounded-lg'
-			: 'rounded-2xl'}"
+		class="{size === 'small' ? 'p-0.5 lg:p-1' : 'p-1 lg:p-1.5'} {!item.hidden
+			? 'hover:bg-pbw-yellow/20 dark:hover:bg-pbw-white/10'
+			: ''} {size === 'small' ? 'rounded-lg' : 'rounded-2xl'}"
 	>
 		<div class="w-full relative">
 			{#if col === 'benefit'}
@@ -50,6 +48,7 @@
 					</div>
 				</div>
 			{/if}
+
 			<a href={_url(col, item)}>
 				<ItemLogo
 					{item}
@@ -62,9 +61,13 @@
 		</div>
 		{#if col !== 'media-partner'}
 			<div class="mt-2">
-				<h3 class=" text-pbw-red">
-					<a href={_url(col, item)} class="hover:underline">{item.shortname || item.name}</a>
-				</h3>
+				{#if item.hidden}
+					{item.shortname || item.name}*
+				{:else}
+					<h3 class=" text-pbw-red">
+						<a href={_url(col, item)} class="hover:underline">{item.shortname || item.name}</a>
+					</h3>
+				{/if}
 				{#if col === 'event'}
 					<div class="text-xl pbw-text-color-secondary  my-2">
 						<span class="font-bold">{formatItemDate(item)}</span>

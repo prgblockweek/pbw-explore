@@ -5,6 +5,7 @@
 	import CalendarList from '$lib/components/CalendarList.svelte';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
+	import DisclaimerHidden from '$lib/components/DisclaimerHidden.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import SvelteMarkdown from 'svelte-markdown';
@@ -430,6 +431,9 @@
 						img="logo"
 					/>
 				</div>
+				{#if data.bundle.events.filter((e) => e.venues?.includes(item.id)).find((e) => e.hidden)}
+					<DisclaimerHidden />
+				{/if}
 			{/if}
 			{#if col === 'chain'}
 				<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">

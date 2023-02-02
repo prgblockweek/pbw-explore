@@ -7,12 +7,12 @@
 
 	export let data;
 	$: entry = $page.params.entry;
-	$: conferences = data.bundle.events.filter((e) =>
-		e.types.find((t) => ['conference', 'hackathon'].includes(t))
-	);
-	$: otherEvents = data.bundle.events.filter(
-		(e) => !e.types.find((t) => ['conference', 'hackathon'].includes(t))
-	);
+	$: conferences = data.bundle.events.filter((e) => {
+		return e.types.find((t) => ['conference', 'hackathon'].includes(t)) && !e.hidden;
+	});
+	$: otherEvents = data.bundle.events.filter((e) => {
+		return !e.types.find((t) => ['conference', 'hackathon'].includes(t)) && !e.hidden;
+	});
 
 	const collections = [
 		{ title: 'Days', value: 10, col: 'schedule' },
@@ -68,8 +68,7 @@
 		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			<a href="/{entry}/speakers">Speakers</a> ({data.bundle.speakers.length})
 		</h2>
-		<Disclaimer type="speakers" />
-		<h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">International 🌎</h2>
+		<!--h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">International 🌎</h2>
 		<div
 			class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl"
 		>
@@ -81,7 +80,7 @@
 		</div>
 		<h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			Local - Czech 🇨🇿 & Slovak 🇸🇰
-		</h2>
+		</h2-->
 		<div
 			class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl"
 		>

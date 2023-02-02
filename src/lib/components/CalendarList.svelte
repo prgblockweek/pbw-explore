@@ -37,11 +37,15 @@
 					</a>
 					<div>
 						{#if !event}
-							<a
-								href="/{entry}/event/{(segment.event || event).id}"
-								class="text-pbw-red hover:underline"
-								>{(segment.event || event)[event && event.shortname ? 'shortname' : 'name']}</a
-							>
+							{#if (segment.event || event).hidden}
+								{(segment.event || event)[event && event.shortname ? 'shortname' : 'name']}*
+							{:else}
+								<a
+									href="/{entry}/event/{(segment.event || event).id}"
+									class="text-pbw-red hover:underline"
+									>{(segment.event || event)[event && event.shortname ? 'shortname' : 'name']}</a
+								>
+							{/if}
 						{:else}
 							<span class="">{event.shortname || event.name}</span>
 						{/if}

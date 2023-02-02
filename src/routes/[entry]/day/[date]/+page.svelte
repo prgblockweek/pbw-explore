@@ -4,6 +4,8 @@
 	import CalendarList from '$lib/components/CalendarList.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
+	import DisclaimerHidden from '$lib/components/DisclaimerHidden.svelte';
+	import Disclaimer from '$lib/components/Disclaimer.svelte';
 
 	import { format, compareAsc } from 'date-fns';
 
@@ -41,6 +43,15 @@
 	}
 
 	$: segments = makeSegments(data.bundle.events, $page.params.date);
+
+	$: haveHiddenEvents = (() => {
+		for (const s of segments) {
+			if (s.event && s.event.hidden) {
+				return true;
+			}
+		}
+		return false;
+	})();
 </script>
 
 <svelte:head>
@@ -57,7 +68,7 @@
 			<h2 class="text-3xl md:text-4xl font-bold pbw-text-color-primary">
 				{format(new Date($page.params.date), 'MMMM d, yyyy - EEEE')}
 			</h2>
-			<div class="mt-10">
+			<div class="mt-10 mb-12">
 				<CalendarList
 					date={$page.params.date}
 					{segments}
@@ -65,8 +76,11 @@
 					bundle={data.bundle}
 				/>
 			</div>
+			{#if haveHiddenEvents}
+				<DisclaimerHidden />
+			{/if}
+			<Disclaimer type="events" />
 		</div>
 	</div>
 </div>
-
 <Footer bundle={data.bundle} />

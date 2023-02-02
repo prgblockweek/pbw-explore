@@ -10,6 +10,16 @@
 	const segmentMinutes = 60;
 	const bundle = data.bundle;
 
+	let popupWidth;
+	let timelineWidth;
+	let selectedSegment = null;
+
+	$: selectedSegmentEvents = selectedSegment
+		? selectedSegment.data.events.map((e) => {
+				return [eventDetail(e[0]), e[1]];
+		  })
+		: [];
+
 	const days = [];
 	let currentDate = startDate;
 	while (compareAsc(new Date(currentDate), new Date(endDate)) <= 0) {
@@ -86,8 +96,6 @@
 		it.perc = it.score / (segmentsMax / 100);
 	}
 
-	let selectedSegment = null;
-
 	function makeSelected(day, segment, keys) {
 		const baseDate = new Date(`${day}T${segment}`);
 		const title =
@@ -126,29 +134,40 @@
 			class="absolute top-[81px] w-[300px] border dark:border-gray-400 bg-white dark:bg-pbw-dark dark:text-gray-200 z-50 py-2 px-4 {selectedSegment
 				? 'hidden md:block'
 				: 'hidden'}"
-			style="left: {selectedSegment.event.layerX}px;"
+			style="left: {selectedSegment.event.layerX + popupWidth < timelineWidth
+				? selectedSegment.event.layerX
+				: selectedSegment.event.layerX - popupWidth}px;"
+			bind:clientWidth={popupWidth}
 		>
 			<div class="uppercase pbw-text-color-secondary text-lg">{selectedSegment.title}</div>
-			<div class="text-xl mt-4">
-				{#each selectedSegment.data.events.map((e) => {
-					return [eventDetail(e[0]), e[1]];
-				}) as [item, segmentId]}
-					<div class="flex gap-2 items-center mb-1">
-						<div class="">
-							<ItemLogo {item} width="h-8" />
+			{#if selectedSegmentEvents.length > 0}
+				<div class="text-xl mt-4">
+					{#each selectedSegmentEvents as [item, segmentId]}
+						<div class="flex gap-2 items-center mb-1">
+							<div class="">
+								<ItemLogo {item} width="h-8" />
+							</div>
+							<div class="">
+								{item.shortname || item.name}{#if item.hidden}*{/if}
+								{#if item.segments[segmentId].title}
+									- {item.segments[segmentId].title}
+								{/if}
+							</div>
 						</div>
-						<div class="">
-							{item.shortname || item.name}
-							{#if item.segments[segmentId].title}
-								- {item.segments[segmentId].title}
-							{/if}
-						</div>
-					</div>
-				{/each}
-			</div>
+					{/each}
+					{#if selectedSegmentEvents.find((e) => e[0].hidden)}
+						<div class="text-base mt-4 pbw-text-color-secondary">*Not a part of #PBW23</div>
+					{/if}
+				</div>
+			{:else}
+				<div class="text-lg mt-4 pbw-text-color-secondary">No events</div>
+			{/if}
 		</div>
 	{/if}
-	<div class="flex text-center text-gray-400 text-sm items-end h-10">
+	<div
+		class="flex text-center text-gray-400 text-sm items-end h-10"
+		bind:clientWidth={timelineWidth}
+	>
 		{#each days as day}
 			<div
 				class="mb-1 uppercase {highlightDay && highlightDay !== day

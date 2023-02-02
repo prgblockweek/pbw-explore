@@ -13,6 +13,7 @@
 	import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import Disclaimer from '$lib/components/Disclaimer.svelte';
+	import DisclaimerHidden from '$lib/components/DisclaimerHidden.svelte';
 
 	import { compareAsc, compareDesc, addMinutes } from 'date-fns';
 	import { writable } from 'svelte/store';
@@ -73,9 +74,6 @@
 				<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
 					{tc.title} ({processedItems.length})
 				</h2>
-				{#if ['events', 'speakers'].includes(type)}
-					<Disclaimer {type} />
-				{/if}
 				<div class="text-xl mt-6 pbw-text-color-base">
 					<table class="w-full table-auto">
 						<thead>
@@ -127,9 +125,14 @@
 										</td>
 										<td class="text-lg md:text-2xl flex items-center h-12">
 											<div class="">
-												<a href="/{entry}/{tc.model}/{item.id}" class="text-pbw-red hover:underline"
-													>{item.name}</a
-												>
+												{#if item.hidden}
+													{item.name}*
+												{:else}
+													<a
+														href="/{entry}/{tc.model}/{item.id}"
+														class="text-pbw-red hover:underline">{item.name}</a
+													>
+												{/if}
 											</div>
 											<div class="gap-1 items-center ml-4 hidden md:flex">
 												{#each item.types as type}
@@ -251,6 +254,12 @@
 						</tbody>
 					</table>
 				</div>
+				{#if type === 'events'}
+					<DisclaimerHidden />
+				{/if}
+				{#if ['events', 'speakers'].includes(type)}
+					<Disclaimer {type} />
+				{/if}
 			</div>
 		</div>
 	</div>
