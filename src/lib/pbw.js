@@ -30,6 +30,10 @@ export const config = {
 		chains: {
 			title: 'Blockchains',
 			model: 'chain'
+		},
+		'other-events': {
+			title: 'Other events',
+			model: 'other-event'
 		}
 	},
 	eventTypeColors: {

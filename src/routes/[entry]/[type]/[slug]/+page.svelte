@@ -65,7 +65,7 @@
 					<h1 class="pbw-text-color-primary text-4xl md:text-5xl font-bold mt-4 md:mt-0">
 						{item.name}
 					</h1>
-					{#if col === 'event'}
+					{#if col === 'event' || col === 'other-event'}
 						<div class="text-2xl flex gap-4 mt-2 flex-wrap">
 							<div class="flex gap-1 items-center">
 								{#each item.types as type}
@@ -117,7 +117,7 @@
 							{/each}
 						</div>
 					{/if}
-					{#if col === 'event'}
+					{#if col === 'event' || col === 'other-event'}
 						<div class="flex flex-wrap gap-6 text-xl mt-4">
 							{#if item.chains && item.chains.length > 0}
 								<div>
@@ -169,10 +169,12 @@
 									</div>
 								</div>
 							{/if}
-							<div>
-								<div class="uppercase text-sm opacity-40">Organizator</div>
-								<div class="markdown"><SvelteMarkdown source={item.org || 'TBD'} /></div>
-							</div>
+							{#if col !== 'other-event'}
+								<div>
+									<div class="uppercase text-sm opacity-40">Organizator</div>
+									<div class="markdown"><SvelteMarkdown source={item.org || 'TBD'} /></div>
+								</div>
+							{/if}
 							{#if item.poc}
 								<div>
 									<div class="uppercase text-sm opacity-40">Point of contact</div>

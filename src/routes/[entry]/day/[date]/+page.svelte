@@ -43,6 +43,7 @@
 	}
 
 	$: segments = makeSegments(data.bundle.events, $page.params.date);
+	$: relatedEvents = makeSegments(data.bundle['other-events'], $page.params.date);
 
 	$: haveHiddenEvents = (() => {
 		for (const s of segments) {
@@ -76,9 +77,25 @@
 					bundle={data.bundle}
 				/>
 			</div>
-			{#if haveHiddenEvents}
-				<DisclaimerHidden />
+			<div class="sm:ml-6">
+				{#if haveHiddenEvents}
+					<DisclaimerHidden />
+				{/if}
+			</div>
+
+			{#if relatedEvents && relatedEvents.length > 0}
+				<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary mt-10">Other events</h2>
+				<div class="mt-4 mb-12">
+					<CalendarList
+						date={$page.params.date}
+						col="other-event"
+						segments={relatedEvents}
+						entry={$page.params.entry}
+						bundle={data.bundle}
+					/>
+				</div>
 			{/if}
+
 			<Disclaimer type="events" />
 		</div>
 	</div>
