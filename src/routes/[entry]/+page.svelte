@@ -16,7 +16,7 @@
 
 	const collections = [
 		{ title: 'Days', value: 10, col: 'schedule' },
-		{ title: 'Events', col: 'events' },
+		{ title: 'Events', col: 'events', filter: e => !e.hidden },
 		{ title: 'Speakers', col: 'speakers' },
 		{ title: 'Places', col: 'places' },
 		{ title: 'Media Partners', col: 'media-partners' },
@@ -38,7 +38,7 @@
 					<button
 						class="border rounded border-pbw-red hover:bg-pbw-red hover:text-white py-2 px-2 text-pbw-red hover:shadow-lg"
 					>
-						{cd.value || data.bundle[cd.col]?.length}
+						{cd.value || data.bundle[cd.col]?.filter(cd.filter || (e => e)).length}
 						{cd.title}
 					</button>
 				</a>

@@ -72,7 +72,7 @@
 		<div class="max-w-7xl mx-auto pt-5 md:pt-10">
 			<div class="mx-4 xl:mx-0">
 				<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
-					{tc.title} ({processedItems.length})
+					{tc.title} ({processedItems.filter(e => !e.hidden).length})
 				</h2>
 				<div class="text-xl mt-6 pbw-text-color-base">
 					<table class="w-full table-auto">
