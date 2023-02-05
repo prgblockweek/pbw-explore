@@ -12,7 +12,8 @@ export const config = {
 		speakers: {
 			title: 'Speakers',
 			model: 'speaker',
-			img: 'photoUrl'
+			img: 'photoUrl',
+			virtual: true
 		},
 		'media-partners': {
 			title: 'Media Partners & Communities',

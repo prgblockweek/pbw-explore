@@ -55,8 +55,9 @@
 								href="https://github.com/utxo-foundation/prague-blockchain-week/commits/main"
 								target="_blank"
 								class="underline hover:no-underline"
-								>{formatDistanceToNow(new Date(bundle.time))} ago</a
+								>{formatDistanceToNow(new Date(bundle.__time || null))} ago</a
 							>
+							 ({bundle.__tag})
 							&nbsp;|&nbsp;
 							<a
 								href="https://analytics.gwei.cz/explore.prgblockweek.com"
