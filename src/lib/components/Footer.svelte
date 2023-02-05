@@ -57,8 +57,7 @@
 								class="underline hover:no-underline"
 								>{formatDistanceToNow(new Date(bundle.__time || null))} ago</a
 							>
-							 ({bundle.__tag})
-							&nbsp;|&nbsp;
+							({bundle.__tag}) &nbsp;|&nbsp;
 							<a
 								href="https://analytics.gwei.cz/explore.prgblockweek.com"
 								class="underline hover:no-underline"
