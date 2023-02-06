@@ -68,7 +68,7 @@
 		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			<a href="/{entry}/speakers">Speakers</a> ({data.bundle.speakers.length})
 		</h2>
-		<!--h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">International 🌎</h2>
+		<h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">International 🌎</h2>
 		<div
 			class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl"
 		>
@@ -80,13 +80,14 @@
 		</div>
 		<h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			Local - Czech 🇨🇿 & Slovak 🇸🇰
-		</h2-->
+		</h2>
 		<div
 			class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl"
 		>
 			<CollectionList
 				arr={data.bundle.speakers.filter((s) => ['cz', 'sk'].includes(s.country))}
 				{entry}
+				offer="true"
 			/>
 		</div>
 		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
