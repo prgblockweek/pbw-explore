@@ -1,45 +1,45 @@
 const l = [
   "/_app/immutable/assets/_layout-b34e4d6c.css",
-  "/_app/immutable/chunks/singletons-be286767.js",
-  "/_app/immutable/chunks/index-bc2baea7.js",
+  "/_app/immutable/chunks/control-e7f5239e.js",
   "/_app/immutable/chunks/stores-16595c51.js",
+  "/_app/immutable/chunks/_layout-839acd43.js",
   "/_app/immutable/components/error.svelte-1e1dd53e.js",
-  "/_app/immutable/chunks/3-6c3e60c6.js",
-  "/_app/immutable/chunks/4-b1b35353.js",
-  "/_app/immutable/chunks/5-66e2bab5.js",
-  "/_app/immutable/chunks/6-edb4a023.js",
+  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
   "/_app/immutable/chunks/7-2543e030.js",
   "/_app/immutable/chunks/8-7d3f8c10.js",
   "/_app/immutable/chunks/9-85d77da5.js",
   "/_app/immutable/chunks/10-d8f31efc.js",
-  "/_app/immutable/modules/pages/_entry_/_layout.js-3bcd30ac.js",
+  "/_app/immutable/modules/pages/_entry_/_layout.js-3c962219.js",
   "/_app/immutable/modules/pages/_page.js-8da6f1e5.js",
-  "/_app/immutable/components/pages/_entry_/_page.svelte-68ab58a4.js",
-  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
-  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
-  "/_app/immutable/chunks/TimelineHeatmap-6a9bd822.js",
-  "/_app/immutable/chunks/control-e7f5239e.js",
-  "/_app/immutable/start-5ba2c5eb.js",
-  "/_app/immutable/chunks/_page-6ce32609.js",
-  "/_app/immutable/chunks/_layout-f1279b1a.js",
-  "/_app/immutable/chunks/Header-c7de4272.js",
-  "/_app/immutable/chunks/utils-de551328.js",
-  "/_app/immutable/chunks/CollectionList-ff3bfeb8.js",
+  "/_app/immutable/chunks/singletons-be286767.js",
+  "/_app/immutable/start-c3d8a484.js",
   "/_app/immutable/components/pages/_entry_/_type_/_page.svelte-7ad524a5.js",
-  "/_app/immutable/chunks/DisclaimerHidden-7c122652.js",
-  "/_app/immutable/chunks/2-58e996d4.js",
-  "/_app/immutable/chunks/CalendarList-7e525307.js",
-  "/_app/immutable/chunks/1-6b65ec40.js",
-  "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-56f8560a.js",
-  "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-95532a3e.js",
-  "/_app/immutable/chunks/0-f9d37d48.js",
-  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-1e3db662.js",
-  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
-  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-14949875.js",
+  "/_app/immutable/chunks/_page-6ce32609.js",
+  "/_app/immutable/components/pages/_entry_/_page.svelte-68ab58a4.js",
   "/_app/immutable/chunks/Footer-45bd9e70.js",
+  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
   "/_app/immutable/components/pages/_entry_/day/_date_/_page.svelte-15021dbe.js",
+  "/_app/immutable/chunks/1-6b65ec40.js",
+  "/_app/immutable/chunks/CalendarList-7e525307.js",
+  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-14949875.js",
+  "/_app/immutable/chunks/0-f9d37d48.js",
+  "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-95532a3e.js",
+  "/_app/immutable/chunks/5-66e2bab5.js",
+  "/_app/immutable/chunks/2-57ddd49c.js",
+  "/_app/immutable/chunks/utils-de551328.js",
+  "/_app/immutable/chunks/3-6c3e60c6.js",
+  "/_app/immutable/chunks/4-b1b35353.js",
+  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
+  "/_app/immutable/chunks/TimelineHeatmap-6a9bd822.js",
+  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-1e3db662.js",
+  "/_app/immutable/chunks/index-bc2baea7.js",
+  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
+  "/_app/immutable/chunks/CollectionList-ff3bfeb8.js",
+  "/_app/immutable/chunks/Header-c7de4272.js",
+  "/_app/immutable/chunks/DisclaimerHidden-7c122652.js",
+  "/_app/immutable/chunks/6-edb4a023.js",
   "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js",
-  "/_app/immutable/chunks/Disclaimer-1872fbc3.js"
+  "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-56f8560a.js"
 ], d = [
   "/bg-prg.png",
   "/favicon.png",
@@ -47,7 +47,7 @@ const l = [
   "/img/pbw23-twitter-card.png",
   "/manifest.json",
   "/preview.jpg"
-], h = "1675698080300", m = "23", u = "Prague Blockchain Week 2023", k = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", f = [
+], h = "1675880625341", m = "23", u = "Prague Blockchain Week 2023", k = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", f = [
   {
     id: "gabriel-loci",
     hash: "fe396bba857b97fb96e1d15294a63931a532c3abed6ec43d39c3ec4b99436a35",
@@ -459,6 +459,25 @@ const l = [
       }
     ],
     speakers: [
+      {
+        id: "adam-hrazdira",
+        name: "Adam Hrazdira",
+        bio: "Solana blockchain auditor, nadšenec pro programovací jazyk Rust",
+        orgs: `[Ackee Blockchain](https://ackeeblockchain.com/)
+`,
+        caption: "Solana blockchain auditor, Rust language enthusiast",
+        tracks: [
+          "alty"
+        ],
+        country: "cz",
+        desc: `Solana blockchain auditor v české bezpečnostní společnosti Ackee Blockchain.
+`,
+        photos: [
+          "web:png"
+        ],
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/adam-hrazdira.png",
+        photo: "photos/speakers/adam-hrazdira.png"
+      },
       {
         id: "adam-kracik",
         name: "Adam Kracík",
@@ -917,6 +936,29 @@ const l = [
         ],
         photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/pavol-luptak.jpg",
         photo: "photos/speakers/pavol-luptak.jpg"
+      },
+      {
+        id: "petr-hotovec",
+        name: "Petr Hotovec",
+        linkedin: "petr-hotovec-2b1759a7",
+        bio: "Vystudovaný právník a ekonom",
+        orgs: `[Soft Vision](https://softvision.ai/)
+`,
+        caption: "Cryptocurrency hedge fund manager and consultant",
+        tracks: [
+          "regulace"
+        ],
+        country: "cz",
+        desc: `Petr Hotovec is the chief operating officer at the Investment Adviser. Petr worked in Prague, Czech Republic-based legal office Skils s.r.o. advokátní kancelář (former Weil, Gotshal & Manges) as a lawyer. Prior to that he worked as an analyst in the first Central European cryptocurrency fund – Kryptofond and at Allen & Overy in Prague as a paralegal. Petr specialised in M&A, corporate and finance law during his stay at Skils and Allen & Overy.
+Petr Hotovec holds a master’s degree in law and a bachelor's degree in economics and finance from the Charles University in Prague, Czech Republic. 
+
+Petr Hotovec is co-founder of Dromi Solutions, a blockchain consultancy agency.
+`,
+        photos: [
+          "web:jpg"
+        ],
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/petr-hotovec.jpg",
+        photo: "photos/speakers/petr-hotovec.jpg"
       },
       {
         id: "petr-lukac",
@@ -1894,7 +1936,7 @@ For this purpose Prague DeFi Summit, and the event build-up, has been designed a
         id: "radek-svarz",
         name: "Radek Svarz",
         twitter: "radk",
-        caption: "",
+        caption: "AlzheimerChain",
         photoUrl: "https://data.prgblockweek.com/23/assets/events/praguedefi/photos/speakers/radek-svarz.jpg",
         country: "cz",
         photo: "photos/speakers/radek-svarz.jpg"
@@ -1903,9 +1945,17 @@ For this purpose Prague DeFi Summit, and the event build-up, has been designed a
         id: "sasha-tanase",
         name: "Sasha Tanase",
         twitter: "sasha_tanase",
-        caption: "",
+        caption: "web3UX",
         photoUrl: "https://data.prgblockweek.com/23/assets/events/praguedefi/photos/speakers/sasha-tanase.jpg",
         photo: "photos/speakers/sasha-tanase.jpg"
+      },
+      {
+        id: "marc-zeller",
+        name: "Marc Zeller",
+        twitter: "![MarcZeller.jpeg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/508ec973-7608-498c-98a4-e4d94817a81d/MarcZeller.jpeg)",
+        caption: "AAVE",
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/praguedefi/photos/speakers/marc-zeller.jpeg",
+        photo: "photos/speakers/marc-zeller.jpeg"
       },
       {
         id: "rosco-kalis",
@@ -2055,7 +2105,7 @@ For this purpose Prague DeFi Summit, and the event build-up, has been designed a
       web: "https://bitcoin.org/"
     }
   }
-], z = "2023-02-06T15:39:34.160Z", T = "v2023.02.06-r3", c = {
+], z = "2023-02-08T18:21:25.836Z", T = "v2023.02.08-r1", c = {
   id: m,
   name: u,
   dataUrl: k,
