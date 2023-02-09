@@ -1,45 +1,45 @@
 const l = [
   "/_app/immutable/assets/_layout-b34e4d6c.css",
+  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
+  "/_app/immutable/components/pages/_entry_/_page.svelte-58830ccd.js",
+  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
+  "/_app/immutable/chunks/_layout-341b1b37.js",
+  "/_app/immutable/chunks/CollectionList-6f860ada.js",
+  "/_app/immutable/chunks/Footer-cdca4abb.js",
+  "/_app/immutable/chunks/stores-16595c51.js",
+  "/_app/immutable/chunks/singletons-be286767.js",
+  "/_app/immutable/modules/pages/_page.js-8da6f1e5.js",
+  "/_app/immutable/components/error.svelte-1e1dd53e.js",
+  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
+  "/_app/immutable/chunks/control-e7f5239e.js",
+  "/_app/immutable/chunks/index-bc2baea7.js",
+  "/_app/immutable/chunks/0-f9d37d48.js",
+  "/_app/immutable/chunks/1-6b65ec40.js",
+  "/_app/immutable/chunks/2-21f2be69.js",
   "/_app/immutable/chunks/3-6c3e60c6.js",
   "/_app/immutable/chunks/4-4662c762.js",
   "/_app/immutable/chunks/5-fd8a71cc.js",
+  "/_app/immutable/chunks/6-549ea1dd.js",
   "/_app/immutable/chunks/7-8ac59812.js",
   "/_app/immutable/chunks/8-d6bf0120.js",
   "/_app/immutable/chunks/9-15fada45.js",
   "/_app/immutable/chunks/10-9af3afde.js",
-  "/_app/immutable/modules/pages/_entry_/_layout.js-efbf1abf.js",
-  "/_app/immutable/modules/pages/_page.js-8da6f1e5.js",
-  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
-  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
-  "/_app/immutable/chunks/utils-f207ab4c.js",
-  "/_app/immutable/chunks/6-549ea1dd.js",
-  "/_app/immutable/chunks/TimelineHeatmap-f8a9bab1.js",
-  "/_app/immutable/chunks/singletons-be286767.js",
-  "/_app/immutable/chunks/index-bc2baea7.js",
-  "/_app/immutable/chunks/control-e7f5239e.js",
-  "/_app/immutable/chunks/stores-16595c51.js",
-  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
-  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
+  "/_app/immutable/modules/pages/_entry_/_layout.js-bf2dd3ba.js",
   "/_app/immutable/chunks/_page-6ce32609.js",
-  "/_app/immutable/components/pages/_entry_/_page.svelte-58830ccd.js",
-  "/_app/immutable/chunks/CollectionList-6f860ada.js",
+  "/_app/immutable/chunks/TimelineHeatmap-f8a9bab1.js",
+  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
   "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js",
-  "/_app/immutable/components/error.svelte-1e1dd53e.js",
-  "/_app/immutable/chunks/2-2ae9aa39.js",
-  "/_app/immutable/chunks/Header-c7de4272.js",
-  "/_app/immutable/components/pages/_entry_/_type_/_page.svelte-b27978de.js",
-  "/_app/immutable/chunks/Footer-cdca4abb.js",
-  "/_app/immutable/chunks/CalendarList-944beee7.js",
-  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-2d8e98f2.js",
-  "/_app/immutable/start-131f1fc1.js",
-  "/_app/immutable/chunks/_layout-3974462a.js",
+  "/_app/immutable/start-b2aeca8e.js",
   "/_app/immutable/chunks/DisclaimerHidden-67d93911.js",
-  "/_app/immutable/chunks/0-f9d37d48.js",
+  "/_app/immutable/chunks/utils-f207ab4c.js",
   "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-f97fb279.js",
+  "/_app/immutable/chunks/Header-c7de4272.js",
+  "/_app/immutable/components/pages/_entry_/day/_date_/_page.svelte-d8b318e7.js",
+  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-2d8e98f2.js",
   "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-c0e4437a.js",
-  "/_app/immutable/chunks/1-6b65ec40.js",
   "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-69767ff9.js",
-  "/_app/immutable/components/pages/_entry_/day/_date_/_page.svelte-d8b318e7.js"
+  "/_app/immutable/components/pages/_entry_/_type_/_page.svelte-b27978de.js",
+  "/_app/immutable/chunks/CalendarList-944beee7.js"
 ], d = [
   "/bg-prg.png",
   "/favicon.png",
@@ -47,7 +47,7 @@ const l = [
   "/img/pbw23-twitter-card.png",
   "/manifest.json",
   "/preview.jpg"
-], h = "1675940410043", m = "23", k = "Prague Blockchain Week 2023", u = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", f = [
+], h = "1675949467354", m = "23", k = "Prague Blockchain Week 2023", u = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", w = [
   {
     id: "gabriel-loci",
     hash: "fe396bba857b97fb96e1d15294a63931a532c3abed6ec43d39c3ec4b99436a35",
@@ -198,7 +198,7 @@ const l = [
       web: "https://www.cubexcentrum.cz/eng"
     }
   }
-], w = [
+], f = [
   {
     id: "apus-meetup",
     hash: "63c24076b79a17af6de2177d14e94d3ff6497928790a30e2c9c9cbd942209901",
@@ -1577,49 +1577,6 @@ We regularly meet every Tuesday in the last week of the month. Whether you are a
     ]
   },
   {
-    id: "btc-mining",
-    hash: "1ac5a0cd328ca08cb1d7e663704ff89c47dc7c7bbed77e4f74be96b8964d1362",
-    name: "Bitcoin Mining Conference 2023",
-    shortname: "Bitcoin Mining",
-    types: [
-      "conference"
-    ],
-    status: "published",
-    chains: [
-      "bitcoin"
-    ],
-    org: "[Braiins](https://braiins.com/)",
-    dri: "",
-    poc: "Kristian Csepcsar",
-    date: "2023-06-07",
-    days: 1,
-    venueName: "TBA",
-    languages: [
-      "english"
-    ],
-    logo: "https://data.prgblockweek.com/23/assets/events/btc-mining/logo.jpg",
-    cfp: {
-      link: "https://cs.braiins.com/bitcoin-mining-conference-2023#join"
-    },
-    registration: {
-      type: "invites",
-      link: "https://cs.braiins.com/bitcoin-mining-conference-2023#join",
-      button: "Join #BMC2023"
-    },
-    links: {
-      web: "https://btcminingconf.com/",
-      twitter: "https://twitter.com/BTCMiningConf"
-    },
-    segments: [
-      {
-        date: "2023-06-07",
-        times: "09:00-18:00",
-        startTime: "2023-06-07T07:00:00.000Z",
-        endTime: "2023-06-07T16:00:00.000Z"
-      }
-    ]
-  },
-  {
     id: "dotprague",
     hash: "52579caba8ec46f15c00075f8de37e4d746b220c2f381e2e5cc0b14fc738fb8b",
     name: "DOTPrague 2023",
@@ -2130,14 +2087,14 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
       web: "https://bitcoin.org/"
     }
   }
-], z = "2023-02-09T10:47:48.703Z", T = "v2023.02.09-r0", c = {
+], z = "2023-02-09T13:29:15.894Z", T = "v2023.02.09-r1", c = {
   id: m,
   name: k,
   dataUrl: u,
   exploreUrl: g,
   dataGithubUrl: b,
-  places: f,
-  events: w,
+  places: w,
+  events: f,
   "media-partners": [
     {
       id: "pp",
