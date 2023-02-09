@@ -223,9 +223,9 @@
 										</td>
 									{/if}
 									{#if type === 'benefits'}
-										<td class="w-14">
+										<td class="w-20">
 											<a href="/{entry}/{tc.model}/{item.id}">
-												<ItemLogo {item} />
+												<ItemLogo {item} width="w-16" aspect="aspect-[16/9]" />
 											</a>
 										</td>
 										<td class="text-2xl h-12">
