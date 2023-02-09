@@ -56,7 +56,7 @@
 				<ItemLogo
 					{item}
 					img={config.collections[colPlural]?.img || 'logo'}
-					aspect={config[col]?.aspect || 'aspect-square'}
+					aspect={config.collections[colPlural]?.aspect || 'aspect-square'}
 					width="w-48 md:w-56 mr-5"
 					rounded="rounded-xl"
 				/>

@@ -22,7 +22,8 @@ export const config = {
 		},
 		benefits: {
 			title: 'Benefits for visitors',
-			model: 'benefit'
+			model: 'benefit',
+			aspect: 'aspect-video'
 		},
 		unions: {
 			title: 'Event Unions',
