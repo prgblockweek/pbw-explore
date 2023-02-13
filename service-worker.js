@@ -1,45 +1,45 @@
 const l = [
   "/_app/immutable/assets/_layout-b34e4d6c.css",
-  "/_app/immutable/chunks/control-e7f5239e.js",
   "/_app/immutable/components/layout.svelte-77e7f4c1.js",
-  "/_app/immutable/components/error.svelte-1e1dd53e.js",
-  "/_app/immutable/chunks/stores-16595c51.js",
-  "/_app/immutable/chunks/_layout-07f1b92b.js",
-  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
-  "/_app/immutable/chunks/CollectionList-6f860ada.js",
-  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
-  "/_app/immutable/chunks/utils-f207ab4c.js",
-  "/_app/immutable/start-f2f301d0.js",
-  "/_app/immutable/chunks/Footer-cdca4abb.js",
-  "/_app/immutable/components/pages/_entry_/_page.svelte-0e3dc84b.js",
-  "/_app/immutable/chunks/TimelineHeatmap-f8a9bab1.js",
   "/_app/immutable/chunks/singletons-be286767.js",
+  "/_app/immutable/chunks/control-e7f5239e.js",
+  "/_app/immutable/chunks/stores-16595c51.js",
+  "/_app/immutable/components/error.svelte-1e1dd53e.js",
+  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
   "/_app/immutable/chunks/index-bc2baea7.js",
-  "/_app/immutable/chunks/1-6b65ec40.js",
-  "/_app/immutable/chunks/2-5f29cb38.js",
+  "/_app/immutable/chunks/_page-6ce32609.js",
+  "/_app/immutable/components/pages/_entry_/_page.svelte-0e3dc84b.js",
+  "/_app/immutable/chunks/utils-f207ab4c.js",
+  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
+  "/_app/immutable/chunks/TimelineHeatmap-f8a9bab1.js",
+  "/_app/immutable/chunks/CollectionList-6f860ada.js",
+  "/_app/immutable/start-933842ec.js",
+  "/_app/immutable/chunks/Header-c7de4272.js",
+  "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js",
+  "/_app/immutable/chunks/Footer-cdca4abb.js",
+  "/_app/immutable/components/pages/_entry_/_type_/_page.svelte-c86a41e9.js",
+  "/_app/immutable/chunks/0-f9d37d48.js",
+  "/_app/immutable/chunks/2-5bc3e3de.js",
   "/_app/immutable/chunks/3-6c3e60c6.js",
   "/_app/immutable/chunks/4-f2ced256.js",
-  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-f97fb279.js",
-  "/_app/immutable/chunks/CalendarList-944beee7.js",
-  "/_app/immutable/components/pages/_entry_/_type_/_page.svelte-c86a41e9.js",
+  "/_app/immutable/chunks/5-d4ca268e.js",
   "/_app/immutable/chunks/6-549ea1dd.js",
   "/_app/immutable/chunks/7-8ac59812.js",
   "/_app/immutable/chunks/8-d6bf0120.js",
   "/_app/immutable/chunks/9-15fada45.js",
   "/_app/immutable/chunks/10-9af3afde.js",
-  "/_app/immutable/modules/pages/_entry_/_layout.js-572b2e3d.js",
-  "/_app/immutable/modules/pages/_page.js-8da6f1e5.js",
-  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
-  "/_app/immutable/chunks/5-d4ca268e.js",
-  "/_app/immutable/chunks/_page-6ce32609.js",
-  "/_app/immutable/chunks/Header-c7de4272.js",
-  "/_app/immutable/chunks/DisclaimerHidden-67d93911.js",
   "/_app/immutable/components/pages/_entry_/day/_date_/_page.svelte-d8b318e7.js",
-  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-2d8e98f2.js",
+  "/_app/immutable/modules/pages/_entry_/_layout.js-1f32f2b9.js",
+  "/_app/immutable/modules/pages/_page.js-8da6f1e5.js",
+  "/_app/immutable/chunks/_layout-9e83beeb.js",
+  "/_app/immutable/chunks/1-6b65ec40.js",
+  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
   "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-c0e4437a.js",
   "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-69767ff9.js",
-  "/_app/immutable/chunks/0-f9d37d48.js",
-  "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js"
+  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-2d8e98f2.js",
+  "/_app/immutable/chunks/CalendarList-944beee7.js",
+  "/_app/immutable/chunks/DisclaimerHidden-67d93911.js",
+  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-f97fb279.js"
 ], d = [
   "/bg-prg.png",
   "/favicon.png",
@@ -47,7 +47,7 @@ const l = [
   "/img/pbw23-twitter-card.png",
   "/manifest.json",
   "/preview.jpg"
-], h = "1676313853505", m = "23", k = "Prague Blockchain Week 2023", u = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", w = [
+], h = "1676315655733", k = "23", m = "Prague Blockchain Week 2023", u = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", w = [
   {
     id: "gabriel-loci",
     hash: "fe396bba857b97fb96e1d15294a63931a532c3abed6ec43d39c3ec4b99436a35",
@@ -679,6 +679,33 @@ const l = [
         ],
         photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/jan-zibner.jpg",
         photo: "photos/speakers/jan-zibner.jpg"
+      },
+      {
+        id: "jiri-cepelka",
+        name: "Jiří Čepelka",
+        twitter: "JiriCepelka",
+        web: {
+          url: "https://jiricepelka.carrd.co"
+        },
+        tracks: [
+          "zaklady",
+          "eth",
+          "defi"
+        ],
+        bio: "Kryptoanarchista a lunarpunk",
+        caption: "Cryptoanarchist and lunarpunk, [IBC Prague](https://ibcprague.carrd.co/) organizer",
+        orgs: `Zakladatel Secret Network czech/slovak & organizátor [IBC Prague](https://ibcprague.carrd.co/)
+`,
+        country: "cz",
+        desc: `Miluju Ethereum, Secret Network a DAOs 
+Aktivně se podílím na budování soukromí ve Web3 a na adopci Secret Network.
+`,
+        photos: [
+          "web:jpg",
+          "twitter:jpg"
+        ],
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/jiri-cepelka.jpg",
+        photo: "photos/speakers/jiri-cepelka.jpg"
       },
       {
         id: "jiri-skrivan",
@@ -1426,6 +1453,7 @@ Petr Hotovec is co-founder of Dromi Solutions, a blockchain consultancy agency.
         photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/sunny-aggarwal.png",
         caption: "Osmosis Co-Founder",
         twitter: "sunnya97",
+        country: "tw",
         photo: "photos/speakers/sunny-aggarwal.png"
       },
       {
@@ -1434,6 +1462,7 @@ Petr Hotovec is co-founder of Dromi Solutions, a blockchain consultancy agency.
         photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/zaki-manian.png",
         caption: "Sommelier Co-Founder",
         twitter: "zmanian",
+        country: "us",
         photo: "photos/speakers/zaki-manian.png"
       },
       {
@@ -1442,6 +1471,7 @@ Petr Hotovec is co-founder of Dromi Solutions, a blockchain consultancy agency.
         photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/sergey-gorbunov.png",
         caption: "Axelar Co-Founder",
         twitter: "sergey_nog",
+        country: "us",
         photo: "photos/speakers/sergey-gorbunov.png"
       },
       {
@@ -1450,6 +1480,7 @@ Petr Hotovec is co-founder of Dromi Solutions, a blockchain consultancy agency.
         photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/dean-tribble.png",
         caption: "Agoric Co-Founder",
         twitter: "deantribble",
+        country: "us",
         photo: "photos/speakers/dean-tribble.png"
       },
       {
@@ -1458,6 +1489,7 @@ Petr Hotovec is co-founder of Dromi Solutions, a blockchain consultancy agency.
         photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/federico-kunze-kullmer.png",
         caption: "Evmos Co-Founder",
         twitter: "fekunze",
+        country: "de",
         photo: "photos/speakers/federico-kunze-kullmer.png"
       }
     ]
@@ -1966,6 +1998,7 @@ For this purpose Prague DeFi Summit, and the event build-up, has been designed a
         twitter: "sasha_tanase",
         caption: "web3UX",
         photoUrl: "https://data.prgblockweek.com/23/assets/events/praguedefi/photos/speakers/sasha-tanase.jpg",
+        country: "ro",
         photo: "photos/speakers/sasha-tanase.jpg"
       },
       {
@@ -1974,6 +2007,7 @@ For this purpose Prague DeFi Summit, and the event build-up, has been designed a
         twitter: "lemiscate",
         caption: "AAVE",
         photoUrl: "https://data.prgblockweek.com/23/assets/events/praguedefi/photos/speakers/marc-zeller.jpeg",
+        country: "fr",
         photo: "photos/speakers/marc-zeller.jpeg"
       },
       {
@@ -1982,6 +2016,7 @@ For this purpose Prague DeFi Summit, and the event build-up, has been designed a
         twitter: "RoscoKalis ",
         caption: "Revoke Cash",
         photoUrl: "https://data.prgblockweek.com/23/assets/events/praguedefi/photos/speakers/rosco-kalis.jpeg",
+        country: "nl",
         photo: "photos/speakers/rosco-kalis.jpeg"
       },
       {
@@ -1990,6 +2025,7 @@ For this purpose Prague DeFi Summit, and the event build-up, has been designed a
         twitter: "will_harborne",
         caption: "Rhino Fi",
         photoUrl: "https://data.prgblockweek.com/23/assets/events/praguedefi/photos/speakers/will-harborne.jpeg",
+        country: "gb",
         photo: "photos/speakers/will-harborne.jpeg"
       },
       {
@@ -1998,6 +2034,7 @@ For this purpose Prague DeFi Summit, and the event build-up, has been designed a
         twitter: "AnnaMSGeorge",
         caption: "CoWSwap",
         photoUrl: "https://data.prgblockweek.com/23/assets/events/praguedefi/photos/speakers/anna-george.JPG",
+        country: "pt",
         photo: "photos/speakers/anna-george.JPG"
       },
       {
@@ -2015,6 +2052,7 @@ For this purpose Prague DeFi Summit, and the event build-up, has been designed a
         twitter: "bneiluj",
         caption: "Stake Capital Group ",
         photoUrl: "https://data.prgblockweek.com/23/assets/events/praguedefi/photos/speakers/julien-bouteloup.jpeg",
+        country: "ch",
         photo: "photos/speakers/julien-bouteloup.jpeg"
       }
     ]
@@ -2149,9 +2187,9 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
       web: "https://bitcoin.org/"
     }
   }
-], z = "2023-02-13T11:08:34.127Z", T = "v2023.02.13-r0", c = {
-  id: m,
-  name: k,
+], z = "2023-02-13T19:12:41.365Z", T = "v2023.02.13-r2", c = {
+  id: k,
+  name: m,
   dataUrl: u,
   exploreUrl: g,
   dataGithubUrl: b,
@@ -2484,22 +2522,22 @@ The festival brings together enthusiasts and experts, but also promises smart en
   },
   date: "2023-06-02",
   days: 10
-}, n = `cache-${h}`, i = [];
+}, n = `cache-${h}`, r = [];
 for (const e in p.collections)
-  p.collections[e].virtual || i.push(...c[e].map((t) => t.logo || t.photoUrl || t.photo).filter((t) => t));
+  p.collections[e].virtual || r.push(...c[e].map((t) => t.logo || t.photoUrl || t.photo).filter((t) => t));
 for (const e of c.events)
-  e.speakers && i.push(...e.speakers.map((t) => t.photoUrl).filter((t) => t));
-const r = [
+  e.speakers && r.push(...e.speakers.map((t) => t.photoUrl).filter((t) => t));
+const i = [
   ...l,
   // the app itself
   ...d,
   // everything in `static`
-  ...i
+  ...r
 ];
-console.log(r);
+console.log(i);
 self.addEventListener("install", (e) => {
   async function t() {
-    await (await caches.open(n)).addAll(r);
+    await (await caches.open(n)).addAll(i);
   }
   e.waitUntil(t());
 });
@@ -2515,7 +2553,7 @@ self.addEventListener("fetch", (e) => {
     return;
   async function t() {
     const a = new URL(e.request.url), o = await caches.open(n);
-    if (r.includes(a.pathname))
+    if (i.includes(a.pathname))
       return o.match(e.request);
     try {
       const s = await fetch(e.request);
