@@ -73,7 +73,7 @@
 			class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl"
 		>
 			<CollectionList
-				arr={data.bundle.speakers.filter((s) => !['cz', 'sk'].includes(s.country))}
+				arr={data.bundle.speakers.filter((s) => !['cz', 'sk'].includes(s.country)).sort((x, y) => (x.name > y.name ? 1 : -1))}
 				{entry}
 				offer="true"
 			/>
@@ -85,7 +85,7 @@
 			class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl"
 		>
 			<CollectionList
-				arr={data.bundle.speakers.filter((s) => ['cz', 'sk'].includes(s.country))}
+				arr={data.bundle.speakers.filter((s) => ['cz', 'sk'].includes(s.country)).sort((x, y) => (x.name > y.name ? 1 : -1))}
 				{entry}
 				offer="true"
 			/>
