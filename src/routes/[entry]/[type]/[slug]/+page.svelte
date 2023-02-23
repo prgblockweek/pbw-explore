@@ -28,6 +28,7 @@
 	function eventDates(event) {
 		const dates = [];
 		for (const seg of event.segments) {
+			if (seg.remote) continue;
 			const date = format(new Date(seg.startTime), 'yyyy-MM-dd');
 			if (!dates.includes(date)) {
 				dates.push(date);
@@ -322,7 +323,7 @@
 							<div class="mt-4">
 								<CalendarList
 									{date}
-									segments={item.segments.filter((s) => s.startTime.match(new RegExp('^' + date)))}
+									segments={item.segments.filter((s) => s.remote || s.startTime.match(new RegExp('^' + date)))}
 									{entry}
 									bundle={data.bundle}
 									event={item}

@@ -9,6 +9,21 @@
 	export let entry;
 	export let bundle;
 	export let event = null;
+
+	for (let i = 0; i < segments.length; i++) {
+		const sg = segments[i]
+		if (sg.remote) {
+			console.log(i)
+			const event = bundle.events.find(e => e.id === sg.remote)
+			const remoteSegments = event.segments.map(rs => Object.assign(rs, {
+				event,
+				remote: true
+			}))
+			segments.splice(i, remoteSegments.length, ...remoteSegments)
+		}
+	}
+	console.log(segments)
+
 </script>
 
 <div class="text-2xl">
@@ -37,14 +52,14 @@
 						<ItemLogo item={segment.event || event} width={event ? 'w-8' : 'w-10'} />
 					</a>
 					<div>
-						{#if !event}
+						{#if !event || segment.remote}
 							{#if (segment.event || event).hidden}
-								{(segment.event || event)[event && event.shortname ? 'shortname' : 'name']}*
+								{(segment.event || event)[(segment.event || event).shortname ? 'shortname' : 'name']}*
 							{:else}
 								<a
 									href="/{entry}/{col}/{(segment.event || event).id}"
 									class="text-pbw-red hover:underline"
-									>{(segment.event || event)[event && event.shortname ? 'shortname' : 'name']}</a
+									>{(segment.event || event)[(segment.event || event).shortname ? 'shortname' : 'name']}</a
 								>
 							{/if}
 						{:else}
@@ -56,7 +71,7 @@
 					</div>
 				</div>
 				<div class="flex flex-wrap gap-2">
-					{#if !event}
+					{#if !event && !segment.remote}
 						<div class="gap-1 items-center md:ml-2 hidden md:inline-flex text-xs">
 							{#each (segment.event || event).types as type}
 								<EventTypeBadge {type} />
