@@ -1,45 +1,45 @@
 const l = [
   "/_app/immutable/assets/_layout-b34e4d6c.css",
+  "/_app/immutable/chunks/singletons-be286767.js",
+  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
+  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
+  "/_app/immutable/chunks/_page-6ce32609.js",
+  "/_app/immutable/chunks/control-e7f5239e.js",
+  "/_app/immutable/chunks/stores-16595c51.js",
+  "/_app/immutable/chunks/_layout-f22c31aa.js",
+  "/_app/immutable/chunks/Footer-cdca4abb.js",
+  "/_app/immutable/components/error.svelte-1e1dd53e.js",
+  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
+  "/_app/immutable/start-56d88086.js",
+  "/_app/immutable/chunks/CollectionList-6f860ada.js",
   "/_app/immutable/chunks/TimelineHeatmap-f8a9bab1.js",
   "/_app/immutable/chunks/index-bc2baea7.js",
-  "/_app/immutable/chunks/stores-16595c51.js",
-  "/_app/immutable/components/error.svelte-1e1dd53e.js",
-  "/_app/immutable/chunks/singletons-be286767.js",
-  "/_app/immutable/chunks/_layout-9e83beeb.js",
-  "/_app/immutable/chunks/control-e7f5239e.js",
-  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
+  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-2d8e98f2.js",
   "/_app/immutable/components/pages/_entry_/_page.svelte-0e3dc84b.js",
-  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
-  "/_app/immutable/chunks/_page-6ce32609.js",
-  "/_app/immutable/chunks/CollectionList-6f860ada.js",
-  "/_app/immutable/chunks/DisclaimerHidden-67d93911.js",
+  "/_app/immutable/chunks/4-f2ced256.js",
+  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-306d7e24.js",
   "/_app/immutable/chunks/0-f9d37d48.js",
   "/_app/immutable/chunks/1-6b65ec40.js",
-  "/_app/immutable/chunks/2-5bc3e3de.js",
-  "/_app/immutable/chunks/4-f2ced256.js",
+  "/_app/immutable/chunks/2-239254f1.js",
+  "/_app/immutable/chunks/3-6c3e60c6.js",
   "/_app/immutable/chunks/5-d4ca268e.js",
   "/_app/immutable/chunks/6-08b4a29c.js",
   "/_app/immutable/chunks/7-caac011f.js",
   "/_app/immutable/chunks/8-d6bf0120.js",
   "/_app/immutable/chunks/9-15fada45.js",
-  "/_app/immutable/chunks/10-74b41983.js",
-  "/_app/immutable/modules/pages/_entry_/_layout.js-1f32f2b9.js",
-  "/_app/immutable/modules/pages/_page.js-8da6f1e5.js",
-  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
-  "/_app/immutable/chunks/Footer-cdca4abb.js",
-  "/_app/immutable/chunks/CalendarList-ae4000ba.js",
-  "/_app/immutable/components/pages/_entry_/day/_date_/_page.svelte-2014c175.js",
-  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-2d8e98f2.js",
-  "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-c0e4437a.js",
-  "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-a4cccf31.js",
-  "/_app/immutable/chunks/3-6c3e60c6.js",
-  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
-  "/_app/immutable/chunks/utils-f207ab4c.js",
-  "/_app/immutable/start-b95b7f18.js",
-  "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js",
   "/_app/immutable/components/pages/_entry_/_type_/_page.svelte-c86a41e9.js",
   "/_app/immutable/chunks/Header-c7de4272.js",
-  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-306d7e24.js"
+  "/_app/immutable/chunks/DisclaimerHidden-67d93911.js",
+  "/_app/immutable/chunks/CalendarList-ae4000ba.js",
+  "/_app/immutable/components/pages/_entry_/day/_date_/_page.svelte-2014c175.js",
+  "/_app/immutable/chunks/10-74b41983.js",
+  "/_app/immutable/modules/pages/_page.js-8da6f1e5.js",
+  "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-a4cccf31.js",
+  "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-c0e4437a.js",
+  "/_app/immutable/modules/pages/_entry_/_layout.js-56d4733e.js",
+  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
+  "/_app/immutable/chunks/utils-f207ab4c.js",
+  "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js"
 ], d = [
   "/bg-prg.png",
   "/favicon.png",
@@ -47,7 +47,28 @@ const l = [
   "/img/pbw23-twitter-card.png",
   "/manifest.json",
   "/preview.jpg"
-], h = "1677134673672", k = "23", m = "Prague Blockchain Week 2023", u = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", w = [
+], h = "1677141848070", k = "23", m = "Prague Blockchain Week 2023", u = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", w = [
+  {
+    id: "paralelni-polis",
+    hash: "04bff1ba451a1e4a5c3f2d01825d9ca4c06a2d111a1905074b7a1a2ac7034378",
+    name: "Paralelní Polis",
+    eventTypes: [
+      "conference",
+      "hackathon",
+      "party",
+      "meetup",
+      "party"
+    ],
+    capacity: 250,
+    address: "Dělnická 475/43, 170 00 Praha 7",
+    mapUrl: "https://goo.gl/maps/nxYRgrCFSigLA3ea9",
+    description: `Fully equipped venue for all types of events. Spaces including "Bitcoin Coffee" (50 ppl), "Paper Hub" coworking (100 ppl) and lecture hall "Institute of Cryptoanarchy" (100 ppl). The space can be expanded by another 400 people by connecting with La Fabrika.
+`,
+    photo: "https://data.prgblockweek.com/23/assets/places/paralelni-polis/photo.jpg",
+    links: {
+      web: "https://www.paralelnipolis.cz/en/"
+    }
+  },
   {
     id: "gabriel-loci",
     hash: "fe396bba857b97fb96e1d15294a63931a532c3abed6ec43d39c3ec4b99436a35",
@@ -65,61 +86,6 @@ const l = [
     photo: "https://data.prgblockweek.com/23/assets/places/gabriel-loci/photo.jpg",
     links: {
       web: "https://www.gabrielloci.com/en/"
-    }
-  },
-  {
-    id: "ackee-blox",
-    hash: "7bb7f11104fee01ca057919418330e8a22ab4bb1982db49aae113831431ce7c9",
-    name: "Ackee @ Blox",
-    eventTypes: [
-      "meetup",
-      "conference"
-    ],
-    capacity: 100,
-    address: "Evropská 2758/11, 160 00 Praha 6",
-    mapUrl: "https://goo.gl/maps/PgZrePiSutCV9MeL9",
-    description: `Ackee office space, which includes a presentation room.
-`,
-    photo: "https://data.prgblockweek.com/23/assets/places/ackee-blox/photo.jpg",
-    links: {
-      web: "https://www.ackee.cz/"
-    }
-  },
-  {
-    id: "la-fabrika",
-    hash: "fc4ad444095f39d8453a5ca8beb72f4cf5f88bd8cdbb88a817dd1720d5016069",
-    name: "La Fabrika",
-    eventTypes: [
-      "conference",
-      "hackathon"
-    ],
-    capacity: 450,
-    address: "Komunardů 1001, 170 00 Praha 7-Holešovice",
-    mapUrl: "https://goo.gl/maps/9GMeXXFaowpAtxfT8",
-    description: `The barrier-free, variable space with two multifunctional halls, its high-tech equipment and catering facilities, allows for events of all kinds. Suitable to complement the Paralelní Polis next door. It is possible to combine the venue into one.
-`,
-    photo: "https://data.prgblockweek.com/23/assets/places/la-fabrika/photo.jpg",
-    links: {
-      web: "https://www.lafabrika.cz/en/pronajem"
-    }
-  },
-  {
-    id: "pva-expo",
-    hash: "de813695f20f8e5982dd1ac41bd32c16ef36eb33f6e576caace01f4ba7206ffb",
-    name: "PVA Expo",
-    eventTypes: [
-      "conference",
-      "hackathon",
-      "expo"
-    ],
-    capacity: 25e3,
-    address: "Beranových 667, 199 00 Praha 9",
-    mapUrl: "https://goo.gl/maps/w8pucaRDjFq9oFqe9",
-    description: `PVA (Prague Exhibition Grounds) EXPO PRAHA or Výstaviště Letňany is a trade fair complex in Prague-Letňany. It covers an area of 105,000 m² in close proximity to the final metro station of the C line and Letňany Airport for small aircraft.
-`,
-    photo: "https://data.prgblockweek.com/23/assets/places/pva-expo/photo.jpg",
-    links: {
-      web: "https://www.pvaexpo.cz/pronajem-arealu"
     }
   },
   {
@@ -142,24 +108,40 @@ const l = [
     }
   },
   {
-    id: "paralelni-polis",
-    hash: "04bff1ba451a1e4a5c3f2d01825d9ca4c06a2d111a1905074b7a1a2ac7034378",
-    name: "Paralelní Polis",
+    id: "ackee-blox",
+    hash: "7bb7f11104fee01ca057919418330e8a22ab4bb1982db49aae113831431ce7c9",
+    name: "Ackee @ Blox",
+    eventTypes: [
+      "meetup",
+      "conference"
+    ],
+    capacity: 100,
+    address: "Evropská 2758/11, 160 00 Praha 6",
+    mapUrl: "https://goo.gl/maps/PgZrePiSutCV9MeL9",
+    description: `Ackee office space, which includes a presentation room.
+`,
+    photo: "https://data.prgblockweek.com/23/assets/places/ackee-blox/photo.jpg",
+    links: {
+      web: "https://www.ackee.cz/"
+    }
+  },
+  {
+    id: "pva-expo",
+    hash: "de813695f20f8e5982dd1ac41bd32c16ef36eb33f6e576caace01f4ba7206ffb",
+    name: "PVA Expo",
     eventTypes: [
       "conference",
       "hackathon",
-      "party",
-      "meetup",
-      "party"
+      "expo"
     ],
-    capacity: 250,
-    address: "Dělnická 475/43, 170 00 Praha 7",
-    mapUrl: "https://goo.gl/maps/nxYRgrCFSigLA3ea9",
-    description: `Fully equipped venue for all types of events. Spaces including "Bitcoin Coffee" (50 ppl), "Paper Hub" coworking (100 ppl) and lecture hall "Institute of Cryptoanarchy" (100 ppl). The space can be expanded by another 400 people by connecting with La Fabrika.
+    capacity: 25e3,
+    address: "Beranových 667, 199 00 Praha 9",
+    mapUrl: "https://goo.gl/maps/w8pucaRDjFq9oFqe9",
+    description: `PVA (Prague Exhibition Grounds) EXPO PRAHA or Výstaviště Letňany is a trade fair complex in Prague-Letňany. It covers an area of 105,000 m² in close proximity to the final metro station of the C line and Letňany Airport for small aircraft.
 `,
-    photo: "https://data.prgblockweek.com/23/assets/places/paralelni-polis/photo.jpg",
+    photo: "https://data.prgblockweek.com/23/assets/places/pva-expo/photo.jpg",
     links: {
-      web: "https://www.paralelnipolis.cz/en/"
+      web: "https://www.pvaexpo.cz/pronajem-arealu"
     }
   },
   {
@@ -197,8 +179,251 @@ const l = [
     links: {
       web: "https://www.cubexcentrum.cz/eng"
     }
+  },
+  {
+    id: "la-fabrika",
+    hash: "fc4ad444095f39d8453a5ca8beb72f4cf5f88bd8cdbb88a817dd1720d5016069",
+    name: "La Fabrika",
+    eventTypes: [
+      "conference",
+      "hackathon"
+    ],
+    capacity: 450,
+    address: "Komunardů 1001, 170 00 Praha 7-Holešovice",
+    mapUrl: "https://goo.gl/maps/9GMeXXFaowpAtxfT8",
+    description: `The barrier-free, variable space with two multifunctional halls, its high-tech equipment and catering facilities, allows for events of all kinds. Suitable to complement the Paralelní Polis next door. It is possible to combine the venue into one.
+`,
+    photo: "https://data.prgblockweek.com/23/assets/places/la-fabrika/photo.jpg",
+    links: {
+      web: "https://www.lafabrika.cz/en/pronajem"
+    }
   }
 ], f = [
+  {
+    id: "ethprague",
+    hash: "f8e0f26e1df7e27cfa2a99fe303e78dee62bdf4abfdc97786859e604241058cd",
+    name: "ETHPrague 2023",
+    shortname: "ETHPrague",
+    types: [
+      "hackathon",
+      "conference"
+    ],
+    status: "planning",
+    org: "DuckTape/Paralelní Polis",
+    dri: "",
+    poc: "JosefJ, Vojta",
+    date: "2023-06-09",
+    days: 3,
+    venues: [
+      "paralelni-polis",
+      "la-fabrika"
+    ],
+    languages: [
+      "english"
+    ],
+    attendees: 600,
+    chains: [
+      "ethereum"
+    ],
+    difficulty: "All Welcome",
+    tags: [
+      "solarpunk"
+    ],
+    logo: "https://data.prgblockweek.com/23/assets/events/ethprague/logo.jpg",
+    description: `ETHPrague isn’t looking for the next get rich quickly scheme or groundbreaking DeFi apps, instead it’s an event focusing on the future potential of Ethereum and concepts or applications which don’t yet exist. We want to tackle challenges which will or might arise in the next decade and we believe Ethereum will play a major role in solving these. The future is in your hands, anon! You decide whether we end up living in a dark authoritarian dystopia or a bright solarpunk utopia.
+`,
+    registration: {
+      type: "invites"
+    },
+    links: {
+      web: "https://ethprague.com/",
+      twitter: "https://twitter.com/EthPrague",
+      telegram: "https://t.me/ethprague"
+    },
+    segments: [
+      {
+        date: "2023-06-09",
+        times: "09:00-19:00",
+        ecap: 600,
+        startTime: "2023-06-09T07:00:00.000Z",
+        endTime: "2023-06-09T17:00:00.000Z"
+      },
+      {
+        date: "2023-06-09",
+        times: "19:00-09:00",
+        ecap: 100,
+        title: "Night hacking",
+        venues: [
+          "paralelni-polis"
+        ],
+        startTime: "2023-06-09T17:00:00.000Z",
+        endTime: "2023-06-10T07:00:00.000Z"
+      },
+      {
+        date: "2023-06-10",
+        times: "09:00-19:00",
+        ecap: 600,
+        startTime: "2023-06-10T07:00:00.000Z",
+        endTime: "2023-06-10T17:00:00.000Z"
+      },
+      {
+        date: "2023-06-10",
+        times: "19:00-09:00",
+        ecap: 100,
+        title: "Night hacking",
+        venues: [
+          "paralelni-polis"
+        ],
+        startTime: "2023-06-10T17:00:00.000Z",
+        endTime: "2023-06-11T07:00:00.000Z"
+      },
+      {
+        date: "2023-06-11",
+        times: "09:00-18:00",
+        ecap: 600,
+        startTime: "2023-06-11T07:00:00.000Z",
+        endTime: "2023-06-11T16:00:00.000Z"
+      }
+    ]
+  },
+  {
+    id: "dotprague",
+    hash: "52579caba8ec46f15c00075f8de37e4d746b220c2f381e2e5cc0b14fc738fb8b",
+    name: "DOTPrague 2023",
+    shortname: "DOTPrague",
+    types: [
+      "conference"
+    ],
+    status: "planning",
+    chains: [
+      "polkadot"
+    ],
+    org: "[KodaDot](https://kodadot.xyz/)",
+    dri: "",
+    poc: "Damsky",
+    date: "2023-06-05",
+    days: 2,
+    times: "10:00-18:00",
+    venues: [
+      "jatka78"
+    ],
+    languages: [
+      "english"
+    ],
+    attendees: 300,
+    logo: "https://data.prgblockweek.com/23/assets/events/dotprague/logo.png",
+    description: `Experience the future of blockchain technology at this 2-day Polkadot Conference in Prague. Network, learn from industry leaders and explore the latest developments in the ecosystem.
+`,
+    cfp: {
+      link: "https://form.dotprague.xyz/speaker"
+    },
+    registration: {
+      type: "invites",
+      link: "https://form.dotprague.xyz/attendee",
+      button: "Join waitlist"
+    },
+    links: {
+      web: "https://dotprague.xyz/",
+      twitter: "https://twitter.com/DotsamaPrague",
+      telegram: "https://t.me/+z77D0iuvL8YyNTBk",
+      discord: "https://discord.com/invite/KQXAs7Y3pQ"
+    },
+    segments: [
+      {
+        date: "2023-06-05",
+        times: "10:00-18:00",
+        startTime: "2023-06-05T08:00:00.000Z",
+        endTime: "2023-06-05T16:00:00.000Z"
+      },
+      {
+        date: "2023-06-06",
+        times: "10:00-18:00",
+        startTime: "2023-06-06T08:00:00.000Z",
+        endTime: "2023-06-06T16:00:00.000Z"
+      }
+    ]
+  },
+  {
+    id: "lunarpunk-party",
+    hash: "66b4e048cb8b6904814271955dc50985103b1c1bd9e81553b9371bb63955954b",
+    name: "#Lunarpunk Party",
+    types: [
+      "party"
+    ],
+    status: "planning",
+    org: "[UTXO Foundation](https://utxo.foundation)",
+    dri: "burningtree",
+    poc: "[tree](https://t.me/treecz)",
+    date: "2023-06-05",
+    times: "20:00-04:00",
+    days: 1,
+    venues: [
+      "x10"
+    ],
+    languages: [
+      "english"
+    ],
+    attendees: 300,
+    tags: [
+      "lunarpunk"
+    ],
+    description: "",
+    logo: "https://data.prgblockweek.com/23/assets/events/lunarpunk-party/logo.jpg",
+    links: {},
+    registration: {
+      type: "tickets",
+      price: "15 EUR"
+    },
+    segments: [
+      {
+        date: "2023-06-05",
+        times: "20:00-04:00",
+        startTime: "2023-06-05T18:00:00.000Z",
+        endTime: "2023-06-06T02:00:00.000Z"
+      }
+    ]
+  },
+  {
+    id: "artiffine-meetup",
+    hash: "a63e4542e0569a1e80eefeaebb84627cb63bc79780330ea1c27d56d26f575a43",
+    name: "Artiffine meetup",
+    shortname: "",
+    types: [
+      "meetup"
+    ],
+    status: "planning",
+    chains: [],
+    org: "",
+    dri: "",
+    poc: "Jan Zibner",
+    date: "2023-06-09",
+    days: 1,
+    venueName: "TBA",
+    languages: [
+      "czech",
+      "slovak"
+    ],
+    tags: [
+      "NFT",
+      "legal"
+    ],
+    description: "",
+    logo: "https://data.prgblockweek.com/23/assets/events/artiffine-meetup/logo.jpg",
+    links: {},
+    speakers: [
+      {
+        id: "jan-zibner"
+      }
+    ],
+    segments: [
+      {
+        date: "2023-06-09",
+        times: "09:00-18:00",
+        startTime: "2023-06-09T07:00:00.000Z",
+        endTime: "2023-06-09T16:00:00.000Z"
+      }
+    ]
+  },
   {
     id: "apus-meetup",
     hash: "63c24076b79a17af6de2177d14e94d3ff6497928790a30e2c9c9cbd942209901",
@@ -245,157 +470,6 @@ const l = [
     ]
   },
   {
-    id: "gweicz-meetup",
-    hash: "86aaeb09db5be1b41c278f550f99294fe94db6a99f36761e8e19a22598807ab6",
-    name: "Gwei.cz Meetup @ PBW23",
-    shortname: "",
-    types: [
-      "meetup"
-    ],
-    status: "planning",
-    chains: [
-      "ethereum"
-    ],
-    org: "Gwei.cz",
-    dri: "burningtree",
-    poc: "[tree](https://t.me/treecz)",
-    date: "2023-06-08",
-    days: 1,
-    times: "18:00-21:00",
-    venueName: "TBA",
-    languages: [
-      "czech",
-      "slovak"
-    ],
-    attendees: 50,
-    tags: [
-      "DeFi",
-      "Web3"
-    ],
-    description: "",
-    logo: "https://data.prgblockweek.com/23/assets/events/gweicz-meetup/logo.png",
-    links: {},
-    segments: [
-      {
-        date: "2023-06-08",
-        times: "18:00-21:00",
-        startTime: "2023-06-08T16:00:00.000Z",
-        endTime: "2023-06-08T19:00:00.000Z"
-      }
-    ]
-  },
-  {
-    id: "skodaverse-meetup",
-    hash: "17a33272918145c34e5f0074834f71e93cb01a9cd21ee0815b012845075cfad1",
-    name: "Škodaverse meetup",
-    shortname: "",
-    types: [
-      "meetup"
-    ],
-    status: "planning",
-    chains: [],
-    org: "",
-    dri: "",
-    poc: "NFTereez",
-    date: "2023-06-05",
-    days: 1,
-    venueName: "TBA",
-    languages: [
-      "english"
-    ],
-    tags: [
-      "metaverse",
-      "NFT"
-    ],
-    description: "",
-    logo: "https://data.prgblockweek.com/23/assets/events/skodaverse-meetup/logo.jpeg",
-    links: {},
-    segments: [
-      {
-        date: "2023-06-05",
-        times: "09:00-18:00",
-        startTime: "2023-06-05T07:00:00.000Z",
-        endTime: "2023-06-05T16:00:00.000Z"
-      }
-    ]
-  },
-  {
-    id: "lunarpunk-party",
-    hash: "66b4e048cb8b6904814271955dc50985103b1c1bd9e81553b9371bb63955954b",
-    name: "#Lunarpunk Party",
-    shortname: "",
-    types: [
-      "party"
-    ],
-    status: "planning",
-    org: "",
-    dri: "",
-    poc: "",
-    date: "2023-06-05",
-    times: "20:00-04:00",
-    days: 1,
-    venues: [
-      "x10"
-    ],
-    languages: [
-      "english"
-    ],
-    attendees: 300,
-    tags: [
-      "lunarpunk"
-    ],
-    description: "",
-    logo: "https://data.prgblockweek.com/23/assets/events/lunarpunk-party/logo.jpg",
-    links: {},
-    registration: {
-      type: "tickets"
-    },
-    segments: [
-      {
-        date: "2023-06-05",
-        times: "20:00-04:00",
-        startTime: "2023-06-05T18:00:00.000Z",
-        endTime: "2023-06-06T02:00:00.000Z"
-      }
-    ]
-  },
-  {
-    id: "desci-prague",
-    hash: "34aa802b4eeb469ecc72fc2d1fce3867ddfe71a6dde2537aa5d0d6823ac6c0dc",
-    name: "DeSci Prague 2023",
-    shortname: "DeSci Prague",
-    types: [
-      "conference"
-    ],
-    status: "idea",
-    org: "",
-    dri: "",
-    poc: "[Radek Švarz](https://t.me/r4deks)",
-    date: "2023-06-06",
-    days: 1,
-    venueName: "TBA",
-    languages: [
-      "english"
-    ],
-    attendees: 150,
-    tags: [
-      "DeSci",
-      "science"
-    ],
-    description: `One-day conference focused on Decentralized Science (DeSci).
-`,
-    logo: "https://data.prgblockweek.com/23/assets/events/desci-prague/logo.png",
-    links: {},
-    segments: [
-      {
-        date: "2023-06-06",
-        times: "09:00-18:00",
-        startTime: "2023-06-06T07:00:00.000Z",
-        endTime: "2023-06-06T16:00:00.000Z"
-      }
-    ]
-  },
-  {
     id: "utxo",
     hash: "3469750952218297ba8b2fda75e68e10ef566ef3116682f1baca559400cda89e",
     name: "UTXO.23",
@@ -419,7 +493,7 @@ const l = [
     attendees: 1200,
     description: `Open community conference focused on cryptocurrencies and blockchain for a wide audience (mostly in Czech language).
 `,
-    logo: "https://data.prgblockweek.com/23/assets/events/utxo/logo.jpg",
+    logo: "https://data.prgblockweek.com/23/assets/events/utxo/logo.png",
     cfp: {
       link: "https://cfp.utxo.cz/23/cfp",
       deadline: "2023-04-01",
@@ -1348,157 +1422,10 @@ Petr Hotovec is co-founder of Dromi Solutions, a blockchain consultancy agency.
     ]
   },
   {
-    id: "ibcprague",
-    hash: "c808ff8ce7b2d89de29381bf1f662373faf28c1014e0b18d69f6843f1b79da60",
-    name: "IBCPrague 2023",
-    shortname: "IBCPrague",
-    types: [
-      "conference"
-    ],
-    status: "planning",
-    chains: [
-      "cosmos"
-    ],
-    org: "",
-    dri: "",
-    poc: "[Jiří Čepelka](https://t.me/jiricepelka)",
-    date: "2023-06-06",
-    days: 1,
-    venues: [
-      "x10"
-    ],
-    languages: [
-      "english"
-    ],
-    attendees: 300,
-    logo: "https://data.prgblockweek.com/23/assets/events/ibcprague/logo.jpg",
-    sponsors: {
-      link: "https://app.skiff.com/docs/c46f9b08-27f8-4dd9-a2ef-145bd2003e78#1W5I8FwJVAziW3wjY1ay%2B%2FVwGi8aoNeNu32Qn5xSAgE%3D",
-      range: "1k-15k USD"
-    },
-    registration: {
-      type: "tickets"
-    },
-    links: {
-      web: "https://ibcprague.carrd.co/",
-      twitter: "https://twitter.com/IBCPrague"
-    },
-    segments: [
-      {
-        date: "2023-06-06",
-        times: "09:00-18:00",
-        startTime: "2023-06-06T07:00:00.000Z",
-        endTime: "2023-06-06T16:00:00.000Z"
-      }
-    ]
-  },
-  {
-    id: "gateway",
-    hash: "b45232371f0bebfd2f354850926be5a072492d0078d3acfc5229cfc9f50915e1",
-    name: "Gateway to Cosmos 2023",
-    shortname: "Gateway Cosmos",
-    types: [
-      "conference"
-    ],
-    status: "planning",
-    chains: [
-      "cosmos"
-    ],
-    org: "[RockawayX](https://rockawayx.com/)",
-    dri: "",
-    poc: "Tomáš Eminger, Tomáš Fanta",
-    date: "2023-06-03",
-    days: 3,
-    venues: [
-      "cubex"
-    ],
-    languages: [
-      "english"
-    ],
-    attendees: 1e3,
-    description: `Gateway to Cosmos is the one-stop-shop conference for all Cosmos Network evangelists. The ever-growing Cosmos community deserves a place to connect and network with one another in person to foster these special relationships that have stemmed from the Internet of Blockchains.
-`,
-    logo: "https://data.prgblockweek.com/23/assets/events/gateway/logo.jpg",
-    registration: {
-      type: "tickets"
-    },
-    links: {
-      web: "https://gateway.events/",
-      twitter: "https://twitter.com/Gateway_Conf"
-    },
-    segments: [
-      {
-        date: "2023-06-03",
-        times: "09:00-18:00",
-        startTime: "2023-06-03T07:00:00.000Z",
-        endTime: "2023-06-03T16:00:00.000Z"
-      },
-      {
-        date: "2023-06-04",
-        times: "09:00-18:00",
-        startTime: "2023-06-04T07:00:00.000Z",
-        endTime: "2023-06-04T16:00:00.000Z"
-      },
-      {
-        date: "2023-06-05",
-        times: "09:00-18:00",
-        startTime: "2023-06-05T07:00:00.000Z",
-        endTime: "2023-06-05T16:00:00.000Z"
-      }
-    ],
-    speakers: [
-      {
-        id: "sunny-aggarwal",
-        name: "Sunny Aggarwal",
-        photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/sunny-aggarwal.png",
-        caption: "Osmosis Co-Founder",
-        twitter: "sunnya97",
-        country: "tw",
-        photo: "photos/speakers/sunny-aggarwal.png"
-      },
-      {
-        id: "zaki-manian",
-        name: "Zaki Manian",
-        photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/zaki-manian.png",
-        caption: "Sommelier Co-Founder",
-        twitter: "zmanian",
-        country: "us",
-        photo: "photos/speakers/zaki-manian.png"
-      },
-      {
-        id: "sergey-gorbunov",
-        name: "Sergey Gorbunov",
-        photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/sergey-gorbunov.png",
-        caption: "Axelar Co-Founder",
-        twitter: "sergey_nog",
-        country: "us",
-        photo: "photos/speakers/sergey-gorbunov.png"
-      },
-      {
-        id: "dean-tribble",
-        name: "Dean Tribble",
-        photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/dean-tribble.png",
-        caption: "Agoric Co-Founder",
-        twitter: "deantribble",
-        country: "us",
-        photo: "photos/speakers/dean-tribble.png"
-      },
-      {
-        id: "federico-kunze-kullmer",
-        name: "Federico Kunze Küllmer",
-        photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/federico-kunze-kullmer.png",
-        caption: "Evmos Co-Founder",
-        twitter: "fekunze",
-        country: "de",
-        photo: "photos/speakers/federico-kunze-kullmer.png"
-      }
-    ]
-  },
-  {
-    id: "privacyeth",
-    hash: "1215a955e8d60b320d94041e05bbc0dfffbc071b9cee9e034ea125bce819f52b",
-    name: "PrivacyETH 2023 by ETHBrno",
-    shortname: "PrivacyETH",
+    id: "web3privacy",
+    hash: "b4202430c819bea43e7d1afffa6e632478b80d645488a38584f7703bbeb16142",
+    name: "Web3Privacy Prague 2023",
+    shortname: "Web3Privacy",
     types: [
       "conference"
     ],
@@ -1523,14 +1450,25 @@ Petr Hotovec is co-founder of Dromi Solutions, a blockchain consultancy agency.
       "privacy",
       "security"
     ],
-    description: `A one-day lunarpunk-style conference focused on privacy. The conference originated as the dark side of [ETHPrague](https://ethprague.com), and is run by the same team behind the [ETHBrno](https://ethbrno.cz) hackathon in November.
+    description: `A one-day lunarpunk-style conference focused on privacy. First ever [Web3Privacy Summit](https://github.com/web3privacy/w3ps) #1.
+
+---
+
+If privacy is a human right, then we need to protect it.
+  
+Privacy advocates worldwide are coming together to discuss how to mainstream privacy within the Web3 industry. So it will become a cultural phenomenon embodying both decentralisation & anti-surveillance capitalism practices.
+  
+The conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).
 `,
-    logo: "https://data.prgblockweek.com/23/assets/events/privacyeth/logo.jpg",
+    logo: "https://data.prgblockweek.com/23/assets/events/web3privacy/logo.png",
     registration: {
-      type: "tickets"
+      type: "tickets",
+      price: "99 EUR"
     },
     links: {
-      twitter: "https://twitter.com/PrivacyETHconf"
+      web: "https://prague.web3privacy.info",
+      twitter: "https://twitter.com/web3privacy",
+      signal: "https://chat.web3privacy.info"
     },
     segments: [
       {
@@ -1538,374 +1476,87 @@ Petr Hotovec is co-founder of Dromi Solutions, a blockchain consultancy agency.
         times: "09:00-20:00",
         startTime: "2023-06-05T07:00:00.000Z",
         endTime: "2023-06-05T18:00:00.000Z"
+      },
+      {
+        remote: "lunarpunk-party"
+      }
+    ],
+    speakers: [
+      {
+        id: "guy-zyskind",
+        name: "Guy Zyskind",
+        twitter: "GuyZys",
+        caption: "Founder of [Secret Network](https://scrt.network/), CEO [SCRT Labs](https://www.scrtlabs.com/)",
+        country: "is",
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/web3privacy/photos/speakers/guy-zyskind.jpeg",
+        photo: "photos/speakers/guy-zyskind.jpeg"
+      },
+      {
+        id: "manu-alzuru",
+        name: "Manu Alzuru",
+        twitter: "ManuAlzuru",
+        caption: "Humanist,  solarpunk, Founder of [DoinGud](https://doingud.com/) & [ETH Barcelona](https://ethbarcelona.com/)",
+        country: "es",
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/web3privacy/photos/speakers/manu-alzuru.jpeg",
+        photo: "photos/speakers/manu-alzuru.jpeg"
+      },
+      {
+        id: "juraj-bednar",
+        name: "Juraj Bednar",
+        twitter: "jurbed",
+        caption: "Educator, writer, cryptoanarchist & biohacker",
+        country: "sk",
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/web3privacy/photos/speakers/juraj-bednar.jpeg",
+        photo: "photos/speakers/juraj-bednar.jpeg"
+      },
+      {
+        id: "mario-havel",
+        name: "Mario Havel",
+        twitter: "TMIYChao",
+        caption: "Hacker, Co-Founder of [Bordel Hackerspace](https://bordel.paralelnipolis.cz/#/)",
+        country: "cz",
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/web3privacy/photos/speakers/mario-havel.jpeg",
+        photo: "photos/speakers/mario-havel.jpeg"
       }
     ]
   },
   {
-    id: "strv-meetup",
-    hash: "45e8497ae2f258de7c54a418fc463568de240519a3b5b688eab1efc5739917a9",
-    name: "STRV meetup",
+    id: "gweicz-meetup",
+    hash: "86aaeb09db5be1b41c278f550f99294fe94db6a99f36761e8e19a22598807ab6",
+    name: "Gwei.cz Meetup @ PBW23",
     shortname: "",
     types: [
       "meetup"
     ],
     status: "planning",
-    chains: [],
-    org: "",
-    dri: "",
-    poc: "[strakovic](https://twitter.com/strakovicm)",
-    date: "2023-06-07",
-    days: 1,
-    venueName: "STRV Karlín",
-    venueAddress: "Rohanské nábřeží 678/23, 186 00 Praha 8 - Karlín, Czech Republic",
-    venueUrl: "https://goo.gl/maps/JESLTW4cf49XPjEm8",
-    languages: [
-      "english"
-    ],
-    tags: [],
-    description: "",
-    logo: "https://data.prgblockweek.com/23/assets/events/strv-meetup/logo.png",
-    links: {},
-    segments: [
-      {
-        date: "2023-06-07",
-        times: "09:00-18:00",
-        startTime: "2023-06-07T07:00:00.000Z",
-        endTime: "2023-06-07T16:00:00.000Z"
-      }
-    ]
-  },
-  {
-    id: "dotnft",
-    hash: "8f0879811361df5267c460c9b36b76c616c51546c1e304f9e4d4a29c1ed3cdbc",
-    name: "DotNFT 2023",
-    shortname: "DotNFT",
-    types: [
-      "conference"
-    ],
-    status: "planning",
-    chains: [
-      "polkadot"
-    ],
-    org: "[KodaDot](https://kodadot.xyz/)",
-    dri: "",
-    poc: "Damsky",
-    date: "2023-06-04",
-    days: 1,
-    times: "10:00-18:00",
-    venueName: "TBD",
-    languages: [
-      "english"
-    ],
-    attendees: 200,
-    tags: [
-      "NFT"
-    ],
-    description: "",
-    registration: {
-      type: "invites"
-    },
-    links: {
-      telegram: "https://t.me/+z77D0iuvL8YyNTBk",
-      discord: "https://discord.com/invite/KQXAs7Y3pQ"
-    },
-    segments: [
-      {
-        date: "2023-06-04",
-        times: "10:00-18:00",
-        startTime: "2023-06-04T08:00:00.000Z",
-        endTime: "2023-06-04T16:00:00.000Z"
-      }
-    ]
-  },
-  {
-    id: "beerfi-meetup",
-    hash: "a29ee59da5c0231f88f83841bdd82ceafb568025d2d27c8c14825f542867185f",
-    name: "BeerFi meetup",
-    shortname: "BeerFi",
-    types: [
-      "meetup"
-    ],
-    status: "planning",
-    chains: [
-      "ethereum",
-      "cosmos",
-      "polkadot"
-    ],
-    org: "Ethan Clime",
-    dri: "",
-    poc: "Ethan",
-    date: "2023-06-10",
-    times: "18:30-00:00",
-    days: 1,
-    venueName: "TBA",
-    languages: [
-      "english"
-    ],
-    attendees: 50,
-    tags: [
-      "web3",
-      "developers",
-      "smart-contracts"
-    ],
-    description: `We are Web3 on-chain dev Meetup Group and this is our special meetup for Prague Blockchain Week 2023 🍺.
-
-We regularly meet every Tuesday in the last week of the month. Whether you are a Web2 developer who wants to learn more or a senior Web3 developer, our meeting is for you!
-`,
-    logo: "https://data.prgblockweek.com/23/assets/events/beerfi-meetup/logo.jpg",
-    links: {
-      web: "https://beerfi.gwei.cz"
-    },
-    speakers: [
-      {
-        id: "radek-svarz"
-      }
-    ],
-    segments: [
-      {
-        date: "2023-06-10",
-        times: "18:30-00:00",
-        startTime: "2023-06-10T16:30:00.000Z",
-        endTime: "2023-06-10T22:00:00.000Z"
-      }
-    ]
-  },
-  {
-    id: "dotprague",
-    hash: "52579caba8ec46f15c00075f8de37e4d746b220c2f381e2e5cc0b14fc738fb8b",
-    name: "DOTPrague 2023",
-    shortname: "DOTPrague",
-    types: [
-      "conference"
-    ],
-    status: "planning",
-    chains: [
-      "polkadot"
-    ],
-    org: "[KodaDot](https://kodadot.xyz/)",
-    dri: "",
-    poc: "Damsky",
-    date: "2023-06-05",
-    days: 2,
-    times: "10:00-18:00",
-    venues: [
-      "jatka78"
-    ],
-    languages: [
-      "english"
-    ],
-    attendees: 300,
-    logo: "https://data.prgblockweek.com/23/assets/events/dotprague/logo.png",
-    description: `Experience the future of blockchain technology at this 2-day Polkadot Conference in Prague. Network, learn from industry leaders and explore the latest developments in the ecosystem.
-`,
-    cfp: {
-      link: "https://form.dotprague.xyz/speaker"
-    },
-    registration: {
-      type: "invites",
-      link: "https://form.dotprague.xyz/attendee",
-      button: "Join waitlist"
-    },
-    links: {
-      web: "https://dotprague.xyz/",
-      twitter: "https://twitter.com/DotsamaPrague",
-      telegram: "https://t.me/+z77D0iuvL8YyNTBk",
-      discord: "https://discord.com/invite/KQXAs7Y3pQ"
-    },
-    segments: [
-      {
-        date: "2023-06-05",
-        times: "10:00-18:00",
-        startTime: "2023-06-05T08:00:00.000Z",
-        endTime: "2023-06-05T16:00:00.000Z"
-      },
-      {
-        date: "2023-06-06",
-        times: "10:00-18:00",
-        startTime: "2023-06-06T08:00:00.000Z",
-        endTime: "2023-06-06T16:00:00.000Z"
-      }
-    ]
-  },
-  {
-    id: "bitcoin-prague",
-    hash: "daf3648d3a38403b37968ff34ce50b6cb3e16ac1d2b5135073f621c64da4985c",
-    name: "Bitcoin conference",
-    types: [
-      "conference",
-      "expo"
-    ],
-    status: "published",
-    chains: [
-      "bitcoin"
-    ],
-    org: "Censored",
-    dri: "",
-    poc: "",
-    date: "2023-06-08",
-    days: 3,
-    venues: [
-      "pva-expo"
-    ],
-    languages: [
-      "english",
-      "czech",
-      "slovak"
-    ],
-    attendees: 1e4,
-    description: "",
-    logo: "https://data.prgblockweek.com/23/assets/events/bitcoin-prague/logo.png",
-    hidden: !0,
-    segments: [
-      {
-        date: "2023-06-08",
-        times: "09:00-20:00",
-        ecap: 500,
-        title: "Industry Day",
-        startTime: "2023-06-08T07:00:00.000Z",
-        endTime: "2023-06-08T18:00:00.000Z"
-      },
-      {
-        date: "2023-06-09",
-        times: "09:00-19:00",
-        ecap: 1e4,
-        startTime: "2023-06-09T07:00:00.000Z",
-        endTime: "2023-06-09T17:00:00.000Z"
-      },
-      {
-        date: "2023-06-10",
-        times: "09:00-19:00",
-        ecap: 1e4,
-        startTime: "2023-06-10T07:00:00.000Z",
-        endTime: "2023-06-10T17:00:00.000Z"
-      }
-    ]
-  },
-  {
-    id: "ethprague",
-    hash: "f8e0f26e1df7e27cfa2a99fe303e78dee62bdf4abfdc97786859e604241058cd",
-    name: "ETHPrague 2023",
-    shortname: "ETHPrague",
-    types: [
-      "hackathon",
-      "conference"
-    ],
-    status: "planning",
-    org: "DuckTape/Paralelní Polis",
-    dri: "",
-    poc: "JosefJ, Vojta",
-    date: "2023-06-09",
-    days: 3,
-    venues: [
-      "paralelni-polis",
-      "la-fabrika"
-    ],
-    languages: [
-      "english"
-    ],
-    attendees: 600,
     chains: [
       "ethereum"
     ],
-    difficulty: "All Welcome",
-    tags: [
-      "solarpunk"
-    ],
-    logo: "https://data.prgblockweek.com/23/assets/events/ethprague/logo.jpg",
-    description: `ETHPrague isn’t looking for the next get rich quickly scheme or groundbreaking DeFi apps, instead it’s an event focusing on the future potential of Ethereum and concepts or applications which don’t yet exist. We want to tackle challenges which will or might arise in the next decade and we believe Ethereum will play a major role in solving these. The future is in your hands, anon! You decide whether we end up living in a dark authoritarian dystopia or a bright solarpunk utopia.
-`,
-    registration: {
-      type: "invites"
-    },
-    links: {
-      web: "https://ethprague.com/",
-      twitter: "https://twitter.com/EthPrague",
-      telegram: "https://t.me/ethprague"
-    },
-    segments: [
-      {
-        date: "2023-06-09",
-        times: "09:00-19:00",
-        ecap: 600,
-        startTime: "2023-06-09T07:00:00.000Z",
-        endTime: "2023-06-09T17:00:00.000Z"
-      },
-      {
-        date: "2023-06-09",
-        times: "19:00-09:00",
-        ecap: 100,
-        title: "Night hacking",
-        venues: [
-          "paralelni-polis"
-        ],
-        startTime: "2023-06-09T17:00:00.000Z",
-        endTime: "2023-06-10T07:00:00.000Z"
-      },
-      {
-        date: "2023-06-10",
-        times: "09:00-19:00",
-        ecap: 600,
-        startTime: "2023-06-10T07:00:00.000Z",
-        endTime: "2023-06-10T17:00:00.000Z"
-      },
-      {
-        date: "2023-06-10",
-        times: "19:00-09:00",
-        ecap: 100,
-        title: "Night hacking",
-        venues: [
-          "paralelni-polis"
-        ],
-        startTime: "2023-06-10T17:00:00.000Z",
-        endTime: "2023-06-11T07:00:00.000Z"
-      },
-      {
-        date: "2023-06-11",
-        times: "09:00-18:00",
-        ecap: 600,
-        startTime: "2023-06-11T07:00:00.000Z",
-        endTime: "2023-06-11T16:00:00.000Z"
-      }
-    ]
-  },
-  {
-    id: "artiffine-meetup",
-    hash: "a63e4542e0569a1e80eefeaebb84627cb63bc79780330ea1c27d56d26f575a43",
-    name: "Artiffine meetup",
-    shortname: "",
-    types: [
-      "meetup"
-    ],
-    status: "planning",
-    chains: [],
-    org: "",
-    dri: "",
-    poc: "Jan Zibner",
-    date: "2023-06-09",
+    org: "Gwei.cz",
+    dri: "burningtree",
+    poc: "[tree](https://t.me/treecz)",
+    date: "2023-06-08",
     days: 1,
+    times: "18:00-21:00",
     venueName: "TBA",
     languages: [
       "czech",
       "slovak"
     ],
+    attendees: 50,
     tags: [
-      "NFT",
-      "legal"
+      "DeFi",
+      "Web3"
     ],
     description: "",
-    logo: "https://data.prgblockweek.com/23/assets/events/artiffine-meetup/logo.jpg",
+    logo: "https://data.prgblockweek.com/23/assets/events/gweicz-meetup/logo.png",
     links: {},
-    speakers: [
-      {
-        id: "jan-zibner"
-      }
-    ],
     segments: [
       {
-        date: "2023-06-09",
-        times: "09:00-18:00",
-        startTime: "2023-06-09T07:00:00.000Z",
-        endTime: "2023-06-09T16:00:00.000Z"
+        date: "2023-06-08",
+        times: "18:00-21:00",
+        startTime: "2023-06-08T16:00:00.000Z",
+        endTime: "2023-06-08T19:00:00.000Z"
       }
     ]
   },
@@ -2056,6 +1707,407 @@ For this purpose Prague DeFi Summit, and the event build-up, has been designed a
         photo: "photos/speakers/julien-bouteloup.jpeg"
       }
     ]
+  },
+  {
+    id: "bitcoin-prague",
+    hash: "daf3648d3a38403b37968ff34ce50b6cb3e16ac1d2b5135073f621c64da4985c",
+    name: "Bitcoin conference",
+    types: [
+      "conference",
+      "expo"
+    ],
+    status: "published",
+    chains: [
+      "bitcoin"
+    ],
+    org: "Censored",
+    dri: "",
+    poc: "",
+    date: "2023-06-08",
+    days: 3,
+    venues: [
+      "pva-expo"
+    ],
+    languages: [
+      "english",
+      "czech",
+      "slovak"
+    ],
+    attendees: 1e4,
+    description: "",
+    logo: "https://data.prgblockweek.com/23/assets/events/bitcoin-prague/logo.png",
+    hidden: !0,
+    segments: [
+      {
+        date: "2023-06-08",
+        times: "09:00-20:00",
+        ecap: 500,
+        title: "Industry Day",
+        startTime: "2023-06-08T07:00:00.000Z",
+        endTime: "2023-06-08T18:00:00.000Z"
+      },
+      {
+        date: "2023-06-09",
+        times: "09:00-19:00",
+        ecap: 1e4,
+        startTime: "2023-06-09T07:00:00.000Z",
+        endTime: "2023-06-09T17:00:00.000Z"
+      },
+      {
+        date: "2023-06-10",
+        times: "09:00-19:00",
+        ecap: 1e4,
+        startTime: "2023-06-10T07:00:00.000Z",
+        endTime: "2023-06-10T17:00:00.000Z"
+      }
+    ]
+  },
+  {
+    id: "ibcprague",
+    hash: "c808ff8ce7b2d89de29381bf1f662373faf28c1014e0b18d69f6843f1b79da60",
+    name: "IBCPrague 2023",
+    shortname: "IBCPrague",
+    types: [
+      "conference"
+    ],
+    status: "planning",
+    chains: [
+      "cosmos"
+    ],
+    org: "",
+    dri: "",
+    poc: "[Jiří Čepelka](https://t.me/jiricepelka)",
+    date: "2023-06-06",
+    days: 1,
+    venues: [
+      "x10"
+    ],
+    languages: [
+      "english"
+    ],
+    attendees: 300,
+    logo: "https://data.prgblockweek.com/23/assets/events/ibcprague/logo.jpg",
+    sponsors: {
+      link: "https://app.skiff.com/docs/c46f9b08-27f8-4dd9-a2ef-145bd2003e78#1W5I8FwJVAziW3wjY1ay%2B%2FVwGi8aoNeNu32Qn5xSAgE%3D",
+      range: "1k-15k USD"
+    },
+    registration: {
+      type: "tickets"
+    },
+    links: {
+      web: "https://ibcprague.carrd.co/",
+      twitter: "https://twitter.com/IBCPrague"
+    },
+    segments: [
+      {
+        date: "2023-06-06",
+        times: "09:00-18:00",
+        startTime: "2023-06-06T07:00:00.000Z",
+        endTime: "2023-06-06T16:00:00.000Z"
+      }
+    ]
+  },
+  {
+    id: "beerfi-meetup",
+    hash: "a29ee59da5c0231f88f83841bdd82ceafb568025d2d27c8c14825f542867185f",
+    name: "BeerFi meetup",
+    shortname: "BeerFi",
+    types: [
+      "meetup"
+    ],
+    status: "planning",
+    chains: [
+      "ethereum",
+      "cosmos",
+      "polkadot"
+    ],
+    org: "Ethan Clime",
+    dri: "",
+    poc: "Ethan",
+    date: "2023-06-10",
+    times: "18:30-00:00",
+    days: 1,
+    venueName: "TBA",
+    languages: [
+      "english"
+    ],
+    attendees: 50,
+    tags: [
+      "web3",
+      "developers",
+      "smart-contracts"
+    ],
+    description: `We are Web3 on-chain dev Meetup Group and this is our special meetup for Prague Blockchain Week 2023 🍺.
+
+We regularly meet every Tuesday in the last week of the month. Whether you are a Web2 developer who wants to learn more or a senior Web3 developer, our meeting is for you!
+`,
+    logo: "https://data.prgblockweek.com/23/assets/events/beerfi-meetup/logo.jpg",
+    links: {
+      web: "https://beerfi.gwei.cz"
+    },
+    speakers: [
+      {
+        id: "radek-svarz"
+      }
+    ],
+    segments: [
+      {
+        date: "2023-06-10",
+        times: "18:30-00:00",
+        startTime: "2023-06-10T16:30:00.000Z",
+        endTime: "2023-06-10T22:00:00.000Z"
+      }
+    ]
+  },
+  {
+    id: "strv-meetup",
+    hash: "45e8497ae2f258de7c54a418fc463568de240519a3b5b688eab1efc5739917a9",
+    name: "STRV meetup",
+    shortname: "",
+    types: [
+      "meetup"
+    ],
+    status: "planning",
+    chains: [],
+    org: "",
+    dri: "",
+    poc: "[strakovic](https://twitter.com/strakovicm)",
+    date: "2023-06-07",
+    days: 1,
+    venueName: "STRV Karlín",
+    venueAddress: "Rohanské nábřeží 678/23, 186 00 Praha 8 - Karlín, Czech Republic",
+    venueUrl: "https://goo.gl/maps/JESLTW4cf49XPjEm8",
+    languages: [
+      "english"
+    ],
+    tags: [],
+    description: "",
+    logo: "https://data.prgblockweek.com/23/assets/events/strv-meetup/logo.png",
+    links: {},
+    segments: [
+      {
+        date: "2023-06-07",
+        times: "09:00-18:00",
+        startTime: "2023-06-07T07:00:00.000Z",
+        endTime: "2023-06-07T16:00:00.000Z"
+      }
+    ]
+  },
+  {
+    id: "desci-prague",
+    hash: "34aa802b4eeb469ecc72fc2d1fce3867ddfe71a6dde2537aa5d0d6823ac6c0dc",
+    name: "DeSci Prague 2023",
+    shortname: "DeSci Prague",
+    types: [
+      "conference"
+    ],
+    status: "idea",
+    org: "",
+    dri: "",
+    poc: "[Radek Švarz](https://t.me/r4deks)",
+    date: "2023-06-06",
+    days: 1,
+    venueName: "TBA",
+    languages: [
+      "english"
+    ],
+    attendees: 150,
+    tags: [
+      "DeSci",
+      "science"
+    ],
+    description: `One-day conference focused on Decentralized Science (DeSci).
+`,
+    logo: "https://data.prgblockweek.com/23/assets/events/desci-prague/logo.png",
+    links: {},
+    segments: [
+      {
+        date: "2023-06-06",
+        times: "09:00-18:00",
+        startTime: "2023-06-06T07:00:00.000Z",
+        endTime: "2023-06-06T16:00:00.000Z"
+      }
+    ]
+  },
+  {
+    id: "dotnft",
+    hash: "8f0879811361df5267c460c9b36b76c616c51546c1e304f9e4d4a29c1ed3cdbc",
+    name: "DotNFT 2023",
+    shortname: "DotNFT",
+    types: [
+      "conference"
+    ],
+    status: "planning",
+    chains: [
+      "polkadot"
+    ],
+    org: "[KodaDot](https://kodadot.xyz/)",
+    dri: "",
+    poc: "Damsky",
+    date: "2023-06-04",
+    days: 1,
+    times: "10:00-18:00",
+    venueName: "TBD",
+    languages: [
+      "english"
+    ],
+    attendees: 200,
+    tags: [
+      "NFT"
+    ],
+    description: "",
+    registration: {
+      type: "invites"
+    },
+    links: {
+      telegram: "https://t.me/+z77D0iuvL8YyNTBk",
+      discord: "https://discord.com/invite/KQXAs7Y3pQ"
+    },
+    segments: [
+      {
+        date: "2023-06-04",
+        times: "10:00-18:00",
+        startTime: "2023-06-04T08:00:00.000Z",
+        endTime: "2023-06-04T16:00:00.000Z"
+      }
+    ]
+  },
+  {
+    id: "gateway",
+    hash: "b45232371f0bebfd2f354850926be5a072492d0078d3acfc5229cfc9f50915e1",
+    name: "Gateway to Cosmos 2023",
+    shortname: "Gateway Cosmos",
+    types: [
+      "conference"
+    ],
+    status: "planning",
+    chains: [
+      "cosmos"
+    ],
+    org: "[RockawayX](https://rockawayx.com/)",
+    dri: "",
+    poc: "Tomáš Eminger, Tomáš Fanta",
+    date: "2023-06-03",
+    days: 3,
+    venues: [
+      "cubex"
+    ],
+    languages: [
+      "english"
+    ],
+    attendees: 1e3,
+    description: `Gateway to Cosmos is the one-stop-shop conference for all Cosmos Network evangelists. The ever-growing Cosmos community deserves a place to connect and network with one another in person to foster these special relationships that have stemmed from the Internet of Blockchains.
+`,
+    logo: "https://data.prgblockweek.com/23/assets/events/gateway/logo.jpg",
+    registration: {
+      type: "tickets"
+    },
+    links: {
+      web: "https://gateway.events/",
+      twitter: "https://twitter.com/Gateway_Conf"
+    },
+    segments: [
+      {
+        date: "2023-06-03",
+        times: "09:00-18:00",
+        startTime: "2023-06-03T07:00:00.000Z",
+        endTime: "2023-06-03T16:00:00.000Z"
+      },
+      {
+        date: "2023-06-04",
+        times: "09:00-18:00",
+        startTime: "2023-06-04T07:00:00.000Z",
+        endTime: "2023-06-04T16:00:00.000Z"
+      },
+      {
+        date: "2023-06-05",
+        times: "09:00-18:00",
+        startTime: "2023-06-05T07:00:00.000Z",
+        endTime: "2023-06-05T16:00:00.000Z"
+      }
+    ],
+    speakers: [
+      {
+        id: "sunny-aggarwal",
+        name: "Sunny Aggarwal",
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/sunny-aggarwal.png",
+        caption: "Osmosis Co-Founder",
+        twitter: "sunnya97",
+        country: "tw",
+        photo: "photos/speakers/sunny-aggarwal.png"
+      },
+      {
+        id: "zaki-manian",
+        name: "Zaki Manian",
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/zaki-manian.png",
+        caption: "Sommelier Co-Founder",
+        twitter: "zmanian",
+        country: "us",
+        photo: "photos/speakers/zaki-manian.png"
+      },
+      {
+        id: "sergey-gorbunov",
+        name: "Sergey Gorbunov",
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/sergey-gorbunov.png",
+        caption: "Axelar Co-Founder",
+        twitter: "sergey_nog",
+        country: "us",
+        photo: "photos/speakers/sergey-gorbunov.png"
+      },
+      {
+        id: "dean-tribble",
+        name: "Dean Tribble",
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/dean-tribble.png",
+        caption: "Agoric Co-Founder",
+        twitter: "deantribble",
+        country: "us",
+        photo: "photos/speakers/dean-tribble.png"
+      },
+      {
+        id: "federico-kunze-kullmer",
+        name: "Federico Kunze Küllmer",
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/gateway/photos/speakers/federico-kunze-kullmer.png",
+        caption: "Evmos Co-Founder",
+        twitter: "fekunze",
+        country: "de",
+        photo: "photos/speakers/federico-kunze-kullmer.png"
+      }
+    ]
+  },
+  {
+    id: "skodaverse-meetup",
+    hash: "17a33272918145c34e5f0074834f71e93cb01a9cd21ee0815b012845075cfad1",
+    name: "Škodaverse meetup",
+    shortname: "",
+    types: [
+      "meetup"
+    ],
+    status: "planning",
+    chains: [],
+    org: "",
+    dri: "",
+    poc: "NFTereez",
+    date: "2023-06-05",
+    days: 1,
+    venueName: "TBA",
+    languages: [
+      "english"
+    ],
+    tags: [
+      "metaverse",
+      "NFT"
+    ],
+    description: "",
+    logo: "https://data.prgblockweek.com/23/assets/events/skodaverse-meetup/logo.jpeg",
+    links: {},
+    segments: [
+      {
+        date: "2023-06-05",
+        times: "09:00-18:00",
+        startTime: "2023-06-05T07:00:00.000Z",
+        endTime: "2023-06-05T16:00:00.000Z"
+      }
+    ]
   }
 ], v = [
   {
@@ -2084,15 +2136,6 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
     }
   },
   {
-    id: "pbw-poap",
-    hash: "f1e385acaf0549c1166cf4cd3596852580fd16360365663f47abebfa6965a5e1",
-    name: "#PBW23 POAP Badge",
-    slogan: "Free",
-    logo: "https://data.prgblockweek.com/23/assets/benefits/pbw-poap/logo.jpg",
-    description: `Get a commemorative #PBW23 POAP badge for attending Prague Blockchain Week in person at each major event or at information booths.
-`
-  },
-  {
     id: "bitcoin-coffee",
     hash: "541c882646cebf7c726255c3c319b8d2be4021f70dd677c4b75740bf10003a33",
     name: "Bitcoin Coffee - Paralelní Polis",
@@ -2106,6 +2149,15 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
     }
   },
   {
+    id: "pbw-poap",
+    hash: "f1e385acaf0549c1166cf4cd3596852580fd16360365663f47abebfa6965a5e1",
+    name: "#PBW23 POAP Badge",
+    slogan: "Free",
+    logo: "https://data.prgblockweek.com/23/assets/benefits/pbw-poap/logo.jpg",
+    description: `Get a commemorative #PBW23 POAP badge for attending Prague Blockchain Week in person at each major event or at information booths.
+`
+  },
+  {
     id: "pbw-map",
     hash: "521d3cdb70d0ec9eb326da0c0534cbc5b33e79dea49a21ead297b833fba2df30",
     name: "#PBW23 Printed map",
@@ -2115,19 +2167,6 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
 `
   }
 ], y = [
-  {
-    id: "decentralizuj-se",
-    hash: "42e24dea73d8b2043be2cfb949d18dde62c0e6176dbf6ef9afa86733bb53761c",
-    name: "Decentralizuj se!",
-    org: "[UTXO Foundation](https://utxo.foundation/)",
-    description: "Crypto for beginners and users in local language",
-    events: [
-      "utxo"
-    ],
-    links: {
-      web: "https://utxo.events/"
-    }
-  },
   {
     id: "gm-events",
     hash: "ab91d6d7abec485d766befb1632a605d0acef0b13dd7da8d639528ddeeffca87",
@@ -2142,17 +2181,30 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
     links: {
       web: "https://gm.events/"
     }
+  },
+  {
+    id: "decentralizuj-se",
+    hash: "42e24dea73d8b2043be2cfb949d18dde62c0e6176dbf6ef9afa86733bb53761c",
+    name: "Decentralizuj se!",
+    org: "[UTXO Foundation](https://utxo.foundation/)",
+    description: "Crypto for beginners and users in local language",
+    events: [
+      "utxo"
+    ],
+    links: {
+      web: "https://utxo.events/"
+    }
   }
 ], j = [
   {
-    id: "ethereum",
-    hash: "5de714b31c76c263e0201837dda7f3b9d92d45a72adb2f495676abdc0370243e",
-    name: "Ethereum",
-    symbol: "ETH",
-    logo: "https://data.prgblockweek.com/23/assets/chains/ethereum/logo.webp",
+    id: "cosmos",
+    hash: "fc1f35322edcdd31bdc323c2a9a48b4e79b7fe3c1b75823d6f0da5b52828b9d7",
+    name: "Cosmos",
+    symbol: "ATOM",
+    logo: "https://data.prgblockweek.com/23/assets/chains/cosmos/logo.png",
     links: {
-      web: "https://ethereum.org/",
-      twitter: "https://twitter.com/ethereum"
+      web: "https://cosmos.network/",
+      twitter: "https://twitter.com/cosmos"
     }
   },
   {
@@ -2167,17 +2219,6 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
     }
   },
   {
-    id: "cosmos",
-    hash: "fc1f35322edcdd31bdc323c2a9a48b4e79b7fe3c1b75823d6f0da5b52828b9d7",
-    name: "Cosmos",
-    symbol: "ATOM",
-    logo: "https://data.prgblockweek.com/23/assets/chains/cosmos/logo.png",
-    links: {
-      web: "https://cosmos.network/",
-      twitter: "https://twitter.com/cosmos"
-    }
-  },
-  {
     id: "bitcoin",
     hash: "89eb61f2c142a77e6a3f40f7524c8cf070841c18b56bf2f1d407e7d8bed1f127",
     name: "Bitcoin",
@@ -2186,8 +2227,19 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
     links: {
       web: "https://bitcoin.org/"
     }
+  },
+  {
+    id: "ethereum",
+    hash: "5de714b31c76c263e0201837dda7f3b9d92d45a72adb2f495676abdc0370243e",
+    name: "Ethereum",
+    symbol: "ETH",
+    logo: "https://data.prgblockweek.com/23/assets/chains/ethereum/logo.webp",
+    links: {
+      web: "https://ethereum.org/",
+      twitter: "https://twitter.com/ethereum"
+    }
   }
-], z = "2023-02-13T19:12:41.365Z", T = "v2023.02.13-r2", c = {
+], z = "2023-02-23T06:56:11.233Z", T = "v2023.02.23-r1", c = {
   id: k,
   name: m,
   dataUrl: u,
@@ -2196,6 +2248,19 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
   places: w,
   events: f,
   "media-partners": [
+    {
+      id: "kryptomagazin",
+      hash: "1c39e69b2a1b8686b74490b63fa54ee9e3b35893de8339fdda4324852b739c26",
+      name: "KryptomagazinCZ",
+      description: "Zpravodajský portál o kryptoměnách",
+      logo: "https://data.prgblockweek.com/23/assets/media-partners/kryptomagazin/logo.jpg",
+      languages: [
+        "czech"
+      ],
+      links: {
+        web: "https://kryptomagazin.cz/"
+      }
+    },
     {
       id: "pp",
       hash: "4f0539f84706a9680a504b9855826ce39f3c3fb4b02b750fcb2022ab7d12509c",
@@ -2208,6 +2273,20 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
       links: {
         web: "https://www.paralelnipolis.cz/",
         twitter: "https://twitter.com/Paralelni_polis"
+      }
+    },
+    {
+      id: "nft-space",
+      hash: "aeb2a0a7c72045ac1643cd163cd35f8b3b591bcfb829872fea5cdc2b3b9fedc1",
+      name: "NFT Space",
+      description: "Novinky a vzdělávací články z NFT, Web3 a Metaverse",
+      languages: [
+        "czech"
+      ],
+      logo: "https://data.prgblockweek.com/23/assets/media-partners/nft-space/logo.jpg",
+      links: {
+        web: "https://www.nftspace.cz/",
+        twitter: "https://twitter.com/nftspaceczsk"
       }
     },
     {
@@ -2224,16 +2303,31 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
       }
     },
     {
-      id: "kryptomagazin",
-      hash: "1c39e69b2a1b8686b74490b63fa54ee9e3b35893de8339fdda4324852b739c26",
-      name: "KryptomagazinCZ",
-      description: "Zpravodajský portál o kryptoměnách",
-      logo: "https://data.prgblockweek.com/23/assets/media-partners/kryptomagazin/logo.jpg",
+      id: "crypto-nomads",
+      hash: "58db3abb1438cd74bbb4bf84a236e5744bc1120e3ce526ad44a3239e44d071fc",
+      name: "Crypto Nomads Club",
+      description: "A community for crypto nomads",
+      logo: "https://data.prgblockweek.com/23/assets/media-partners/crypto-nomads/logo.png",
       languages: [
-        "czech"
+        "english"
       ],
       links: {
-        web: "https://kryptomagazin.cz/"
+        web: "https://www.cryptonomadsclub.xyz/",
+        twitter: "https://twitter.com/CryptoNomads_gm"
+      }
+    },
+    {
+      id: "blockwise",
+      hash: "95fb88f656a099bcf2e5403f345e01909914dba6db4c64bcc269a489a8074da9",
+      name: "blockWise",
+      description: "Newsletter a vzdelávanie o krypte, web3, metaverse, AR",
+      logo: "https://data.prgblockweek.com/23/assets/media-partners/blockwise/logo.png",
+      languages: [
+        "slovak"
+      ],
+      links: {
+        web: "https://www.blockwise.sk/",
+        facebook: "https://www.facebook.com/blockwise.sk/"
       }
     },
     {
@@ -2252,20 +2346,6 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
       }
     },
     {
-      id: "crypto-nomads",
-      hash: "58db3abb1438cd74bbb4bf84a236e5744bc1120e3ce526ad44a3239e44d071fc",
-      name: "Crypto Nomads Club",
-      description: "A community for crypto nomads",
-      logo: "https://data.prgblockweek.com/23/assets/media-partners/crypto-nomads/logo.png",
-      languages: [
-        "english"
-      ],
-      links: {
-        web: "https://www.cryptonomadsclub.xyz/",
-        twitter: "https://twitter.com/CryptoNomads_gm"
-      }
-    },
-    {
       id: "kryptospace",
       hash: "d352468e333d56dc6ab834707faa10f3cf7186cc00266ed5eb6ab9f17482b123",
       name: "KryptoSpace",
@@ -2277,34 +2357,6 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
       links: {
         web: "https://www.kryptospace.cz/",
         twitter: "https://twitter.com/RuzovejSlon"
-      }
-    },
-    {
-      id: "nft-space",
-      hash: "aeb2a0a7c72045ac1643cd163cd35f8b3b591bcfb829872fea5cdc2b3b9fedc1",
-      name: "NFT Space",
-      description: "Novinky a vzdělávací články z NFT, Web3 a Metaverse",
-      languages: [
-        "czech"
-      ],
-      logo: "https://data.prgblockweek.com/23/assets/media-partners/nft-space/logo.jpg",
-      links: {
-        web: "https://www.nftspace.cz/",
-        twitter: "https://twitter.com/nftspaceczsk"
-      }
-    },
-    {
-      id: "blockwise",
-      hash: "95fb88f656a099bcf2e5403f345e01909914dba6db4c64bcc269a489a8074da9",
-      name: "blockWise",
-      description: "Newsletter a vzdelávanie o krypte, web3, metaverse, AR",
-      logo: "https://data.prgblockweek.com/23/assets/media-partners/blockwise/logo.png",
-      languages: [
-        "slovak"
-      ],
-      links: {
-        web: "https://www.blockwise.sk/",
-        facebook: "https://www.facebook.com/blockwise.sk/"
       }
     }
   ],
@@ -2370,6 +2422,53 @@ With 7 studio albums, more than 800 concerts worldwide, numerous international a
       ]
     },
     {
+      id: "i-hate-models",
+      hash: "94336d4df25478e1a857f022b1098035460ca5148852b40ffd0ed342e4b6ebd4",
+      name: "I Hate Models /FR",
+      types: [
+        "other"
+      ],
+      status: "published",
+      org: "",
+      dri: "",
+      poc: "",
+      date: "2023-06-09",
+      days: 1,
+      times: "23:00-04:00",
+      venueName: "Roxy",
+      venueAddress: "Dlouhá 33, 110 00 Staré Město",
+      venueUrl: "https://goo.gl/maps/1trUQWd24gcVap1W7",
+      languages: [
+        "english"
+      ],
+      attendees: 750,
+      tags: [
+        "music",
+        "concert",
+        "culture",
+        "techno"
+      ],
+      logo: "https://data.prgblockweek.com/23/assets/other-events/i-hate-models/photo.jpg",
+      description: `The energy of club music serves as a vessel for his own feelings and a tool to manipulate others with. The spectrum of moods expressed – in his productions, DJ sets and on his label Disco Inferno – veers from nostalgia and passion to loneliness, melancholia and brutality, often juxtaposing darkness and light in the same pulse as an authentic conduit of his own artistic self-assessment. I Hate Models will shock #ROXYprague for the first time on Friday 9/6.
+`,
+      registration: {
+        type: "tickets",
+        link: "https://goout.net/en/i-hate-models/szffnvu/",
+        price: "631 CZK"
+      },
+      links: {
+        web: "https://www.roxy.cz/en/events/detail/3437/i-hate-models"
+      },
+      segments: [
+        {
+          date: "2023-06-09",
+          times: "23:00-04:00",
+          startTime: "2023-06-09T21:00:00.000Z",
+          endTime: "2023-06-10T02:00:00.000Z"
+        }
+      ]
+    },
+    {
       id: "maker-faire",
       hash: "40fd3208d7d6c3dd34d34286da634709f421974f6fe5fbb3cc7e8f8e6d625ad0",
       name: "Maker Faire Prague 2023",
@@ -2420,53 +2519,6 @@ The festival brings together enthusiasts and experts, but also promises smart en
           times: "10:00-16:00",
           startTime: "2023-06-11T08:00:00.000Z",
           endTime: "2023-06-11T14:00:00.000Z"
-        }
-      ]
-    },
-    {
-      id: "i-hate-models",
-      hash: "94336d4df25478e1a857f022b1098035460ca5148852b40ffd0ed342e4b6ebd4",
-      name: "I Hate Models /FR",
-      types: [
-        "other"
-      ],
-      status: "published",
-      org: "",
-      dri: "",
-      poc: "",
-      date: "2023-06-09",
-      days: 1,
-      times: "23:00-04:00",
-      venueName: "Roxy",
-      venueAddress: "Dlouhá 33, 110 00 Staré Město",
-      venueUrl: "https://goo.gl/maps/1trUQWd24gcVap1W7",
-      languages: [
-        "english"
-      ],
-      attendees: 750,
-      tags: [
-        "music",
-        "concert",
-        "culture",
-        "techno"
-      ],
-      logo: "https://data.prgblockweek.com/23/assets/other-events/i-hate-models/photo.jpg",
-      description: `The energy of club music serves as a vessel for his own feelings and a tool to manipulate others with. The spectrum of moods expressed – in his productions, DJ sets and on his label Disco Inferno – veers from nostalgia and passion to loneliness, melancholia and brutality, often juxtaposing darkness and light in the same pulse as an authentic conduit of his own artistic self-assessment. I Hate Models will shock #ROXYprague for the first time on Friday 9/6.
-`,
-      registration: {
-        type: "tickets",
-        link: "https://goout.net/en/i-hate-models/szffnvu/",
-        price: "631 CZK"
-      },
-      links: {
-        web: "https://www.roxy.cz/en/events/detail/3437/i-hate-models"
-      },
-      segments: [
-        {
-          date: "2023-06-09",
-          times: "23:00-04:00",
-          startTime: "2023-06-09T21:00:00.000Z",
-          endTime: "2023-06-10T02:00:00.000Z"
         }
       ]
     }
