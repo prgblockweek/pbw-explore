@@ -1,25 +1,23 @@
 const l = [
   "/_app/immutable/assets/_layout-b34e4d6c.css",
+  "/_app/immutable/chunks/singletons-be286767.js",
+  "/_app/immutable/chunks/control-e7f5239e.js",
   "/_app/immutable/chunks/stores-16595c51.js",
   "/_app/immutable/components/error.svelte-1e1dd53e.js",
-  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
-  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
-  "/_app/immutable/chunks/singletons-be286767.js",
-  "/_app/immutable/chunks/index-bc2baea7.js",
-  "/_app/immutable/chunks/control-e7f5239e.js",
-  "/_app/immutable/chunks/Footer-cdca4abb.js",
-  "/_app/immutable/chunks/Header-c7de4272.js",
-  "/_app/immutable/start-56d88086.js",
-  "/_app/immutable/modules/pages/_page.js-8da6f1e5.js",
-  "/_app/immutable/chunks/TimelineHeatmap-f8a9bab1.js",
-  "/_app/immutable/chunks/0-f9d37d48.js",
-  "/_app/immutable/chunks/1-6b65ec40.js",
-  "/_app/immutable/chunks/_layout-f22c31aa.js",
   "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
   "/_app/immutable/chunks/_page-6ce32609.js",
-  "/_app/immutable/components/pages/_entry_/_page.svelte-0e3dc84b.js",
+  "/_app/immutable/chunks/TimelineHeatmap-f8a9bab1.js",
   "/_app/immutable/chunks/CollectionList-6f860ada.js",
-  "/_app/immutable/chunks/2-239254f1.js",
+  "/_app/immutable/components/pages/_entry_/_page.svelte-0e3dc84b.js",
+  "/_app/immutable/chunks/_layout-e6ce5827.js",
+  "/_app/immutable/chunks/index-bc2baea7.js",
+  "/_app/immutable/chunks/DisclaimerHidden-67d93911.js",
+  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
+  "/_app/immutable/chunks/Header-c7de4272.js",
+  "/_app/immutable/start-5dda2b9b.js",
+  "/_app/immutable/chunks/0-f9d37d48.js",
+  "/_app/immutable/chunks/1-6b65ec40.js",
+  "/_app/immutable/chunks/2-5d2ba973.js",
   "/_app/immutable/chunks/3-6c3e60c6.js",
   "/_app/immutable/chunks/4-f2ced256.js",
   "/_app/immutable/chunks/5-d4ca268e.js",
@@ -28,18 +26,20 @@ const l = [
   "/_app/immutable/chunks/8-d6bf0120.js",
   "/_app/immutable/chunks/9-15fada45.js",
   "/_app/immutable/chunks/10-74b41983.js",
-  "/_app/immutable/modules/pages/_entry_/_layout.js-56d4733e.js",
-  "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-a4cccf31.js",
-  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-2d8e98f2.js",
-  "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-c0e4437a.js",
-  "/_app/immutable/chunks/DisclaimerHidden-67d93911.js",
-  "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js",
+  "/_app/immutable/modules/pages/_entry_/_layout.js-0e189c3c.js",
+  "/_app/immutable/modules/pages/_page.js-8da6f1e5.js",
   "/_app/immutable/components/pages/_entry_/_type_/_page.svelte-c86a41e9.js",
-  "/_app/immutable/chunks/CalendarList-ae4000ba.js",
+  "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js",
   "/_app/immutable/components/pages/_entry_/day/_date_/_page.svelte-2014c175.js",
+  "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-c0e4437a.js",
+  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
   "/_app/immutable/chunks/utils-f207ab4c.js",
-  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-306d7e24.js",
-  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js"
+  "/_app/immutable/chunks/CalendarList-ae4000ba.js",
+  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-2d8e98f2.js",
+  "/_app/immutable/chunks/Footer-cdca4abb.js",
+  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
+  "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-a4cccf31.js",
+  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-306d7e24.js"
 ], d = [
   "/bg-prg.png",
   "/favicon.png",
@@ -47,7 +47,7 @@ const l = [
   "/img/pbw23-twitter-card.png",
   "/manifest.json",
   "/preview.jpg"
-], h = "1677148955160", k = "23", m = "Prague Blockchain Week 2023", u = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", w = [
+], h = "1677157390062", k = "23", m = "Prague Blockchain Week 2023", u = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", w = [
   {
     id: "paralelni-polis",
     hash: "04bff1ba451a1e4a5c3f2d01825d9ca4c06a2d111a1905074b7a1a2ac7034378",
@@ -208,7 +208,7 @@ const l = [
       "hackathon",
       "conference"
     ],
-    status: "planning",
+    status: "published",
     org: "DuckTape/Paralelní Polis",
     dri: "",
     poc: "JosefJ, Vojta",
@@ -232,8 +232,13 @@ const l = [
     logo: "https://data.prgblockweek.com/23/assets/events/ethprague/logo.jpg",
     description: `ETHPrague isn’t looking for the next get rich quickly scheme or groundbreaking DeFi apps, instead it’s an event focusing on the future potential of Ethereum and concepts or applications which don’t yet exist. We want to tackle challenges which will or might arise in the next decade and we believe Ethereum will play a major role in solving these. The future is in your hands, anon! You decide whether we end up living in a dark authoritarian dystopia or a bright solarpunk utopia.
 `,
+    cfp: {
+      link: "https://cfp.paralelnipolis.cz/ethprague-2023/"
+    },
     registration: {
-      type: "invites"
+      type: "invites",
+      link: "https://gmevents.typeform.com/to/jy3Mufeq",
+      button: "Apply to hack"
     },
     links: {
       web: "https://ethprague.com/",
@@ -500,7 +505,8 @@ const l = [
       text: "The conference is in Czech-Slovak language, aimed at a wide audience. English speakers are not accepted (exceptions possible)."
     },
     registration: {
-      type: "tickets"
+      type: "tickets",
+      price: "590 CZK"
     },
     links: {
       web: "https://utxo.cz/",
@@ -1604,7 +1610,7 @@ For this purpose Prague DeFi Summit, and the event build-up, has been designed a
     },
     registration: {
       type: "tickets",
-      price: ">222 EUR",
+      price: "222 EUR",
       link: "https://tickets.paralelnipolis.cz/dtp/PDFS23/"
     },
     links: {
@@ -1980,7 +1986,7 @@ We regularly meet every Tuesday in the last week of the month. Whether you are a
     types: [
       "conference"
     ],
-    status: "planning",
+    status: "published",
     chains: [
       "cosmos"
     ],
@@ -2000,7 +2006,9 @@ We regularly meet every Tuesday in the last week of the month. Whether you are a
 `,
     logo: "https://data.prgblockweek.com/23/assets/events/gateway/logo.jpg",
     registration: {
-      type: "tickets"
+      type: "tickets",
+      price: "50 EUR",
+      link: "https://gateway.events/#tickets"
     },
     links: {
       web: "https://gateway.events/",
@@ -2239,7 +2247,7 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
       twitter: "https://twitter.com/ethereum"
     }
   }
-], z = "2023-02-23T06:56:11.233Z", T = "v2023.02.23-r1", c = {
+], z = "2023-02-23T12:44:40.552Z", T = "v2023.02.23-r2", c = {
   id: k,
   name: m,
   dataUrl: u,
