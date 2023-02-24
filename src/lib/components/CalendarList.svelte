@@ -13,7 +13,6 @@
 	for (let i = 0; i < segments.length; i++) {
 		const sg = segments[i]
 		if (sg.remote) {
-			console.log(i)
 			const event = bundle.events.find(e => e.id === sg.remote)
 			const remoteSegments = event.segments.map(rs => Object.assign(rs, {
 				event,
@@ -22,7 +21,6 @@
 			segments.splice(i, remoteSegments.length, ...remoteSegments)
 		}
 	}
-	console.log(segments)
 
 </script>
 
