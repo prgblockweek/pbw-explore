@@ -1,45 +1,45 @@
 const l = [
   "/_app/immutable/assets/_layout-b34e4d6c.css",
   "/_app/immutable/chunks/stores-16595c51.js",
-  "/_app/immutable/components/error.svelte-1e1dd53e.js",
-  "/_app/immutable/chunks/singletons-be286767.js",
-  "/_app/immutable/chunks/index-bc2baea7.js",
-  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
-  "/_app/immutable/chunks/CollectionList-6f860ada.js",
-  "/_app/immutable/components/pages/_entry_/_page.svelte-0e3dc84b.js",
-  "/_app/immutable/components/pages/_entry_/_type_/_page.svelte-c86a41e9.js",
-  "/_app/immutable/chunks/TimelineHeatmap-f8a9bab1.js",
-  "/_app/immutable/chunks/Header-c7de4272.js",
-  "/_app/immutable/chunks/2-7d76df25.js",
-  "/_app/immutable/chunks/Footer-cdca4abb.js",
   "/_app/immutable/chunks/control-e7f5239e.js",
+  "/_app/immutable/chunks/singletons-be286767.js",
+  "/_app/immutable/components/error.svelte-1e1dd53e.js",
+  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
+  "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js",
   "/_app/immutable/chunks/0-f9d37d48.js",
-  "/_app/immutable/components/pages/_entry_/day/_date_/_page.svelte-6d297379.js",
   "/_app/immutable/chunks/1-6b65ec40.js",
-  "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-c0e4437a.js",
+  "/_app/immutable/chunks/2-b6946400.js",
   "/_app/immutable/chunks/3-6c3e60c6.js",
   "/_app/immutable/chunks/4-f2ced256.js",
   "/_app/immutable/chunks/5-d4ca268e.js",
-  "/_app/immutable/chunks/7-a299a094.js",
   "/_app/immutable/chunks/6-6f90559c.js",
-  "/_app/immutable/chunks/9-15fada45.js",
-  "/_app/immutable/modules/pages/_entry_/_layout.js-8437de5e.js",
-  "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-e1198403.js",
+  "/_app/immutable/chunks/7-a299a094.js",
   "/_app/immutable/chunks/8-d6bf0120.js",
-  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
-  "/_app/immutable/chunks/_layout-86435921.js",
-  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
-  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
+  "/_app/immutable/chunks/9-15fada45.js",
   "/_app/immutable/chunks/10-b15fa496.js",
-  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-c6102c7d.js",
-  "/_app/immutable/chunks/CalendarList-eb3d77c9.js",
-  "/_app/immutable/chunks/_page-6ce32609.js",
-  "/_app/immutable/chunks/utils-f207ab4c.js",
+  "/_app/immutable/modules/pages/_entry_/_layout.js-d569724d.js",
   "/_app/immutable/modules/pages/_page.js-8da6f1e5.js",
-  "/_app/immutable/chunks/DisclaimerHidden-67d93911.js",
-  "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js",
+  "/_app/immutable/chunks/CalendarList-eb3d77c9.js",
+  "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-e1198403.js",
+  "/_app/immutable/components/pages/_entry_/day/_date_/_page.svelte-6d297379.js",
   "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-2d8e98f2.js",
-  "/_app/immutable/start-98d75826.js"
+  "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-c0e4437a.js",
+  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
+  "/_app/immutable/start-f7cb06df.js",
+  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
+  "/_app/immutable/chunks/utils-f207ab4c.js",
+  "/_app/immutable/chunks/Footer-cdca4abb.js",
+  "/_app/immutable/components/pages/_entry_/_type_/_page.svelte-c86a41e9.js",
+  "/_app/immutable/chunks/Header-c7de4272.js",
+  "/_app/immutable/chunks/DisclaimerHidden-67d93911.js",
+  "/_app/immutable/chunks/_page-6ce32609.js",
+  "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
+  "/_app/immutable/chunks/_layout-73842bd8.js",
+  "/_app/immutable/chunks/index-bc2baea7.js",
+  "/_app/immutable/chunks/CollectionList-6f860ada.js",
+  "/_app/immutable/components/pages/_entry_/_page.svelte-0e3dc84b.js",
+  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-c6102c7d.js",
+  "/_app/immutable/chunks/TimelineHeatmap-f8a9bab1.js"
 ], d = [
   "/bg-prg.png",
   "/favicon.png",
@@ -47,7 +47,7 @@ const l = [
   "/img/pbw23-twitter-card.png",
   "/manifest.json",
   "/preview.jpg"
-], h = "1677224503122", k = "23", u = "Prague Blockchain Week 2023", m = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", w = [
+], h = "1677224797729", k = "23", u = "Prague Blockchain Week 2023", m = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", w = [
   {
     id: "paralelni-polis",
     hash: "04bff1ba451a1e4a5c3f2d01825d9ca4c06a2d111a1905074b7a1a2ac7034378",
@@ -486,8 +486,8 @@ const l = [
     org: "[UTXO Foundation](https://utxo.foundation)",
     dri: "burningtree",
     poc: "[Tereza Starostová](https://t.me/Terezastarostova)",
-    date: "2023-06-02",
-    days: 3,
+    date: "2023-06-03",
+    days: 2,
     venues: [
       "gabriel-loci"
     ],
@@ -516,13 +516,6 @@ const l = [
       youtube: "https://www.youtube.com/c/UTXOPrague"
     },
     segments: [
-      {
-        date: "2023-06-02",
-        times: "18:00-02:00",
-        title: "Day 0 - Opening Party",
-        startTime: "2023-06-02T16:00:00.000Z",
-        endTime: "2023-06-03T00:00:00.000Z"
-      },
       {
         date: "2023-06-03",
         times: "10:00-19:00",
@@ -2364,7 +2357,7 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
       twitter: "https://twitter.com/ethereum"
     }
   }
-], z = "2023-02-24T07:34:27.460Z", T = "v2023.02.24-r3", c = {
+], z = "2023-02-24T07:45:35.370Z", T = "v2023.02.24-r5", c = {
   id: k,
   name: u,
   dataUrl: m,
