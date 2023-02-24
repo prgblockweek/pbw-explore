@@ -1,45 +1,45 @@
 const l = [
   "/_app/immutable/assets/_layout-b34e4d6c.css",
-  "/_app/immutable/chunks/singletons-be286767.js",
-  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
-  "/_app/immutable/chunks/stores-16595c51.js",
+  "/_app/immutable/components/error.svelte-1e1dd53e.js",
   "/_app/immutable/chunks/control-e7f5239e.js",
+  "/_app/immutable/chunks/stores-16595c51.js",
+  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
+  "/_app/immutable/components/layout.svelte-77e7f4c1.js",
+  "/_app/immutable/components/pages/_entry_/_page.svelte-0e3dc84b.js",
+  "/_app/immutable/chunks/CollectionList-6f860ada.js",
+  "/_app/immutable/chunks/TimelineHeatmap-f8a9bab1.js",
+  "/_app/immutable/chunks/singletons-be286767.js",
+  "/_app/immutable/chunks/index-bc2baea7.js",
   "/_app/immutable/chunks/0-f9d37d48.js",
   "/_app/immutable/chunks/1-6b65ec40.js",
-  "/_app/immutable/chunks/2-e0092430.js",
+  "/_app/immutable/chunks/2-7d76df25.js",
   "/_app/immutable/chunks/3-6c3e60c6.js",
   "/_app/immutable/chunks/4-f2ced256.js",
   "/_app/immutable/chunks/5-d4ca268e.js",
   "/_app/immutable/chunks/6-6f90559c.js",
   "/_app/immutable/chunks/7-a299a094.js",
-  "/_app/immutable/chunks/_layout-05af6947.js",
-  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
-  "/_app/immutable/chunks/_page-6ce32609.js",
-  "/_app/immutable/components/pages/_entry_/_page.svelte-0e3dc84b.js",
-  "/_app/immutable/chunks/utils-f207ab4c.js",
   "/_app/immutable/chunks/8-d6bf0120.js",
-  "/_app/immutable/chunks/Header-c7de4272.js",
-  "/_app/immutable/chunks/DisclaimerHidden-67d93911.js",
   "/_app/immutable/chunks/9-15fada45.js",
   "/_app/immutable/chunks/10-b15fa496.js",
-  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-2d8e98f2.js",
-  "/_app/immutable/modules/pages/_entry_/_layout.js-4192eaf0.js",
+  "/_app/immutable/modules/pages/_entry_/_layout.js-8437de5e.js",
   "/_app/immutable/modules/pages/_page.js-8da6f1e5.js",
-  "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-c0e4437a.js",
-  "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-e1198403.js",
-  "/_app/immutable/components/pages/_entry_/day/_date_/_page.svelte-6d297379.js",
-  "/_app/immutable/chunks/CollectionList-6f860ada.js",
-  "/_app/immutable/chunks/CalendarList-eb3d77c9.js",
-  "/_app/immutable/chunks/index-bc2baea7.js",
-  "/_app/immutable/start-9f51bd0a.js",
-  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-c6102c7d.js",
-  "/_app/immutable/chunks/TimelineHeatmap-f8a9bab1.js",
-  "/_app/immutable/chunks/Footer-cdca4abb.js",
-  "/_app/immutable/chunks/Disclaimer-1872fbc3.js",
-  "/_app/immutable/components/pages/_entry_/_type_/_page.svelte-c86a41e9.js",
-  "/_app/immutable/components/error.svelte-1e1dd53e.js",
   "/_app/immutable/components/pages/_layout.svelte-881d16bd.js",
-  "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js"
+  "/_app/immutable/components/pages/_entry_/schedule/_page.svelte-e1198403.js",
+  "/_app/immutable/start-98d75826.js",
+  "/_app/immutable/chunks/Header-c7de4272.js",
+  "/_app/immutable/chunks/DisclaimerHidden-67d93911.js",
+  "/_app/immutable/chunks/_layout-86435921.js",
+  "/_app/immutable/components/pages/_page.svelte-3336b2dd.js",
+  "/_app/immutable/chunks/_page-6ce32609.js",
+  "/_app/immutable/components/pages/_entry_/for-sponsors/_page.svelte-c0e4437a.js",
+  "/_app/immutable/chunks/Footer-cdca4abb.js",
+  "/_app/immutable/components/pages/_entry_/day/_date_/_page.svelte-6d297379.js",
+  "/_app/immutable/components/pages/_entry_/_type_/_page.svelte-c86a41e9.js",
+  "/_app/immutable/chunks/SvelteMarkdown-a05ade2d.js",
+  "/_app/immutable/components/pages/_entry_/for-speakers/_page.svelte-2d8e98f2.js",
+  "/_app/immutable/chunks/CalendarList-eb3d77c9.js",
+  "/_app/immutable/chunks/utils-f207ab4c.js",
+  "/_app/immutable/components/pages/_entry_/_type_/_slug_/_page.svelte-c6102c7d.js"
 ], d = [
   "/bg-prg.png",
   "/favicon.png",
@@ -47,7 +47,7 @@ const l = [
   "/img/pbw23-twitter-card.png",
   "/manifest.json",
   "/preview.jpg"
-], h = "1677223905210", k = "23", m = "Prague Blockchain Week 2023", u = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", w = [
+], h = "1677224418678", k = "23", u = "Prague Blockchain Week 2023", m = "https://data.prgblockweek.com/23", g = "https://explore.prgblockweek.com/23", b = "https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23", w = [
   {
     id: "paralelni-polis",
     hash: "04bff1ba451a1e4a5c3f2d01825d9ca4c06a2d111a1905074b7a1a2ac7034378",
@@ -198,7 +198,7 @@ const l = [
       web: "https://www.lafabrika.cz/en/pronajem"
     }
   }
-], f = [
+], v = [
   {
     id: "ethprague",
     hash: "f8e0f26e1df7e27cfa2a99fe303e78dee62bdf4abfdc97786859e604241058cd",
@@ -603,6 +603,32 @@ const l = [
         photo: "photos/speakers/adam-sobotka.jpg"
       },
       {
+        id: "david-stancel",
+        name: "David Stancel",
+        twitter: "dave_stancel",
+        orgs: `Autor [Coin Story](https://coinstory.tech/), CIO @ [Fumbi](https://fumbi.network/)
+`,
+        caption: "Author of [Coin Story](https://coinstory.tech), CIO @ [Fumbi](https://fumbi.network/)",
+        tracks: [
+          "defi",
+          "alty",
+          "spolecnost"
+        ],
+        web: {
+          name: "stanceldavid.sk",
+          url: "https://stanceldavid.sk/"
+        },
+        country: "sk",
+        desc: `Dávid vyštudoval Ekonómiu na Masarykovej univerzite v Brne, a Master of Science v obore Digitálnych mien na Univerzite v Nikózii na Cypre. Pracoval  ako IT auditor a konzultant v [PwC Slovensko](https://www.pwc.com/sk/sk/). Spoluzakladal [Blockchain Slovakia](https://blockchainslovakia.sk/) a pracoval ako konzultant v oblasti kryptomien a blockchain technológií na niekoľkých slovenských ako aj zajhraničných startupoch a projektoch a v súčasnosti je na pozícii Chief Investment Officer vo [Fumbi](https://fumbi.network/). David často prednáša o kryptomenách a blockchaine na medzinárodných fórach, konferenciách či univerzitách. Taktiež učí vlastný predmet o kryptomenách na Slovenskej Technickej univerzite ako aj na Ekonomickej univerzite v Bratislave. Je taktiež autorom knihy Coinstory, ktorá mapuje históriu a evolúciu kryptomien ([CoinStory.tech](https://coinstory.tech/)).
+`,
+        photos: [
+          "web:jpg",
+          "twitter:jpg"
+        ],
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/david-stancel.jpg",
+        photo: "photos/speakers/david-stancel.jpg"
+      },
+      {
         id: "dominika-v",
         name: "Dominika V",
         twitter: "DominikaV5",
@@ -626,6 +652,33 @@ const l = [
         ],
         photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/dominika-v.jpg",
         photo: "photos/speakers/dominika-v.jpg"
+      },
+      {
+        id: "frantisek-kudrna",
+        name: "František Kudrna",
+        twitter: "FrantisekKudrna",
+        linkedin: "fkudrna",
+        bio: "Realitní makléř, táta od 4 dětí",
+        orgs: `Spoluzakladatel [Altlift.cz](https://www.altlift.cz/), CFO, jednatel Tillit.cz
+`,
+        caption: "Real estate agent, [Co-founder of Altlift.cz](https://altlift.cz)",
+        web: {
+          url: "http://frantisekkudrna.cz/"
+        },
+        tracks: [
+          "defi",
+          "regulace",
+          "spolecnost"
+        ],
+        country: "cz",
+        desc: `František se v oblasti kryptoměn pohybuje od počátku roku 2016.  Své dlouholeté zkušenosti z oblastí průmyslové automatizace a prostředí realit využívá k rozvoji společnosti Altlift, kde působí jako CFO. Je odborníkem na využití kryptoměn na realitním trhu. #Family4Kids
+`,
+        photos: [
+          "web:jpg",
+          "twitter:jpg"
+        ],
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/frantisek-kudrna.jpg",
+        photo: "photos/speakers/frantisek-kudrna.jpg"
       },
       {
         id: "huge",
@@ -694,6 +747,28 @@ const l = [
         ],
         photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/jacob-jelen.jpg",
         photo: "photos/speakers/jacob-jelen.jpg"
+      },
+      {
+        id: "jakub-jedlinsky",
+        name: "Jakub Jedlinský",
+        twitter: "Jakub_Jedlinsky",
+        bio: "Makroekonom a analytik specializující se na modelování tokenomiky",
+        caption: "Macroeconomist specialising in tokenomics modelling",
+        orgs: `Spoluzakladatel [Altlift.cz](https://altlift.cz), vyučující na [KMEV VŠE](https://kmev.vse.cz/)
+`,
+        lead: !0,
+        tracks: [
+          "defi",
+          "alty",
+          "spolecnost"
+        ],
+        country: "cz",
+        photos: [
+          "web:jpg",
+          "twitter:jpg"
+        ],
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/jakub-jedlinsky.jpg",
+        photo: "photos/speakers/jakub-jedlinsky.jpg"
       },
       {
         id: "jan-cerny",
@@ -948,6 +1023,27 @@ Aktivně se podílím na budování soukromí ve Web3 a na adopci Secret Network
         photo: "photos/speakers/lukas-kovanda.jpg"
       },
       {
+        id: "martin-bok",
+        name: "Martin Bok",
+        twitter: "BokcvO_ok",
+        bio: "Tokenomics designer / analytik",
+        orgs: "Analytik pro [Altlift](https://altlift.cz/)",
+        caption: "Tokenomics designer / analyst @ [Altlift](https://altlift.cz/)",
+        country: "cz",
+        tracks: [
+          "defi",
+          "alty"
+        ],
+        desc: `Analyst in Altlift.cz with focus on testing tokenomics using SFC modelling
+`,
+        photos: [
+          "web:png",
+          "twitter:jpg"
+        ],
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/martin-bok.png",
+        photo: "photos/speakers/martin-bok.png"
+      },
+      {
         id: "martin-janik",
         name: "Martin Janík",
         nickname: "yanas",
@@ -1024,7 +1120,6 @@ Aktivně se podílím na budování soukromí ve Web3 a na adopci Secret Network
       {
         id: "ondrej-rehacek",
         name: "Ondřej Řeháček",
-        twitter: "olidotexe",
         bio: "Vývojář, Smart-contract Auditor",
         orgs: `Partner Engineer @ [Fractal.is](https://www.fractal.is/), Software & Blockchain Developer, Lecturer @ [Ackee Blockchain](https://ackeeblockchain.com/)
 `,
@@ -1323,6 +1418,28 @@ Petr Hotovec is co-founder of Dromi Solutions, a blockchain consultancy agency.
         ],
         photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/urza.jpg",
         photo: "photos/speakers/urza.jpg"
+      },
+      {
+        id: "vojtech-pour",
+        name: "Vojtěch Pour",
+        twitter: "vojtechpoureth",
+        bio: "spoluzakladatel Meetvers, Web3 social nadšenec",
+        orgs: `[Meetvers](https://meetvers.io)
+`,
+        caption: "Co-founder of [Meetvers](https://meetvers.io), Web3 social enthusiast",
+        country: "cz",
+        tracks: [
+          "eth",
+          "spolecnost"
+        ],
+        desc: `Zakladatel meetvers.io, Web3 social nadšenec
+`,
+        photos: [
+          "web:jpg",
+          "twitter:jpg"
+        ],
+        photoUrl: "https://data.prgblockweek.com/23/assets/events/utxo/photos/speakers/vojtech-pour.jpg",
+        photo: "photos/speakers/vojtech-pour.jpg"
       }
     ],
     tracks: [
@@ -2117,7 +2234,7 @@ We regularly meet every Tuesday in the last week of the month. Whether you are a
       }
     ]
   }
-], v = [
+], f = [
   {
     id: "kryptoplakaty",
     hash: "941d2676bdabed3b285bbf7915601d604bad4eb09f1f4e60267d6b41e8e52d37",
@@ -2247,14 +2364,14 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
       twitter: "https://twitter.com/ethereum"
     }
   }
-], z = "2023-02-24T07:27:19.098Z", T = "v2023.02.24-r2", c = {
+], z = "2023-02-24T07:34:27.460Z", T = "v2023.02.24-r3", c = {
   id: k,
-  name: m,
-  dataUrl: u,
+  name: u,
+  dataUrl: m,
   exploreUrl: g,
   dataGithubUrl: b,
   places: w,
-  events: f,
+  events: v,
   "media-partners": [
     {
       id: "kryptomagazin",
@@ -2368,7 +2485,7 @@ Neváhej podpořit skvělý projekt a objednej na [www.kryptoplakaty.cz](https:/
       }
     }
   ],
-  benefits: v,
+  benefits: f,
   unions: y,
   chains: j,
   "other-events": [
