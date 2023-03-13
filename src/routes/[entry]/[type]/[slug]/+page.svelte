@@ -37,15 +37,54 @@
 		return dates;
 	}
 
+	function enrichItem (it) {
+		if (!it) return null
+		console.log(it)
+		// segments
+		let segments = it.segments
+		for (let i = 0; i < segments.length; i++) {
+			const sg = segments[i]
+			if (sg.remote) {
+				const event = data.bundle.events.find(e => e.id === sg.remote)
+				const remoteSegments = event.segments.map(rs => Object.assign(rs, {
+					event,
+					remote: true
+				}))
+				segments.splice(i, remoteSegments.length, ...remoteSegments)
+			}
+		}
+		it.segments = segments
+		return it
+	}
+
 	$: entry = $page.params.entry;
 	$: col = $page.params.type;
 	$: colPlural = colsDef[col];
-	$: item = data.bundle[colPlural].find((e) => e.id === $page.params.slug);
+	$: item = enrichItem(data.bundle[colPlural].find((e) => e.id === $page.params.slug));
 	$: defs = data.schema ? data.schema.definitions[col] : {};
+
+	function venuesMap (arr, rich = false) {
+		return arr.map((vId) => {
+			const place = data.bundle.places.find((p) => p.id === vId);
+			return rich ? `<a href="/${$page.params.entry}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>` : place.name;
+		})
+		.join(', ')
+	}
+
+	$: itemDescription = `${formatItemDate(item, { full: true })} @ ${item.venues ? venuesMap(item.venues) : item.venueName }. ${item.tags ? item.tags.join(', ') : ''}`
 </script>
 
 <svelte:head>
 	<title>{item.name} | #PBW{$page.params.entry}</title>
+	<meta name="description" content={itemDescription}>
+    <meta name="keywords" content={item.tags ? item.tags.join(", ") : ""}>
+    <meta name="twitter:card" content="summary" />
+	{#if item.links?.twitter}
+    	<meta name="twitter:site" content="@{item.links.twitter.replace(/https?:\/\/(twitter\.com\/)/g,'')}" />
+	{/if}
+    <meta name="twitter:title" content="{item.name} | #PBW{$page.params.entry}" />
+    <meta name="twitter:description" content={itemDescription} />
+    <meta name="twitter:image" content={item[config.collections[colPlural]?.img || 'logo']} />
 </svelte:head>
 
 <Header path={colsDef[$page.params.type]} type={$page.params.type} />
@@ -77,12 +116,7 @@
 							<div>
 								📍
 								{#if item.venues}
-									{@html item.venues
-										.map((vId) => {
-											const place = data.bundle.places.find((p) => p.id === vId);
-											return `<a href="/${$page.params.entry}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`;
-										})
-										.join(', ')}
+									{@html venuesMap(item.venues, true)}
 								{:else if item.venueUrl}
 									<a
 										href={item.venueUrl}
