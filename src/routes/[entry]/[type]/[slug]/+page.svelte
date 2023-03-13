@@ -38,14 +38,16 @@
 	}
 
 	function enrichItem (it) {
-		if (!it) return null
-		console.log(it)
+		if (!it || !it.segments) return it
 		// segments
 		let segments = it.segments
 		for (let i = 0; i < segments.length; i++) {
 			const sg = segments[i]
 			if (sg.remote) {
 				const event = data.bundle.events.find(e => e.id === sg.remote)
+				if (!event || !event.segments) {
+					continue
+				}
 				const remoteSegments = event.segments.map(rs => Object.assign(rs, {
 					event,
 					remote: true
@@ -71,7 +73,7 @@
 		.join(', ')
 	}
 
-	$: itemDescription = `${formatItemDate(item, { full: true })} @ ${item.venues ? venuesMap(item.venues) : item.venueName }. ${item.tags ? item.tags.join(', ') : ''}`
+	$: itemDescription = col === 'event' ? `${formatItemDate(item, { full: true })} @ ${item.venues ? venuesMap(item.venues) : item.venueName }. ${item.tags ? item.tags.join(', ') : ''}` : null
 </script>
 
 <svelte:head>

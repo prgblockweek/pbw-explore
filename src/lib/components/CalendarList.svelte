@@ -14,6 +14,9 @@
 		const sg = segments[i]
 		if (sg.remote) {
 			const event = bundle.events.find(e => e.id === sg.remote)
+			if (!event || !event.segments) {
+				continue
+			}
 			const remoteSegments = event.segments.map(rs => Object.assign(rs, {
 				event,
 				remote: true
