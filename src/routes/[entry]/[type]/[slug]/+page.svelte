@@ -74,19 +74,29 @@
 	}
 
 	$: itemDescription = col === 'event' ? `${formatItemDate(item, { full: true })} @ ${item.venues ? venuesMap(item.venues) : item.venueName }. ${item.tags ? item.tags.join(', ') : ''}` : null
+	$: itemImage = item[config.collections[colPlural]?.img || 'logo']
 </script>
 
 <svelte:head>
 	<title>{item.name} | #PBW{$page.params.entry}</title>
 	<meta name="description" content={itemDescription}>
     <meta name="keywords" content={item.tags ? item.tags.join(", ") : ""}>
+
+	{#if item.links?.web}
+		<meta property="og:url" content={item.links.web}>
+		<meta property="og:type" content="website">
+	{/if}
+	<meta property="og:title" content={item.name}>
+	<meta property="og:description" content={itemDescription}>
+	<meta property="og:image" content={itemImage}>
+
     <meta name="twitter:card" content="summary" />
 	{#if item.links?.twitter}
     	<meta name="twitter:site" content="@{item.links.twitter.replace(/https?:\/\/(twitter\.com\/)/g,'')}" />
 	{/if}
     <meta name="twitter:title" content="{item.name} | #PBW{$page.params.entry}" />
     <meta name="twitter:description" content={itemDescription} />
-    <meta name="twitter:image" content={item[config.collections[colPlural]?.img || 'logo']} />
+    <meta name="twitter:image" content={itemImage} />
 </svelte:head>
 
 <Header path={colsDef[$page.params.type]} type={$page.params.type} />
