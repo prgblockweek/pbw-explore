@@ -8,7 +8,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
-	import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
+	import { formatItemDate, bareDomain, getFlagEmoji, processItemsList } from '$lib/utils.js';
 	import makeBlockie from 'ethereum-blockies-base64';
 	import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
@@ -23,7 +23,8 @@
 	let entry = $page.params.entry;
 	$: type = $page.params.type;
 	$: tc = config.collections[type];
-	$: items = data.bundle[type];
+	$: items = type === 'speakers' ? processItemsList(data.bundle[type]) : data.bundle[type]
+
 
 	function processItems(_items, query = {}) {
 		if (!_items) return [];

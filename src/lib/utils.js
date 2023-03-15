@@ -35,3 +35,17 @@ export function getFlagEmoji(str, mapper = true) {
 		.map((char) => 127397 + char.charCodeAt());
 	return String.fromCodePoint(...codePoints);
 }
+
+export function processItemsList (arr) {
+	const out = []
+	const ids = []
+	for (const sp of arr) {
+		// filter out duplicates
+		if (ids.includes(sp.id)) {
+			continue
+		}
+		out.push(sp)
+		ids.push(sp.id)
+	}
+	return out
+}
