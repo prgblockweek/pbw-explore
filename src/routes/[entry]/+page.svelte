@@ -97,7 +97,7 @@
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl"
 		>
-			<CollectionList arr={data.bundle.places} col="place" img="photo" {entry} />
+			<CollectionList arr={data.bundle.places} col="place" img="photo" {entry} offer={true} />
 		</div>
 		{#if data.bundle.benefits}
 			<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">

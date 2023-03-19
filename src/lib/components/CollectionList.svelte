@@ -112,6 +112,9 @@
 				{#if col === 'speaker'}<a href="/{entry}/for-speakers" class="underline hover:no-underline"
 						>Participate as a speaker!</a
 					>{/if}
+				{#if col === 'place'}<a href="https://prgblockweek.com/submit-venue" class="underline hover:no-underline"
+					>Offer your own venue!</a
+				>{/if}
 			</div>
 		</div>
 	</div>
