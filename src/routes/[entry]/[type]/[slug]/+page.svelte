@@ -12,6 +12,7 @@
 	import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
 	import { config } from '$lib/pbw';
 	import { format } from 'date-fns';
+	import { formatInTimeZone } from 'date-fns-tz'
 
 	const colsDef = Object.fromEntries(
 		Object.keys(config.collections).map((col) => {
@@ -29,7 +30,7 @@
 		const dates = [];
 		for (const seg of event.segments) {
 			if (seg.remote) continue;
-			const date = format(new Date(seg.startTime), 'yyyy-MM-dd');
+			const date = formatInTimeZone(new Date(seg.startTime), config.tz, 'yyyy-MM-dd');
 			if (!dates.includes(date)) {
 				dates.push(date);
 			}
@@ -369,7 +370,7 @@
 							<div class="mt-4">
 								<CalendarList
 									{date}
-									segments={item.segments.filter((s) => s.remote || s.startTime.match(new RegExp('^' + date)))}
+									segments={item.segments.filter((s) => s.remote || formatInTimeZone(new Date(s.startTime), config.tz, 'yyyy-MM-dd') === date)}
 									{entry}
 									bundle={data.bundle}
 									event={item}

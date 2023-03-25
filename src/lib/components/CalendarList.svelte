@@ -1,7 +1,9 @@
 <script>
-	import { format } from 'date-fns';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
+	import { config } from '$lib/pbw';
+	import { format } from 'date-fns';
+	import { formatInTimeZone } from 'date-fns-tz'
 
 	export let segments;
 	export let date;
@@ -34,8 +36,9 @@
 		>
 			<div class="flex gap-2">
 				<div class="text-xl md:w-32 md:text-right">
-					{format(new Date(segment.startTime), 'HH:mm')} - {format(
+					{formatInTimeZone(new Date(segment.startTime), config.tz, 'HH:mm')} - {formatInTimeZone(
 						new Date(segment.endTime),
+						config.tz,
 						'HH:mm'
 					)}
 				</div>
