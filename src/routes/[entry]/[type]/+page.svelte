@@ -45,7 +45,7 @@
 			});
 		}
 		if (['speakers', 'benefits', 'media-partner'].includes(type)) {
-			_items = _items.sort((x, y) => (x.name > y.name ? 1 : -1))
+			_items = _items.sort((x, y) => (x.name.toLowerCase() > y.name.toLowerCase() ? 1 : -1))
 		}
 		if (type === 'places') {
 			_items = _items.sort((x, y) => (x.capacity > y.capacity ? -1 : 1))

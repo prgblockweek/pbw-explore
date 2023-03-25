@@ -18,13 +18,14 @@
 	const collections = [
 		{ title: 'Days', value: 10, col: 'schedule' },
 		{ title: 'Events', col: 'events', filter: (e) => !e.hidden },
-		{ title: 'Speakers', col: 'speakers' },
+		{ title: 'Speakers', col: 'speakers', value: processItemsList(data.bundle.speakers).length },
 		{ title: 'Places', col: 'places' },
 		{ title: 'Media Partners', col: 'media-partners' },
 		//{ title: "Blockchains", col: "chains" },
 		//{ title: "Unions", col: "unions" },
 		{ title: 'Benefits', col: 'benefits' }
 	];
+
 </script>
 
 <svelte:head>
