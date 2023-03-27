@@ -386,7 +386,7 @@
 					<div
 						class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl"
 					>
-						<CollectionList arr={item.speakers} bundle={data.bundle} currentItem={item} />
+						<CollectionList arr={item.speakers} bundle={data.bundle} currentItem={item} circle="true" />
 					</div>
 				{/if}
 				{#if item.events}

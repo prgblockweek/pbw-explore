@@ -9,6 +9,7 @@
 	export let img = 'photoUrl';
 	export let aspect = 'aspect-square';
 	export let size = 'normal';
+	export let circle = false;
 	export let offer = false;
 	export let bundle = null;
 	export let currentItem = null;
@@ -38,7 +39,7 @@
 	<div
 		class="{size === 'small' ? 'p-0.5 lg:p-1' : 'p-1 lg:p-1.5'} {!item.hidden
 			? 'hover:bg-pbw-yellow/20 dark:hover:bg-pbw-white/10'
-			: ''} {size === 'small' ? 'rounded-lg' : 'rounded-2xl'}"
+			: ''} {(size === 'small' ? 'rounded-lg' : 'rounded-2xl')}"
 	>
 		<div class="w-full relative">
 			{#if col === 'benefit'}
@@ -55,7 +56,7 @@
 					width="w-full"
 					{aspect}
 					{img}
-					rounded={size === 'small' ? 'rounded-lg' : 'rounded-2xl'}
+					rounded={circle ? 'rounded-full' : (size === 'small' ? 'rounded-lg' : 'rounded-2xl')}
 				/>
 			</a>
 		</div>

@@ -80,6 +80,7 @@
 				arr={processItemsList(speakers.filter((s) => !['cz', 'sk'].includes(s.country)).sort((x, y) => (x.name > y.name ? 1 : -1)))}
 				{entry}
 				offer="true"
+				circle="true"
 			/>
 		</div>
 		<h2 class="text-xl uppercase font-bold mt-10 pbw-text-color-secondary">
@@ -92,6 +93,7 @@
 				arr={processItemsList(speakers.filter((s) => ['cz', 'sk'].includes(s.country)).sort((x, y) => (x.name > y.name ? 1 : -1)))}
 				{entry}
 				offer="true"
+				circle="true"
 			/>
 		</div>
 		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
@@ -104,7 +106,7 @@
 		</div>
 		{#if data.bundle.benefits}
 			<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
-				<a href="/{entry}/benefits">Benefits for visitors</a> ({data.bundle.benefits.length})
+				<a href="/{entry}/benefits">PBW Benefits for visitors</a> ({data.bundle.benefits.length})
 			</h2>
 			<div
 				class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-xl mb-8"
@@ -121,7 +123,7 @@
 		{/if}
 		{#if data.bundle['media-partners']}
 			<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
-				<a href="/{entry}/media-partners">Media Partners & Communities</a> ({data.bundle[
+				<a href="/{entry}/media-partners">PBW Media Partners & Communities</a> ({data.bundle[
 					'media-partners'
 				].length})
 			</h2>

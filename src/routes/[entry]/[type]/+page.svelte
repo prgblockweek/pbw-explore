@@ -182,7 +182,7 @@
 									{#if type === 'speakers'}
 										<td class="w-12 md:w-14">
 											<a href="/{entry}/{tc.model}/{item.id}">
-												<ItemLogo {item} img="photoUrl" />
+												<ItemLogo {item} img="photoUrl" rounded="rounded-full" />
 											</a>
 										</td>
 										<td class="text-2xl h-12">
