@@ -18,8 +18,8 @@
 
 <div class="w-full">
 	<div class="max-w-7xl mx-auto pt-5 md:pt-10">
-		<div class="mx-4 xl:mx-0">
-			<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">For sponsors</h2>
+		<div class="mx-4 xl:mx-0 pbw-text-color-secondary">
+			<h2 class="text-2xl uppercase font-bold">For sponsors</h2>
 			<div class="text-xl mt-4">
 				Do you want to sponsor an event that takes place as part of #PBW23?
 			</div>
