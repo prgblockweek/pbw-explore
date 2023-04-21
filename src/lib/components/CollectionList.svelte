@@ -79,12 +79,12 @@
 					<div class="text-base pbw-text-color-secondary my-2">{item.description}</div>
 				{/if}
 				{#if col === 'speaker'}
-					<div class="text-base pbw-text-color-secondary my-2">
+					<div class="text-base pbw-text-color-secondary my-2 break-words">
 						<SvelteMarkdown source={item.caption} />
 					</div>
 				{/if}
 				{#if col === 'union'}
-					<div class="text-base pbw-text-color-secondary my-2">
+					<div class="text-base pbw-text-color-secondary my-2 break-words">
 						<SvelteMarkdown source={item.description} />
 					</div>
 				{/if}
