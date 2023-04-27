@@ -8,9 +8,9 @@
 	export let rounded = 'rounded';
 	export let thumb = null;
 
-	if (width.match(/^w-48/)) {
+	/*if (width.match(/^w-48/)) {
 		thumb = '500';
-	}
+	}*/
 
 	$: blockie = !item[img] && item.hash ? makeBlockie('0x' + item.hash.substr(0, 40)) : null;
 </script>
