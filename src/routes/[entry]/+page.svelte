@@ -57,7 +57,7 @@
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl"
 		>
-			<CollectionList arr={conferences} thumb="500" img="logo" col="event" {entry} offer={true} />
+			<CollectionList arr={conferences} img="logo" col="event" {entry} offer={true} />
 		</div>
 
 		<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
@@ -66,7 +66,7 @@
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl"
 		>
-			<CollectionList arr={otherEvents} thumb="500" img="logo" col="event" {entry} />
+			<CollectionList arr={otherEvents} img="logo" col="event" {entry} />
 		</div>
 		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			<a href="/{entry}/speakers">Speakers</a> ({speakers.length})
@@ -111,7 +111,6 @@
 		>
 			<CollectionList
 				arr={data.bundle.places}
-				thumb="500"
 				col="place"
 				img="photo"
 				{entry}

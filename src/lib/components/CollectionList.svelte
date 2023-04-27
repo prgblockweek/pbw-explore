@@ -13,7 +13,7 @@
 	export let offer = false;
 	export let bundle = null;
 	export let currentItem = null;
-	export let thumb = '300';
+	export let thumb = null;
 
 	function findObject(it) {
 		if (!bundle) {
