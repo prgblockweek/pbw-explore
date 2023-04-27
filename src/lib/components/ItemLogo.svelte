@@ -6,13 +6,18 @@
 	export let width = 'w-10';
 	export let aspect = 'aspect-square';
 	export let rounded = 'rounded';
+	export let thumb = '300';
+
+	if (width.match(/^w-48/)) {
+		thumb = '500';
+	}
 
 	$: blockie = !item[img] && item.hash ? makeBlockie('0x' + item.hash.substr(0, 40)) : null;
 </script>
 
 {#if item[img]}
 	<img
-		src={item[img]}
+		src={item[img].replace(/\.([^.]+)$/, `_${thumb}px.webp`)}
 		class="{width} {rounded} {aspect} object-cover dark:bg-white drop-shadow-xl z-10"
 		alt={item.name}
 	/>

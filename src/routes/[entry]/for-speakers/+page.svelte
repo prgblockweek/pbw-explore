@@ -45,7 +45,9 @@
 								>
 							</div>
 						</div>
-						<div class="mt-2 pbw-text-color-secondary">Date: <span>{formatItemDate(event, { full: true })}</span></div>
+						<div class="mt-2 pbw-text-color-secondary">
+							Date: <span>{formatItemDate(event, { full: true })}</span>
+						</div>
 						{#if event.cfp.text}
 							<div class="mt-2 pbw-text-color-secondary">{event.cfp.text}</div>
 						{/if}

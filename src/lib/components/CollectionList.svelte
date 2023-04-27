@@ -13,6 +13,7 @@
 	export let offer = false;
 	export let bundle = null;
 	export let currentItem = null;
+	export let thumb = '300';
 
 	function findObject(it) {
 		if (!bundle) {
@@ -39,7 +40,7 @@
 	<div
 		class="{size === 'small' ? 'p-0.5 lg:p-1' : 'p-1 lg:p-1.5'} {!item.hidden
 			? 'hover:bg-pbw-yellow/20 dark:hover:bg-pbw-white/10'
-			: ''} {(size === 'small' ? 'rounded-lg' : 'rounded-2xl')}"
+			: ''} {size === 'small' ? 'rounded-lg' : 'rounded-2xl'}"
 	>
 		<div class="w-full relative">
 			{#if col === 'benefit'}
@@ -53,10 +54,11 @@
 			<a href={_url(col, item)}>
 				<ItemLogo
 					{item}
+					{thumb}
 					width="w-full"
 					{aspect}
 					{img}
-					rounded={circle ? 'rounded-full' : (size === 'small' ? 'rounded-lg' : 'rounded-2xl')}
+					rounded={circle ? 'rounded-full' : size === 'small' ? 'rounded-lg' : 'rounded-2xl'}
 				/>
 			</a>
 		</div>
@@ -113,9 +115,10 @@
 				{#if col === 'speaker'}<a href="/{entry}/for-speakers" class="underline hover:no-underline"
 						>Participate as a speaker!</a
 					>{/if}
-				{#if col === 'place'}<a href="https://prgblockweek.com/submit-venue" class="underline hover:no-underline"
-					>Offer your own venue!</a
-				>{/if}
+				{#if col === 'place'}<a
+						href="https://prgblockweek.com/submit-venue"
+						class="underline hover:no-underline">Offer your own venue!</a
+					>{/if}
 			</div>
 		</div>
 	</div>

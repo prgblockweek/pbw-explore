@@ -36,16 +36,16 @@ export function getFlagEmoji(str, mapper = true) {
 	return String.fromCodePoint(...codePoints);
 }
 
-export function processItemsList (arr) {
-	const out = []
-	const ids = []
+export function processItemsList(arr) {
+	const out = [];
+	const ids = [];
 	for (const sp of arr) {
 		// filter out duplicates
 		if (ids.includes(sp.id)) {
-			continue
+			continue;
 		}
-		out.push(sp)
-		ids.push(sp.id)
+		out.push(sp);
+		ids.push(sp.id);
 	}
-	return out
+	return out;
 }

@@ -15,7 +15,7 @@
 		return !e.types.find((t) => ['conference', 'hackathon'].includes(t)) && !e.hidden;
 	});
 
-	const speakers = processItemsList(data.bundle.speakers)
+	const speakers = processItemsList(data.bundle.speakers);
 
 	const collections = [
 		{ title: 'Days', value: 10, col: 'schedule' },
@@ -27,7 +27,6 @@
 		//{ title: "Unions", col: "unions" },
 		{ title: 'Benefits', col: 'benefits' }
 	];
-
 </script>
 
 <svelte:head>
@@ -58,7 +57,7 @@
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl"
 		>
-			<CollectionList arr={conferences} img="logo" col="event" {entry} offer={true} />
+			<CollectionList arr={conferences} thumb="500" img="logo" col="event" {entry} offer={true} />
 		</div>
 
 		<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
@@ -67,7 +66,7 @@
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl"
 		>
-			<CollectionList arr={otherEvents} img="logo" col="event" {entry} />
+			<CollectionList arr={otherEvents} thumb="500" img="logo" col="event" {entry} />
 		</div>
 		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			<a href="/{entry}/speakers">Speakers</a> ({speakers.length})
@@ -77,7 +76,11 @@
 			class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl"
 		>
 			<CollectionList
-				arr={processItemsList(speakers.filter((s) => !['cz', 'sk'].includes(s.country)).sort((x, y) => (x.name > y.name ? 1 : -1)))}
+				arr={processItemsList(
+					speakers
+						.filter((s) => !['cz', 'sk'].includes(s.country))
+						.sort((x, y) => (x.name > y.name ? 1 : -1))
+				)}
 				{entry}
 				offer="true"
 				circle="true"
@@ -90,7 +93,11 @@
 			class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl"
 		>
 			<CollectionList
-				arr={processItemsList(speakers.filter((s) => ['cz', 'sk'].includes(s.country)).sort((x, y) => (x.name > y.name ? 1 : -1)))}
+				arr={processItemsList(
+					speakers
+						.filter((s) => ['cz', 'sk'].includes(s.country))
+						.sort((x, y) => (x.name > y.name ? 1 : -1))
+				)}
 				{entry}
 				offer="true"
 				circle="true"
@@ -102,7 +109,14 @@
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl"
 		>
-			<CollectionList arr={data.bundle.places} col="place" img="photo" {entry} offer={true} />
+			<CollectionList
+				arr={data.bundle.places}
+				thumb="500"
+				col="place"
+				img="photo"
+				{entry}
+				offer={true}
+			/>
 		</div>
 		{#if data.bundle.benefits}
 			<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">

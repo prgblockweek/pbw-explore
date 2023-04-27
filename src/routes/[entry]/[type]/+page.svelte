@@ -23,12 +23,11 @@
 	let entry = $page.params.entry;
 	$: type = $page.params.type;
 	$: tc = config.collections[type];
-	$: items = type === 'speakers' ? processItemsList(data.bundle[type]) : data.bundle[type]
-
+	$: items = type === 'speakers' ? processItemsList(data.bundle[type]) : data.bundle[type];
 
 	function processItems(_items, query = {}) {
 		if (!_items) return [];
-		_items = [..._items]
+		_items = [..._items];
 		if (type === 'events') {
 			_items = _items.sort((x, y) => (x.date > y.date ? 1 : -1));
 		}
@@ -45,10 +44,10 @@
 			});
 		}
 		if (['speakers', 'benefits', 'media-partner'].includes(type)) {
-			_items = _items.sort((x, y) => (x.name.toLowerCase() > y.name.toLowerCase() ? 1 : -1))
+			_items = _items.sort((x, y) => (x.name.toLowerCase() > y.name.toLowerCase() ? 1 : -1));
 		}
 		if (type === 'places') {
-			_items = _items.sort((x, y) => (x.capacity > y.capacity ? -1 : 1))
+			_items = _items.sort((x, y) => (x.capacity > y.capacity ? -1 : 1));
 		}
 
 		return _items;

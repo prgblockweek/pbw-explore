@@ -3,7 +3,7 @@
 	import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
 	import { config } from '$lib/pbw';
 	import { format } from 'date-fns';
-	import { formatInTimeZone } from 'date-fns-tz'
+	import { formatInTimeZone } from 'date-fns-tz';
 
 	export let segments;
 	export let date;
@@ -13,20 +13,21 @@
 	export let event = null;
 
 	for (let i = 0; i < segments.length; i++) {
-		const sg = segments[i]
+		const sg = segments[i];
 		if (sg.remote) {
-			const event = bundle.events.find(e => e.id === sg.remote)
+			const event = bundle.events.find((e) => e.id === sg.remote);
 			if (!event || !event.segments) {
-				continue
+				continue;
 			}
-			const remoteSegments = event.segments.map(rs => Object.assign(rs, {
-				event,
-				remote: true
-			}))
-			segments.splice(i, remoteSegments.length, ...remoteSegments)
+			const remoteSegments = event.segments.map((rs) =>
+				Object.assign(rs, {
+					event,
+					remote: true
+				})
+			);
+			segments.splice(i, remoteSegments.length, ...remoteSegments);
 		}
 	}
-
 </script>
 
 <div class="text-2xl">
@@ -58,12 +59,16 @@
 					<div>
 						{#if !event || segment.remote}
 							{#if (segment.event || event).hidden}
-								{(segment.event || event)[(segment.event || event).shortname ? 'shortname' : 'name']}*
+								{(segment.event || event)[
+									(segment.event || event).shortname ? 'shortname' : 'name'
+								]}*
 							{:else}
 								<a
 									href="/{entry}/{col}/{(segment.event || event).id}"
 									class="text-pbw-red hover:underline"
-									>{(segment.event || event)[(segment.event || event).shortname ? 'shortname' : 'name']}</a
+									>{(segment.event || event)[
+										(segment.event || event).shortname ? 'shortname' : 'name'
+									]}</a
 								>
 							{/if}
 						{:else}

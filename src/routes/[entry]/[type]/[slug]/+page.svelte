@@ -12,7 +12,7 @@
 	import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
 	import { config } from '$lib/pbw';
 	import { format } from 'date-fns';
-	import { formatInTimeZone } from 'date-fns-tz'
+	import { formatInTimeZone } from 'date-fns-tz';
 
 	const colsDef = Object.fromEntries(
 		Object.keys(config.collections).map((col) => {
@@ -38,26 +38,28 @@
 		return dates;
 	}
 
-	function enrichItem (it) {
-		if (!it || !it.segments) return it
+	function enrichItem(it) {
+		if (!it || !it.segments) return it;
 		// segments
-		let segments = it.segments
+		let segments = it.segments;
 		for (let i = 0; i < segments.length; i++) {
-			const sg = segments[i]
+			const sg = segments[i];
 			if (sg.remote) {
-				const event = data.bundle.events.find(e => e.id === sg.remote)
+				const event = data.bundle.events.find((e) => e.id === sg.remote);
 				if (!event || !event.segments) {
-					continue
+					continue;
 				}
-				const remoteSegments = event.segments.map(rs => Object.assign(rs, {
-					event,
-					remote: true
-				}))
-				segments.splice(i, remoteSegments.length, ...remoteSegments)
+				const remoteSegments = event.segments.map((rs) =>
+					Object.assign(rs, {
+						event,
+						remote: true
+					})
+				);
+				segments.splice(i, remoteSegments.length, ...remoteSegments);
 			}
 		}
-		it.segments = segments
-		return it
+		it.segments = segments;
+		return it;
 	}
 
 	$: entry = $page.params.entry;
@@ -66,38 +68,49 @@
 	$: item = enrichItem(data.bundle[colPlural].find((e) => e.id === $page.params.slug));
 	$: defs = data.schema ? data.schema.definitions[col] : {};
 
-	function venuesMap (arr, rich = false) {
-		return arr.map((vId) => {
-			const place = data.bundle.places.find((p) => p.id === vId);
-			return rich ? `<a href="/${$page.params.entry}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>` : place.name;
-		})
-		.join(', ')
+	function venuesMap(arr, rich = false) {
+		return arr
+			.map((vId) => {
+				const place = data.bundle.places.find((p) => p.id === vId);
+				return rich
+					? `<a href="/${$page.params.entry}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`
+					: place.name;
+			})
+			.join(', ');
 	}
 
-	$: itemDescription = col === 'event' ? `${formatItemDate(item, { full: true })} @ ${item.venues ? venuesMap(item.venues) : item.venueName }. ${item.tags ? item.tags.join(', ') : ''}` : null
-	$: itemImage = item[config.collections[colPlural]?.img || 'logo']
+	$: itemDescription =
+		col === 'event'
+			? `${formatItemDate(item, { full: true })} @ ${
+					item.venues ? venuesMap(item.venues) : item.venueName
+			  }. ${item.tags ? item.tags.join(', ') : ''}`
+			: null;
+	$: itemImage = item[config.collections[colPlural]?.img || 'logo'];
 </script>
 
 <svelte:head>
 	<title>{item.name} | #PBW{$page.params.entry}</title>
-	<meta name="description" content={itemDescription}>
-    <meta name="keywords" content={item.tags ? item.tags.join(", ") : ""}>
+	<meta name="description" content={itemDescription} />
+	<meta name="keywords" content={item.tags ? item.tags.join(', ') : ''} />
 
 	{#if item.links?.web}
-		<meta property="og:url" content={item.links.web}>
-		<meta property="og:type" content="website">
+		<meta property="og:url" content={item.links.web} />
+		<meta property="og:type" content="website" />
 	{/if}
-	<meta property="og:title" content={item.name}>
-	<meta property="og:description" content={itemDescription}>
-	<meta property="og:image" content={itemImage}>
+	<meta property="og:title" content={item.name} />
+	<meta property="og:description" content={itemDescription} />
+	<meta property="og:image" content={itemImage} />
 
-    <meta name="twitter:card" content="summary" />
+	<meta name="twitter:card" content="summary" />
 	{#if item.links?.twitter}
-    	<meta name="twitter:site" content="@{item.links.twitter.replace(/https?:\/\/(twitter\.com\/)/g,'')}" />
+		<meta
+			name="twitter:site"
+			content="@{item.links.twitter.replace(/https?:\/\/(twitter\.com\/)/g, '')}"
+		/>
 	{/if}
-    <meta name="twitter:title" content="{item.name} | #PBW{$page.params.entry}" />
-    <meta name="twitter:description" content={itemDescription} />
-    <meta name="twitter:image" content={itemImage} />
+	<meta name="twitter:title" content="{item.name} | #PBW{$page.params.entry}" />
+	<meta name="twitter:description" content={itemDescription} />
+	<meta name="twitter:image" content={itemImage} />
 </svelte:head>
 
 <Header path={colsDef[$page.params.type]} type={$page.params.type} />
@@ -370,7 +383,11 @@
 							<div class="mt-4">
 								<CalendarList
 									{date}
-									segments={item.segments.filter((s) => s.remote || formatInTimeZone(new Date(s.startTime), config.tz, 'yyyy-MM-dd') === date)}
+									segments={item.segments.filter(
+										(s) =>
+											s.remote ||
+											formatInTimeZone(new Date(s.startTime), config.tz, 'yyyy-MM-dd') === date
+									)}
 									{entry}
 									bundle={data.bundle}
 									event={item}
@@ -386,7 +403,12 @@
 					<div
 						class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 mt-4 text-center text-xl"
 					>
-						<CollectionList arr={item.speakers} bundle={data.bundle} currentItem={item} circle="true" />
+						<CollectionList
+							arr={item.speakers}
+							bundle={data.bundle}
+							currentItem={item}
+							circle="true"
+						/>
 					</div>
 				{/if}
 				{#if item.events}
