@@ -31,7 +31,7 @@
 </script>
 
 <div class="text-2xl">
-	{#each segments as segment}
+	{#each segments.filter(s => !s.hidden) as segment}
 		<div
 			class="md:flex flex-wrap mb-2 gap-3 items-center text-gray-800 border dark:text-gray-200 border-gray-300 rounded-lg md:border-none px-3 py-2 md:px-0 md:py-0"
 		>
