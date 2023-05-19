@@ -23,13 +23,12 @@
 	let entry = $page.params.entry;
 	let q = '';
 
-	let total = 0
-	let scores = {}
+	let total = 0;
+	let scores = {};
 
 	$: type = $page.params.type;
 	$: tc = config.collections[type];
 	$: items = type === 'speakers' ? processItemsList(data.bundle[type]) : data.bundle[type];
-
 
 	function processItems(_items, query = {}, q = '') {
 		if (!_items) return [];
@@ -56,37 +55,54 @@
 			_items = _items.sort((x, y) => (x.capacity > y.capacity ? -1 : 1));
 		}
 
-		const normalize = str => {
-			if (typeof str.replace !== "function") {
-				return str
+		const normalize = (str) => {
+			if (typeof str.replace !== 'function') {
+				return str;
 			}
-			return str.normalize("NFD").toLowerCase().replace(/[\u0300-\u036F]/g, "")
-		}
-		
+			return str
+				.normalize('NFD')
+				.toLowerCase()
+				.replace(/[\u0300-\u036F]/g, '');
+		};
+
 		// filters
-		console.log('@@@@', q)
+		console.log('@@@@', q);
 		if (q) {
-			scores = {}
-			_items = _items.map(i => {
-				const cols = [["name", 50], ["tags", 30], ["caption", 20], ["venueName"], ["venueAddress"], ["org"], ["chains"], ["description"], ["twitter"], ["country"]]
-				scores[i.id] = 0
-				for (const [ c, cs = 20 ] of cols) {
-					let ctag = typeof i[c] === "array" ? i[c].join(", ") : i[c]
-					if (typeof ctag === "string" && normalize(ctag).match(new RegExp(normalize(q), "si"))) {
-						scores[i.id] += cs
+			scores = {};
+			_items = _items
+				.map((i) => {
+					const cols = [
+						['name', 50],
+						['tags', 30],
+						['caption', 20],
+						['venueName'],
+						['venueAddress'],
+						['org'],
+						['chains'],
+						['description'],
+						['twitter'],
+						['country']
+					];
+					scores[i.id] = 0;
+					for (const [c, cs = 20] of cols) {
+						let ctag = typeof i[c] === 'array' ? i[c].join(', ') : i[c];
+						if (typeof ctag === 'string' && normalize(ctag).match(new RegExp(normalize(q), 'si'))) {
+							scores[i.id] += cs;
+						}
 					}
-				}
-				return i
-			}).filter(i => scores[i.id] > 0).sort((x, y) => scores[x.id] > scores[y.id] ? -1 : 1)
+					return i;
+				})
+				.filter((i) => scores[i.id] > 0)
+				.sort((x, y) => (scores[x.id] > scores[y.id] ? -1 : 1));
 		} else {
-			total = _items.filter((e) => !e.hidden).length
+			total = _items.filter((e) => !e.hidden).length;
 		}
-		
+
 		return _items;
 	}
 
 	$: processedItems = processItems(items, {}, q); //, Object.fromEntries($page.url.searchParams))
-	$: currentTotal = processedItems.filter((e) => !e.hidden).length
+	$: currentTotal = processedItems.filter((e) => !e.hidden).length;
 
 	onMount(async () => {
 		if (!config.collections[$page.params.type]) {
@@ -115,7 +131,9 @@
 				</h2>
 				<div class="filter">
 					<div class="filter-component">
-						<label for="q">Search{#if q}: "{q}"{/if}</label>
+						<label for="q"
+							>Search{#if q}: "{q}"{/if}</label
+						>
 						<input type="text" id="q" class="w-full" bind:value={q} />
 					</div>
 				</div>
@@ -241,7 +259,9 @@
 												>
 											{/if}
 										</td>
-										<td class="hidden md:table-cell"><SvelteMarkdown source={item.caption || ''} /></td>
+										<td class="hidden md:table-cell"
+											><SvelteMarkdown source={item.caption || ''} /></td
+										>
 									{/if}
 									{#if type === 'media-partners'}
 										<td class="w-20">

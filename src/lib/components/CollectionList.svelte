@@ -36,7 +36,6 @@
 	const _url = (col, item) => (item.hidden ? '' : `/${entry}/${col}/${item.id}`);
 </script>
 
-
 {#each arr.map((k) => findObject(k)) as item}
 	<div
 		class="{size === 'small' ? 'p-0.5 lg:p-1' : 'p-1 lg:p-1.5'} {!item.hidden

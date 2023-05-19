@@ -78,9 +78,20 @@
 		@apply text-gray-500 dark:text-gray-300;
 	}
 
-	.filter-component { @apply grow; }
-	.filter-component label, .filter-component input { @apply block; }
-	.filter-component label { @apply uppercase text-black/60; }
-	.filter-component input { @apply border py-1 px-2 border-black/40 rounded bg-black/5; }
-	.filter { @apply mt-4 mb-2 text-lg flex; }
+	.filter-component {
+		@apply grow;
+	}
+	.filter-component label,
+	.filter-component input {
+		@apply block;
+	}
+	.filter-component label {
+		@apply uppercase text-black/60;
+	}
+	.filter-component input {
+		@apply border py-1 px-2 border-black/40 rounded bg-black/5;
+	}
+	.filter {
+		@apply mt-4 mb-2 text-lg flex;
+	}
 }
