@@ -68,23 +68,32 @@
 							class="underline hover:no-underline">documentation</a
 						>.
 					</p>
-					<p class="pt-4 text-2xl">
-						🐦 <a
-							href="https://twitter.com/PrgBlockWeek"
-							class="underline hover:no-underline"
-							target="_blank">Follow us on Twitter</a
-						>
-						&nbsp;&nbsp; 📖
-						<a
-							href="https://guide.prgblockweek.com/"
-							class="underline hover:no-underline"
-							target="_blank">Read our #PBW23 Guide</a
-						>
-						&nbsp;&nbsp; 💬
-						<a href="https://t.me/PrgBlockWeek" class="underline hover:no-underline" target="_blank"
-							>Join our Telegram group</a
-						>
-					</p>
+					<div class="pt-4 text-2xl flex flex-wrap gap-4">
+						<div>
+							🐦
+							<a
+								href="https://twitter.com/PrgBlockWeek"
+								class="underline hover:no-underline"
+								target="_blank">Follow us on Twitter</a
+							>
+						</div>
+						<div>
+							📖
+							<a
+								href="https://guide.prgblockweek.com/"
+								class="underline hover:no-underline"
+								target="_blank">Read our #PBW23 Guide</a
+							>
+						</div>
+						<div>
+							💬
+							<a
+								href="https://t.me/PrgBlockWeek"
+								class="underline hover:no-underline"
+								target="_blank">Join our Telegram group</a
+							>
+						</div>
+					</div>
 					<!--p class="mt-5 opacity-50">⚠️ This is just a temporary site that will soon be replaced by a full-fledged website and information center for <a href="https://twitter.com/search?q=%23PBW23" target="_blank">#PBW23</a>. In the meantime, you can read the <a href="https://guide.prgblockweek.com/faq">FAQ</a> and learn more about our concept.</p-->
 					<!--p class="mt-5 text-3xl text-center text-pbw-yellow">💛 #PBW23</p-->
 				</div>
