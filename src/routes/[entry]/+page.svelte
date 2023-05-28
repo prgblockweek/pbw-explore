@@ -60,14 +60,37 @@
 			<CollectionList arr={conferences} img="logo" col="event" {entry} offer={true} />
 		</div>
 
+		<div
+			class="mt-4 mb-8 text-lg bg-pbw-yellow/20 dark:bg-gray-700 pbw-text-color-secondary flex flex-wrap lg:flex-nowrap"
+		>
+			<div class="p-4">
+				Are you a journalist or an influencer? Our <a
+					href="https://guide.prgblockweek.com/media-partners/press-center"
+					class="underline hover:no-underline font-medium">#PBW23 Press Center by Cleevio</a
+				>
+				is available for the entire duration of #PBW23 free of charge! We offer accredited
+				journalists a quiet place to work and meet with fast internet, including a basic podcast
+				studio. You can
+				<a href="https://prgblockweek.com/media-registration" class="underline hover:no-underline"
+					>Register here</a
+				>.
+			</div>
+			<div class="flex-shrink-0 text-center justify-end">
+				<a href="https://guide.prgblockweek.com/media-partners/press-center"
+					><img src="/img/press-center-banner.webp" class="max-h-20 sm:max-h-32" /></a
+				>
+			</div>
+		</div>
+
 		<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary">
-			<a href="/{entry}/events">Other events</a> ({otherEvents.length})
+			<a href="/{entry}/events">Meetups, parties and other events</a> ({otherEvents.length})
 		</h2>
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl"
 		>
 			<CollectionList arr={otherEvents} img="logo" col="event" {entry} />
 		</div>
+
 		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			<a href="/{entry}/speakers">Speakers</a> ({speakers.length})
 		</h2>
