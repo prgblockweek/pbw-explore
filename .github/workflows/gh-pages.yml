@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - run: rm src/lib/data.json && wget -O src/lib/data.json https://blockchainweek.github.io/data/23/index.json
+      - run: rm src/lib/data.json && wget -O src/lib/data.json https://duplicity6-sulfur-objet0-air1.protocol.berlin/23/index.json
 
       - name: Build
         run: npm run build

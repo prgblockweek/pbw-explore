@@ -7,7 +7,7 @@ export async function load(entry = '23', host = null) {
 		data = localData;
 	} else {
 		const resp = await fetch(
-			`https://blockchainweek.github.io/data/${entry}/index.json`
+			`https://duplicity6-sulfur-objet0-air1.protocol.berlin/${entry}/index.json`
 		);
 		data = await resp.json();
 	}
@@ -27,7 +27,7 @@ export async function load(entry = '23', host = null) {
 
 export async function loadSchema(host) {
 	const resp = await fetch(
-		`https://blockchainweek.github.io/data/schema/1/bundle.json`
+		`https://duplicity6-sulfur-objet0-air1.protocol.berlin/schema/1/bundle.json`
 	);
 	return resp.json();
 }
