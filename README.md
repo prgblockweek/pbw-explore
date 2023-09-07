@@ -2,7 +2,7 @@
 
 This tool is a frontend for [Berlin Blockchain Week data](https://github.com/blockchainweek/data) that allows you to view the data contained in the dataset.
 
-The production version is available at [blockchainweek.github.io/explore](https://blockchainweek.github.io/explore).
+The production version is available at [outright6-sear-8gusto-atrium.protocol.berlin](https://outright6-sear-8gusto-atrium.protocol.berlin).
 
 ## Technologies used
 
