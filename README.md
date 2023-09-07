@@ -1,8 +1,8 @@
 # PBW Explore
 
-This tool is a frontend for [Prague Blockchain Week data](https://github.com/utxo-foundation/prague-blockchain-week) that allows you to view the data contained in the dataset.
+This tool is a frontend for [Berlin Blockchain Week data](https://github.com/blockchainweek/data) that allows you to view the data contained in the dataset.
 
-The production version is available at [explore.prgblockweek.com](https://explore.prgblockweek.com/).
+The production version is available at [blockchainweek.github.io/explore](https://blockchainweek.github.io/explore).
 
 ## Technologies used
 
