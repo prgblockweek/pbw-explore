@@ -1,9 +1,5 @@
 import localData from '$lib/data.json';
 
-function isMirror(host) {
-	return host === 'mirror.explore.prgblockweek.com';
-}
-
 export async function load(entry = '23', host = null) {
 	let data = null;
 
@@ -11,7 +7,7 @@ export async function load(entry = '23', host = null) {
 		data = localData;
 	} else {
 		const resp = await fetch(
-			`https://${isMirror(host) ? 'mirror.' : ''}data.prgblockweek.com/${entry}/index.json`
+			`https://blockchainweek.github.io/data/${entry}/index.json`
 		);
 		data = await resp.json();
 	}
@@ -31,7 +27,7 @@ export async function load(entry = '23', host = null) {
 
 export async function loadSchema(host) {
 	const resp = await fetch(
-		`https://${isMirror(host) ? 'mirror.' : ''}data.prgblockweek.com/schema/1/bundle.json`
+		`https://blockchainweek.github.io/data/schema/1/bundle.json`
 	);
 	return resp.json();
 }

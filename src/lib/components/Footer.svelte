@@ -19,9 +19,9 @@
 					<div>
 						⚙ This page is automatically generated using the structured dataset which can be
 						consumed as a single JSON file → <a
-							href="https://data.prgblockweek.com/23/index.json"
+							href="https://blockchainweek.github.io/data/23/index.json"
 							class="underline hover:no-underline"
-							target="_blank">data.prgblockweek.com/23/index.json</a
+							target="_blank">blockchainweek.github.io/data/23/index.json</a
 						>.
 						<div class="h-4" />
 						📖 The source data GitHub repository →<a
