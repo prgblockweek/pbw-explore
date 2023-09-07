@@ -25,9 +25,9 @@
 						>.
 						<div class="h-4" />
 						📖 The source data GitHub repository →<a
-							href="https://github.com/utxo-foundation/prague-blockchain-week"
+							href="https://github.com/blockchainweek/data"
 							class="underline hover:no-underline"
-							target="_blank">utxo-foundation/prague-blockchain-week</a
+							target="_blank">blockchainweek/data</a
 						>. Go ahead and do PRs!
 					</div>
 				</div>
@@ -52,7 +52,7 @@
 					<div class="mt-4 text-white">
 						<div class="mt-2">
 							Last update: <a
-								href="https://github.com/utxo-foundation/prague-blockchain-week/commits/main"
+								href="https://github.com/blockchainweek/data/commits/main"
 								target="_blank"
 								class="underline hover:no-underline"
 								>{formatDistanceToNow(new Date(bundle.__time || null))} ago</a
@@ -71,7 +71,7 @@
 							>
 							{#if item}
 								&nbsp;|&nbsp; ID: <a
-									href="https://github.com/utxo-foundation/prague-blockchain-week/tree/main/data/23/{cc}/{item.id}"
+									href="https://github.com/blockchainweek/data/tree/main/data/23/{cc}/{item.id}"
 									class="underline hover:no-underline"
 									target="_blank">{item.id}</a
 								>

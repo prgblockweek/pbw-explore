@@ -49,7 +49,7 @@
 		<div class="px-6 xl:px-0">
 			<div class="max-w-7xl mx-auto pt-10 pb-6">
 				<h1 class="text-5xl uppercase font-bold text-pbw-white">
-					<a href="https://prgblockweek.com">Prague Blockchain Week 2023</a>
+					<a href="https://prgblockweek.com">Berlin Blockchain Week 2023</a>
 				</h1>
 				<div class="text-4xl text-pbw-yellow">June 2-11, 2023</div>
 			</div>

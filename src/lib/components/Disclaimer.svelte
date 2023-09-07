@@ -9,6 +9,6 @@
 	{/if}
 	{#if type === 'speakers'}
 		⚠️ All these people are guests of the individual events, which have their own organizers and
-		have no direct connection to Prague Blockchain Week.
+		have no direct connection to Berlin Blockchain Week.
 	{/if}
 </div>

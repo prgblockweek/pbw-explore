@@ -1,5 +1,5 @@
 export const config = {
-	tz: 'Europe/Prague',
+	tz: 'Europe/Berlin',
 	collections: {
 		places: {
 			title: 'Places',
