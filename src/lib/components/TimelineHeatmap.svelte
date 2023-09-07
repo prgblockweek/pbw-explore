@@ -5,8 +5,8 @@
 	export let data;
 	export let highlightDay = false;
 
-	const startDate = '2023-06-02';
-	const endDate = '2023-06-11';
+	const startDate = '2023-09-08';
+	const endDate = '2023-09-17';
 	const segmentMinutes = 60;
 	const bundle = data.bundle;
 
