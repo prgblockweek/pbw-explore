@@ -1,6 +1,6 @@
 {
-	"name": "pbw-explore",
-	"version": "0.2.1",
+	"name": "bbw-explore",
+	"version": "0.3.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
