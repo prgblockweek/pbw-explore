@@ -4,7 +4,7 @@ pipeline:
     commands:
       - node --version
       - npm ci
-      - rm src/lib/data.json && wget -O src/lib/data.json https://duplicity6-sulfur-objet0-air1.protocol.berlin/23/index.json
+      - rm src/lib/data.json && wget -O src/lib/data.json https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/index.json
       - npm run build
     when:
       branch: [dev]

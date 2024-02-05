@@ -4,7 +4,7 @@
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 
 	export let arr;
-	export let entry = '23';
+	export let entry = '24';
 	export let col = 'speaker';
 	export let img = 'photoUrl';
 	export let aspect = 'aspect-square';

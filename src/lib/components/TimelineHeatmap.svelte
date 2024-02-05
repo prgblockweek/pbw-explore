@@ -175,7 +175,7 @@
 					: 'text-pbw-red text-lg'}"
 				style="width: {1 / (days.length / 100)}%;"
 			>
-				<a href="/23/day/{format(new Date(day), 'yyyy-MM-dd')}"
+				<a href="/24/day/{format(new Date(day), 'yyyy-MM-dd')}"
 					><span class="hidden md:inline-block">{format(new Date(day), 'eee ')}</span>
 					{format(new Date(day), 'd')}</a
 				>
