@@ -1,111 +1,100 @@
 {
-  "id": "23",
-  "name": "Berlin Blockchain Week 2023",
-  "dataUrl": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/23",
-  "exploreUrl": "https://outright6-sear-8gusto-atrium.protocol.berlin/23",
-  "dataGithubUrl": "https://github.com/blockchainweek/data/tree/main/data/23",
+  "id": "24",
+  "name": "Berlin Blockchain Week 2024",
+  "dataUrl": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/24",
+  "exploreUrl": "https://outright6-sear-8gusto-atrium.protocol.berlin/24",
+  "dataGithubUrl": "https://github.com/blockchainweek/data/tree/main/data/24",
   "places": [
     {
-      "id": "magazin",
-      "hash": "67973d2c9b280b9a5b5a88457b9b6b3c1ad7bcf099c3b4075376f505d62c001c",
-      "name": "Magazin an der Heeresbäckerei",
+      "id": "factory",
+      "hash": "788ed6d85371105e87f0e5fc522e0a67ffc9e8b29087aa47086266e47d74506e",
+      "name": "Factory Berlin",
       "eventTypes": [
         "conference",
-        "party"
+        "hackathon"
       ],
-      "capacity": 750,
-      "address": "Köpenicker Straße 16-17, 10997 Berlin-Kreuzberg",
-      "mapUrl": "https://nominatim.openstreetmap.org/ui/search.html?q=K%C3%B6penicker+Stra%C3%9Fe+16%2C+10997+Berlin",
-      "description": "The Heeresbäckerei (magazine in the army bakery) in Berlin-Kreuzberg is an impressive industrial monument located directly at the river Spree. The magazine in the west wing was used as a warehouse since 1890. Lorries with flour and grain travelled on rails between the magazine and the bakery. The brick building has retained its substance over the years. Cast iron columns carry a five-meter-high ceiling. The parquet is made of old beech. Deep arched windows open the room to the light. The result is a magnificent venue with charm - perhaps one of the most beautiful in Berlin-Kreuzberg.\n",
-      "photo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/23/assets/places/magazin/photo.webp",
+      "capacity": 1000,
+      "address": "Lohmühlenstraße 65, 12435 Berlin",
+      "mapUrl": "https://nominatim.openstreetmap.org/ui/search.html?q=Lohmuehlenstra%C3%9Fe+65+12435+Berlin",
+      "description": "Factory Berlin is an ecosystem of over 3,500 members from more than 70 nations located on two campuses – Factory Berlin Görlitzer Park and Factory Berlin Mitte.\n",
+      "photo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/assets/places/factory/photo.webp",
       "links": {
-        "web": "https://www.magazin-heeresbaeckerei.de/en/"
+        "web": "https://factoryberlin.com/spaces/"
       }
     }
   ],
   "events": [
     {
-      "id": "protocol",
-      "hash": "918a3acdfaef4a47b9e71a4b99dcf21a3b41466b79c8f54b6351da679033dd84",
-      "name": "Protocol Berg 2023",
-      "shortname": "Protocol",
+      "id": "ethberlin",
+      "hash": "0c2bf6f69867ed0708262a3d675ebf842f6232d465cd0755c1641803f3154580",
+      "name": "ETHBerlin 04",
+      "shortname": "ETHBerlin",
       "types": [
-        "conference"
+        "hackathon"
       ],
       "status": "published",
       "org": "Department of Decentralization",
       "dri": "q9f",
       "poc": "Afri Schoedon",
-      "date": "2023-09-15",
-      "days": 1,
-      "times": "08:00-21:00",
+      "date": "2024-05-24",
+      "days": 3,
+      "times": "00:00-24:00",
       "venues": [
-        "magazin"
+        "factory"
       ],
       "languages": [
         "english"
       ],
-      "attendees": 625,
-      "chains": [],
-      "tags": [
-        "protocol",
-        "infrastructure",
-        "core",
-        "research"
+      "attendees": 800,
+      "chains": [
+        "ethereum",
+        "polkadot",
+        "cosmos"
       ],
-      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/23/assets/events/protocol/logo.webp",
-      "description": "Protocol Berg is a one-day technical conference for protocol/system/network engineers, decentralized-infrastructure administrators, researchers, and other curious minds from different ecosystems. Attendance is free of charge. The event will not host any sponsors or commercial talks.\n",
+      "tags": [
+        "cypherpunk",
+        "privacy",
+        "hacker",
+        "identity"
+      ],
+      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/assets/events/ethberlin/logo.webp",
+      "description": "ETHBerlin is a hackathon, a cultural festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward.\n",
       "registration": {
         "type": "signup",
         "price": "free",
-        "link": "https://tickets.protocol.berlin",
-        "status": "sold-out"
+        "link": "https://visas.ethberlin.org/ethberlin/4/",
+        "button": "Sign up!",
+        "status": "available"
       },
       "links": {
-        "web": "https://protocol.berlin/",
+        "web": "https://ethberlin.org/",
         "twitter": "https://twitter.com/ETHBerlin",
-        "telegram": "https://matrix.to/#/%23protocol:tchncs.de"
+        "telegram": "https://matrix.to/#/%23ethberlin:dod.ngo"
       },
       "segments": [
         {
-          "date": "2023-09-15",
-          "times": "08:00-21:00",
-          "startTime": "2023-09-15T06:00:00.000Z",
-          "endTime": "2023-09-15T19:00:00.000Z"
+          "date": "2024-05-24",
+          "times": "00:00-24:00",
+          "startTime": "2024-05-23T22:00:00.000Z",
+          "endTime": "2024-05-24T22:00:00.000Z"
+        },
+        {
+          "date": "2024-05-25",
+          "times": "00:00-24:00",
+          "startTime": "2024-05-24T22:00:00.000Z",
+          "endTime": "2024-05-25T22:00:00.000Z"
+        },
+        {
+          "date": "2024-05-26",
+          "times": "00:00-24:00",
+          "startTime": "2024-05-25T22:00:00.000Z",
+          "endTime": "2024-05-26T22:00:00.000Z"
         }
       ]
     }
   ],
-  "media-partners": [
-    {
-      "id": "gweicz",
-      "hash": "12d653fa7dd5edda231dfa9b0814548347132833583a4be91db59994122c4dd5",
-      "name": "Gwei.cz",
-      "description": "Czech/Slovak Ethereum community",
-      "languages": [
-        "czech",
-        "slovak"
-      ],
-      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/23/assets/media-partners/gweicz/logo.webp",
-      "links": {
-        "web": "https://gwei.cz",
-        "twitter": "https://twitter.com/gweicz"
-      }
-    }
-  ],
-  "contributors": [
-    {
-      "id": "streameth",
-      "hash": "77d780ae3b569c456a76d3fcc955fb94f04631d7d262c8e63e7be7a55f003151",
-      "name": "StreamETH",
-      "description": "The complete solution to organize your virtual or hybrid event",
-      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/23/assets/contributors/streameth/logo.webp",
-      "links": {
-        "web": "https://streameth.org/",
-        "twitter": "https://twitter.com/streameth"
-      }
-    }
-  ],
+  "media-partners": [],
+  "contributors": [],
   "benefits": [],
   "unions": [],
   "chains": [
@@ -114,7 +103,7 @@
       "hash": "5de714b31c76c263e0201837dda7f3b9d92d45a72adb2f495676abdc0370243e",
       "name": "Ethereum",
       "symbol": "ETH",
-      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/23/assets/chains/ethereum/logo.webp",
+      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/assets/chains/ethereum/logo.webp",
       "links": {
         "web": "https://ethereum.org/",
         "twitter": "https://twitter.com/ethereum"
@@ -125,7 +114,7 @@
       "hash": "89eb61f2c142a77e6a3f40f7524c8cf070841c18b56bf2f1d407e7d8bed1f127",
       "name": "Bitcoin",
       "symbol": "BTC",
-      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/23/assets/chains/bitcoin/logo.webp",
+      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/assets/chains/bitcoin/logo.webp",
       "links": {
         "web": "https://bitcoin.org/"
       }
@@ -135,7 +124,7 @@
       "hash": "aa2a9bad20d98363d2a47204788b0d4cbb4aa3ab3340031f2b24c3ca9c112921",
       "name": "Monero",
       "symbol": "XMR",
-      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/23/assets/chains/monero/logo.webp",
+      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/assets/chains/monero/logo.webp",
       "links": {
         "web": "https://www.getmonero.org/",
         "twitter": "https://twitter.com/monero"
@@ -146,7 +135,7 @@
       "hash": "fc1f35322edcdd31bdc323c2a9a48b4e79b7fe3c1b75823d6f0da5b52828b9d7",
       "name": "Cosmos",
       "symbol": "ATOM",
-      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/23/assets/chains/cosmos/logo.webp",
+      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/assets/chains/cosmos/logo.webp",
       "links": {
         "web": "https://cosmos.network/",
         "twitter": "https://twitter.com/cosmos"
@@ -157,7 +146,7 @@
       "hash": "48887cef7134179e2390ebbd2122bc4e76e1414c894720757f7b05ddea753f68",
       "name": "Polkadot",
       "symbol": "DOT",
-      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/23/assets/chains/polkadot/logo.webp",
+      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/assets/chains/polkadot/logo.webp",
       "links": {
         "web": "https://polkadot.network/",
         "twitter": "https://twitter.com/polkadot"
@@ -165,6 +154,6 @@
     }
   ],
   "other-events": [],
-  "__time": "2023-09-07T15:41:37.253Z",
-  "__tag": "v23.3.1"
+  "__time": "2024-02-05T14:03:57.321Z",
+  "__tag": "v24.1.1"
 }

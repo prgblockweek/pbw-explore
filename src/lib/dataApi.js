@@ -1,6 +1,6 @@
 import localData from '$lib/data.json';
 
-export async function load(entry = '23', host = null) {
+export async function load(entry = '24', host = null) {
 	let data = null;
 
 	if (host === 'localhost') {
