@@ -4,7 +4,6 @@
 	import CalendarList from '$lib/components/CalendarList.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import DisclaimerHidden from '$lib/components/DisclaimerHidden.svelte';
 	import Disclaimer from '$lib/components/Disclaimer.svelte';
 
 	import { format, compareAsc } from 'date-fns';
@@ -78,9 +77,6 @@
 				/>
 			</div>
 			<div class="sm:ml-6">
-				{#if haveHiddenEvents}
-					<DisclaimerHidden />
-				{/if}
 			</div>
 
 			{#if relatedEvents && relatedEvents.length > 0}

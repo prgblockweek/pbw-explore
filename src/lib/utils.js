@@ -3,6 +3,7 @@ import { format, addDays } from 'date-fns';
 const langMapper = {
 	czech: 'cz',
 	slovak: 'sk',
+	german: 'de',
 	english: 'gb'
 };
 

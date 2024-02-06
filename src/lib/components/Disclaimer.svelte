@@ -4,7 +4,7 @@
 
 <div class="mt-4 mb-8 text-xl pbw-text-color-secondary">
 	{#if type === 'events'}
-		⚠️ All events published here are independent and have their own organisers. #PBW23 is an
+		⚠️ All events published here are independent and have their own organisers. #BBW24 is an
 		independent initiative that informs about these events.
 	{/if}
 	{#if type === 'speakers'}

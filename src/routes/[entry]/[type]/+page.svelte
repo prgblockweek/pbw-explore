@@ -13,7 +13,6 @@
 	import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import Disclaimer from '$lib/components/Disclaimer.svelte';
-	import DisclaimerHidden from '$lib/components/DisclaimerHidden.svelte';
 
 	import { compareAsc, compareDesc, addMinutes } from 'date-fns';
 	import { writable } from 'svelte/store';
@@ -319,9 +318,6 @@
 						</tbody>
 					</table>
 				</div>
-				{#if type === 'events'}
-					<DisclaimerHidden />
-				{/if}
 				{#if ['events', 'speakers'].includes(type)}
 					<Disclaimer {type} />
 				{/if}

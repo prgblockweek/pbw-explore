@@ -6,6 +6,23 @@
   "dataGithubUrl": "https://github.com/blockchainweek/data/tree/main/data/24",
   "places": [
     {
+      "id": "cbase",
+      "hash": "1483aa21c333e89fb9e13b456768c670b3c1e0ea50c68ebd6caad20b9ee51e38",
+      "name": "c-base",
+      "eventTypes": [
+        "conference",
+        "meetup"
+      ],
+      "capacity": 100,
+      "address": "Rungestraße 20, 10179 Berlin",
+      "mapUrl": "https://nominatim.openstreetmap.org/ui/search.html?q=Rungestra%C3%9Fe+20+10179+Berlin",
+      "description": "c-base space station is a hacker space.\n",
+      "photo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/assets/places/cbase/logo.webp",
+      "links": {
+        "web": "https://c-base.org"
+      }
+    },
+    {
       "id": "factory",
       "hash": "788ed6d85371105e87f0e5fc522e0a67ffc9e8b29087aa47086266e47d74506e",
       "name": "Factory Berlin",
@@ -24,6 +41,56 @@
     }
   ],
   "events": [
+    {
+      "id": "w3pn",
+      "hash": "b6a43b2faa6b96fbc74f2ca5a154829cd92e469ba7988f4db6c827db58bae8cb",
+      "name": "Web3privacy now meetup",
+      "shortname": "W3PN",
+      "types": [
+        "meetup"
+      ],
+      "status": "planning",
+      "org": "Web3Privacy now",
+      "dri": "burningtree",
+      "poc": "https://matrix.to/#/#web3privacy:matrix.org",
+      "date": "2024-05-22",
+      "days": 1,
+      "times": "15:00-21:00",
+      "venues": [
+        "cbase"
+      ],
+      "languages": [
+        "english"
+      ],
+      "attendees": 300,
+      "tags": [
+        "lunarpunk",
+        "privacy",
+        "censorship resistance",
+        "cypherphunk"
+      ],
+      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/assets/events/w3pn/logo.webp",
+      "description": "Web3Privacy now community presents core meetup of the privacy enthusiasts @ ETHBerlin 4. Explore the latest privacy market insights, presentations from the key privacy protocols & dApps, talk through regulatory pressure & anti-censorship efforts behind privacy community players",
+      "registration": {
+        "type": "signup",
+        "price": "TBD",
+        "link": "https://lu.ma/w3pn-meetup-berlin1",
+        "status": "available"
+      },
+      "links": {
+        "web": "http://web3privacy.info",
+        "twitter": "https://twitter.com/web3privacy",
+        "telegram": "https://t.me/web3privacynow"
+      },
+      "segments": [
+        {
+          "date": "2024-05-22",
+          "times": "15:00-21:00",
+          "startTime": "2024-05-22T13:00:00.000Z",
+          "endTime": "2024-05-22T19:00:00.000Z"
+        }
+      ]
+    },
     {
       "id": "ethberlin",
       "hash": "0c2bf6f69867ed0708262a3d675ebf842f6232d465cd0755c1641803f3154580",
@@ -94,7 +161,19 @@
     }
   ],
   "media-partners": [],
-  "contributors": [],
+  "contributors": [
+    {
+      "id": "dod",
+      "hash": "c4c98a42355b1bcbfed1b312b492cc607e7cdc1d2ab1146cef1a7b19c1e593c9",
+      "name": "Department of Decentralization",
+      "description": "The Department of Decentralization (DoD) is a collective of people from various crypto- and blockchain communities in and around Berlin. The group first assembled in 2018 to organize ETHBerlin and has been active since.",
+      "logo": "https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/assets/contributors/dod/logo.webp",
+      "links": {
+        "web": "https://dod.ngo/",
+        "twitter": "https://twitter.com/dod_berlin"
+      }
+    }
+  ],
   "benefits": [],
   "unions": [],
   "chains": [
@@ -154,6 +233,6 @@
     }
   ],
   "other-events": [],
-  "__time": "2024-02-05T14:03:57.321Z",
-  "__tag": "v24.1.1"
+  "__time": "2024-02-06T13:51:27.788Z",
+  "__tag": "v24.1.3"
 }

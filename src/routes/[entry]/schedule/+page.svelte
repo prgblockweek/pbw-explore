@@ -2,7 +2,6 @@
 	import { page } from '$app/stores';
 	import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
 	import Disclaimer from '$lib/components/Disclaimer.svelte';
-	import DisclaimerHidden from '$lib/components/DisclaimerHidden.svelte';
 	import CalendarList from '$lib/components/CalendarList.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
@@ -81,7 +80,6 @@
 					</div>
 				</div>
 			{/each}
-			<DisclaimerHidden />
 			<Disclaimer type="events" />
 		</div>
 	</div>

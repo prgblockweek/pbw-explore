@@ -21,14 +21,16 @@
 						consumed as a single JSON file → <a
 							href="https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/index.json"
 							class="underline hover:no-underline"
-							target="_blank">duplicity6-sulfur-objet0-air1.protocol.berlin/24/index.json</a
+							target="_blank"
+							rel="noreferrer">duplicity6-sulfur-objet0-air1.protocol.berlin/24/index.json</a
 						>.
 						<div class="h-4" />
 						📖 The source data GitHub repository →<a
 							href="https://github.com/blockchainweek/data"
 							class="underline hover:no-underline"
-							target="_blank">blockchainweek/data</a
-						>. Go ahead and do PRs!
+							target="_blank"
+							rel="noreferrer">blockchainweek/data</a
+						>. Go ahead and submit PRs!
 					</div>
 				</div>
 				{#if showSource}
@@ -55,25 +57,22 @@
 								href="https://github.com/blockchainweek/data/commits/main"
 								target="_blank"
 								class="underline hover:no-underline"
+								rel="noreferrer"
 								>{formatDistanceToNow(new Date(bundle.__time || null))} ago</a
 							>
 							({bundle.__tag}) &nbsp;|&nbsp;
 							<a
-								href="https://analytics.gwei.cz/explore.prgblockweek.com"
-								class="underline hover:no-underline"
-								target="_blank">Analytics</a
-							>
-							&nbsp;|&nbsp;
-							<a
 								href="https://github.com/utxo-foundation/pbw-explore"
 								class="underline hover:no-underline"
-								target="_blank">pbw-explore {__VERSION__}</a
+								target="_blank"
+								rel="noreferrer">bbw-explore {__VERSION__}</a
 							>
 							{#if item}
 								&nbsp;|&nbsp; ID: <a
 									href="https://github.com/blockchainweek/data/tree/main/data/24/{cc}/{item.id}"
 									class="underline hover:no-underline"
-									target="_blank">{item.id}</a
+									target="_blank"
+									rel="noreferrer">{item.id}</a
 								>
 								[{cc}] &nbsp;|&nbsp;
 								<button

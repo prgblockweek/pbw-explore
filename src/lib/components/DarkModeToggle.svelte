@@ -20,7 +20,7 @@
 			xmlns="http://www.w3.org/2000/svg"
 			><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg
 		>
-		<span class="px-2">Dark mode</span>
+		<span class="px-2">Lunar mode</span>
 	{:else}
 		<svg
 			id="theme-toggle-light-icon"
@@ -34,6 +34,6 @@
 				clip-rule="evenodd"
 			/></svg
 		>
-		<span class="px-2">Light mode</span>
+		<span class="px-2">Solar mode</span>
 	{/if}
 </button>

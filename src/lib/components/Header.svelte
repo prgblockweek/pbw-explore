@@ -10,7 +10,7 @@
 		<div class="mx-4 xl:mx-0">
 			<div class="flex gap-8 pb-6">
 				<h1 class="text-4xl md:text-5xl font-bold text-pbw-white">
-					<a href="/{$page.params.entry}">#PBW23</a><a
+					<a href="/{$page.params.entry}">#BBW24</a><a
 						href="/{$page.params.entry}{path ? '/' + path : ''}"
 						><span class="text-pbw-yellow">.{type}</span></a
 					>

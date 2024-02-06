@@ -12,7 +12,6 @@
 	export let circle = false;
 	export let offer = false;
 	export let bundle = null;
-	export let currentItem = null;
 	export let thumb = null;
 
 	function findObject(it) {
@@ -103,20 +102,19 @@
 			<div class="text-6xl">+</div>
 			<div>
 				{#if col === 'event'}<a
-						href="https://guide.prgblockweek.com/event-host-guide"
+						href="https://github.com/blockchainweek/data/issues/new/choose"
 						target="_blank"
-						class="underline hover:no-underline">Host your own event!</a
+						class="underline hover:no-underline"
+						rel="noreferrer">Submit your own event!</a
 					>{/if}
-				{#if col === 'benefit'}<a
-						href="https://guide.prgblockweek.com/event-host-guide"
+				{#if col === 'speaker'}<a
+						href="https://github.com/blockchainweek/data/issues/new/choose"
 						target="_blank"
-						class="underline hover:no-underline">Offer visitors your own benefit!</a
-					>{/if}
-				{#if col === 'speaker'}<a href="/{entry}/for-speakers" class="underline hover:no-underline"
-						>Participate as a speaker!</a
+						class="underline hover:no-underline"
+						rel="noreferrer">Submit a missing speaker!</a
 					>{/if}
 				{#if col === 'place'}<a
-						href="https://prgblockweek.com/submit-venue"
+						href="https://github.com/blockchainweek/data/issues/new/choose"
 						class="underline hover:no-underline">Offer your own venue!</a
 					>{/if}
 			</div>

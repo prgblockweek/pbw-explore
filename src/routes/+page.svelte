@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Berlin Blockchain Week | Explore</title>
+	<title>Berlin Blockchain Week 2024</title>
 </svelte:head>
 
 <div />

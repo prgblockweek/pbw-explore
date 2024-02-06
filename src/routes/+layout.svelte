@@ -49,7 +49,7 @@
 		<div class="px-6 xl:px-0">
 			<div class="max-w-7xl mx-auto pt-10 pb-6">
 				<h1 class="text-5xl uppercase font-bold text-pbw-white">
-					<a href="https://prgblockweek.com">Berlin Blockchain Week 2024</a>
+					<a href="/">Berlin Blockchain Week 2024</a>
 				</h1>
 				<div class="text-4xl text-pbw-yellow">May 18-27, 2024</div>
 			</div>
@@ -58,50 +58,44 @@
 			<div class="max-w-7xl mx-auto bg-pbw-red/10 text-pbw-red dark:text-gray-300 rounded-lg">
 				<div class="p-5 text-xl">
 					<p>
-						A decentralized gathering for cryptocurrency enthusiasts and related topics. It includes
-						events like conferences, hackathons, workshops, meetups, and parties from Jun 2 - 11.
-						Topics covered range from hard money to NFTs, DeFi to mining. The initiative is chain
-						agnostic and aims to foster discussion among different blockchain proponents. Financial
-						freedom, decentralization, and privacy are the common themes. More information and FAQs
-						can be found in our <a
-							href="https://guide.prgblockweek.com/"
-							class="underline hover:no-underline">documentation</a
-						>.
+						Blockchain Week Berlin is a decentralized community-organized
+						initiative. There is no single owner. It is an agnostic movement
+						based on the premise that self-organization is the backbone of the
+						ecosystem. We invite projects, individuals and anyone interested in
+						fruitful and educational discussions to join us in Berlin in
+						May.
+
+						Blockchain Week Berlin is committed to reduce the noise from the
+						market and focus on education, in order to push mass adoption by
+						providing first-hand information about the industry.
+
+						Our concept is simple: keep it educational, try to be as
+						cost-friendly for the community as you can (bearing in mind, we all
+						need to pay bills - so not all events are free!) and to create a
+						welcoming and inclusive environment, so interested parties at
+						anyknowledge level feel comfortable to join.
 					</p>
 					<div class="pt-4 text-2xl flex flex-wrap gap-4">
 						<div>
 							🐦
 							<a
-								href="https://twitter.com/PrgBlockWeek"
+								href="https://twitter.com/BerBlockWeek"
 								class="underline hover:no-underline"
-								target="_blank">Follow us on Twitter</a
-							>
-						</div>
-						<div>
-							📖
-							<a
-								href="https://guide.prgblockweek.com/"
-								class="underline hover:no-underline"
-								target="_blank">Read our #PBW23 Guide</a
+								target="_blank"
+								rel="noreferrer">Follow us on Twitter</a
 							>
 						</div>
 						<div>
 							💬
 							<a
-								href="https://t.me/PrgBlockWeek"
+								href="https://matrix.to/#/%23blockchainweek:dod.ngo"
 								class="underline hover:no-underline"
-								target="_blank">Join our Telegram group</a
+								target="_blank"
+								rel="noreferrer">Join our Matrix space</a
 							>
 						</div>
 					</div>
-					<!--p class="mt-5 opacity-50">⚠️ This is just a temporary site that will soon be replaced by a full-fledged website and information center for <a href="https://twitter.com/search?q=%23PBW23" target="_blank">#PBW23</a>. In the meantime, you can read the <a href="https://guide.prgblockweek.com/faq">FAQ</a> and learn more about our concept.</p-->
-					<!--p class="mt-5 text-3xl text-center text-pbw-yellow">💛 #PBW23</p-->
 				</div>
-				<!--div class="flex flex-wrap gap-10 items-center text-center text-xl md:text-2xl uppercase mt-2 md:mt-7 pb-16 md:pb-24 text-pbw-yellow p-7">
-					<div class="flex-grow"><a href="https://explore.prgblockweek.com" class="button">Explore #PBW23</a></div>
-					<div class="flex-grow"><a href="https://twitter.com/PrgBlockWeek" target="_blank" class="button">Follow us on Twitter</a></div>
-					<div class="flex-grow"><a href="https://t.me/PrgBlockWeek" target="_blank" class="button">Join Telegram group</a></div>
-				</div-->
 			</div>
 		</div>
 	{/if}
