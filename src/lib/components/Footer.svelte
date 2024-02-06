@@ -6,8 +6,7 @@
 	export let col;
 	export let bundle;
 
-	const cc = Object.keys(config.collections).find((c) => config.collections[c].model === col);
-
+	let cc = Object.keys(config.collections).find((c) => config.collections[c].model === col);
 	let showSource = false;
 </script>
 
@@ -17,22 +16,20 @@
 			<div class="pt-0">
 				<div class="bg-gray-100 dark:bg-gray-600 p-4 text-lg text-gray-600 dark:text-gray-200">
 					<div>
-						⚙ This page is automatically generated using the structured dataset which can be
-						consumed as a single JSON file → <a
-							href="https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/index.json"
-							class="underline hover:no-underline"
-							target="_blank"
-							rel="noreferrer">duplicity6-sulfur-objet0-air1.protocol.berlin/24/index.json</a
-						>.
-						<div class="h-4" />
-						📖 The source data GitHub repository →<a
+						<em>This page is automatically generated using a structured dataset which can be
+						consumed as a single <a
+						href="https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/index.json"
+						class="underline hover:no-underline"
+						target="_blank"
+						rel="noreferrer">JSON file</a
+						>. The source data is a GitHub repository at <a
 							href="https://github.com/blockchainweek/data"
 							class="underline hover:no-underline"
 							target="_blank"
 							rel="noreferrer">blockchainweek/data</a
-						>. Go ahead and submit PRs!
-					</div>
+						>. Go ahead and submit PRs!</em>
 				</div>
+			</div>
 				{#if showSource}
 					<h2 class="text-2xl uppercase font-bold mt-10 text-gray-500">JSON source-code</h2>
 					<div
@@ -62,7 +59,7 @@
 							>
 							({bundle.__tag}) &nbsp;|&nbsp;
 							<a
-								href="https://github.com/utxo-foundation/pbw-explore"
+								href="https://github.com/blockchainweek/explore"
 								class="underline hover:no-underline"
 								target="_blank"
 								rel="noreferrer">bbw-explore {__VERSION__}</a

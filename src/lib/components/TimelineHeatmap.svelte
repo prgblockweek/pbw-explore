@@ -29,7 +29,6 @@
 
 	const segments = [];
 	let currentSegment = '00:00';
-	const endSegmentDate = addDays(new Date(startDate), 1);
 	while (!segments.includes(currentSegment)) {
 		segments.push(format(new Date(startDate + 'T' + currentSegment), 'HH:mm'));
 		currentSegment = format(
@@ -55,7 +54,6 @@
 				const sstart = new Date(`${day}T${segment}`);
 				const send = new Date(addMinutes(sstart, segmentMinutes));
 				if (compareAsc(sstart, time.end) < 0 && compareAsc(send, time.start) > 0) {
-					//console.log(timelineData[[day, segment].join(';')])
 					const baseScore = attendees
 						? attendees > 3000
 							? 3000
@@ -115,7 +113,6 @@
 	function makeClick(day, segment, keys) {
 		const start = new Date(`${day}T${segment}`);
 		const end = addMinutes(start, segmentMinutes);
-		//goto(`/${data.params.entry}/events?start=${start.toISOString()}&end=${end.toISOString()}`)
 		goto(`/${data.params.entry}/day/${day}?start=${start.toISOString()}&end=${end.toISOString()}`);
 	}
 
@@ -155,9 +152,6 @@
 							</div>
 						</div>
 					{/each}
-					{#if selectedSegmentEvents.find((e) => e[0].hidden)}
-						<div class="text-base mt-4 pbw-text-color-secondary">*Not a part of #PBW23</div>
-					{/if}
 				</div>
 			{:else}
 				<div class="text-lg mt-4 pbw-text-color-secondary">No events</div>

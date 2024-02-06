@@ -58,17 +58,15 @@
 			<div class="max-w-7xl mx-auto bg-pbw-red/10 text-pbw-red dark:text-gray-300 rounded-lg">
 				<div class="p-5 text-xl">
 					<p>
-						Blockchain Week Berlin is a decentralized community-organized
+						Berlin Blockchain Week is a decentralized community-organized
 						initiative. There is no single owner. It is an agnostic movement
 						based on the premise that self-organization is the backbone of the
 						ecosystem. We invite projects, individuals and anyone interested in
 						fruitful and educational discussions to join us in Berlin in
-						May.
-
-						Blockchain Week Berlin is committed to reduce the noise from the
+						May.<br /><br />
+						We are committed to reduce the noise from the
 						market and focus on education, in order to push mass adoption by
-						providing first-hand information about the industry.
-
+						providing first-hand information about the industry.<br /><br />
 						Our concept is simple: keep it educational, try to be as
 						cost-friendly for the community as you can (bearing in mind, we all
 						need to pay bills - so not all events are free!) and to create a

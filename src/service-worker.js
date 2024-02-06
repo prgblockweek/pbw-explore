@@ -22,8 +22,6 @@ const ASSETS = [
 	...images
 ];
 
-console.log(ASSETS);
-
 self.addEventListener('install', (event) => {
 	// Create a new cache and add all files to it
 	async function addFilesToCache() {

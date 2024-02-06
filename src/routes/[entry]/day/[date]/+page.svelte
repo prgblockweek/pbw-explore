@@ -56,7 +56,7 @@
 
 <svelte:head>
 	<title
-		>{format(new Date($page.params.date), 'EEEE MMMM d, yyyy')} | #PBW{$page.params.entry} Explore</title
+		>{format(new Date($page.params.date), 'EEEE MMMM d, yyyy')} | Berlin Blockchain Week 20{$page.params.entry}</title
 	>
 </svelte:head>
 

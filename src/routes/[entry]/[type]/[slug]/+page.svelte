@@ -88,7 +88,7 @@
 </script>
 
 <svelte:head>
-	<title>{item.name} | #PBW{$page.params.entry}</title>
+	<title>{item.name} | Berlin Blockchain Week 20{$page.params.entry}</title>
 	<meta name="description" content={itemDescription} />
 	<meta name="keywords" content={item.tags ? item.tags.join(', ') : ''} />
 
@@ -107,7 +107,7 @@
 			content="@{item.links.twitter.replace(/https?:\/\/(twitter\.com\/)/g, '')}"
 		/>
 	{/if}
-	<meta name="twitter:title" content="{item.name} | #PBW{$page.params.entry}" />
+	<meta name="twitter:title" content="{item.name} | #BBW{$page.params.entry}" />
 	<meta name="twitter:description" content={itemDescription} />
 	<meta name="twitter:image" content={itemImage} />
 </svelte:head>
@@ -126,7 +126,6 @@
 					rounded="rounded-xl"
 				/>
 				<div class="flex-grow">
-					<!--div class="font-normal text opacity-50 mt-4 md:mt-0 mb-1" style="line-height: 0.6em;"><a href="/{entry}/{col}">{col.toUpperCase()}</a></div-->
 					<h1 class="pbw-text-color-primary text-4xl md:text-5xl font-bold mt-4 md:mt-0">
 						{item.name}
 					</h1>
@@ -146,7 +145,8 @@
 									<a
 										href={item.venueUrl}
 										target="_blank"
-										class="underline hover:no-underline external">{item.venueName}</a
+										class="underline hover:no-underline external"
+										rel="noreferrer">{item.venueName}</a
 									>
 								{:else}
 									{item.venueName}
@@ -170,6 +170,7 @@
 											href={speakerLinks[lk].col(item)}
 											target="_blank"
 											class="underline hover:no-underline"
+											rel="noreferrer"
 											>{bareDomain(speakerLinks[lk].col(item), lk)}</a
 										>
 									</div>
@@ -253,7 +254,8 @@
 											<a
 												href={item.mapUrl}
 												target="_blank"
-												class="external underline hover:no-underline">{item.address}</a
+												class="external underline hover:no-underline"
+												rel="noreferrer">{item.address}</a
 											>
 										{:else}
 											{item.address}
@@ -287,6 +289,7 @@
 								<div>
 									<span class="opacity-40 text-sm uppercase">{lk} →</span>
 									<a href={item.links[lk]} target="_blank" class="underline hover:no-underline"
+									rel="noreferrer"
 										>{bareDomain(item.links[lk], lk)}</a
 									>
 								</div>
@@ -300,7 +303,8 @@
 						<div class="w-auto rounded-lg md:text-right gap-4">
 							{#if item.registration.link}
 								<div class="pb-2">
-									<a href={item.registration.link} class="" target="_blank">
+									<a href={item.registration.link} class="" target="_blank"
+									rel="noreferrer">
 										<div
 											class="inline-block py-3 px-6 border border-pbw-red hover:bg-pbw-red hover:text-white text-pbw-red text-xl rounded-lg whitespace-nowrap"
 										>
@@ -367,7 +371,6 @@
 								class="border rounded-lg bg-gray-50 dark:text-gray-300 dark:border-gray-300 dark:bg-transparent items-center py-1.5 px-2"
 							>
 								<div class="text-xl" title={track.name}>{track.shortname || track.name}</div>
-								<!--div class="text-lg markdown"><SvelteMarkdown source={track.examples} /></div-->
 							</div>
 						{/each}
 					</div>
@@ -441,6 +444,7 @@
 					<div class="mt-4 text-xl">
 						This event is looking for speakers.{item.cfp.text ? ' ' + item.cfp.text : ''}
 						<a href={item.cfp.link} target="_blank" class="underline hover:no-underline"
+						rel="noreferrer"
 							>Submit a proposal</a
 						>.
 					</div>
@@ -454,6 +458,7 @@
 							? ' in the ' + item.sponsors.range + ' range'
 							: ''}.{item.sponsors.text ? ' ' + item.sponsors.text : ''} Check out their
 						<a href={item.sponsors.link} target="_blank" class="underline hover:no-underline"
+						rel="noreferrer"
 							>pitch deck</a
 						>.
 					</div>

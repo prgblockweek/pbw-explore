@@ -12,7 +12,6 @@ export async function load(entry = '24', host = null) {
 		data = await resp.json();
 	}
 	data.events.sort((a, b) => ((a.attendees || 0) < (b.attendees || 0) ? 1 : -1));
-	//console.log(data.events)
 	data.speakers = [];
 	for (const event of data.events) {
 		if (!event.speakers) continue;

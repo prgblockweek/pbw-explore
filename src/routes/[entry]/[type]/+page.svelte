@@ -1,21 +1,18 @@
 <script>
 	import { page } from '$app/stores';
 	import { config } from '$lib/pbw';
-	//import { redirect } from '@sveltejs/kit';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import SvelteMarkdown from 'svelte-markdown';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
-	import { formatItemDate, bareDomain, getFlagEmoji, processItemsList } from '$lib/utils.js';
-	import makeBlockie from 'ethereum-blockies-base64';
-	import TimelineHeatmap from '$lib/components/TimelineHeatmap.svelte';
+	import { formatItemDate, getFlagEmoji, processItemsList } from '$lib/utils.js';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import Disclaimer from '$lib/components/Disclaimer.svelte';
 
-	import { compareAsc, compareDesc, addMinutes } from 'date-fns';
-	import { writable } from 'svelte/store';
+	import { compareAsc } from 'date-fns';
+
 
 	export let data;
 
@@ -44,7 +41,6 @@
 						compareAsc(new Date(sgm.endTime), new Date(query.end)) >= 0
 					);
 				});
-				//        return compareAsc(item.new Date(query.segment) > 0)
 			});
 		}
 		if (['speakers', 'benefits', 'media-partner'].includes(type)) {
@@ -65,7 +61,6 @@
 		};
 
 		// filters
-		console.log('@@@@', q);
 		if (q) {
 			scores = {};
 			_items = _items
@@ -100,7 +95,7 @@
 		return _items;
 	}
 
-	$: processedItems = processItems(items, {}, q); //, Object.fromEntries($page.url.searchParams))
+	$: processedItems = processItems(items, {}, q);
 	$: currentTotal = processedItems.filter((e) => !e.hidden).length;
 
 	onMount(async () => {
@@ -116,7 +111,7 @@
 </script>
 
 <svelte:head>
-	<title>{tc?.title} | #PBW{$page.params.entry} Explore</title>
+	<title>{tc?.title} | Berlin Blockchain Week 20{$page.params.entry}</title>
 </svelte:head>
 
 <Header path={false} type={$page.params.type} />

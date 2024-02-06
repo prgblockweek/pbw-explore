@@ -30,7 +30,7 @@
 </script>
 
 <svelte:head>
-	<title>#BBW{$page.params.entry} Explore</title>
+	<title>Berlin Blockchain Week 20{$page.params.entry}</title>
 </svelte:head>
 
 <div class="w-full px-6 xl:mx-0">

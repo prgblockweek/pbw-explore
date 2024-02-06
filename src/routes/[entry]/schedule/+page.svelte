@@ -15,7 +15,6 @@
 		const days = [];
 		for (let i = 0; i < config.days; i++) {
 			const date = format(addDays(new Date(config.date), i), 'yyyy-MM-dd');
-			//console.log(date)
 			const query = {
 				start: date + 'T00:00',
 				end: date + 'T23:59'
@@ -53,7 +52,7 @@
 </script>
 
 <svelte:head>
-	<title>Schedule | #PBW{$page.params.entry} Explore</title>
+	<title>Schedule | Berlin Blockchain Week 20{$page.params.entry}</title>
 </svelte:head>
 
 <Header path={false} type="schedule" />
