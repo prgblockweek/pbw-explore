@@ -29,7 +29,7 @@ Go to the issues, hit **NEW** and choose **UPDATE/NEW EVENT**:
 
 ## License
 
-As published by [prgblockweek/prague-blockchain-week](https://github.com/prgblockweek/prague-blockchain-week):
+As published by [prgblockweek/pbw-explore](https://github.com/prgblockweek/pbw-explore):
 
 [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 
