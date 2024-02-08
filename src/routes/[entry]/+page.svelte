@@ -20,7 +20,7 @@
 	const collections = [
 		{ title: 'Days', value: 10, col: 'schedule' },
 		{ title: 'Events', col: 'events', filter: (e) => !e.hidden },
-		{ title: 'Speakers', col: 'speakers', value: speakers.length },
+		// { title: 'Speakers', col: 'speakers', value: speakers.length },
 		{ title: 'Places', col: 'places' },
 		// { title: 'Media Partners', col: 'media-partners' },
 		// { title: "Blockchains", col: "chains" },
@@ -68,22 +68,6 @@
 			<CollectionList arr={otherEvents} img="logo" col="event" {entry} />
 		</div>
 
-		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
-			<a href="/{entry}/speakers">Speakers</a> ({speakers.length})
-		</h2>
-		<div
-			class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 my-6 text-center text-xl"
-		>
-			<CollectionList
-				arr={processItemsList(
-					speakers
-						.sort((x, y) => (x.name > y.name ? 1 : -1))
-				)}
-				{entry}
-				offer="true"
-				circle="true"
-			/>
-		</div>
 		<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
 			<a href="/{entry}/places">Places</a> ({data.bundle.places.length})
 		</h2>
