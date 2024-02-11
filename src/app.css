@@ -9,13 +9,13 @@
 		@apply underline hover:no-underline hover:text-red-200;
 	}
 	#footer a {
-		@apply underline hover:no-underline hover:text-pbw-white;
+		@apply underline hover:no-underline hover:text-bbw-white;
 	}
 	.separator {
 		@apply inline-block mx-3;
 	}
 	.button {
-		@apply border border-pbw-yellow py-3 px-4 rounded hover:bg-pbw-yellow hover:text-pbw-red;
+		@apply border border-bbw-yellow py-3 px-4 rounded hover:bg-bbw-yellow hover:text-bbw-navy;
 	}
 
 	.cc0-license {
@@ -57,24 +57,24 @@
 	}
 
 	body {
-		@apply bg-pbw-red;
+		@apply bg-bbw-navy;
 	}
 
 	.page-body {
-		@apply bg-pbw-white;
+		@apply bg-bbw-white;
 	}
 
 	body.dark .page-body {
-		@apply bg-pbw-dark;
+		@apply bg-bbw-dark;
 	}
 
-	.pbw-text-color-base {
+	.bbw-text-color-base {
 		@apply text-gray-800 dark:text-gray-200;
 	}
-	.pbw-text-color-primary {
+	.bbw-text-color-primary {
 		@apply text-gray-600 dark:text-gray-100;
 	}
-	.pbw-text-color-secondary {
+	.bbw-text-color-secondary {
 		@apply text-gray-500 dark:text-gray-300;
 	}
 

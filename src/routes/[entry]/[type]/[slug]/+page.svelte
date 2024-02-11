@@ -9,7 +9,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import SvelteMarkdown from 'svelte-markdown';
 	import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
-	import { config } from '$lib/pbw';
+	import { config } from '$lib/bbw';
 	import { format } from 'date-fns';
 	import { formatInTimeZone } from 'date-fns-tz';
 
@@ -126,7 +126,7 @@
 					rounded="rounded-xl"
 				/>
 				<div class="flex-grow">
-					<h1 class="pbw-text-color-primary text-4xl md:text-5xl font-bold mt-4 md:mt-0">
+					<h1 class="bbw-text-color-primary text-4xl md:text-5xl font-bold mt-4 md:mt-0">
 						{item.name}
 					</h1>
 					{#if col === 'event' || col === 'other-event'}
@@ -170,8 +170,7 @@
 											href={speakerLinks[lk].col(item)}
 											target="_blank"
 											class="underline hover:no-underline"
-											rel="noreferrer"
-											>{bareDomain(speakerLinks[lk].col(item), lk)}</a
+											rel="noreferrer">{bareDomain(speakerLinks[lk].col(item), lk)}</a
 										>
 									</div>
 								{/if}
@@ -288,9 +287,11 @@
 							{#each Object.keys(item.links) as lk}
 								<div>
 									<span class="opacity-40 text-sm uppercase">{lk} →</span>
-									<a href={item.links[lk]} target="_blank" class="underline hover:no-underline"
-									rel="noreferrer"
-										>{bareDomain(item.links[lk], lk)}</a
+									<a
+										href={item.links[lk]}
+										target="_blank"
+										class="underline hover:no-underline"
+										rel="noreferrer">{bareDomain(item.links[lk], lk)}</a
 									>
 								</div>
 							{/each}
@@ -303,10 +304,9 @@
 						<div class="w-auto rounded-lg md:text-right gap-4">
 							{#if item.registration.link}
 								<div class="pb-2">
-									<a href={item.registration.link} class="" target="_blank"
-									rel="noreferrer">
+									<a href={item.registration.link} class="" target="_blank" rel="noreferrer">
 										<div
-											class="inline-block py-3 px-6 border border-pbw-red hover:bg-pbw-red hover:text-white text-pbw-red text-xl rounded-lg whitespace-nowrap"
+											class="inline-block py-3 px-6 border border-bbw-navy hover:bg-bbw-navy hover:text-white text-bbw-navy text-xl rounded-lg whitespace-nowrap"
 										>
 											{#if item.registration.button}
 												{item.registration.button}
@@ -364,7 +364,7 @@
 
 			{#if col === 'event'}
 				{#if item.tracks}
-					<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">Tracks</h2>
+					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">Tracks</h2>
 					<div class="flex flex-wrap gap-2 mt-4">
 						{#each item.tracks as track}
 							<div
@@ -376,7 +376,7 @@
 					</div>
 				{/if}
 				{#if item.segments}
-					<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">Schedule</h2>
+					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">Schedule</h2>
 					{#each eventDates(item) as date}
 						<div class="mb-6">
 							<h3 class="mt-4 text-xl uppercase text-gray-500 dark:text-gray-400">
@@ -399,7 +399,7 @@
 					{/each}
 				{/if}
 				{#if item.speakers}
-					<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
+					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
 						Speakers ({item.speakers?.length || 0})
 					</h2>
 					<div
@@ -414,7 +414,7 @@
 					</div>
 				{/if}
 				{#if item.events}
-					<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
+					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
 						Sub-Events ({item.events?.length || 0})
 					</h2>
 					<div
@@ -424,7 +424,7 @@
 					</div>
 				{/if}
 				{#if item.venues}
-					<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
+					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
 						Venues ({item.venues?.length || 0})
 					</h2>
 					<div
@@ -438,34 +438,38 @@
 					</div>
 				{/if}
 				{#if item.cfp}
-					<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
+					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
 						<a href="/{entry}/for-speakers">For speakers</a>
 					</h2>
 					<div class="mt-4 text-xl">
 						This event is looking for speakers.{item.cfp.text ? ' ' + item.cfp.text : ''}
-						<a href={item.cfp.link} target="_blank" class="underline hover:no-underline"
-						rel="noreferrer"
-							>Submit a proposal</a
+						<a
+							href={item.cfp.link}
+							target="_blank"
+							class="underline hover:no-underline"
+							rel="noreferrer">Submit a proposal</a
 						>.
 					</div>
 				{/if}
 				{#if item.sponsors}
-					<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
+					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
 						<a href="/{entry}/for-sponsors">For sponsors</a>
 					</h2>
 					<div class="mt-4 text-xl">
 						This event is looking for sponsors{item.sponsors.range
 							? ' in the ' + item.sponsors.range + ' range'
 							: ''}.{item.sponsors.text ? ' ' + item.sponsors.text : ''} Check out their
-						<a href={item.sponsors.link} target="_blank" class="underline hover:no-underline"
-						rel="noreferrer"
-							>pitch deck</a
+						<a
+							href={item.sponsors.link}
+							target="_blank"
+							class="underline hover:no-underline"
+							rel="noreferrer">pitch deck</a
 						>.
 					</div>
 				{/if}
 			{/if}
 			{#if col === 'union'}
-				<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
+				<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
 					Big events ({item.events?.map((eId) => data.bundle.events.find((e) => e.id === eId))
 						.length})
 				</h2>
@@ -480,7 +484,7 @@
 				</div>
 			{/if}
 			{#if col === 'speaker'}
-				<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
+				<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
 					Events ({data.bundle.events.filter((e) => e.speakers?.find((s) => s.id === item.id))
 						.length || 0})
 				</h2>
@@ -495,7 +499,7 @@
 				</div>
 			{/if}
 			{#if col === 'place'}
-				<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
+				<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
 					Events ({data.bundle.events.filter((e) => e.venues?.includes(item.id)).length || 0})
 				</h2>
 				<div
@@ -509,7 +513,7 @@
 				</div>
 			{/if}
 			{#if col === 'chain'}
-				<h2 class="text-2xl uppercase font-bold mt-10 pbw-text-color-secondary">
+				<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
 					Events ({data.bundle.events.filter((e) => e.chains?.includes(item.id)).length || 0})
 				</h2>
 				<div

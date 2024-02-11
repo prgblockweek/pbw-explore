@@ -8,7 +8,7 @@
 </script>
 
 <button
-	class="flex items-center text-white py-1 px-2 rounded-full hover:bg-pbw-yellow/20 dark:hover:bg-pbw-white/10"
+	class="flex items-center text-white py-1 px-2 rounded-full hover:bg-bbw-yellow/20 dark:hover:bg-bbw-white/10"
 	on:click={toggleDarkMode}
 >
 	{#if dark}

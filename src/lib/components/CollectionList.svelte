@@ -38,13 +38,13 @@
 {#each arr.map((k) => findObject(k)) as item}
 	<div
 		class="{size === 'small' ? 'p-0.5 lg:p-1' : 'p-1 lg:p-1.5'} {!item.hidden
-			? 'hover:bg-pbw-yellow/20 dark:hover:bg-pbw-white/10'
+			? 'hover:bg-bbw-yellow/20 dark:hover:bg-bbw-white/10'
 			: ''} {size === 'small' ? 'rounded-lg' : 'rounded-2xl'}"
 	>
 		<div class="w-full relative">
 			{#if col === 'benefit'}
 				<div class="absolute top-3 -left-2.5 z-50">
-					<div class="bg-pbw-red py-0.5 px-1.5 rounded-md text-white uppercase text-base">
+					<div class="bg-bbw-navy py-0.5 px-1.5 rounded-md text-white uppercase text-base">
 						{item.slogan}
 					</div>
 				</div>
@@ -66,31 +66,31 @@
 				{#if item.hidden}
 					{item.shortname || item.name}*
 				{:else}
-					<h3 class=" text-pbw-red">
+					<h3 class=" text-bbw-navy">
 						<a href={_url(col, item)} class="hover:underline">{item.shortname || item.name}</a>
 					</h3>
 				{/if}
 				{#if col === 'event'}
-					<div class="text-xl pbw-text-color-secondary  my-2">
+					<div class="text-xl bbw-text-color-secondary  my-2">
 						<span class="font-bold">{formatItemDate(item)}</span>
 						{#if item.attendees}<br />{item.attendees} ppl{/if}
 					</div>
 				{/if}
 				{#if col === 'media-partner'}
-					<div class="text-base pbw-text-color-secondary my-2">{item.description}</div>
+					<div class="text-base bbw-text-color-secondary my-2">{item.description}</div>
 				{/if}
 				{#if col === 'speaker'}
-					<div class="text-base pbw-text-color-secondary my-2 break-words">
+					<div class="text-base bbw-text-color-secondary my-2 break-words">
 						<SvelteMarkdown source={item.caption} />
 					</div>
 				{/if}
 				{#if col === 'union'}
-					<div class="text-base pbw-text-color-secondary my-2 break-words">
+					<div class="text-base bbw-text-color-secondary my-2 break-words">
 						<SvelteMarkdown source={item.description} />
 					</div>
 				{/if}
 				{#if col === 'place'}
-					<div class="text-xl pbw-text-color-secondary my-2">{item.capacity} ppl</div>
+					<div class="text-xl bbw-text-color-secondary my-2">{item.capacity} ppl</div>
 				{/if}
 			</div>
 		{/if}

@@ -65,7 +65,7 @@
 	<div class="max-w-7xl mx-auto pt-5 md:pt-10">
 		<div class="mx-4 xl:mx-0">
 			<TimelineHeatmap {data} highlightDay={$page.params.date} />
-			<h2 class="text-3xl md:text-4xl font-bold pbw-text-color-primary">
+			<h2 class="text-3xl md:text-4xl font-bold bbw-text-color-primary">
 				{format(new Date($page.params.date), 'MMMM d, yyyy - EEEE')}
 			</h2>
 			<div class="mt-10 mb-12">
@@ -80,7 +80,7 @@
 			</div>
 
 			{#if relatedEvents && relatedEvents.length > 0}
-				<h2 class="text-2xl uppercase font-bold pbw-text-color-secondary mt-10">Other events</h2>
+				<h2 class="text-2xl uppercase font-bold bbw-text-color-secondary mt-10">Other events</h2>
 				<div class="mt-4 mb-12">
 					<CalendarList
 						date={$page.params.date}

@@ -1,6 +1,6 @@
 import { build, files, version } from '$service-worker';
 import data from '$lib/data.json' assert { type: 'json' };
-import { config } from '$lib/pbw.js';
+import { config } from '$lib/bbw.js';
 
 // Create a unique cache name for this deployment
 const CACHE = `cache-${version}`;

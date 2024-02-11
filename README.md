@@ -7,7 +7,8 @@ The production version is available at [outright6-sear-8gusto-atrium.protocol.be
 ## Want to add your own event?
 
 Go to the issues, hit **NEW** and choose **UPDATE/NEW EVENT**:
-* https://github.com/blockchainweek/data/issues/new/choose
+
+- https://github.com/blockchainweek/data/issues/new/choose
 
 ## Follow us!
 

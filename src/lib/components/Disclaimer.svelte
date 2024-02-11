@@ -2,7 +2,7 @@
 	export let type = 'events';
 </script>
 
-<div class="mt-4 mb-8 text-xl pbw-text-color-secondary">
+<div class="mt-4 mb-8 text-xl bbw-text-color-secondary">
 	{#if type === 'events'}
 		<em>All events published here are independent and have their own organisers. #BBW24 is an
 		independent initiative that informs about these events.</em>

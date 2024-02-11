@@ -1,7 +1,7 @@
 <script>
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import EventTypeBadge from '$lib/components/EventTypeBadge.svelte';
-	import { config } from '$lib/pbw';
+	import { config } from '$lib/bbw';
 	import { format } from 'date-fns';
 	import { formatInTimeZone } from 'date-fns-tz';
 
@@ -65,7 +65,7 @@
 							{:else}
 								<a
 									href="/{entry}/{col}/{(segment.event || event).id}"
-									class="text-pbw-red hover:underline"
+									class="text-bbw-navy hover:underline"
 									>{(segment.event || event)[
 										(segment.event || event).shortname ? 'shortname' : 'name'
 									]}</a

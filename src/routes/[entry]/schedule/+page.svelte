@@ -5,7 +5,7 @@
 	import CalendarList from '$lib/components/CalendarList.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import { config } from '$lib/pbw';
+	import { config } from '$lib/bbw';
 
 	import { format, compareAsc, addDays } from 'date-fns';
 
@@ -64,10 +64,10 @@
 			{#each days as day}
 				<div class="mb-14">
 					<h2 class="text-3xl md:text-3xl">
-						<a href="/{$page.params.entry}/day/{day.date}" class=" text-pbw-red hover:underline"
+						<a href="/{$page.params.entry}/day/{day.date}" class=" text-bbw-navy hover:underline"
 							>{format(new Date(day.date), 'MMMM d, yyyy')}</a
 						>
-						<span class="pbw-text-color-primary">- {format(new Date(day.date), 'EEEE')}</span>
+						<span class="bbw-text-color-primary">- {format(new Date(day.date), 'EEEE')}</span>
 					</h2>
 					<div class="mt-6">
 						<CalendarList

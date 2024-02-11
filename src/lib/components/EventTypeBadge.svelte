@@ -1,5 +1,5 @@
 <script>
-	import { config } from '$lib/pbw.js';
+	import { config } from '$lib/bbw.js';
 	export let type = 'conference';
 </script>
 
