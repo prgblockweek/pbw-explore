@@ -14,7 +14,7 @@
 {#if item[img]}
 	<img
 		src={thumb ? item[img].replace(/\.([^.]+)$/, `_${thumb}px.webp`) : item[img]}
-		class="{width} {rounded} {aspect} object-cover dark:bg-white drop-shadow-xl z-10"
+		class="{width} {rounded} {aspect} object-contain dark:bg-white drop-shadow-xl z-10"
 		alt={item.name}
 	/>
 {:else if item.hash}

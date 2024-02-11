@@ -48,15 +48,15 @@
 	{#if homepage}
 		<div class="px-6 xl:px-0">
 			<div class="max-w-7xl mx-auto pt-10 pb-6">
-				<h1 class="text-5xl uppercase font-bold text-bbw-white">
+				<h1 class="text-4xl font-bold text-bbw-white">
 					<a href="/">Berlin Blockchain Week 2024</a>
 				</h1>
-				<div class="text-4xl text-bbw-yellow">May 18-27, 2024</div>
+				<div class="text-2xl text-bbw-yellow">May 18-27, 2024</div>
 			</div>
 		</div>
 		<div class="bg-white dark:bg-bbw-dark px-6 xl:px-0 pt-6 pb-4">
 			<div class="max-w-7xl mx-auto bg-bbw-navy/10 text-bbw-navy dark:text-gray-300 rounded-lg">
-				<div class="p-5 text-xl">
+				<div class="p-5 text-lg">
 					<p>
 						Berlin Blockchain Week is a decentralized community-organized initiative. There is no
 						single owner. It is an agnostic movement based on the premise that self-organization is
@@ -69,7 +69,7 @@
 						to create a welcoming and inclusive environment, so interested parties at anyknowledge level
 						feel comfortable to join.
 					</p>
-					<div class="pt-4 text-2xl flex flex-wrap gap-4">
+					<div class="pt-4 text-xl flex flex-wrap gap-4">
 						<div>
 							🐦
 							<a

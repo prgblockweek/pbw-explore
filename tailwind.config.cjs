@@ -7,7 +7,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Barlow Semi Condensed', ...defaultTheme.fontFamily.sans]
+				sans: ['PT Sans', ...defaultTheme.fontFamily.sans]
 			},
 			colors: {
 				bbw: {

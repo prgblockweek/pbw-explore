@@ -35,7 +35,7 @@
 
 <div class="w-full px-6 xl:mx-0">
 	<div class="max-w-7xl mx-auto pt-2">
-		<div class="flex flex-wrap gap-2 my-6 text-center text-2xl">
+		<div class="flex flex-wrap gap-2 my-6 text-center text-lg">
 			{#each collections as cd}
 				<a href="/{$page.params.entry}/{cd.col}">
 					<button

@@ -181,9 +181,9 @@
 			<div
 				class="h-10 flex flex-grow hover:bg-bbw-yellow/20"
 				style="width: {1 / (days.length / 100)}%; {highlightDay && highlightDay === day
-					? 'border: 1px solid rgb(255, 22, 22);'
+					? 'border: 1px solid rgb(0, 36, 225);'
 					: !highlightDay
-					? 'border-right: 1px solid rgb(255, 22, 22);'
+					? 'border-right: 1px solid rgb(0, 36, 225);'
 					: days.length - i > 1
 					? 'border-right: 1px solid silver;'
 					: ''}"
@@ -196,7 +196,7 @@
 						class="md:hover:border md:hover:border-bbw-yellow flex-grow cursor-pointer"
 						style="width: {1 / (segments.length / 50)}%; background-color: rgba({!highlightDay ||
 						highlightDay === day
-							? '255, 22, 22'
+							? '0, 36, 225'
 							: '115, 115, 115'}, {timelineData[[day, segment].join(';')].perc}%);"
 						on:click={makeClick(day, segment, timelineData[[day, segment].join(';')])}
 						on:mouseenter={makeSelected(day, segment, timelineData[[day, segment].join(';')])}
